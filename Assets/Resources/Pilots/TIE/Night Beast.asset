@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: Night Beast
   m_EditorClassIdentifier: 
   cardArt: {fileID: 21300000, guid: a7e063f417a55454e882088be584d7eb, type: 3}
-  title: []
-  astromech: []
-  torpedo: []
-  missile: []
-  elitePilotTalent: []
-  modification:
-  - {fileID: 0}
+  titles: 0
+  astromechs: 0
+  torpedos: 0
+  missiles: 0
+  elitePilotTalents: 0
+  modifications: 1
   isUnique: 1
   cost: 15

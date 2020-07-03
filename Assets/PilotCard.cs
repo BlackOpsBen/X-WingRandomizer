@@ -5,16 +5,36 @@ using UnityEngine;
 [CreateAssetMenu]
 public class PilotCard : ScriptableObject
 {
+    [Header("Settings")]
     public Sprite cardArt;
-
-    public Title[] title;
-    public Astromech[] astromech;
-    public Torpedo[] torpedo;
-    public Missile[] missile;
-    public AddonCard[] elitePilotTalent;
-    public AddonCard[] modification;
-
     public bool isUnique;
-
     public int cost;
+
+    [Header("Common addons")]
+    public int elitePilotTalents;
+    public int torpedos;
+    public int missiles;
+    public int bombs;
+    public int modifications = 1;
+
+    [Header("Uncommon addons")]
+    public int titles;
+    public int astromechs;
+    public int cannons;
+    public int turret;
+    public int crew;
+    public int systems;
+    public int techs;
+
+    [Header("Rare addons")]
+    public int illicits;
+    public int cargo;
+    public int hardpoints;
+    public int teams;
+    public int salvagedAstromechs;
+
+    public void GetAddonSlots()
+    {
+        Debug.Log("Fetching addons");
+    }
 }

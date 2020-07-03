@@ -13,12 +13,11 @@ MonoBehaviour:
   m_Name: Academy Pilot
   m_EditorClassIdentifier: 
   cardArt: {fileID: 21300000, guid: 03741f91a0d65444081e6b5c8f483e52, type: 3}
-  title: []
-  astromech: []
-  torpedo: []
-  missile: []
-  elitePilotTalent: []
-  modification:
-  - {fileID: 0}
+  titles: 0
+  astromechs: 0
+  torpedos: 0
+  missiles: 0
+  elitePilotTalents: 0
+  modifications: 1
   isUnique: 0
   cost: 12

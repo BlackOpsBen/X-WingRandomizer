@@ -214,6 +214,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1277167121}
   - component: {fileID: 1277167122}
+  - component: {fileID: 1277167123}
+  - component: {fileID: 1277167124}
   m_Layer: 0
   m_Name: '[Card Manager]'
   m_TagString: Untagged
@@ -251,3 +253,37 @@ MonoBehaviour:
   imperialShips: []
   rebelPilotGroups: []
   imperialPilotGroups: []
+--- !u!114 &1277167123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277167120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 046a67182f9786947b3ff756f5695f8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ship: {fileID: 0}
+  pilot: {fileID: 0}
+  addons: []
+--- !u!114 &1277167124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277167120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50162069eb135174583bebe75d9dee9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  addonTypes:
+  - Titles
+  - Astromechs
+  - Torpedos
+  - Missiles
+  - ElitePilotTalents
+  - Modifications
