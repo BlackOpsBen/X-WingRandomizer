@@ -16,29 +16,30 @@ public class CardManager : MonoBehaviour
         SingletonPattern();
 
         LoadAllShips();
-        CreatePilotGroups();
-    }
-
-    private void CreatePilotGroups()
-    {
-        rebelPilotGroups = new PilotGroup[rebelShips.Length];
-
-        for (int i = 0; i < rebelPilotGroups.Length; i++)
-        {
-            rebelPilotGroups[i] = new PilotGroup();
-        }
-
-        for (int i = 0; i < rebelPilotGroups.Length; i++)
-        {
-            string path = "Pilots/" + rebelShips[i].name;
-            rebelPilotGroups[i].pilots = Resources.LoadAll<PilotCard>(path);
-        }
+        CreatePilotGroups(ref rebelPilotGroups, ref rebelShips);
+        CreatePilotGroups(ref imperialPilotGroups, ref imperialShips);
     }
 
     private void LoadAllShips()
     {
         rebelShips = Resources.LoadAll<Ship>("Ships/Rebel");
         imperialShips = Resources.LoadAll<Ship>("Ships/Imperial");
+    }
+
+    private void CreatePilotGroups(ref PilotGroup[] pilotGroups, ref Ship[] ships)
+    {
+        pilotGroups = new PilotGroup[ships.Length];
+
+        for (int i = 0; i < pilotGroups.Length; i++)
+        {
+            pilotGroups[i] = new PilotGroup();
+        }
+
+        for (int i = 0; i < pilotGroups.Length; i++)
+        {
+            string path = "Pilots/" + ships[i].name;
+            pilotGroups[i].pilots = Resources.LoadAll<PilotCard>(path);
+        }
     }
 
     private void SingletonPattern()
