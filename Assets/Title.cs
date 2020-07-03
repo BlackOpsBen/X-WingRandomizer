@@ -3,6 +3,6 @@
 [CreateAssetMenu]
 public class Title : AddonCard
 {
-    public string ship;
+    public Ship ship;
     public bool isUnique;
 }

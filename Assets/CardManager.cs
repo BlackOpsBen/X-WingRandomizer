@@ -6,46 +6,39 @@ public class CardManager : MonoBehaviour
 {
     public static CardManager Instance { get; private set; }
 
-    public Ship[] ships;
-    public PilotCard[] pilots;
-    public Title[] titles;
-    public Astromech[] astromechs;
-    public Missile[] missiles;
-    public Torpedo[] torpedoes;
-    public ElitePilotTalent[] elitePilotTalents;
-    public Modification[] modifications;
-
-    public PilotGroup[] pilotGroups;
+    public Ship[] rebelShips;
+    public Ship[] imperialShips;
+    public PilotGroup[] rebelPilotGroups;
+    public PilotGroup[] imperialPilotGroups;
 
     private void Awake()
     {
         SingletonPattern();
-        PrepareShipLists();
-        SortPilots();
+
+        LoadAllShips();
+        CreatePilotGroups();
     }
 
-    private void PrepareShipLists()
+    private void CreatePilotGroups()
     {
-        pilotGroups = new PilotGroup[ships.Length];
-        for (int i = 0; i < pilotGroups.Length; i++)
+        rebelPilotGroups = new PilotGroup[rebelShips.Length];
+
+        for (int i = 0; i < rebelPilotGroups.Length; i++)
         {
-            pilotGroups[i] = new PilotGroup();
-            pilotGroups[i].shipPilots = new List<PilotCard>();
+            rebelPilotGroups[i] = new PilotGroup();
+        }
+
+        for (int i = 0; i < rebelPilotGroups.Length; i++)
+        {
+            string path = "Pilots/" + rebelShips[i].name;
+            rebelPilotGroups[i].pilots = Resources.LoadAll<PilotCard>(path);
         }
     }
 
-    private void SortPilots()
+    private void LoadAllShips()
     {
-        for (int i = 0; i < ships.Length; i++)
-        {
-            foreach (PilotCard pilot in pilots)
-            {
-                if (pilot.ship == ships[i].name)
-                {
-                    pilotGroups[i].shipPilots.Add(pilot);
-                }
-            }
-        }
+        rebelShips = Resources.LoadAll<Ship>("Ships/Rebel");
+        imperialShips = Resources.LoadAll<Ship>("Ships/Imperial");
     }
 
     private void SingletonPattern()
@@ -64,5 +57,5 @@ public class CardManager : MonoBehaviour
 [System.Serializable]
 public class PilotGroup
 {
-    public List<PilotCard> shipPilots;
+    public PilotCard[] pilots;
 }

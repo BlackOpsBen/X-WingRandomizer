@@ -5,8 +5,6 @@ using UnityEngine;
 [CreateAssetMenu]
 public class PilotCard : ScriptableObject
 {
-    public string ship;
-
     public Sprite cardArt;
 
     public Title[] title;
