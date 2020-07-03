@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CardManager : MonoBehaviour
+public class PilotCardManager : MonoBehaviour
 {
-    public static CardManager Instance { get; private set; }
+    public static PilotCardManager Instance { get; private set; }
 
     public Ship[] rebelShips;
     public Ship[] imperialShips;
@@ -38,6 +38,7 @@ public class CardManager : MonoBehaviour
         for (int i = 0; i < pilotGroups.Length; i++)
         {
             string path = "Pilots/" + ships[i].name;
+            pilotGroups[i].name = ships[i].name;
             pilotGroups[i].pilots = Resources.LoadAll<PilotCard>(path);
         }
     }
@@ -58,5 +59,6 @@ public class CardManager : MonoBehaviour
 [System.Serializable]
 public class PilotGroup
 {
+    public string name;
     public PilotCard[] pilots;
 }

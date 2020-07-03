@@ -12,12 +12,58 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca49ddfea8c813b4e9baa4f7776fbc1b, type: 3}
   m_Name: Tycho Celchu
   m_EditorClassIdentifier: 
+  addonTypes:
+  - name: 
+    quantity: 0
+  - name: 
+    quantity: 0
+  - name: 
+    quantity: 0
+  - name: 
+    quantity: 0
+  - name: 
+    quantity: 0
+  - name: 
+    quantity: 0
+  - name: 
+    quantity: 0
+  - name: 
+    quantity: 0
+  - name: 
+    quantity: 0
+  - name: 
+    quantity: 0
+  - name: 
+    quantity: 0
+  - name: 
+    quantity: 0
+  - name: 
+    quantity: 0
+  - name: 
+    quantity: 0
+  - name: 
+    quantity: 0
+  - name: 
+    quantity: 0
+  - name: 
+    quantity: 0
   cardArt: {fileID: 21300000, guid: 0dfa1eebbfa79344580d1ca949591fbb, type: 3}
-  titles: 1
-  astromechs: 0
-  torpedos: 0
-  missiles: 1
-  elitePilotTalents: 1
-  modifications: 1
   isUnique: 1
   cost: 26
+  elitePilotTalents: 0
+  torpedos: 0
+  missiles: 0
+  bombs: 0
+  modifications: 1
+  titles: 0
+  astromechs: 0
+  cannons: 0
+  turret: 0
+  crew: 0
+  systems: 0
+  techs: 0
+  illicits: 0
+  cargo: 0
+  hardpoints: 0
+  teams: 0
+  salvagedAstromechs: 0
