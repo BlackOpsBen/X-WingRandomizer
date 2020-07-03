@@ -28,6 +28,5 @@ public class testRandomCards : MonoBehaviour
         pilot = CardManager.Instance.rebelPilotGroups[randShip].pilots[randPilot];
         Debug.Log(pilot.name);
 
-        pilot.GetAddonSlots();
     }
 }

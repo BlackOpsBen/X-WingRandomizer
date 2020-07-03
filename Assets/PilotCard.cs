@@ -32,9 +32,4 @@ public class PilotCard : ScriptableObject
     public int hardpoints;
     public int teams;
     public int salvagedAstromechs;
-
-    public void GetAddonSlots()
-    {
-        Debug.Log("Fetching addons");
-    }
 }
