@@ -33,10 +33,6 @@ public class PilotCardManager : MonoBehaviour
         for (int i = 0; i < pilotGroups.Length; i++)
         {
             pilotGroups[i] = new PilotGroup();
-        }
-
-        for (int i = 0; i < pilotGroups.Length; i++)
-        {
             string path = "Pilots/" + ships[i].name;
             pilotGroups[i].name = ships[i].name;
             pilotGroups[i].pilots = Resources.LoadAll<PilotCard>(path);

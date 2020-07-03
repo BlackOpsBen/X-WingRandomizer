@@ -8,32 +8,31 @@ public class AddonCardManager : MonoBehaviour
     public static AddonCardManager Instance { get; private set; }
 
     private string[] addonCardNames;
-    public AddonCardGroup[] addonCardGroups;
-
-    //public ElitePilotTalent[] elitePilotTalents;
-    //public Torpedo[] torpedos;
-    //public Missile[] missiles;
-    ////public Bomb[] bombs;
-    //public Modification[] modifications;
-    //public Title[] titles;
-    //public Astromech[] astromechs;
-    ////public Cannon[] cannons;
-    ////public Turret[] turrets;
-    ////public Crew[] crews;
-    ////public System[] systems;
-    ////public Tech[] techs;
-    ////public Illicit[] illicits;
-    ////public Cargo[] cargos;
-    ////public Hardpoint[] hardpoints;
-    ////public Team[] teams;
-    ////public SalvagedAstromech[] salvagedAstromechs;
+    [SerializeField] private AddonCardGroup[] addonCardGroups;
 
     private void Awake()
     {
         SingletonPattern();
+        InitializeNames();
+        CreateAddonCardGroups();
+    }
 
-        addonCardNames = new string[]
+    private void CreateAddonCardGroups()
+    {
+        addonCardGroups = new AddonCardGroup[addonCardNames.Length];
+
+        for (int i = 0; i < addonCardGroups.Length; i++)
         {
+            addonCardGroups[i] = new AddonCardGroup();
+            addonCardGroups[i].name = addonCardNames[i];
+            addonCardGroups[i].addonCards = Resources.LoadAll<AddonCard>(addonCardNames[i]);
+        }
+    }
+
+    private void InitializeNames()
+    {
+        addonCardNames = new string[]
+                {
             "Elite Pilot Talents",
             "Torpedos",
             "Missiles",
@@ -51,20 +50,7 @@ public class AddonCardManager : MonoBehaviour
             "Hardpoints",
             "Teams",
             "SalvagedAstromechs"
-        };
-
-        addonCardGroups = new AddonCardGroup[addonCardNames.Length];
-
-        for (int i = 0; i < addonCardGroups.Length; i++)
-        {
-            addonCardGroups[i] = new AddonCardGroup();
-        }
-
-        for (int i = 0; i < addonCardGroups.Length; i++)
-        {
-            addonCardGroups[i].name = addonCardNames[i];
-            addonCardGroups[i].addonCards = Resources.LoadAll<AddonCard>(addonCardNames[i]);
-        }
+                };
     }
 
     private void SingletonPattern()

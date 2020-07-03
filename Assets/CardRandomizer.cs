@@ -9,16 +9,11 @@ public class CardRandomizer : MonoBehaviour
     public PilotCard pilot;
     public List<AddonCard> addonCards;
 
-    //private int totalAddons = 0;
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {            
             MakeRandomPilot();
-
-            //totalAddons = GetAddonSlots();
-
             SelectAddons();
         }
     }
@@ -38,25 +33,6 @@ public class CardRandomizer : MonoBehaviour
 
     private void SelectAddons()
     {
-        for (int i = 0; i < pilot.addonTypes.Length; i++)
-        {
-            for (int j = 0; j < pilot.addonTypes[i].quantity; j++)
-            {
-                if (true)
-                {
-                    
-                }
-            }
-        }
-    }
 
-    //private int GetAddonSlots()
-    //{
-    //    int totalAddons = 0;
-    //    for (int i = 0; i < pilot.addonTypes.Length; i++)
-    //    {
-    //        totalAddons += pilot.addonTypes[i].quantity;
-    //    }
-    //    return totalAddons;
-    //}
+    }
 }

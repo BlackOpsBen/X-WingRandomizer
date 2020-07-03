@@ -5,35 +5,35 @@ using UnityEngine;
 [CreateAssetMenu]
 public class PilotCard : ScriptableObject
 {
-    public AddonType[] addonTypes = new AddonType[17];
+    private AddonType[] addonTypes = new AddonType[17];
 
     [Header("Settings")]
-    public Sprite cardArt;
-    public bool isUnique;
-    public int cost;
+    [SerializeField] private Sprite cardArt;
+    [SerializeField] private bool isUnique;
+    [SerializeField] private int cost;
 
     [Header("Common addons")]
-    public int elitePilotTalents;
-    public int torpedos;
-    public int missiles;
-    public int bombs;
-    public int modifications = 1;
+    [SerializeField] private int elitePilotTalents;
+    [SerializeField] private int torpedos;
+    [SerializeField] private int missiles;
+    [SerializeField] private int bombs;
+    [SerializeField] private int modifications = 1;
 
     [Header("Uncommon addons")]
-    public int titles;
-    public int astromechs;
-    public int cannons;
-    public int turrets;
-    public int crews;
-    public int systems;
-    public int techs;
+    [SerializeField] private int titles;
+    [SerializeField] private int astromechs;
+    [SerializeField] private int cannons;
+    [SerializeField] private int turrets;
+    [SerializeField] private int crews;
+    [SerializeField] private int systems;
+    [SerializeField] private int techs;
 
     [Header("Rare addons")]
-    public int illicits;
-    public int cargos;
-    public int hardpoints;
-    public int teams;
-    public int salvagedAstromechs;
+    [SerializeField] private int illicits;
+    [SerializeField] private int cargos;
+    [SerializeField] private int hardpoints;
+    [SerializeField] private int teams;
+    [SerializeField] private int salvagedAstromechs;
 
     public void MakeList()
     {
@@ -94,7 +94,6 @@ public class PilotCard : ScriptableObject
     }
 }
 
-//[System.Serializable]
 public struct AddonType
 {
     public string name;
