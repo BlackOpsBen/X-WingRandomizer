@@ -92,10 +92,24 @@ public class PilotCard : ScriptableObject
         addonTypes[16].name = "SalvagedAstromechs";
         addonTypes[16].quantity = salvagedAstromechs;
     }
-}
+    private struct AddonType
+    {
+        public string name;
+        public int quantity;
+    }
 
-public struct AddonType
-{
-    public string name;
-    public int quantity;
+    public int GetAddonTypeQuantity(int i)
+    {
+        return addonTypes[i].quantity;
+    }
+
+    public int GetNumAddonTypes()
+    {
+        return addonTypes.Length;
+    }
+
+    public int GetCost()
+    {
+        return cost;
+    }
 }

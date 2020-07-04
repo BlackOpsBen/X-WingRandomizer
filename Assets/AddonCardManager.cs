@@ -32,7 +32,7 @@ public class AddonCardManager : MonoBehaviour
     private void InitializeNames()
     {
         addonCardNames = new string[]
-                {
+            {
             "Elite Pilot Talents",
             "Torpedos",
             "Missiles",
@@ -50,7 +50,17 @@ public class AddonCardManager : MonoBehaviour
             "Hardpoints",
             "Teams",
             "SalvagedAstromechs"
-                };
+            };
+    }
+
+    public AddonCard GetAddonCard(int group, int card)
+    {
+        return addonCardGroups[group].addonCards[card];
+    }
+
+    public int GetAddonCardGroupLength(int group)
+    {
+        return addonCardGroups[group].addonCards.Length;
     }
 
     private void SingletonPattern()
