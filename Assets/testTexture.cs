@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class testTexture : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] Texture desiredTexture;
+    private void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GetComponent<MeshRenderer>().materials[1].mainTexture = desiredTexture;
     }
 }

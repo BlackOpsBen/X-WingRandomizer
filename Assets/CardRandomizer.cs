@@ -14,25 +14,37 @@ public class CardRandomizer : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Return))
         {
-            addonCards.Clear();
-            totalCost = 0;
-            MakeRandomPilot();
-            SelectAddons();
+            GenerateNewSet();
         }
+    }
+
+    private void GenerateNewSet()
+    {
+        addonCards.Clear();
+        totalCost = 0;
+        MakeRandomPilot();
+        SelectAddons();
+
+        GetComponent<DisplayCards>().DisplayAddons(addonCards);
     }
 
     private void MakeRandomPilot()
     {
+        // Randomly selects Ship
         int randShip = UnityEngine.Random.Range(0, PilotCardManager.Instance.rebelShips.Length);
         ship = PilotCardManager.Instance.rebelShips[randShip];
-        Debug.Log(ship.name);
 
+        // Randomly selects Pilot based on selected Ship
         int randPilot = UnityEngine.Random.Range(0, PilotCardManager.Instance.rebelPilotGroups[randShip].pilots.Length);
         pilot = PilotCardManager.Instance.rebelPilotGroups[randShip].pilots[randPilot];
-        Debug.Log(pilot.name);
 
+        // Creates array of addon card slots
         pilot.MakeList();
 
+        // Displays the pilot on the card model
+        GetComponent<DisplayCards>().DisplayPilot(pilot.GetTexture());
+
+        // Adds the cost of the selected Pilot
         totalCost += pilot.GetCost();
     }
 
@@ -43,7 +55,7 @@ public class CardRandomizer : MonoBehaviour
             for (int j = 0; j < pilot.GetAddonTypeQuantity(i); j++)
             {
                 // roll to see if to be filled
-                if (Roll())
+                if (true)
                 {
                     int randMax = AddonCardManager.Instance.GetAddonCardGroupLength(i);
                     int rand = UnityEngine.Random.Range(0, randMax);

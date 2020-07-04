@@ -112,4 +112,9 @@ public class PilotCard : ScriptableObject
     {
         return cost;
     }
+
+    public Texture GetTexture()
+    {
+        return cardArt.texture;
+    }
 }
