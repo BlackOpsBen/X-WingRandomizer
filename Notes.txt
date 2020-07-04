@@ -1,0 +1,88 @@
+User define max points
+
+User define faction (by pressing button to generate? Or by toggle?)
+
+Randomly select a ship
+
+Randomly select a pilot
+	
+	re-select if this named pilot was already selected.
+	record selection and track points.
+
+for each addon slot
+	
+	randomly select an item of the correct type to fill the slot
+	
+
+
+
+For each SHIP
+	take the string from the ship and use it as a directory to create a list from
+	
+	
+	
+EXCEPTIONS
+
+A-Wing Title Test Pilot
+
+A-Wing Chardaan refit
+
+Elite Adaptability
+
+Small/Large Ships?
+
+Stygium Particle Accelerator
+
+Advanced Cloaking Device
+
+B-Wing/E2
+
+Countermeasures
+
+Tactical Jammer
+
+Advanced SLAM
+
+Twin ION Engine MK II
+
+Ion Projector
+
+Integrated Astromech
+
+Automated Protocols
+
+Optimized Generators
+
+Ordnance Tubes
+
+Gyroscopic Targeting
+
+Vectored THrusters
+
+Captured TIE
+
+Lightweight Frame
+
+Pulsed Ray Shield
+
+Defletive Plating
+
+Smuggling Compartment
+
+Servomotor S-Foils
+
+Long range scanners
+
+Spacetug Tractor Array
+
+Ruthlessness
+
+
+
+Torpedos
+
+Bomb Loadout
+
+Extra Munitions
+
+Renegade Regit
