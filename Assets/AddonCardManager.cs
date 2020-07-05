@@ -34,7 +34,7 @@ public class AddonCardManager : MonoBehaviour
         addonCardNames = new string[]
             {
             "Elite Pilot Talents",
-            "Torpedos",
+            "Torpedoes",
             "Missiles",
             "Bombs",
             "Modifications",

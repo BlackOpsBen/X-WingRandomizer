@@ -14,7 +14,7 @@ public class PilotCard : ScriptableObject
 
     [Header("Common addons")]
     [SerializeField] private int elitePilotTalents;
-    [SerializeField] private int torpedos;
+    [SerializeField] private int torpedoes;
     [SerializeField] private int missiles;
     [SerializeField] private int bombs;
     [SerializeField] private int modifications = 1;
@@ -44,8 +44,8 @@ public class PilotCard : ScriptableObject
         addonTypes[0].name = "Elite Pilot Talents";
         addonTypes[0].quantity = elitePilotTalents;
 
-        addonTypes[1].name = "Torpedos";
-        addonTypes[1].quantity = torpedos;
+        addonTypes[1].name = "Torpedoes";
+        addonTypes[1].quantity = torpedoes;
 
         addonTypes[2].name = "Missiles";
         addonTypes[2].quantity = missiles;

@@ -16,7 +16,7 @@ MonoBehaviour:
   isUnique: 1
   cost: 23
   elitePilotTalents: 0
-  torpedos: 0
+  torpedoes: 0
   missiles: 1
   bombs: 0
   modifications: 1

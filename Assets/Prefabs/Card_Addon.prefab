@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 7858454803655333206}
   - component: {fileID: 2360216909421297649}
   - component: {fileID: 2359960490069184847}
+  - component: {fileID: 285032715194882635}
   m_Layer: 0
   m_Name: Card_Addon
-  m_TagString: Untagged
+  m_TagString: card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,9 +59,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2046885675816838695, guid: 2b8a12dbf08a3a841a96c66e47e22ab8, type: 3}
-  - {fileID: 8598920763845157108, guid: 2b8a12dbf08a3a841a96c66e47e22ab8, type: 3}
-  - {fileID: -2783442246429335838, guid: 2b8a12dbf08a3a841a96c66e47e22ab8, type: 3}
+  - {fileID: 2100000, guid: 700e8b9ccafa72c439a5b22eedabf2d8, type: 2}
+  - {fileID: 2100000, guid: 700e8b9ccafa72c439a5b22eedabf2d8, type: 2}
+  - {fileID: 2100000, guid: 700e8b9ccafa72c439a5b22eedabf2d8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,3 +82,15 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &285032715194882635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3881688929013072240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fcd44befa2e3c941a7b4bbeca36a249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

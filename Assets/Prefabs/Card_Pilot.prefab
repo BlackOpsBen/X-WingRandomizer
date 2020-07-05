@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 4571977692424949264}
   - component: {fileID: 8558586439903723294}
   - component: {fileID: 4625647840159496165}
+  - component: {fileID: 1698151590071537222}
   m_Layer: 0
   m_Name: Card_Pilot
-  m_TagString: Untagged
+  m_TagString: card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,3 +82,15 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1698151590071537222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6508797645920780872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8d18578f9a35a84e97d65d898ffeb7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -9,6 +9,8 @@ public class DisplayCards : MonoBehaviour
     [SerializeField] Transform addonCardParent;
     [SerializeField] GameObject addonCardModel;
 
+    [SerializeField] FitView fitView;
+
     private List<GameObject> addonCardObjects = new List<GameObject>();
 
     private const float xOffset = 2.25f;
@@ -19,12 +21,18 @@ public class DisplayCards : MonoBehaviour
 
     public void DisplayPilot(Texture texture)
     {
+        pilotCardModel.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+
         pilotCardModel.GetComponent<MeshRenderer>().materials[faceMatIndex].mainTexture = texture;
+
+        pilotCardModel.AddComponent<MoveAndFlip>();
     }
 
     public void DisplayAddons(List<AddonCard> addonCards)
     {
         ClearPreviousCards();
+
+        AddonCard[] addonCardsArray = addonCards.ToArray();
 
         int count = addonCards.Count;
 
@@ -35,22 +43,40 @@ public class DisplayCards : MonoBehaviour
         {
             Vector3 relPos = Vector3.zero;
 
-            float newRelX = pX + xOffset * Mathf.Abs(((i + 2) % 2)-1) * CheckForFirstCard(i);
-            float newRelY = yOffset * ((i + 2) % 2);
+            float newRelX;
+            float newRelY;
+
+            if (count > 3)
+            {
+                newRelX = pX + xOffset * Mathf.Abs(((i + 2) % 2) - 1) * CheckForFirstCard(i);
+                newRelY = yOffset * ((i + 2) % 2);
+            }
+            else
+            {
+                newRelX = pX + xOffset * CheckForFirstCard(i);
+                newRelY = 0f;
+            }
 
             relPos = new Vector3(newRelX, newRelY, 0f);
 
             pX = newRelX;
             pY = newRelY;
 
-            GameObject newCardObject = Instantiate(addonCardModel, relPos, Quaternion.identity, addonCardParent);
+            GameObject newCardObject = Instantiate(addonCardModel, Vector3.zero, Quaternion.Euler(0f, 180f, 0f), addonCardParent);
 
             addonCardObjects.Add(newCardObject);
+
+            newCardObject.GetComponent<MeshRenderer>().materials[faceMatIndex].mainTexture = addonCardsArray[i].cardArt.texture;
+
+            MoveAndFlip moveAndFlip = newCardObject.AddComponent<MoveAndFlip>();
+
+            moveAndFlip.destPos = relPos;
         }
     }
 
     private void ClearPreviousCards()
     {
+        fitView.ClearTargets();
         foreach (GameObject cardObject in addonCardObjects)
         {
             Destroy(cardObject);
