@@ -7,16 +7,18 @@ public class FitView : MonoBehaviour
 {
     private List<Transform> targets = new List<Transform>();
 
-    //public float minZoom = 75f;
-    //public float maxZoom = 60f;
+    public float minFOV = 60f;
+    public float maxFOV = 70f;
 
     private Vector3 offset = new Vector3(0f, 0f, -5f);
 
     private float speed = 2f;
 
-    private float hypotenuse;
+    private float zoomSpeed = 2f;
 
     private Camera cam;
+
+    private GameObject[] cards;
 
     private void Awake()
     {
@@ -25,7 +27,7 @@ public class FitView : MonoBehaviour
 
     private void LateUpdate()
     {
-        GameObject[] cards = GameObject.FindGameObjectsWithTag("card");
+        cards = GameObject.FindGameObjectsWithTag("card");
 
         for (int i = 0; i < cards.Length; i++)
         {
@@ -38,14 +40,24 @@ public class FitView : MonoBehaviour
         }
 
         MoveToFit();
-        //ZoomToFit();
+        ZoomToFit();
     }
 
-    //private void ZoomToFit()
-    //{
-    //    float newZoom = Mathf.Lerp(maxZoom, minZoom, hypotenuse);
-    //    cam.fieldOfView = newZoom;
-    //}
+    private void ZoomToFit()
+    {
+        float newFOV;
+
+        if (cards.Length > 4)
+        {
+            newFOV = maxFOV;
+        }
+        else
+        {
+            newFOV = minFOV;
+        }
+        
+        cam.fieldOfView = Mathf.Lerp(cam.fieldOfView, newFOV, Time.deltaTime * zoomSpeed);
+    }
 
     private void MoveToFit()
     {
@@ -68,8 +80,6 @@ public class FitView : MonoBehaviour
         {
             bounds.Encapsulate(targets[i].position);
         }
-
-        hypotenuse = Mathf.Sqrt(Mathf.Pow(bounds.size.x,2f) + Mathf.Pow(bounds.size.y,2));
 
         return bounds.center;
     }

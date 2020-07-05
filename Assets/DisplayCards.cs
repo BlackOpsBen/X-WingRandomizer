@@ -41,6 +41,8 @@ public class DisplayCards : MonoBehaviour
 
         for (int i = 0; i < count; i++)
         {
+            Vector3 zOffset = new Vector3(0f, 0f, 0.5f);
+
             Vector3 relPos = Vector3.zero;
 
             float newRelX;
@@ -62,7 +64,7 @@ public class DisplayCards : MonoBehaviour
             pX = newRelX;
             pY = newRelY;
 
-            GameObject newCardObject = Instantiate(addonCardModel, Vector3.zero, Quaternion.Euler(0f, 180f, 0f), addonCardParent);
+            GameObject newCardObject = Instantiate(addonCardModel, Vector3.zero + (zOffset * (i + 1)), Quaternion.Euler(0f, 180f, 0f), addonCardParent);
 
             addonCardObjects.Add(newCardObject);
 
