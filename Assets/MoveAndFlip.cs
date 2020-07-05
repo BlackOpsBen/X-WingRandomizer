@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveAndFlip : MonoBehaviour
 {
-    public Vector3 destPos;
+    private Vector3 destPos;
 
     private float moveSpeed = 2f;
 
@@ -20,5 +20,10 @@ public class MoveAndFlip : MonoBehaviour
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(Vector3.zero), Time.deltaTime * flipSpeed);
         }
+    }
+
+    public void SetDestPos(Vector3 newDestPos)
+    {
+        destPos = newDestPos;
     }
 }

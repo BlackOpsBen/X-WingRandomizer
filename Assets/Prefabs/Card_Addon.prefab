@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7858454803655333206}
   - component: {fileID: 2360216909421297649}
   - component: {fileID: 2359960490069184847}
-  - component: {fileID: 285032715194882635}
   m_Layer: 0
   m_Name: Card_Addon
   m_TagString: card
@@ -82,15 +81,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &285032715194882635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3881688929013072240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fcd44befa2e3c941a7b4bbeca36a249, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

@@ -49,7 +49,7 @@ public class DisplayCards : MonoBehaviour
             if (count > 3)
             {
                 newRelX = pX + xOffset * Mathf.Abs(((i + 2) % 2) - 1) * CheckForFirstCard(i);
-                newRelY = yOffset * ((i + 2) % 2);
+                newRelY = (yOffset * ((i + 2) % 2)) - yOffset/2;
             }
             else
             {
@@ -70,7 +70,7 @@ public class DisplayCards : MonoBehaviour
 
             MoveAndFlip moveAndFlip = newCardObject.AddComponent<MoveAndFlip>();
 
-            moveAndFlip.destPos = relPos;
+            moveAndFlip.SetDestPos(relPos);
         }
     }
 
