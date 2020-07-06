@@ -13,11 +13,23 @@ MonoBehaviour:
   m_Name: Soontir Fel
   m_EditorClassIdentifier: 
   cardArt: {fileID: 21300000, guid: 0280448246198574990b37c08d815637, type: 3}
+  isUnique: 1
+  pilotSkill: 9
+  cost: 27
+  elitePilotTalents: 1
+  torpedoes: 0
+  missiles: 0
+  bombs: 0
+  modifications: 1
   titles: 1
   astromechs: 0
-  torpedos: 0
-  missiles: 0
-  elitePilotTalents: 1
-  modifications: 1
-  isUnique: 1
-  cost: 27
+  cannons: 0
+  turrets: 0
+  crews: 0
+  systems: 0
+  techs: 0
+  illicits: 0
+  cargos: 0
+  hardpoints: 0
+  teams: 0
+  salvagedAstromechs: 0

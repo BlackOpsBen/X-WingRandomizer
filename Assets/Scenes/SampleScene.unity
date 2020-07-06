@@ -407,6 +407,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb90cd0551bdbec4cb211c9cb17be798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  minFOV: 60
+  maxFOV: 70
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -942,7 +944,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Card_Pilot
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1698151590071537222, guid: 0980ef0950e1ad54b8e304a5e3f2fa09, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0980ef0950e1ad54b8e304a5e3f2fa09, type: 3}
 --- !u!1 &5613837977817113038 stripped
 GameObject:

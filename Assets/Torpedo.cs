@@ -3,5 +3,5 @@
 [CreateAssetMenu]
 public class Torpedo : AddonCard
 {
-
+    
 }

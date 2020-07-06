@@ -13,11 +13,23 @@ MonoBehaviour:
   m_Name: Biggs Darklighter
   m_EditorClassIdentifier: 
   cardArt: {fileID: 21300000, guid: 6cb71ae63902c8441a794c57c5e27fed, type: 3}
+  isUnique: 1
+  pilotSkill: 5
+  cost: 25
+  elitePilotTalents: 0
+  torpedoes: 0
+  missiles: 0
+  bombs: 0
+  modifications: 1
   titles: 0
   astromechs: 1
-  torpedos: 1
-  missiles: 0
-  elitePilotTalents: 0
-  modifications: 1
-  isUnique: 1
-  cost: 25
+  cannons: 0
+  turrets: 0
+  crews: 0
+  systems: 0
+  techs: 0
+  illicits: 0
+  cargos: 0
+  hardpoints: 0
+  teams: 0
+  salvagedAstromechs: 0

@@ -3,5 +3,5 @@
 [CreateAssetMenu]
 public class Astromech : AddonCard
 {
-    public bool isUnique;
+    
 }

@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardArt: {fileID: 21300000, guid: 8e6e9c4e0e87eec46a882c22c9d65507, type: 3}
   cost: 1
-  isUnique: 1
+  unique: 1
+  limited: 0

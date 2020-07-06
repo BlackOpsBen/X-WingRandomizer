@@ -86,3 +86,18 @@ Bomb Loadout
 Extra Munitions
 
 Renegade Regit
+
+Cards that add an icon the ship already has, such as Engine Upgrade on A-Wings
+
+
+Experimental Interface requires an "Action:" card
+
+Integrated Astromech requires astromech
+
+Ordnance tubes
+
+Extra Munitions
+
+A mod that grants an ability should make it possible to select other cards that require that ability.
+A mod or card that grants a slot will just re-roll for a new slot.
+

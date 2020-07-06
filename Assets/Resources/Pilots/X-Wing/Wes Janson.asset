@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardArt: {fileID: 21300000, guid: 23c12e226605603479dff5881e9eaeeb, type: 3}
   isUnique: 1
+  pilotSkill: 8
   cost: 29
   elitePilotTalents: 1
-  torpedos: 1
+  torpedoes: 0
   missiles: 0
   bombs: 0
   modifications: 1

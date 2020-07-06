@@ -12,3 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: Rebel TIE
   m_EditorClassIdentifier: 
+  shieldValue: 0
+  focus: 1
+  targetLock: 0
+  boost: 0
+  evade: 1
+  barrelRoll: 1
+  cloak: 0
+  SLAM: 0
+  rebel: 1
+  imperial: 0
+  scum: 0
+  smallShip: 1
+  largeShip: 0
+  hugeShip: 0
+  heavyTIE: 0
+  TIE: 1

@@ -10,6 +10,7 @@ public class PilotCard : ScriptableObject
     [Header("Settings")]
     [SerializeField] private Sprite cardArt;
     [SerializeField] private bool isUnique;
+    [SerializeField] private int pilotSkill;
     [SerializeField] private int cost;
 
     [Header("Common addons")]
@@ -116,5 +117,10 @@ public class PilotCard : ScriptableObject
     public Texture GetTexture()
     {
         return cardArt.texture;
+    }
+
+    public int GetPilotSkill()
+    {
+        return pilotSkill;
     }
 }
