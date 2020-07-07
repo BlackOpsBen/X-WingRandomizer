@@ -26,4 +26,7 @@ public class Ship : ScriptableObject
     public bool hugeShip;
     public bool heavyTIE;
     public bool TIE;
+
+    [Header("Title Options")]
+    [SerializeField] private Title[] titles;
 }

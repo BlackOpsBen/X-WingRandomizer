@@ -38,7 +38,6 @@ public class AddonCardManager : MonoBehaviour
             "Missiles",
             "Bombs",
             "Modifications",
-            "Titles",
             "Astromechs",
             "Cannons",
             "Turrets",

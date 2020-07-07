@@ -155,11 +155,13 @@ public class CardRandomizer : MonoBehaviour
             {
                 return false;
             }
-
+            Debug.LogWarning("B/SF-17 Bomber about to be validated.");
             if (addonCard.BSF17BomberOnly && ship.name != "B/SF-17 Bomber")
             {
+                Debug.LogWarning("B/SF-17 Bomber validation took place. Limitation does apply and card is invalid.");
                 return false;
             }
+            Debug.LogWarning("B/SF-17 Bomber validation took place. Limitation does not apply.");
 
             if (addonCard.lancerClassPursuitCraftOnly && ship.name != "Lancer-Class Pursuit Craft")
             {

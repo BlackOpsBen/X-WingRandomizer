@@ -21,7 +21,6 @@ public class PilotCard : ScriptableObject
     [SerializeField] private int modifications = 1;
 
     [Header("Uncommon addons")]
-    [SerializeField] private int titles;
     [SerializeField] private int astromechs;
     [SerializeField] private int cannons;
     [SerializeField] private int turrets;
@@ -57,41 +56,38 @@ public class PilotCard : ScriptableObject
         addonTypes[4].name = "Modifications";
         addonTypes[4].quantity = modifications;
 
-        addonTypes[5].name = "Titles";
-        addonTypes[5].quantity = titles;
+        addonTypes[5].name = "Astromechs";
+        addonTypes[5].quantity = astromechs;
 
-        addonTypes[6].name = "Astromechs";
-        addonTypes[6].quantity = astromechs;
+        addonTypes[6].name = "Cannons";
+        addonTypes[6].quantity = cannons;
 
-        addonTypes[7].name = "Cannons";
-        addonTypes[7].quantity = cannons;
+        addonTypes[7].name = "Turrets";
+        addonTypes[7].quantity = turrets;
 
-        addonTypes[8].name = "Turrets";
-        addonTypes[8].quantity = turrets;
+        addonTypes[8].name = "Crews";
+        addonTypes[8].quantity = crews;
 
-        addonTypes[9].name = "Crews";
-        addonTypes[9].quantity = crews;
+        addonTypes[9].name = "Systems";
+        addonTypes[9].quantity = systems;
 
-        addonTypes[10].name = "Systems";
-        addonTypes[10].quantity = systems;
+        addonTypes[10].name = "Techs";
+        addonTypes[10].quantity = techs;
 
-        addonTypes[11].name = "Techs";
-        addonTypes[11].quantity = techs;
+        addonTypes[11].name = "Illicits";
+        addonTypes[11].quantity = illicits;
 
-        addonTypes[12].name = "Illicits";
-        addonTypes[12].quantity = illicits;
+        addonTypes[12].name = "Cargos";
+        addonTypes[12].quantity = cargos;
 
-        addonTypes[13].name = "Cargos";
-        addonTypes[13].quantity = cargos;
+        addonTypes[13].name = "Hardpoints";
+        addonTypes[13].quantity = hardpoints;
 
-        addonTypes[14].name = "Hardpoints";
-        addonTypes[14].quantity = hardpoints;
+        addonTypes[14].name = "Teams";
+        addonTypes[14].quantity = teams;
 
-        addonTypes[15].name = "Teams";
-        addonTypes[15].quantity = teams;
-
-        addonTypes[16].name = "SalvagedAstromechs";
-        addonTypes[16].quantity = salvagedAstromechs;
+        addonTypes[15].name = "SalvagedAstromechs";
+        addonTypes[15].quantity = salvagedAstromechs;
     }
     private struct AddonType
     {
