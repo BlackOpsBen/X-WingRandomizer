@@ -35,6 +35,26 @@ public class ListManager : ScriptableObject
             objectLists[i].objects = Resources.LoadAll<Ship>(objectDirectories[i]);
         }
     }
+
+    public ScriptableObject[] GetAllObjectsInList()
+    {
+        int arraySize = 0;
+        for (int i = 0; i < objectLists.Length; i++)
+        {
+            arraySize += objectLists[i].objects.Length;
+        }
+        ScriptableObject[] objects = new ScriptableObject[arraySize];
+
+        for (int i = 0; i < objectLists.Length; i++)
+        {
+            for (int j = 0; j < objectLists[i].objects.Length; j++)
+            {
+                objects[j + objectLists[Mathf.Min(0, i - 1)].objects.Length * i] = objectLists[i].objects[j];
+            }
+        }
+
+        return objects;
+    }
 }
 
 [System.Serializable]
