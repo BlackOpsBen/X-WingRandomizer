@@ -10,6 +10,13 @@ public class CardRandomizer : MonoBehaviour
     public List<AddonCard> addonCards;
     public int totalCost;
 
+    private DisplayCards displayCards;
+    
+    private void Awake()
+    {
+        displayCards = GetComponent<DisplayCards>();
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
@@ -20,12 +27,17 @@ public class CardRandomizer : MonoBehaviour
 
     private void GenerateNewSet()
     {
-        addonCards.Clear();
-        totalCost = 0;
+        Reset();
         MakeRandomPilot();
         SelectAddons();
 
-        GetComponent<DisplayCards>().DisplayAddons(addonCards);
+        displayCards.DisplayAddons(addonCards);
+    }
+
+    private void Reset()
+    {
+        addonCards.Clear();
+        totalCost = 0;
     }
 
     private void MakeRandomPilot()
@@ -55,7 +67,7 @@ public class CardRandomizer : MonoBehaviour
             for (int j = 0; j < pilot.GetAddonTypeQuantity(i); j++)
             {
                 // roll to see if to be filled
-                if (true)
+                if (true) // TODO replace "true" with "Roll()"
                 {
                     int randMax = AddonCardManager.Instance.GetAddonCardGroupLength(i);
                     int rand;
@@ -66,7 +78,7 @@ public class CardRandomizer : MonoBehaviour
                     {
                         rand = UnityEngine.Random.Range(0, randMax);
                         selectedCard = AddonCardManager.Instance.GetAddonCard(i, rand);
-                    } while (false);
+                    } while (false); // TODO replace "false" with Validation
                     
                     addonCards.Add(selectedCard);
                     totalCost += selectedCard.cost;

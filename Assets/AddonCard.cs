@@ -10,7 +10,22 @@ public class AddonCard : ScriptableObject
 
     public int cost;
 
-    //public ShipList[] shipLists;
+    public RestrictionList shipRestrictions;
+
+    //public ListManager tempList;
+
+    private void OnValidate()
+    {
+        //tempList = RestrictionManager.Instance.shipRestrictions;
+
+        shipRestrictions.name = "Ship Restrictions";
+        shipRestrictions.restrictions = new Restriction[RestrictionManager.Instance.shipRestrictions.GetCompleteList().Length];
+        for (int i = 0; i < shipRestrictions.restrictions.Length; i++)
+        {
+            shipRestrictions.restrictions[i] = new Restriction();
+            shipRestrictions.restrictions[i].name = RestrictionManager.Instance.shipRestrictions.GetCompleteList()[i].name;
+        }
+    }
 
     /*DELETE FROM HERE...
     private bool hasRestrictions;
@@ -78,30 +93,6 @@ public class AddonCard : ScriptableObject
     public bool grantsBarrelRoll;
     ... TO HERE*/
 
-    //private void OnValidate()
-    //{
-    //    string pathPrefix = "Assets/Resources/";
-
-    //    string[] shipDirectories = Directory.GetDirectories(pathPrefix + "Ships");
-
-    //    for (int i = 0; i < shipDirectories.Length; i++)
-    //    {
-    //        shipDirectories[i] = shipDirectories[i].Replace(pathPrefix, string.Empty);
-    //        shipDirectories[i] = shipDirectories[i].Replace("\\", "/");
-    //    }
-        
-
-    //    shipLists = new ShipList[shipDirectories.Length];
-
-    //    for (int i = 0; i < shipLists.Length; i++)
-    //    {
-    //        shipLists[i] = new ShipList();
-    //        shipLists[i].name = shipDirectories[i].Replace("Ships/", string.Empty);
-
-    //        shipLists[i].ships = Resources.LoadAll<Ship>(shipDirectories[i]);
-    //    }
-    //}
-
     /* LIST OF RESTRICTIONS
     private void MakeListOfRestrictions()
     {
@@ -151,8 +142,18 @@ public class AddonCard : ScriptableObject
     } */
 }
 
-//public class ShipList
-//{
-//    public string name;
-//    public Ship[] ships;
-//}
+[System.Serializable]
+public class RestrictionList
+{
+    [HideInInspector] public string name;
+
+    public Restriction[] restrictions;
+}
+
+[System.Serializable]
+public class Restriction
+{
+    [HideInInspector] public string name;
+
+    public bool restriction;
+}

@@ -34,7 +34,7 @@ public class ListManager : ScriptableObject
             objectLists[i] = new ObjectList();
             objectLists[i].name = objectDirectories[i].Replace(this.name + "/", string.Empty);
 
-            objectLists[i].objects = Resources.LoadAll<Ship>(objectDirectories[i]);
+            objectLists[i].objects = Resources.LoadAll<ScriptableObject>(objectDirectories[i]);
         }
 
         completeList = PutAllObjectsInCompleteList();
@@ -64,6 +64,7 @@ public class ListManager : ScriptableObject
 
     public ScriptableObject[] GetCompleteList()
     {
+        completeList = PutAllObjectsInCompleteList();
         return completeList;
     }
 }
