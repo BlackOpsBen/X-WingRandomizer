@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 [CreateAssetMenu]
@@ -9,6 +10,9 @@ public class AddonCard : ScriptableObject
 
     public int cost;
 
+    //public ShipList[] shipLists;
+
+    /*DELETE FROM HERE...
     private bool hasRestrictions;
     private bool[] restrictions;
 
@@ -72,13 +76,33 @@ public class AddonCard : ScriptableObject
     public bool grantsBoost;
     public bool grantsEvade;
     public bool grantsBarrelRoll;
+    ... TO HERE*/
 
-    private void Awake()
-    {
-        MakeListOfRestrictions();
-        hasRestrictions = SetHasRestrictions();
-    }
+    //private void OnValidate()
+    //{
+    //    string pathPrefix = "Assets/Resources/";
 
+    //    string[] shipDirectories = Directory.GetDirectories(pathPrefix + "Ships");
+
+    //    for (int i = 0; i < shipDirectories.Length; i++)
+    //    {
+    //        shipDirectories[i] = shipDirectories[i].Replace(pathPrefix, string.Empty);
+    //        shipDirectories[i] = shipDirectories[i].Replace("\\", "/");
+    //    }
+        
+
+    //    shipLists = new ShipList[shipDirectories.Length];
+
+    //    for (int i = 0; i < shipLists.Length; i++)
+    //    {
+    //        shipLists[i] = new ShipList();
+    //        shipLists[i].name = shipDirectories[i].Replace("Ships/", string.Empty);
+
+    //        shipLists[i].ships = Resources.LoadAll<Ship>(shipDirectories[i]);
+    //    }
+    //}
+
+    /* LIST OF RESTRICTIONS
     private void MakeListOfRestrictions()
     {
         restrictions = new bool[]
@@ -124,22 +148,11 @@ public class AddonCard : ScriptableObject
             hasTorpedoOrMissileSlot,
             requiresShieldValue1
         };
-    }
-
-    private bool SetHasRestrictions()
-    {
-        for (int i = 0; i < restrictions.Length; i++)
-        {
-            if (restrictions[i])
-            {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public bool GetHasRestrictions()
-    {
-        return hasRestrictions;
-    }
+    } */
 }
+
+//public class ShipList
+//{
+//    public string name;
+//    public Ship[] ships;
+//}
