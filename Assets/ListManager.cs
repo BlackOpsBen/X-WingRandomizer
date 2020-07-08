@@ -10,6 +10,8 @@ public class ListManager : ScriptableObject
 
     public ObjectList[] objectLists;
 
+    public ScriptableObject[] completeList;
+
     private void OnValidate()
     {
         updateList = false;
@@ -34,9 +36,11 @@ public class ListManager : ScriptableObject
 
             objectLists[i].objects = Resources.LoadAll<Ship>(objectDirectories[i]);
         }
+
+        completeList = PutAllObjectsInCompleteList();
     }
 
-    public ScriptableObject[] GetAllObjectsInList()
+    private ScriptableObject[] PutAllObjectsInCompleteList()
     {
         int arraySize = 0;
         for (int i = 0; i < objectLists.Length; i++)
@@ -45,15 +49,22 @@ public class ListManager : ScriptableObject
         }
         ScriptableObject[] objects = new ScriptableObject[arraySize];
 
+        int objectCounter = 0;
         for (int i = 0; i < objectLists.Length; i++)
         {
             for (int j = 0; j < objectLists[i].objects.Length; j++)
             {
-                objects[j + objectLists[Mathf.Min(0, i - 1)].objects.Length * i] = objectLists[i].objects[j];
+                objects[objectCounter] = objectLists[i].objects[j];
+                objectCounter++;
             }
         }
 
         return objects;
+    }
+
+    public ScriptableObject[] GetCompleteList()
+    {
+        return completeList;
     }
 }
 
