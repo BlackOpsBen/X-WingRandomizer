@@ -31,12 +31,12 @@ public class CardRandomizer : MonoBehaviour
     private void MakeRandomPilot()
     {
         // Randomly selects Ship
-        int randShip = UnityEngine.Random.Range(0, PilotCardManager.Instance.rebelShips.Length);
-        ship = PilotCardManager.Instance.rebelShips[randShip];
+        int randShip = UnityEngine.Random.Range(0, PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].ships.Length);
+        ship = PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].ships[randShip];
 
         // Randomly selects Pilot based on selected Ship
-        int randPilot = UnityEngine.Random.Range(0, PilotCardManager.Instance.rebelPilotGroups[randShip].pilots.Length);
-        pilot = PilotCardManager.Instance.rebelPilotGroups[randShip].pilots[randPilot];
+        int randPilot = UnityEngine.Random.Range(0, PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].pilotGroups[randShip].pilots.Length);
+        pilot = PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].pilotGroups[randShip].pilots[randPilot];
 
         // Creates array of addon card slots
         pilot.MakeList();
@@ -476,7 +476,7 @@ public class CardRandomizer : MonoBehaviour
             }
         }
 
-        if (addonCard.barrelRoll && ship.barrelRoll)
+        if (addonCard.grantsBarrelRoll && ship.barrelRoll)
         {
             //Debug.Log(addonCard.name + " grants a redundant ability (Barrel Roll). Invalid selection.");
             return false;

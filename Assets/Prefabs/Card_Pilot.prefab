@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4571977692424949264}
   - component: {fileID: 8558586439903723294}
   - component: {fileID: 4625647840159496165}
-  - component: {fileID: 1698151590071537222}
+  - component: {fileID: 5613837977817113039}
   m_Layer: 0
   m_Name: Card_Pilot
   m_TagString: card
@@ -82,7 +82,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &1698151590071537222
+--- !u!114 &5613837977817113039
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,6 +91,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 6508797645920780872}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8d18578f9a35a84e97d65d898ffeb7e, type: 3}
+  m_Script: {fileID: 11500000, guid: a10f23c1494b8054dab2ee8dbdcc3aa8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  faceMatIndex: 1
+  backMatIndex: 2
+  cardTextures:
+  - {fileID: 2800000, guid: 895b0879962934b47b5b25aac2a62d43, type: 3}
+  - {fileID: 2800000, guid: 4c361807aab809f4b89091bca7b96935, type: 3}
+  - {fileID: 2800000, guid: 6dc2eabc8d27b4a47844368929321f5e, type: 3}

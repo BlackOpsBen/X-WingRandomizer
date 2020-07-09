@@ -6,24 +6,49 @@ public class PilotCardManager : MonoBehaviour
 {
     public static PilotCardManager Instance { get; private set; }
 
-    public Ship[] rebelShips;
-    public Ship[] imperialShips;
-    public PilotGroup[] rebelPilotGroups;
-    public PilotGroup[] imperialPilotGroups;
+    public string[] factions;
+
+    public int selectedFaction;
+
+    private GameObject pilotCard;
+
+    [System.Serializable]
+    public class Faction
+    {
+        public string name;
+        public Ship[] ships;
+        public PilotGroup[] pilotGroups;
+    }
+
+    public Faction[] factionList;
 
     private void Awake()
     {
         SingletonPattern();
 
+        pilotCard = FindObjectOfType<ChangeFaction>().gameObject;
+
+        factionList = new Faction[factions.Length];
+        for (int i = 0; i < factionList.Length; i++)
+        {
+            factionList[i] = new Faction();
+            factionList[i].name = factions[i];
+        }
+
         LoadAllShips();
-        CreatePilotGroups(ref rebelPilotGroups, ref rebelShips);
-        CreatePilotGroups(ref imperialPilotGroups, ref imperialShips);
+
+        for (int i = 0; i < factionList.Length; i++)
+        {
+            CreatePilotGroups(ref factionList[i].pilotGroups, ref factionList[i].ships);
+        }
     }
 
     private void LoadAllShips()
     {
-        rebelShips = Resources.LoadAll<Ship>("Ships/Rebel");
-        imperialShips = Resources.LoadAll<Ship>("Ships/Imperial");
+        for (int i = 0; i < factionList.Length; i++)
+        {
+            factionList[i].ships = Resources.LoadAll<Ship>("Ships/" + factionList[i].name);
+        }
     }
 
     private void CreatePilotGroups(ref PilotGroup[] pilotGroups, ref Ship[] ships)
@@ -49,6 +74,12 @@ public class PilotCardManager : MonoBehaviour
         {
             Instance = this;
         }
+    }
+
+    public void ChangeSelectedFaction(int faction)
+    {
+        selectedFaction = faction;
+        pilotCard.GetComponent<ChangeFaction>().ChangeCardBack(selectedFaction);
     }
 }
 

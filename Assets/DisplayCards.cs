@@ -25,7 +25,7 @@ public class DisplayCards : MonoBehaviour
 
         pilotCardModel.GetComponent<MeshRenderer>().materials[faceMatIndex].mainTexture = texture;
 
-        pilotCardModel.AddComponent<MoveAndFlip>();
+        pilotCardModel.GetComponent<FlipPilotCard>().SetDestRot(Vector3.zero);
     }
 
     public void DisplayAddons(List<AddonCard> addonCards)
