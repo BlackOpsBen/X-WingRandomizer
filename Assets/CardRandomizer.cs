@@ -336,8 +336,28 @@ public class CardRandomizer : MonoBehaviour
                 }
             }
 
-            if (addonCard.torpedoOrMissileEquipped && pilot.GetAddonTypeQuantity(1) == 0 && pilot.GetAddonTypeQuantity(2) == 0)
+            if (addonCard.torpedoOrMissileEquipped)
             {
+                if (pilot.GetAddonTypeQuantity(1) == 0 && pilot.GetAddonTypeQuantity(2) == 0)
+                {
+                    Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip a torpedo or missile.");
+                    return false;
+                }
+
+                bool isEquipped = false;
+                foreach (AddonCard prevCard in addonCards)
+                {
+                    if (prevCard is Torpedo || prevCard is Missile)
+                    {
+                        isEquipped = true;
+                    }
+                }
+                if (!isEquipped)
+                {
+                    
+                }
+
+
                 //Debug.Log(addonCard.name + " requires a Torpedo or Missile to be equipped. Invalid selection.");
                 //Debug.LogWarning("Need to allow for potential selection of Torpedo or Missile to make " + addonCard.name + " a valid selection.");
                 return false;
