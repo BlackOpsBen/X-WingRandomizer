@@ -28,3 +28,4 @@ MonoBehaviour:
   hugeShip: 0
   heavyTIE: 0
   TIE: 0
+  titles: []

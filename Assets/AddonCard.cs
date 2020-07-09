@@ -53,7 +53,7 @@ public class AddonCard : ScriptableObject
     public bool cloak;
     public bool boostOrBarrelRoll;
     public bool focusOrEvade;
-    public bool SLAM;
+    public bool slam;
 
     [Header("Misc Restrictions")]
     public bool cantAlreadyHaveElitePilotTalentSlot;
@@ -73,11 +73,17 @@ public class AddonCard : ScriptableObject
     public bool grantsEvade;
     public bool grantsBarrelRoll;
 
-    private void Awake()
+    private void OnValidate()
     {
         MakeListOfRestrictions();
         hasRestrictions = SetHasRestrictions();
     }
+
+    //private void Awake()
+    //{
+    //    MakeListOfRestrictions();
+    //    hasRestrictions = SetHasRestrictions();
+    //}
 
     private void MakeListOfRestrictions()
     {
@@ -115,7 +121,7 @@ public class AddonCard : ScriptableObject
             cloak,
             boostOrBarrelRoll,
             focusOrEvade,
-            SLAM,
+            slam,
             cantAlreadyHaveElitePilotTalentSlot,
             hasMinPilotSkill,
             hasMaxPilotSkill,

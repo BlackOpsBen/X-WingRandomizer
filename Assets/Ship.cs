@@ -13,7 +13,7 @@ public class Ship : ScriptableObject
     public bool evade;
     public bool barrelRoll;
     public bool cloak;
-    public bool SLAM;
+    public bool slam;
 
     [Header("Faction")]
     public bool rebel;

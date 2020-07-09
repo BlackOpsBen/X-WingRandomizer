@@ -17,11 +17,10 @@ MonoBehaviour:
   pilotSkill: 1
   cost: 22
   elitePilotTalents: 1
-  torpedoes: 0
+  torpedoes: 1
   missiles: 0
   bombs: 0
   modifications: 1
-  titles: 0
   astromechs: 1
   cannons: 0
   turrets: 0
