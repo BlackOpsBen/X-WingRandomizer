@@ -9,9 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88a1fb23bd78df745bf6c61057502607, type: 3}
-  m_Name: Pilots
+  m_Script: {fileID: 11500000, guid: 1042fbb3d7afbd04fa59b7d5e0de86e1, type: 3}
+  m_Name: Target Lock
   m_EditorClassIdentifier: 
-  updateList: 0
-  objectLists: []
-  completeList: []

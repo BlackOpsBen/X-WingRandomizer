@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class QualityList : ScriptableObject
+public class Quality : ScriptableObject
 {
-    public string[] qualities;
+    
 }
