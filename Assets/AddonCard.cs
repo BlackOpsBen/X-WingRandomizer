@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu]
 public class AddonCard : ScriptableObject
 {
+    public bool forcePushChanges;
+
     public Sprite cardArt;
 
     public int cost;
@@ -77,6 +79,7 @@ public class AddonCard : ScriptableObject
     {
         MakeListOfRestrictions();
         hasRestrictions = SetHasRestrictions();
+        forcePushChanges = false;
     }
 
     //private void Awake()

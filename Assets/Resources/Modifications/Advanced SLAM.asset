@@ -46,7 +46,7 @@ MonoBehaviour:
   cloak: 0
   boostOrBarrelRoll: 0
   focusOrEvade: 0
-  SLAM: 1
+  slam: 1
   cantAlreadyHaveElitePilotTalentSlot: 0
   hasMinPilotSkill: 0
   minPilotSkill: 0

@@ -100,12 +100,12 @@ public class CardRandomizer : MonoBehaviour
 
     private bool ValidateSelection(AddonCard addonCard)
     {
+        if (addonCard is Astromech)
+        {
+            Debug.Log(addonCard.name + " is being evaluated.");
+        }
         if (addonCard.GetHasRestrictions())
         {
-            if (addonCard.name == "Advanced SLAM")
-            {
-                Debug.Log(addonCard.name + " has restrictions.");
-            }
             //Debug.Log(addonCard.name + " has restrictions.");
 
             if (addonCard.unique)
@@ -234,7 +234,7 @@ public class CardRandomizer : MonoBehaviour
 
             if (addonCard.TIEOnly && !ship.TIE)
             {
-                Debug.Log(addonCard.name + " requires any TIE type. Invalid selection.");
+                //Debug.Log(addonCard.name + " requires any TIE type. Invalid selection.");
                 return false;
             }
 
@@ -307,7 +307,7 @@ public class CardRandomizer : MonoBehaviour
 
             if (addonCard.slam && !ship.slam)
             {
-                Debug.Log(addonCard.name + " requires a ship that can SLAM. Invalid selection.");
+                //Debug.Log(addonCard.name + " requires a ship that can SLAM. Invalid selection.");
                 return false;
             }
 
@@ -364,10 +364,6 @@ public class CardRandomizer : MonoBehaviour
         }
         else
         {
-            if (addonCard.name == "Advanced SLAM")
-            {
-                Debug.Log("Supposedly " + addonCard.name + " does not have any requirements!");
-            }
             //Debug.Log(addonCard.name + " does NOT have any restrictions.");
         }
 
@@ -481,9 +477,10 @@ public class CardRandomizer : MonoBehaviour
                 return false;
             }
         }
-        if (addonCard.name == "Advanced SLAM")
+
+        if (addonCard is Astromech)
         {
-            Debug.Log("All requirements supposedly met for equipping " + addonCard.name + ". hmmm...");
+            Debug.Log(addonCard.name + " is valid.");
         }
         //Debug.Log("All requirements met for equipping " + addonCard.name + ". This card is valid!");
         return true;
