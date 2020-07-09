@@ -1,8 +1,20 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 [CreateAssetMenu]
 public class Ship : ScriptableObject
 {
+    public RestrictionListGroup restrictionListGroup;
+
+    private ListManager qualityListManager;
+
+    private void OnValidate()
+    {
+        RestrictionManager rm = ScriptableObject.CreateInstance<RestrictionManager>();
+        restrictionListGroup = rm.CreateRestrictionLists(restrictionListGroup, "Qualities");
+    }
+
+    /* OLD VERSION
     [Header("Stats")]
     public int shieldValue;
 
@@ -29,4 +41,5 @@ public class Ship : ScriptableObject
 
     [Header("Title Options")]
     [SerializeField] private Title[] titles;
+    */
 }
