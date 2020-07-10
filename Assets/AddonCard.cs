@@ -56,6 +56,7 @@ public class AddonCard : ScriptableObject
     public bool boostOrBarrelRoll;
     public bool focusOrEvade;
     public bool slam;
+    public bool actionHeader;
 
     [Header("Misc Restrictions")]
     public bool cantAlreadyHaveElitePilotTalentSlot;
@@ -67,6 +68,8 @@ public class AddonCard : ScriptableObject
     public bool torpedoOrMissileOrBombEquipped;
     public bool hasTorpedoOrMissileSlot;
     public bool requiresShieldValue1;
+    public bool bombEquipped;
+    public bool hasAstromechEquipped;
 
     [Header("Grants actions/abilities:")]
     public bool grantsFocus;
@@ -74,6 +77,13 @@ public class AddonCard : ScriptableObject
     public bool grantsBoost;
     public bool grantsEvade;
     public bool grantsBarrelRoll;
+    public bool grantsActionHeader;
+
+    [Header("Grants new slots to fill")]
+    public bool grantsElitePilotTalent;
+    public bool grantsCrew;
+    public bool grantsIllicit;
+    public bool grantsModificationCosting3OrLess;
 
     private void OnValidate()
     {
@@ -119,13 +129,16 @@ public class AddonCard : ScriptableObject
             boostOrBarrelRoll,
             focusOrEvade,
             slam,
+            actionHeader,
             cantAlreadyHaveElitePilotTalentSlot,
             hasMinPilotSkill,
             hasMaxPilotSkill,
             torpedoOrMissileEquipped,
             torpedoOrMissileOrBombEquipped,
             hasTorpedoOrMissileSlot,
-            requiresShieldValue1
+            requiresShieldValue1,
+            bombEquipped,
+            hasAstromechEquipped
         };
     }
 

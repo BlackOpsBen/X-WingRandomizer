@@ -9,13 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2614d7a3fe43b5f4097ba3c27e303646, type: 3}
-  m_Name: Squad Leader
+  m_Script: {fileID: 11500000, guid: c13d99f7654b4814197abd859e2bb759, type: 3}
+  m_Name: Servomotor S-Foils
   m_EditorClassIdentifier: 
   forcePushChanges: 0
-  cardArt: {fileID: 21300000, guid: 07b3f39621793cc43b324e6a633bb23f, type: 3}
-  cost: 2
-  unique: 1
+  cardArt: {fileID: 0}
+  cost: 0
+  unique: 0
   limited: 0
   rebelOnly: 0
   imperialOnly: 0
@@ -36,7 +36,7 @@ MonoBehaviour:
   quadjumperOnly: 0
   heavyTIEOnly: 0
   TIEOnly: 0
-  T65xWingOnly: 0
+  T65xWingOnly: 1
   aWingOnly: 0
   yWingOnly: 0
   focus: 0
@@ -50,8 +50,8 @@ MonoBehaviour:
   slam: 0
   actionHeader: 0
   cantAlreadyHaveElitePilotTalentSlot: 0
-  hasMinPilotSkill: 1
-  minPilotSkill: 2
+  hasMinPilotSkill: 0
+  minPilotSkill: 0
   hasMaxPilotSkill: 0
   maxPilotSkill: 0
   torpedoOrMissileEquipped: 0
@@ -62,10 +62,10 @@ MonoBehaviour:
   hasAstromechEquipped: 0
   grantsFocus: 0
   grantsTargetLock: 0
-  grantsBoost: 0
+  grantsBoost: 1
   grantsEvade: 0
-  grantsBarrelRoll: 0
-  grantsActionHeader: 1
+  grantsBarrelRoll: 1
+  grantsActionHeader: 0
   grantsElitePilotTalent: 0
   grantsCrew: 0
   grantsIllicit: 0

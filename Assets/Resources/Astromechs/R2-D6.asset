@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9104d6957c474c4db4428f74b090480, type: 3}
   m_Name: R2-D6
   m_EditorClassIdentifier: 
+  forcePushChanges: 0
   cardArt: {fileID: 21300000, guid: 21e8bc0201be18f4bbf26a9d58716d9a, type: 3}
   cost: 1
   unique: 1
@@ -46,7 +47,7 @@ MonoBehaviour:
   cloak: 0
   boostOrBarrelRoll: 0
   focusOrEvade: 0
-  SLAM: 0
+  slam: 0
   cantAlreadyHaveElitePilotTalentSlot: 1
   hasMinPilotSkill: 1
   minPilotSkill: 3
@@ -61,3 +62,5 @@ MonoBehaviour:
   grantsBoost: 0
   grantsEvade: 0
   grantsBarrelRoll: 0
+  grantsElitePilotTalent: 1
+  grantsCrew: 0

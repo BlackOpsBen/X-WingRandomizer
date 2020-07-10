@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c13d99f7654b4814197abd859e2bb759, type: 3}
   m_Name: Spacetug Tractor Array
   m_EditorClassIdentifier: 
+  forcePushChanges: 0
   cardArt: {fileID: 21300000, guid: 1b81dbeb7f40aad40aef3ecc23fc114f, type: 3}
   cost: 2
   unique: 0
@@ -46,7 +47,8 @@ MonoBehaviour:
   cloak: 0
   boostOrBarrelRoll: 0
   focusOrEvade: 0
-  SLAM: 0
+  slam: 0
+  actionHeader: 0
   cantAlreadyHaveElitePilotTalentSlot: 0
   hasMinPilotSkill: 0
   minPilotSkill: 0
@@ -56,8 +58,15 @@ MonoBehaviour:
   torpedoOrMissileOrBombEquipped: 0
   hasTorpedoOrMissileSlot: 0
   requiresShieldValue1: 0
+  bombEquipped: 0
+  hasAstromechEquipped: 0
   grantsFocus: 0
   grantsTargetLock: 0
   grantsBoost: 0
   grantsEvade: 0
   grantsBarrelRoll: 0
+  grantsActionHeader: 1
+  grantsElitePilotTalent: 0
+  grantsCrew: 0
+  grantsIllicit: 0
+  grantsModificationCosting3OrLess: 0

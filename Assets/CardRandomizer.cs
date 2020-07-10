@@ -24,6 +24,8 @@ public class CardRandomizer : MonoBehaviour
         MakeRandomPilot();
         SelectAddons();
 
+        FillAnyNewSlots();
+
         GetComponent<DisplayCards>().DisplayAddons(addonCards);
 
         UIManager.Instance.EnableKeepOrPass();
@@ -110,7 +112,10 @@ public class CardRandomizer : MonoBehaviour
         }
     }
 
+    private void FillAnyNewSlots()
+    {
 
+    }
 
     private bool ValidateSelection(AddonCard addonCard)
     {
@@ -371,6 +376,18 @@ public class CardRandomizer : MonoBehaviour
             if (addonCard.requiresShieldValue1 && ship.shieldValue != 1)
             {
                 //Debug.Log(addonCard.name + " requires a Shield Value of exactly 1. Invalid selection.");
+                return false;
+            }
+
+            if (addonCard.bombEquipped && pilot.GetAddonTypeQuantity(3) == 0)
+            {
+                Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip a bomb.");
+                return false;
+            }
+
+            if (addonCard.hasAstromechEquipped && pilot.GetAddonTypeQuantity(5) == 0)
+            {
+                Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip an Astromech.");
                 return false;
             }
         }
