@@ -25,6 +25,8 @@ public class CardRandomizer : MonoBehaviour
         SelectAddons();
 
         GetComponent<DisplayCards>().DisplayAddons(addonCards);
+
+        UIManager.Instance.EnableKeepOrPass();
     }
 
     private void ResetPilot()
@@ -65,7 +67,7 @@ public class CardRandomizer : MonoBehaviour
         {
             for (int j = 0; j < pilot.GetAddonTypeQuantity(i); j++)
             {
-                if (Roll())
+                if (true) // TODO set this back to Roll() and make better odds
                 {
                     List<AddonCard> allCards = new List<AddonCard>();
 
@@ -107,6 +109,8 @@ public class CardRandomizer : MonoBehaviour
             return true;
         }
     }
+
+
 
     private bool ValidateSelection(AddonCard addonCard)
     {

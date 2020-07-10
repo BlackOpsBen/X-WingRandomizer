@@ -76,14 +76,20 @@ public class DisplayCards : MonoBehaviour
         }
     }
 
-    private void ClearPreviousCards()
+    public void ClearPreviousCards()
     {
         fitView.ClearTargets();
         foreach (GameObject cardObject in addonCardObjects)
         {
-            Destroy(cardObject);
+            cardObject.GetComponent<MoveAndFlip>().ExitCard();
+            Destroy(cardObject, 1f);
         }
         addonCardObjects.Clear();
+    }
+
+    public void FlipPilotCard()
+    {
+        pilotCardModel.GetComponent<FlipPilotCard>().SetDestRot(new Vector3(0f, -180f, 0f));
     }
 
     private int CheckForFirstCard(int i)

@@ -10,7 +10,7 @@ public class FitView : MonoBehaviour
     public float minFOV = 60f;
     public float maxFOV = 70f;
 
-    private Vector3 offset = new Vector3(0f, 0f, -5f);
+    [SerializeField] private Vector3 offset = new Vector3(0f, 0f, -5f);
 
     private float speed = 2f;
 
