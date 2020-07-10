@@ -71,31 +71,53 @@ public class CardRandomizer : MonoBehaviour
             {
                 if (true) // TODO set this back to Roll() and make better odds
                 {
-                    List<AddonCard> allCards = new List<AddonCard>();
-
-                    for (int k = 0; k < AddonCardManager.Instance.GetAddonCardGroupLength(i); k++)
-                    {
-                        if (ValidateSelection(AddonCardManager.Instance.GetAddonCard(i,k)))
-                        {
-                            allCards.Add(AddonCardManager.Instance.GetAddonCard(i, k));
-                        }
-                    }
-
-                    if (allCards.Count > 0)
-                    {
-                        int randMax = allCards.Count;
-                        int rand;
-
-                        AddonCard selectedCard;
-
-                        rand = UnityEngine.Random.Range(0, randMax);
-                        selectedCard = allCards[rand];
-
-                        addonCards.Add(selectedCard);
-                        totalCost += selectedCard.cost;
-                    }
+                    MakeValidSelection(i);
                 }
             }
+        }
+    }
+
+    private void MakeValidSelection(int addonType)
+    {
+        AddonCard selection;
+        if (selection = RandomlySelectAddon(addonType))
+        {
+            addonCards.Add(selection);
+        }
+    }
+
+    private AddonCard RandomlySelectAddon(int addonType)
+    {
+        List<AddonCard> allCards = new List<AddonCard>();
+
+        for (int k = 0; k < AddonCardManager.Instance.GetAddonCardGroupLength(addonType); k++)
+        {
+            if (ValidateSelection(AddonCardManager.Instance.GetAddonCard(addonType, k)))
+            {
+                allCards.Add(AddonCardManager.Instance.GetAddonCard(addonType, k));
+            }
+        }
+
+        if (allCards.Count > 0)
+        {
+            int randMax = allCards.Count;
+            int rand;
+
+            AddonCard selectedCard;
+
+            rand = UnityEngine.Random.Range(0, randMax);
+            selectedCard = allCards[rand];
+
+            totalCost += selectedCard.cost; // TODO delegate cost counting elsewhere
+
+            Debug.Log("Selected " + selectedCard.name);
+
+            return selectedCard;
+        }
+        else
+        {
+            Debug.LogWarning("Attempted to select a card but there were no valid choices.");
+            return null;
         }
     }
 
@@ -114,7 +136,40 @@ public class CardRandomizer : MonoBehaviour
 
     private void FillAnyNewSlots()
     {
+        foreach (AddonCard addonCard in addonCards)
+        {
+            if (addonCard.grantsCrew)
+            {
+                MakeValidSelection(8);
+                Debug.Log("Verify this selection was of type 'Crew'");
+            }
 
+            if (addonCard.grantsElitePilotTalent)
+            {
+                MakeValidSelection(0);
+                Debug.Log("Verify this selection was of type 'Elite Pilot Talent'");
+            }
+
+            if (addonCard.grantsIllicit)
+            {
+                MakeValidSelection(11);
+                Debug.Log("Verify this selection was of type 'Illicit'");
+            }
+
+            if (addonCard.grantsModificationCosting3OrLess)
+            {
+                AddonCard newMod;
+
+                do
+                {
+                    newMod = RandomlySelectAddon(4);
+                } while (newMod.cost > 3);
+
+                // TODO need to make valid selection if no valid card exists. Avoid inf loop
+                
+                Debug.Log("Verify this selection was of type 'Modification' and that it costs 3 or less points.");
+            }
+        }
     }
 
     private bool ValidateSelection(AddonCard addonCard)
