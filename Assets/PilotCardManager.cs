@@ -28,18 +28,20 @@ public class PilotCardManager : MonoBehaviour
 
         pilotCard = FindObjectOfType<ChangeFaction>().gameObject;
 
+        InitializeFactions();
+
+        LoadAllShips();
+
+        LoadAllPilots();
+    }
+
+    private void InitializeFactions()
+    {
         factionList = new Faction[factions.Length];
         for (int i = 0; i < factionList.Length; i++)
         {
             factionList[i] = new Faction();
             factionList[i].name = factions[i];
-        }
-
-        LoadAllShips();
-
-        for (int i = 0; i < factionList.Length; i++)
-        {
-            CreatePilotGroups(ref factionList[i].pilotGroups, ref factionList[i].ships);
         }
     }
 
@@ -48,6 +50,14 @@ public class PilotCardManager : MonoBehaviour
         for (int i = 0; i < factionList.Length; i++)
         {
             factionList[i].ships = Resources.LoadAll<Ship>("Ships/" + factionList[i].name);
+        }
+    }
+
+    private void LoadAllPilots()
+    {
+        for (int i = 0; i < factionList.Length; i++)
+        {
+            CreatePilotGroups(ref factionList[i].pilotGroups, ref factionList[i].ships);
         }
     }
 

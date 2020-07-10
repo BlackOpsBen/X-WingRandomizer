@@ -82,12 +82,6 @@ public class AddonCard : ScriptableObject
         forcePushChanges = false;
     }
 
-    //private void Awake()
-    //{
-    //    MakeListOfRestrictions();
-    //    hasRestrictions = SetHasRestrictions();
-    //}
-
     private void MakeListOfRestrictions()
     {
         restrictions = new bool[]

@@ -19,7 +19,7 @@ MonoBehaviour:
   evade: 1
   barrelRoll: 1
   cloak: 0
-  SLAM: 0
+  slam: 0
   rebel: 0
   imperial: 1
   scum: 0
@@ -28,3 +28,4 @@ MonoBehaviour:
   hugeShip: 0
   heavyTIE: 0
   TIE: 1
+  titles: []

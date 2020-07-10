@@ -10,42 +10,53 @@ public class CardRandomizer : MonoBehaviour
     public List<AddonCard> addonCards;
     public int totalCost;
 
-    private void Update()
+    private DisplayCards displayCards;
+
+    private void Awake()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
-        {
-            GenerateNewSet();
-        }
+        displayCards = GetComponent<DisplayCards>();
     }
 
-    private void GenerateNewSet()
+    // Called by UI Button
+    public void GenerateNewSet()
     {
-        addonCards.Clear();
-        totalCost = 0;
+        ResetPilot();
         MakeRandomPilot();
         SelectAddons();
 
         GetComponent<DisplayCards>().DisplayAddons(addonCards);
     }
 
+    private void ResetPilot()
+    {
+        addonCards.Clear();
+        totalCost = 0;
+    }
+
     private void MakeRandomPilot()
     {
-        // Randomly selects Ship
-        int randShip = UnityEngine.Random.Range(0, PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].ships.Length);
-        ship = PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].ships[randShip];
+        int randShip = RollForShip(out ship);
 
-        // Randomly selects Pilot based on selected Ship
-        int randPilot = UnityEngine.Random.Range(0, PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].pilotGroups[randShip].pilots.Length);
-        pilot = PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].pilotGroups[randShip].pilots[randPilot];
+        pilot = RollForPilot(randShip);
 
-        // Creates array of addon card slots
         pilot.MakeList();
 
-        // Displays the pilot on the card model
-        GetComponent<DisplayCards>().DisplayPilot(pilot.GetTexture());
+        displayCards.DisplayPilot(pilot.GetTexture());
 
-        // Adds the cost of the selected Pilot
         totalCost += pilot.GetCost();
+    }
+
+    private int RollForShip(out Ship s)
+    {
+        int result = UnityEngine.Random.Range(0, PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].ships.Length);
+        s = PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].ships[result];
+        return result;
+    }
+
+    private PilotCard RollForPilot(int randShip)
+    {
+        int randPilot = UnityEngine.Random.Range(0, PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].pilotGroups[randShip].pilots.Length);
+        return PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].pilotGroups[randShip].pilots[randPilot];
     }
 
     private void SelectAddons()
@@ -54,8 +65,7 @@ public class CardRandomizer : MonoBehaviour
         {
             for (int j = 0; j < pilot.GetAddonTypeQuantity(i); j++)
             {
-                // roll to see if to be filled
-                if (true)
+                if (Roll())
                 {
                     List<AddonCard> allCards = new List<AddonCard>();
 
@@ -100,14 +110,8 @@ public class CardRandomizer : MonoBehaviour
 
     private bool ValidateSelection(AddonCard addonCard)
     {
-        if (addonCard is Astromech)
-        {
-            Debug.Log(addonCard.name + " is being evaluated.");
-        }
         if (addonCard.GetHasRestrictions())
         {
-            //Debug.Log(addonCard.name + " has restrictions.");
-
             if (addonCard.unique)
             {
                 //Debug.Log(addonCard.name + " is Unique. Checking to see if it was already purchased in this squadron...");
@@ -343,31 +347,15 @@ public class CardRandomizer : MonoBehaviour
                     Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip a torpedo or missile.");
                     return false;
                 }
-
-                bool isEquipped = false;
-                foreach (AddonCard prevCard in addonCards)
-                {
-                    if (prevCard is Torpedo || prevCard is Missile)
-                    {
-                        isEquipped = true;
-                    }
-                }
-                if (!isEquipped)
-                {
-                    
-                }
-
-
-                //Debug.Log(addonCard.name + " requires a Torpedo or Missile to be equipped. Invalid selection.");
-                //Debug.LogWarning("Need to allow for potential selection of Torpedo or Missile to make " + addonCard.name + " a valid selection.");
-                return false;
             }
 
-            if (addonCard.torpedoOrMissileOrBombEquipped && pilot.GetAddonTypeQuantity(1) == 0 && pilot.GetAddonTypeQuantity(2) == 0 && pilot.GetAddonTypeQuantity(3) == 0)
+            if (addonCard.torpedoOrMissileOrBombEquipped)
             {
-                //Debug.Log(addonCard.name + " requires a Torpedo or Missile or Bomb to be equipped. Invalid selection.");
-                //Debug.LogWarning("Need to allow for potential selection of Torpedo or Missile or Bomb to make " + addonCard.name + " a valid selection.");
-                return false;
+                if (pilot.GetAddonTypeQuantity(1) == 0 && pilot.GetAddonTypeQuantity(2) == 0 && pilot.GetAddonTypeQuantity(3) == 0)
+                {
+                    Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip a torpedo or missile or bomb.");
+                    return false;
+                }
             }
 
             if (addonCard.hasTorpedoOrMissileSlot && pilot.GetAddonTypeQuantity(1) == 0 && pilot.GetAddonTypeQuantity(2) == 0)
@@ -498,10 +486,6 @@ public class CardRandomizer : MonoBehaviour
             }
         }
 
-        if (addonCard is Astromech)
-        {
-            Debug.Log(addonCard.name + " is valid.");
-        }
         //Debug.Log("All requirements met for equipping " + addonCard.name + ". This card is valid!");
         return true;
     }

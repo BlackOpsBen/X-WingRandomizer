@@ -13,20 +13,9 @@ public class AddonCardManager : MonoBehaviour
     private void Awake()
     {
         SingletonPattern();
+
         InitializeNames();
         CreateAddonCardGroups();
-    }
-
-    private void CreateAddonCardGroups()
-    {
-        addonCardGroups = new AddonCardGroup[addonCardNames.Length];
-
-        for (int i = 0; i < addonCardGroups.Length; i++)
-        {
-            addonCardGroups[i] = new AddonCardGroup();
-            addonCardGroups[i].name = addonCardNames[i];
-            addonCardGroups[i].addonCards = Resources.LoadAll<AddonCard>(addonCardNames[i]);
-        }
     }
 
     private void InitializeNames()
@@ -50,6 +39,18 @@ public class AddonCardManager : MonoBehaviour
             "Teams",
             "SalvagedAstromechs"
             };
+    }
+
+    private void CreateAddonCardGroups()
+    {
+        addonCardGroups = new AddonCardGroup[addonCardNames.Length];
+
+        for (int i = 0; i < addonCardGroups.Length; i++)
+        {
+            addonCardGroups[i] = new AddonCardGroup();
+            addonCardGroups[i].name = addonCardNames[i];
+            addonCardGroups[i].addonCards = Resources.LoadAll<AddonCard>(addonCardNames[i]);
+        }
     }
 
     public AddonCard GetAddonCard(int group, int card)
