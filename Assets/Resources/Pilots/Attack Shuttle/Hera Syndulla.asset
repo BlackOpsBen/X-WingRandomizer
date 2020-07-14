@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca49ddfea8c813b4e9baa4f7776fbc1b, type: 3}
   m_Name: Hera Syndulla
   m_EditorClassIdentifier: 
-  cardArt: {fileID: 0}
-  isUnique: 0
-  pilotSkill: 0
-  cost: 0
-  elitePilotTalents: 0
+  cardArt: {fileID: 21300000, guid: 7ab367126e036fc45a27c794defc4bb3, type: 3}
+  isUnique: 1
+  pilotSkill: 7
+  cost: 22
+  elitePilotTalents: 1
   torpedoes: 0
   missiles: 0
   bombs: 0
   modifications: 1
   astromechs: 0
   cannons: 0
-  turrets: 0
-  crews: 0
+  turrets: 1
+  crews: 1
   systems: 0
   techs: 0
   illicits: 0

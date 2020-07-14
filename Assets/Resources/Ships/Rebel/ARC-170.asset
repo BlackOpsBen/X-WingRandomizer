@@ -12,18 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: ARC-170
   m_EditorClassIdentifier: 
-  shieldValue: 0
-  focus: 0
-  targetLock: 0
+  shieldValue: 3
+  focus: 1
+  targetLock: 1
   boost: 0
   evade: 0
   barrelRoll: 0
   cloak: 0
   slam: 0
-  rebel: 0
+  rebel: 1
   imperial: 0
   scum: 0
-  smallShip: 0
+  smallShip: 1
   largeShip: 0
   hugeShip: 0
   heavyTIE: 0
