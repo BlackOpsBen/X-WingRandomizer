@@ -172,6 +172,18 @@ public class CardRandomizer : MonoBehaviour
         }
     }
 
+    private bool PreviousCardValidates(int aGrantingIndex)
+    {
+        foreach (AddonCard addonCard in addonCards)
+        {
+            if (addonCard.GetActionGranting(aGrantingIndex))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
     private bool ValidateSelection(AddonCard addonCard)
     {
         if (addonCard.GetHasRestrictions())
@@ -325,31 +337,31 @@ public class CardRandomizer : MonoBehaviour
             }
 
             // Action Restrictions
-            if (addonCard.focus && !ship.focus)
+            if (addonCard.focus && !ship.focus && PreviousCardValidates(0))
             {
                 //Debug.Log(addonCard.name + " requires a ship that can Focus. Invalid selection.");
                 return false;
             }
 
-            if (addonCard.targetLock && !ship.targetLock)
+            if (addonCard.targetLock && !ship.targetLock && PreviousCardValidates(1))
             {
                 //Debug.Log(addonCard.name + " requires a ship that can Target Lock. Invalid selection.");
                 return false;
             }
 
-            if (addonCard.boost && !ship.boost)
+            if (addonCard.boost && !ship.boost && PreviousCardValidates(2))
             {
                 //Debug.Log(addonCard.name + " requires a ship that can Boost. Invalid selection.");
                 return false;
             }
 
-            if (addonCard.evade && !ship.evade)
+            if (addonCard.evade && !ship.evade && PreviousCardValidates(3))
             {
                 //Debug.Log(addonCard.name + " requires a ship that can Evade. Invalid selection.");
                 return false;
             }
 
-            if (addonCard.barrelRoll && !ship.barrelRoll)
+            if (addonCard.barrelRoll && !ship.barrelRoll && PreviousCardValidates(4))
             {
                 //Debug.Log(addonCard.name + " requires a ship that can Barrel Roll. Invalid selection.");
                 return false;
@@ -361,13 +373,13 @@ public class CardRandomizer : MonoBehaviour
                 return false;
             }
 
-            if (addonCard.boostOrBarrelRoll && !ship.boost && !ship.barrelRoll)
+            if (addonCard.boostOrBarrelRoll && !ship.boost && !ship.barrelRoll && PreviousCardValidates(2) && PreviousCardValidates(4))
             {
                 //Debug.Log(addonCard.name + " requires a ship that can Boost or Barrel Roll. Invalid selection.");
                 return false;
             }
 
-            if (addonCard.focusOrEvade && !ship.focus && !ship.evade)
+            if (addonCard.focusOrEvade && !ship.focus && !ship.evade && PreviousCardValidates(0) && PreviousCardValidates(3))
             {
                 //Debug.Log(addonCard.name + " requires a ship that can Focus or Evade. Invalid selection.");
                 return false;
