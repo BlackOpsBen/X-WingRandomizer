@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c13d99f7654b4814197abd859e2bb759, type: 3}
-  m_Name: Shield Upgrade
+  m_Name: Vectored Thrusters
   m_EditorClassIdentifier: 
   forcePushChanges: 0
-  cardArt: {fileID: 21300000, guid: 381880cf79d3297418def1010cb8f460, type: 3}
-  cost: 4
+  cardArt: {fileID: 21300000, guid: ad10fe6446c80e149b6ec5f12ed6365c, type: 3}
+  cost: 2
   unique: 0
   limited: 0
   rebelOnly: 0
   imperialOnly: 0
   scumOnly: 0
   rebelAndScumOnly: 0
-  smallShipOnly: 0
+  smallShipOnly: 1
   largeShipOnly: 0
   hugeShipOnly: 0
   tiePhantomOnly: 0
@@ -64,7 +64,7 @@ MonoBehaviour:
   grantsTargetLock: 0
   grantsBoost: 0
   grantsEvade: 0
-  grantsBarrelRoll: 0
+  grantsBarrelRoll: 1
   grantsActionHeader: 0
   grantsElitePilotTalent: 0
   grantsCrew: 0

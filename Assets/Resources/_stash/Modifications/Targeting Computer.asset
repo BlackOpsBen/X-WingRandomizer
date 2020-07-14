@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c13d99f7654b4814197abd859e2bb759, type: 3}
-  m_Name: Shield Upgrade
+  m_Name: Targeting Computer
   m_EditorClassIdentifier: 
   forcePushChanges: 0
-  cardArt: {fileID: 21300000, guid: 381880cf79d3297418def1010cb8f460, type: 3}
-  cost: 4
+  cardArt: {fileID: 21300000, guid: 9ed689b55e02bfc4eb8dd3a71b0ce5f2, type: 3}
+  cost: 2
   unique: 0
   limited: 0
   rebelOnly: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
   bombEquipped: 0
   hasAstromechEquipped: 0
   grantsFocus: 0
-  grantsTargetLock: 0
+  grantsTargetLock: 1
   grantsBoost: 0
   grantsEvade: 0
   grantsBarrelRoll: 0

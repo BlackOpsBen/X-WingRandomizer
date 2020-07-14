@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c13d99f7654b4814197abd859e2bb759, type: 3}
-  m_Name: Shield Upgrade
+  m_Name: Pulsed Ray Shield
   m_EditorClassIdentifier: 
   forcePushChanges: 0
-  cardArt: {fileID: 21300000, guid: 381880cf79d3297418def1010cb8f460, type: 3}
-  cost: 4
+  cardArt: {fileID: 21300000, guid: df65c8c9e983c8f4f88556536a07070b, type: 3}
+  cost: 2
   unique: 0
   limited: 0
   rebelOnly: 0
   imperialOnly: 0
   scumOnly: 0
-  rebelAndScumOnly: 0
+  rebelAndScumOnly: 1
   smallShipOnly: 0
   largeShipOnly: 0
   hugeShipOnly: 0
@@ -57,7 +57,7 @@ MonoBehaviour:
   torpedoOrMissileEquipped: 0
   torpedoOrMissileOrBombEquipped: 0
   hasTorpedoOrMissileSlot: 0
-  requiresShieldValue1: 0
+  requiresShieldValue1: 1
   bombEquipped: 0
   hasAstromechEquipped: 0
   grantsFocus: 0

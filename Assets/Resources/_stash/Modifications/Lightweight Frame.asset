@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c13d99f7654b4814197abd859e2bb759, type: 3}
-  m_Name: Shield Upgrade
+  m_Name: Lightweight Frame
   m_EditorClassIdentifier: 
   forcePushChanges: 0
-  cardArt: {fileID: 21300000, guid: 381880cf79d3297418def1010cb8f460, type: 3}
-  cost: 4
+  cardArt: {fileID: 21300000, guid: 531d764d136016c4a881df7d41abea00, type: 3}
+  cost: 2
   unique: 0
   limited: 0
   rebelOnly: 0
@@ -34,7 +34,7 @@ MonoBehaviour:
   YT1300AndYT2400Only: 0
   TIEFighterOnly: 0
   quadjumperOnly: 0
-  heavyTIEOnly: 0
+  heavyTIEOnly: 1
   TIEOnly: 0
   T65xWingOnly: 0
   aWingOnly: 0

@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c13d99f7654b4814197abd859e2bb759, type: 3}
-  m_Name: Shield Upgrade
+  m_Name: Engine Upgrade
   m_EditorClassIdentifier: 
   forcePushChanges: 0
-  cardArt: {fileID: 21300000, guid: 381880cf79d3297418def1010cb8f460, type: 3}
+  cardArt: {fileID: 21300000, guid: 2e01bfaf09c8c4c468eee083259cd239, type: 3}
   cost: 4
   unique: 0
   limited: 0
@@ -62,7 +62,7 @@ MonoBehaviour:
   hasAstromechEquipped: 0
   grantsFocus: 0
   grantsTargetLock: 0
-  grantsBoost: 0
+  grantsBoost: 1
   grantsEvade: 0
   grantsBarrelRoll: 0
   grantsActionHeader: 0

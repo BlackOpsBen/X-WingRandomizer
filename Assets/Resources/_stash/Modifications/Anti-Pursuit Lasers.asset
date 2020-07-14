@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c13d99f7654b4814197abd859e2bb759, type: 3}
-  m_Name: Shield Upgrade
+  m_Name: Anti-Pursuit Lasers
   m_EditorClassIdentifier: 
   forcePushChanges: 0
-  cardArt: {fileID: 21300000, guid: 381880cf79d3297418def1010cb8f460, type: 3}
-  cost: 4
+  cardArt: {fileID: 21300000, guid: 3c58ebd5734482349b0a69ca3e310769, type: 3}
+  cost: 2
   unique: 0
   limited: 0
   rebelOnly: 0
@@ -22,7 +22,7 @@ MonoBehaviour:
   scumOnly: 0
   rebelAndScumOnly: 0
   smallShipOnly: 0
-  largeShipOnly: 0
+  largeShipOnly: 1
   hugeShipOnly: 0
   tiePhantomOnly: 0
   bWingOnly: 0

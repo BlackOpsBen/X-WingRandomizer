@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c13d99f7654b4814197abd859e2bb759, type: 3}
-  m_Name: Shield Upgrade
+  m_Name: Maneuvering Fins
   m_EditorClassIdentifier: 
   forcePushChanges: 0
-  cardArt: {fileID: 21300000, guid: 381880cf79d3297418def1010cb8f460, type: 3}
-  cost: 4
+  cardArt: {fileID: 21300000, guid: a0963e5d8cbc2bd4797e10b5bac6b1a8, type: 3}
+  cost: 1
   unique: 0
   limited: 0
   rebelOnly: 0
@@ -30,7 +30,7 @@ MonoBehaviour:
   BSF17BomberOnly: 0
   lancerClassPursuitCraftOnly: 0
   xWingOnly: 0
-  YV666Only: 0
+  YV666Only: 1
   YT1300AndYT2400Only: 0
   TIEFighterOnly: 0
   quadjumperOnly: 0
