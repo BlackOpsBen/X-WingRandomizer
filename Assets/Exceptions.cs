@@ -25,6 +25,13 @@ public class Exceptions : MonoBehaviour
         }
         #endregion
 
+        #region Extra Munitions
+        if (addonCard.name == "Extra Munitions" && pilot.GetAddonTypeQuantity(1) == 1 && pilot.GetAddonTypeQuantity(2) == 0 && pilot.GetAddonTypeQuantity(3) == 0)
+        {
+            return false;
+        }
+        #endregion
+
         return true;
     }
 }
