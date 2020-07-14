@@ -179,4 +179,9 @@ public class AddonCard : ScriptableObject
     {
         return actionGrantings[aGranting];
     }
+
+    public bool GetRestriction(int restriction)
+    {
+        return restrictions[restriction];
+    }
 }
