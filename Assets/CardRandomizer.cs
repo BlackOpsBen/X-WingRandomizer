@@ -65,13 +65,29 @@ public class CardRandomizer : MonoBehaviour
 
     private void SelectAddons()
     {
+        int numToLoop = pilot.GetNumAddonTypes();
+        List<int> orderedList = new List<int>();
+        for (int i = 0; i < numToLoop; i++)
+        {
+            orderedList.Add(i);
+        }
+
+        List<int> unorderedList = new List<int>();
+        for (int i = 0; i < numToLoop; i++)
+        {
+            int index = UnityEngine.Random.Range(0, orderedList.Count);
+            int rand = orderedList[index];
+            unorderedList.Add(rand);
+            orderedList.RemoveAt(index);
+        }
+        
         for (int i = 0; i < pilot.GetNumAddonTypes(); i++)
         {
-            for (int j = 0; j < pilot.GetAddonTypeQuantity(i); j++)
+            for (int j = 0; j < pilot.GetAddonTypeQuantity(unorderedList[i]); j++)
             {
                 if (true) // TODO set this back to Roll() and make better odds
                 {
-                    MakeValidSelection(i);
+                    MakeValidSelection(unorderedList[i]);
                 }
             }
         }
