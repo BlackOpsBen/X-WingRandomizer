@@ -62,7 +62,9 @@ public class CardRandomizer : MonoBehaviour
 
     private PilotCard RollForPilot(int randShip)
     {
+        Debug.Log("randShip = " + randShip + ".");
         int randPilot = UnityEngine.Random.Range(0, PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].pilotGroups[randShip].pilots.Length);
+        Debug.Log("randPilot = " + randPilot + ".");
         return PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].pilotGroups[randShip].pilots[randPilot];
     }
 
@@ -187,6 +189,12 @@ public class CardRandomizer : MonoBehaviour
                 // TODO need to make valid selection if no valid card exists. Avoid inf loop
                 
                 Debug.Log("Verify this selection was of type 'Modification' and that it costs 3 or less points.");
+            }
+
+            if (addonCard.grantsBomb)
+            {
+                MakeValidSelection(3);
+                Debug.Log("Verify this selection was of type 'Bomb'");
             }
         }
     }

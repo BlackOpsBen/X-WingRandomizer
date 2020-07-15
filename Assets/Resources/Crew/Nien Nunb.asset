@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12bb5836b19dcfe42a7272eb7a90a8fc, type: 3}
+  m_Name: Nien Nunb
+  m_EditorClassIdentifier: 
+  forcePushChanges: 0
+  cardArt: {fileID: 21300000, guid: 65a9fe85c850cd543885146bc3fbb3f5, type: 3}
+  cost: 1
+  unique: 1
+  limited: 0
+  rebelOnly: 1
+  imperialOnly: 0
+  scumOnly: 0
+  rebelAndScumOnly: 0
+  smallShipOnly: 0
+  largeShipOnly: 0
+  hugeShipOnly: 0
+  tiePhantomOnly: 0
+  bWingOnly: 0
+  GR75Only: 0
+  BSF17BomberOnly: 0
+  lancerClassPursuitCraftOnly: 0
+  xWingOnly: 0
+  YV666Only: 0
+  YT1300AndYT2400Only: 0
+  TIEFighterOnly: 0
+  quadjumperOnly: 0
+  heavyTIEOnly: 0
+  TIEOnly: 0
+  T65xWingOnly: 0
+  aWingOnly: 0
+  yWingOnly: 0
+  focus: 0
+  targetLock: 0
+  boost: 0
+  evade: 0
+  barrelRoll: 0
+  cloak: 0
+  boostOrBarrelRoll: 0
+  focusOrEvade: 0
+  slam: 0
+  actionHeader: 0
+  cantAlreadyHaveElitePilotTalentSlot: 0
+  hasMinPilotSkill: 0
+  minPilotSkill: 0
+  hasMaxPilotSkill: 0
+  maxPilotSkill: 0
+  torpedoOrMissileEquipped: 0
+  torpedoOrMissileOrBombEquipped: 0
+  hasTorpedoOrMissileSlot: 0
+  requiresShieldValue1: 0
+  bombEquipped: 0
+  hasAstromechEquipped: 0
+  grantsFocus: 0
+  grantsTargetLock: 0
+  grantsBoost: 0
+  grantsEvade: 0
+  grantsBarrelRoll: 0
+  grantsActionHeader: 0
+  grantsElitePilotTalent: 0
+  grantsCrew: 0
+  grantsIllicit: 0
+  grantsModificationCosting3OrLess: 0

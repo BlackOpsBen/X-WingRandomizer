@@ -86,6 +86,7 @@ public class AddonCard : ScriptableObject
     public bool grantsCrew;
     public bool grantsIllicit;
     public bool grantsModificationCosting3OrLess;
+    public bool grantsBomb;
 
     private void OnValidate()
     {

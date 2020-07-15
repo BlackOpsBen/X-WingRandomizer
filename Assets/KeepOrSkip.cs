@@ -5,17 +5,18 @@ using UnityEngine;
 public class KeepOrSkip : MonoBehaviour
 {
     private DisplayCards displayCards;
+    private CardRandomizer cardRandomizer;
 
     private void Awake()
     {
         displayCards = GetComponent<DisplayCards>();
+        cardRandomizer = GetComponent<CardRandomizer>();
     }
 
     public void KeepSet()
     {
-        Debug.Log("Kept");
-
         // Record the set in Squadrons Manager
+        Squadrons.Instance.RecordPilotSet(cardRandomizer.ship, cardRandomizer.pilot, cardRandomizer.addonCards.ToArray());
 
         // Hide all Addons
         displayCards.ClearPreviousCards();
