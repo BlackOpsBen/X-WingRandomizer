@@ -30,7 +30,7 @@ public class Ship : ScriptableObject
     [Header("Title Options")]
     [SerializeField] private Title[] titles;
 
-    private int cheapestPilotCost;
+    private int cheapestPilotCost = 100;
 
     public void SetCheapestPilotCost(int cost)
     {

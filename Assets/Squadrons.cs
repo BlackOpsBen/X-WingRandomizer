@@ -61,9 +61,9 @@ public class Squadrons : MonoBehaviour
 
         CalculateSetTotalCost(pilotSet);
 
-        squadrons[PilotCardManager.Instance.selectedFaction].pilotSets.Add(pilotSet);
+        squadrons[PilotCardManager.Instance.GetSelectedFactionIndex()].pilotSets.Add(pilotSet);
 
-        CalculateSquadronTotalCost(squadrons[PilotCardManager.Instance.selectedFaction]);
+        CalculateSquadronTotalCost(squadrons[PilotCardManager.Instance.GetSelectedFactionIndex()]);
     }
 
     private void CalculateSetTotalCost(PilotSet pilotSet)
@@ -127,7 +127,7 @@ public class Squadrons : MonoBehaviour
 
     public bool GetUniqueAlreadyTaken(string name)
     {
-        foreach (PilotSet pilotSet in squadrons[PilotCardManager.Instance.selectedFaction].pilotSets)
+        foreach (PilotSet pilotSet in squadrons[PilotCardManager.Instance.GetSelectedFactionIndex()].pilotSets)
         {
             if (pilotSet.pilotName == name)
             {
@@ -144,5 +144,10 @@ public class Squadrons : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public int GetPointsRemaining()
+    {
+        return Settings.Instance.GetPointLimit() - GetSquadronTotalCost(PilotCardManager.Instance.GetSelectedFactionIndex());
     }
 }

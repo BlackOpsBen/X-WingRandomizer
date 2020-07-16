@@ -8,7 +8,7 @@ public class PilotCardManager : MonoBehaviour
 
     public string[] factions;
 
-    public int selectedFaction;
+    private int selectedFaction;
 
     private GameObject pilotCard;
 
@@ -83,9 +83,12 @@ public class PilotCardManager : MonoBehaviour
             int cheapestCost = 100;
             for (int j = 0; j < pilotGroups[i].pilots.Length; j++)
             {
-                if (pilotGroups[i].pilots[j].GetCost() < cheapestCost)
+                int pilotCost = pilotGroups[i].pilots[j].GetCost();
+                if (pilotCost < cheapestCost)
                 {
+                    cheapestCost = pilotCost;
                     ships[i].SetCheapestPilotCost(cheapestCost);
+                    Debug.Log(ships[i].name + " cheapest cost set to " + cheapestCost + ".");
                 }
             }
         }
@@ -107,6 +110,24 @@ public class PilotCardManager : MonoBehaviour
     {
         selectedFaction = faction;
         pilotCard.GetComponent<ChangeFaction>().ChangeCardBack(selectedFaction);
+    }
+
+    public int GetSelectedFactionIndex()
+    {
+        return selectedFaction;
+    }
+
+    public List<Ship> GetAffordableShips(int pointsAvailable)
+    {
+        List<Ship> listToReturn = new List<Ship>();
+        foreach (Ship ship in factionList[PilotCardManager.Instance.GetSelectedFactionIndex()].ships)
+        {
+            if (ship.GetCheapestPilotCost() < pointsAvailable)
+            {
+                listToReturn.Add(ship);
+            }
+        }
+        return listToReturn;
     }
 }
 

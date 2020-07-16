@@ -62,8 +62,9 @@ public class CardRandomizer : MonoBehaviour
 
     private int RollForShip(out Ship s)
     {
-        int result = UnityEngine.Random.Range(0, PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].ships.Length);
-        s = PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].ships[result];
+        List<Ship> affordableShips =  PilotCardManager.Instance.GetAffordableShips(Squadrons.Instance.GetPointsRemaining());
+        int result = UnityEngine.Random.Range(0, affordableShips.Count);
+        s = affordableShips[result];
         return result;
     }
 
@@ -72,8 +73,8 @@ public class CardRandomizer : MonoBehaviour
         PilotCard potentialPilot;
         do
         {
-            int randPilot = UnityEngine.Random.Range(0, PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].pilotGroups[randShip].pilots.Length);
-            potentialPilot = PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].pilotGroups[randShip].pilots[randPilot];
+            int randPilot = UnityEngine.Random.Range(0, PilotCardManager.Instance.factionList[PilotCardManager.Instance.GetSelectedFactionIndex()].pilotGroups[randShip].pilots.Length);
+            potentialPilot = PilotCardManager.Instance.factionList[PilotCardManager.Instance.GetSelectedFactionIndex()].pilotGroups[randShip].pilots[randPilot];
         } while (UniquePilotAlreadyTaken(potentialPilot));
         return potentialPilot;
     }

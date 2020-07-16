@@ -17,9 +17,9 @@ public class DebugIterator : MonoBehaviour
 
     private void GetShipAndPilotDetails()
     {
-        Ship ship = PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].ships[shipIndex];
+        Ship ship = PilotCardManager.Instance.factionList[PilotCardManager.Instance.GetSelectedFactionIndex()].ships[shipIndex];
 
-        PilotCard pilot = PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].pilotGroups[shipIndex].pilots[pilotIndex];
+        PilotCard pilot = PilotCardManager.Instance.factionList[PilotCardManager.Instance.GetSelectedFactionIndex()].pilotGroups[shipIndex].pilots[pilotIndex];
         
         LogNames(ship, pilot);
     }
@@ -42,13 +42,13 @@ public class DebugIterator : MonoBehaviour
 
     private void GetAllShipsAndPilots()
     {
-        Ship[] ships = PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].ships;
+        Ship[] ships = PilotCardManager.Instance.factionList[PilotCardManager.Instance.GetSelectedFactionIndex()].ships;
         for (int i = 0; i < ships.Length; i++)
         {
             Ship ship = ships[i];
             LogShipName(ship);
 
-            PilotCard[] pilots = PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].pilotGroups[i].pilots;
+            PilotCard[] pilots = PilotCardManager.Instance.factionList[PilotCardManager.Instance.GetSelectedFactionIndex()].pilotGroups[i].pilots;
             for (int j = 0; j < pilots.Length; j++)
             {
                 PilotCard pilot = pilots[j];

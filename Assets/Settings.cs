@@ -6,7 +6,7 @@ public class Settings : MonoBehaviour
 {
     public static Settings Instance { get; private set; }
 
-    private int pointLimit = 100;
+    [SerializeField] private int pointLimit = 100;
 
     private void Awake()
     {
