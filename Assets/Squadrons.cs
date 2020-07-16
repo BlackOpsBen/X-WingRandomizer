@@ -124,4 +124,23 @@ public class Squadrons : MonoBehaviour
     {
         return squadrons[factionIndex].totalCost;
     }
+
+    public bool GetUniqueAlreadyTaken(string name)
+    {
+        foreach (PilotSet pilotSet in squadrons[PilotCardManager.Instance.selectedFaction].pilotSets)
+        {
+            if (pilotSet.pilotName == name)
+            {
+                return true;
+            }
+            foreach (SelectedAddon selectedAddon in pilotSet.selectedAddons)
+            {
+                if (selectedAddon.addonName == name)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }

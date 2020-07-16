@@ -72,6 +72,7 @@ public class AddonCard : ScriptableObject
     public bool requiresShieldValue1;
     public bool bombEquipped;
     public bool hasAstromechEquipped;
+    public bool hasAttackTargetLockEquipped;
 
     [Header("Grants actions/abilities:")]
     public bool grantsFocus;
@@ -80,6 +81,7 @@ public class AddonCard : ScriptableObject
     public bool grantsEvade;
     public bool grantsBarrelRoll;
     public bool grantsActionHeader;
+    public bool grantsAttackTargetLock;
 
     [Header("Grants new slots to fill")]
     public bool grantsElitePilotTalent;
@@ -142,7 +144,8 @@ public class AddonCard : ScriptableObject
             hasTorpedoOrMissileSlot,
             requiresShieldValue1,
             bombEquipped,
-            hasAstromechEquipped
+            hasAstromechEquipped,
+            hasAttackTargetLockEquipped
         };
     }
 
@@ -155,7 +158,8 @@ public class AddonCard : ScriptableObject
             grantsBoost,
             grantsEvade,
             grantsBarrelRoll,
-            grantsActionHeader
+            grantsActionHeader,
+            grantsAttackTargetLock
         };
     }
 

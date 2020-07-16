@@ -62,9 +62,9 @@ public class CardRandomizer : MonoBehaviour
 
     private PilotCard RollForPilot(int randShip)
     {
-        Debug.Log("randShip = " + randShip + ".");
+        Debug.Log("randShip = " + randShip + "."); // TODO remove this
         int randPilot = UnityEngine.Random.Range(0, PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].pilotGroups[randShip].pilots.Length);
-        Debug.Log("randPilot = " + randPilot + ".");
+        Debug.Log("randPilot = " + randPilot + "."); // TODO remove this
         return PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].pilotGroups[randShip].pilots[randPilot];
     }
 
@@ -388,31 +388,31 @@ public class CardRandomizer : MonoBehaviour
             }
 
             // Action Restrictions
-            if (addonCard.focus && !ship.focus && PreviousCardGrantsAction(0))
+            if (addonCard.focus && !ship.focus && !PreviousCardGrantsAction(0))
             {
                 //Debug.Log(addonCard.name + " requires a ship that can Focus. Invalid selection.");
                 return false;
             }
 
-            if (addonCard.targetLock && !ship.targetLock && PreviousCardGrantsAction(1))
+            if (addonCard.targetLock && !ship.targetLock && !PreviousCardGrantsAction(1))
             {
                 //Debug.Log(addonCard.name + " requires a ship that can Target Lock. Invalid selection.");
                 return false;
             }
 
-            if (addonCard.boost && !ship.boost && PreviousCardGrantsAction(2))
+            if (addonCard.boost && !ship.boost && !PreviousCardGrantsAction(2))
             {
                 //Debug.Log(addonCard.name + " requires a ship that can Boost. Invalid selection.");
                 return false;
             }
 
-            if (addonCard.evade && !ship.evade && PreviousCardGrantsAction(3))
+            if (addonCard.evade && !ship.evade && !PreviousCardGrantsAction(3))
             {
                 //Debug.Log(addonCard.name + " requires a ship that can Evade. Invalid selection.");
                 return false;
             }
 
-            if (addonCard.barrelRoll && !ship.barrelRoll && PreviousCardGrantsAction(4))
+            if (addonCard.barrelRoll && !ship.barrelRoll && !PreviousCardGrantsAction(4))
             {
                 //Debug.Log(addonCard.name + " requires a ship that can Barrel Roll. Invalid selection.");
                 return false;
@@ -424,13 +424,13 @@ public class CardRandomizer : MonoBehaviour
                 return false;
             }
 
-            if (addonCard.boostOrBarrelRoll && !ship.boost && !ship.barrelRoll && PreviousCardGrantsAction(2) && PreviousCardGrantsAction(4))
+            if (addonCard.boostOrBarrelRoll && !ship.boost && !ship.barrelRoll && !PreviousCardGrantsAction(2) && !PreviousCardGrantsAction(4))
             {
                 //Debug.Log(addonCard.name + " requires a ship that can Boost or Barrel Roll. Invalid selection.");
                 return false;
             }
 
-            if (addonCard.focusOrEvade && !ship.focus && !ship.evade && PreviousCardGrantsAction(0) && PreviousCardGrantsAction(3))
+            if (addonCard.focusOrEvade && !ship.focus && !ship.evade && !PreviousCardGrantsAction(0) && !PreviousCardGrantsAction(3))
             {
                 //Debug.Log(addonCard.name + " requires a ship that can Focus or Evade. Invalid selection.");
                 return false;
@@ -506,6 +506,12 @@ public class CardRandomizer : MonoBehaviour
             if (addonCard.hasAstromechEquipped && pilot.GetAddonTypeQuantity(5) == 0)
             {
                 Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip an Astromech.");
+                return false;
+            }
+
+            if (addonCard.hasAttackTargetLockEquipped && !PreviousCardGrantsAction(6))
+            {
+                Debug.Log(addonCard.name + " won't be equipped because no addon card has Attack Target Lock.");
                 return false;
             }
         }
