@@ -110,6 +110,7 @@ public class PilotCardManager : MonoBehaviour
     {
         selectedFaction = faction;
         pilotCard.GetComponent<ChangeFaction>().ChangeCardBack(selectedFaction);
+        UIManager.Instance.UpdateUI();
     }
 
     public int GetSelectedFactionIndex()

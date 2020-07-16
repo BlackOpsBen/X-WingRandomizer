@@ -12,10 +12,13 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private float UIToggleDelay = 1f;
 
+    private PointsCounter pointsCounter;
 
     private void Awake()
     {
         SingletonPattern();
+
+        pointsCounter = GetComponent<PointsCounter>();
     }
 
     public void EnableGenerate()
@@ -52,5 +55,11 @@ public class UIManager : MonoBehaviour
         generateUI.SetActive(false);
         yield return new WaitForSeconds(UIToggleDelay);
         keepOrPassUI.SetActive(true);
+    }
+
+    // So far, called when Squadrons Calculates total cost, and when PilotCardManager changes selected faction.
+    public void UpdateUI()
+    {
+        pointsCounter.UpdatePoints();
     }
 }

@@ -82,6 +82,8 @@ public class Squadrons : MonoBehaviour
         {
             squadron.totalCost += pilotSet.pilotSetCost;
         }
+
+        UIManager.Instance.UpdateUI();
     }
 
     [System.Serializable]
