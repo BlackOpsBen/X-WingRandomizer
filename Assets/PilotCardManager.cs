@@ -122,9 +122,22 @@ public class PilotCardManager : MonoBehaviour
         List<Ship> listToReturn = new List<Ship>();
         foreach (Ship ship in factionList[PilotCardManager.Instance.GetSelectedFactionIndex()].ships)
         {
-            if (ship.GetCheapestPilotCost() < pointsAvailable)
+            if (ship.GetCheapestPilotCost() <= pointsAvailable)
             {
                 listToReturn.Add(ship);
+            }
+        }
+        return listToReturn;
+    }
+
+    public List<PilotCard> GetAffordablePilots(int pointsAvailable, int shipIndex)
+    {
+        List<PilotCard> listToReturn = new List<PilotCard>();
+        foreach (PilotCard pilot in factionList[selectedFaction].pilotGroups[shipIndex].pilots)
+        {
+            if (pilot.GetCost() <= pointsAvailable)
+            {
+                listToReturn.Add(pilot);
             }
         }
         return listToReturn;

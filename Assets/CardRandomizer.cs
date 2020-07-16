@@ -62,19 +62,28 @@ public class CardRandomizer : MonoBehaviour
 
     private int RollForShip(out Ship s)
     {
-        List<Ship> affordableShips =  PilotCardManager.Instance.GetAffordableShips(Squadrons.Instance.GetPointsRemaining());
+        List<Ship> affordableShips = PilotCardManager.Instance.GetAffordableShips(Squadrons.Instance.GetPointsRemaining());
         int result = UnityEngine.Random.Range(0, affordableShips.Count);
         s = affordableShips[result];
+        for (int i = 0; i < PilotCardManager.Instance.factionList[PilotCardManager.Instance.GetSelectedFactionIndex()].ships.Length; i++)
+        {
+            if (PilotCardManager.Instance.factionList[PilotCardManager.Instance.GetSelectedFactionIndex()].ships[i].name == affordableShips[result].name)
+            {
+                return i;
+            }
+        }
+        Debug.LogError("Failed to map affordable ship index to ALL SHIPS index.");
         return result;
     }
 
     private PilotCard RollForPilot(int randShip)
     {
+        List<PilotCard> affordablePilots = PilotCardManager.Instance.GetAffordablePilots(Squadrons.Instance.GetPointsRemaining(), randShip);
         PilotCard potentialPilot;
         do
         {
-            int randPilot = UnityEngine.Random.Range(0, PilotCardManager.Instance.factionList[PilotCardManager.Instance.GetSelectedFactionIndex()].pilotGroups[randShip].pilots.Length);
-            potentialPilot = PilotCardManager.Instance.factionList[PilotCardManager.Instance.GetSelectedFactionIndex()].pilotGroups[randShip].pilots[randPilot];
+            int randPilot = UnityEngine.Random.Range(0, affordablePilots.Count);
+            potentialPilot = affordablePilots[randPilot];
         } while (UniquePilotAlreadyTaken(potentialPilot));
         return potentialPilot;
     }
