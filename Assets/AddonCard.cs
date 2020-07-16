@@ -95,6 +95,7 @@ public class AddonCard : ScriptableObject
     {
         MakeListOfRestrictions();
         MakeListOfActionGrantings();
+        MakeListOfSlotGrantings();
         hasRestrictions = SetHasRestrictions();
         forcePushChanges = false;
     }
@@ -168,7 +169,6 @@ public class AddonCard : ScriptableObject
     {
         slotGrantings = new bool[]
         {
-
             grantsElitePilotTalent,
             grantsCrew,
             grantsIllicit,
