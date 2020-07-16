@@ -19,7 +19,7 @@ MonoBehaviour:
   evade: 1
   barrelRoll: 0
   cloak: 0
-  SLAM: 0
+  slam: 0
   rebel: 1
   imperial: 0
   scum: 0
