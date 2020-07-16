@@ -34,6 +34,7 @@ public class CardRandomizer : MonoBehaviour
         {
             FillAnyNewSlots();
         }
+        lastCountedCardIndex = 0;
 
         GetComponent<DisplayCards>().DisplayAddons(addonCards);
 
@@ -71,9 +72,7 @@ public class CardRandomizer : MonoBehaviour
         PilotCard potentialPilot;
         do
         {
-            Debug.Log("randShip = " + randShip + "."); // TODO remove this
             int randPilot = UnityEngine.Random.Range(0, PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].pilotGroups[randShip].pilots.Length);
-            Debug.Log("randPilot = " + randPilot + "."); // TODO remove this
             potentialPilot = PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].pilotGroups[randShip].pilots[randPilot];
         } while (UniquePilotAlreadyTaken(potentialPilot));
         return potentialPilot;
@@ -164,7 +163,7 @@ public class CardRandomizer : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Attempted to select a card but there were no valid choices.");
+            //Debug.LogWarning("Attempted to select a card but there were no valid choices.");
             return null;
         }
     }
@@ -505,7 +504,7 @@ public class CardRandomizer : MonoBehaviour
             {
                 if (pilot.GetAddonTypeQuantity(1) == 0 && pilot.GetAddonTypeQuantity(2) == 0)
                 {
-                    Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip a torpedo or missile.");
+                    //Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip a torpedo or missile.");
                     return false;
                 }
             }
@@ -514,7 +513,7 @@ public class CardRandomizer : MonoBehaviour
             {
                 if (pilot.GetAddonTypeQuantity(1) == 0 && pilot.GetAddonTypeQuantity(2) == 0 && pilot.GetAddonTypeQuantity(3) == 0)
                 {
-                    Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip a torpedo or missile or bomb.");
+                    //Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip a torpedo or missile or bomb.");
                     return false;
                 }
             }
@@ -533,19 +532,19 @@ public class CardRandomizer : MonoBehaviour
 
             if (addonCard.bombEquipped && pilot.GetAddonTypeQuantity(3) == 0)
             {
-                Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip a bomb.");
+                //Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip a bomb.");
                 return false;
             }
 
             if (addonCard.hasAstromechEquipped && pilot.GetAddonTypeQuantity(5) == 0)
             {
-                Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip an Astromech.");
+                //Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip an Astromech.");
                 return false;
             }
 
             if (addonCard.hasAttackTargetLockEquipped && !PreviousCardGrantsAction(6))
             {
-                Debug.Log(addonCard.name + " won't be equipped because no addon card has Attack Target Lock.");
+                //Debug.Log(addonCard.name + " won't be equipped because no addon card has Attack Target Lock.");
                 return false;
             }
         }
