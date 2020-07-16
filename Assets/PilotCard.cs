@@ -119,4 +119,9 @@ public class PilotCard : ScriptableObject
     {
         return pilotSkill;
     }
+
+    public bool GetIsUnique()
+    {
+        return isUnique;
+    }
 }

@@ -15,6 +15,7 @@ public class AddonCard : ScriptableObject
     private bool[] restrictions;
 
     private bool[] actionGrantings;
+    private bool[] slotGrantings;
 
     [Header("Restrictions")]
     public bool unique;
@@ -163,6 +164,19 @@ public class AddonCard : ScriptableObject
         };
     }
 
+    private void MakeListOfSlotGrantings()
+    {
+        slotGrantings = new bool[]
+        {
+
+            grantsElitePilotTalent,
+            grantsCrew,
+            grantsIllicit,
+            grantsModificationCosting3OrLess,
+            grantsBomb
+        };
+    }
+
     private bool SetHasRestrictions()
     {
         for (int i = 0; i < restrictions.Length; i++)
@@ -178,6 +192,18 @@ public class AddonCard : ScriptableObject
     public bool GetHasRestrictions()
     {
         return hasRestrictions;
+    }
+
+    public bool GetGrantsSlot()
+    {
+        for (int i = 0; i < slotGrantings.Length; i++)
+        {
+            if (slotGrantings[i])
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public bool GetActionGranting(int aGranting)

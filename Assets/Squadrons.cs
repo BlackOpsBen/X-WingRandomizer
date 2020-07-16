@@ -131,12 +131,14 @@ public class Squadrons : MonoBehaviour
         {
             if (pilotSet.pilotName == name)
             {
+                Debug.LogWarning("Unique name already chosen. \"" + name + "\" is invalid pilot.");
                 return true;
             }
             foreach (SelectedAddon selectedAddon in pilotSet.selectedAddons)
             {
                 if (selectedAddon.addonName == name)
                 {
+                    Debug.LogWarning("Unique name already chosen. \"" + name + "\" is invalid addon.");
                     return true;
                 }
             }

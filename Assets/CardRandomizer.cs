@@ -14,6 +14,9 @@ public class CardRandomizer : MonoBehaviour
 
     private Exceptions exceptions;
 
+    private bool needToFillNewSlots = false;
+    private int lastCountedCardIndex = 0;
+
     private void Awake()
     {
         displayCards = GetComponent<DisplayCards>();
@@ -27,7 +30,10 @@ public class CardRandomizer : MonoBehaviour
         MakeRandomPilot();
         SelectAddons();
 
-        FillAnyNewSlots();
+        while (needToFillNewSlots)
+        {
+            FillAnyNewSlots();
+        }
 
         GetComponent<DisplayCards>().DisplayAddons(addonCards);
 
@@ -62,10 +68,27 @@ public class CardRandomizer : MonoBehaviour
 
     private PilotCard RollForPilot(int randShip)
     {
-        Debug.Log("randShip = " + randShip + "."); // TODO remove this
-        int randPilot = UnityEngine.Random.Range(0, PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].pilotGroups[randShip].pilots.Length);
-        Debug.Log("randPilot = " + randPilot + "."); // TODO remove this
-        return PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].pilotGroups[randShip].pilots[randPilot];
+        PilotCard potentialPilot;
+        do
+        {
+            Debug.Log("randShip = " + randShip + "."); // TODO remove this
+            int randPilot = UnityEngine.Random.Range(0, PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].pilotGroups[randShip].pilots.Length);
+            Debug.Log("randPilot = " + randPilot + "."); // TODO remove this
+            potentialPilot = PilotCardManager.Instance.factionList[PilotCardManager.Instance.selectedFaction].pilotGroups[randShip].pilots[randPilot];
+        } while (UniquePilotAlreadyTaken(potentialPilot));
+        return potentialPilot;
+    }
+
+    private bool UniquePilotAlreadyTaken(PilotCard pilotCard)
+    {
+        if (pilotCard.GetIsUnique())
+        {
+            return Squadrons.Instance.GetUniqueAlreadyTaken(pilotCard.name);
+        }
+        else
+        {
+            return false;
+        }
     }
 
     private void SelectAddons()
@@ -104,6 +127,10 @@ public class CardRandomizer : MonoBehaviour
         if (selection = RandomlySelectAddon(addonType))
         {
             addonCards.Add(selection);
+            if (selection.GetGrantsSlot())
+            {
+                needToFillNewSlots = true;
+            }
         }
     }
 
@@ -157,27 +184,30 @@ public class CardRandomizer : MonoBehaviour
 
     private void FillAnyNewSlots()
     {
-        foreach (AddonCard addonCard in addonCards)
+        needToFillNewSlots = false;
+        int currentCardCount = addonCards.Count;
+
+        for (int i = lastCountedCardIndex; i < currentCardCount; i++)
         {
-            if (addonCard.grantsCrew)
+            if (addonCards[i].grantsCrew)
             {
                 MakeValidSelection(8);
                 Debug.Log("Verify this selection was of type 'Crew'");
             }
 
-            if (addonCard.grantsElitePilotTalent)
+            if (addonCards[i].grantsElitePilotTalent)
             {
                 MakeValidSelection(0);
                 Debug.Log("Verify this selection was of type 'Elite Pilot Talent'");
             }
 
-            if (addonCard.grantsIllicit)
+            if (addonCards[i].grantsIllicit)
             {
                 MakeValidSelection(11);
                 Debug.Log("Verify this selection was of type 'Illicit'");
             }
 
-            if (addonCard.grantsModificationCosting3OrLess)
+            if (addonCards[i].grantsModificationCosting3OrLess)
             {
                 AddonCard newMod;
 
@@ -187,15 +217,16 @@ public class CardRandomizer : MonoBehaviour
                 } while (newMod.cost > 3);
 
                 // TODO need to make valid selection if no valid card exists. Avoid inf loop
-                
+
                 Debug.Log("Verify this selection was of type 'Modification' and that it costs 3 or less points.");
             }
 
-            if (addonCard.grantsBomb)
+            if (addonCards[i].grantsBomb)
             {
                 MakeValidSelection(3);
                 Debug.Log("Verify this selection was of type 'Bomb'");
             }
+            lastCountedCardIndex++;
         }
     }
 
@@ -241,15 +272,18 @@ public class CardRandomizer : MonoBehaviour
         {
             if (addonCard.unique)
             {
-                //Debug.Log(addonCard.name + " is Unique. Checking to see if it was already purchased in this squadron...");
-                // if a previous card is the same card, return false
-                // if a current neighboring card is the same card, return false
+                if (Squadrons.Instance.GetUniqueAlreadyTaken(addonCard.name) && PreviousCardIs(addonCard.name))
+                {
+                    return false;
+                }
             }
 
             if (addonCard.limited)
             {
-                //Debug.Log(addonCard.name + " is Limited. Checking to see if it was already purchased for this ship.");
-                // if a current neighboring card is the same card, return false
+                if (PreviousCardIs(addonCard.name))
+                {
+                    return false;
+                }
             }
 
             // Faction restrictions

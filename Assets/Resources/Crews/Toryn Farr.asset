@@ -60,12 +60,14 @@ MonoBehaviour:
   requiresShieldValue1: 0
   bombEquipped: 0
   hasAstromechEquipped: 0
+  hasAttackTargetLockEquipped: 0
   grantsFocus: 0
   grantsTargetLock: 0
   grantsBoost: 0
   grantsEvade: 0
   grantsBarrelRoll: 0
-  grantsActionHeader: 0
+  grantsActionHeader: 1
+  grantsAttackTargetLock: 0
   grantsElitePilotTalent: 0
   grantsCrew: 0
   grantsIllicit: 0
