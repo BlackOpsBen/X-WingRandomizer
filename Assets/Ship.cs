@@ -29,4 +29,16 @@ public class Ship : ScriptableObject
 
     [Header("Title Options")]
     [SerializeField] private Title[] titles;
+
+    private int cheapestPilotCost;
+
+    public void SetCheapestPilotCost(int cost)
+    {
+        cheapestPilotCost = cost;
+    }
+
+    public int GetCheapestPilotCost()
+    {
+        return cheapestPilotCost;
+    }
 }

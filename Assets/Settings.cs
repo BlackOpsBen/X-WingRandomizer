@@ -6,6 +6,8 @@ public class Settings : MonoBehaviour
 {
     public static Settings Instance { get; private set; }
 
+    private int pointLimit = 100;
+
     private void Awake()
     {
         SingletonPattern();
@@ -21,5 +23,15 @@ public class Settings : MonoBehaviour
         {
             Instance = this;
         }
+    }
+
+    public int GetPointLimit()
+    {
+        return pointLimit;
+    }
+
+    public void SetPointLimit(int points)
+    {
+        pointLimit = points;
     }
 }

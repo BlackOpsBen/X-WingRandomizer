@@ -72,6 +72,23 @@ public class PilotCardManager : MonoBehaviour
             pilotGroups[i].name = ships[i].name;
             pilotGroups[i].pilots = Resources.LoadAll<PilotCard>(path);
         }
+
+        FindCheapestPilotCost(pilotGroups, ships);
+    }
+
+    private static void FindCheapestPilotCost(PilotGroup[] pilotGroups, Ship[] ships)
+    {
+        for (int i = 0; i < ships.Length; i++)
+        {
+            int cheapestCost = 100;
+            for (int j = 0; j < pilotGroups[i].pilots.Length; j++)
+            {
+                if (pilotGroups[i].pilots[j].GetCost() < cheapestCost)
+                {
+                    ships[i].SetCheapestPilotCost(cheapestCost);
+                }
+            }
+        }
     }
 
     private void SingletonPattern()
