@@ -14,11 +14,15 @@ public class UIManager : MonoBehaviour
 
     private PointsCounter pointsCounter;
 
+    private DisableGenerate disableGenerate;
+
     private void Awake()
     {
         SingletonPattern();
 
         pointsCounter = GetComponent<PointsCounter>();
+
+        disableGenerate = GetComponent<DisableGenerate>();
     }
 
     public void EnableGenerate()
@@ -61,5 +65,6 @@ public class UIManager : MonoBehaviour
     public void UpdateUI()
     {
         pointsCounter.UpdatePoints();
+        disableGenerate.SetGenerateButton();
     }
 }

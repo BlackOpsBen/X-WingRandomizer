@@ -88,7 +88,6 @@ public class PilotCardManager : MonoBehaviour
                 {
                     cheapestCost = pilotCost;
                     ships[i].SetCheapestPilotCost(cheapestCost);
-                    Debug.Log(ships[i].name + " cheapest cost set to " + cheapestCost + ".");
                 }
             }
         }
@@ -106,6 +105,7 @@ public class PilotCardManager : MonoBehaviour
         }
     }
 
+    // Called by UI button
     public void ChangeSelectedFaction(int faction)
     {
         selectedFaction = faction;
