@@ -275,8 +275,26 @@ public class CardRandomizer : MonoBehaviour
         return false;
     }
 
+    public int PreviousCardsCost()
+    {
+        int subtotalCost = 0;
+        foreach (AddonCard addonCard in addonCards)
+        {
+            subtotalCost += addonCard.cost;
+        }
+        return subtotalCost;
+    }
+
     private bool ValidateSelection(AddonCard addonCard)
     {
+        int pointLimit = Squadrons.Instance.GetPointsRemaining() - PreviousCardsCost() - pilot.GetCost();
+        Debug.Log("Point limit: " + pointLimit);
+        if (addonCard.cost > pointLimit)
+        {
+            Debug.Log(addonCard.name + " too expensive.");
+            return false;
+        }
+
         if (addonCard.GetHasRestrictions())
         {
             if (addonCard.unique)

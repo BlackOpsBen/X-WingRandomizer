@@ -31,8 +31,6 @@ public class KeepOrSkip : MonoBehaviour
 
     public void SkipSet()
     {
-        Debug.Log("Skipped");
-
         displayCards.ClearPreviousCards();
 
         displayCards.FlipPilotCard();
