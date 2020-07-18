@@ -40,7 +40,7 @@ public class DebugVerifyProducts : MonoBehaviour
         for (int i = 0; i < items.Length; i++)
         {
             string[] productInclusions = items[i].GetProductsIncludedWith();
-            if (productInclusions != null)
+            if (productInclusions != null && productInclusions.Length > 0)
             {
                 for (int j = 0; j < productInclusions.Length; j++)
                 {
