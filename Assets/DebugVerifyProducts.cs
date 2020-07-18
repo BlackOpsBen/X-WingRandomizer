@@ -14,8 +14,9 @@ public class DebugVerifyProducts : MonoBehaviour
     {
         LoadAllResources();
         LogQuantitiesFound();
-        ValidatePilotProductStrings();
-        ValidateAddonProductStrings();
+
+        ValidateProductStrings(pilots);
+        ValidateProductStrings(addonCards);
     }
 
     private void LogQuantitiesFound()
@@ -34,11 +35,11 @@ public class DebugVerifyProducts : MonoBehaviour
         addonCards = Resources.LoadAll<AddonCard>("");
     }
 
-    private void ValidatePilotProductStrings()
+    private void ValidateProductStrings(IComeInProducts[] items)
     {
-        for (int i = 0; i < pilots.Length; i++)
+        for (int i = 0; i < items.Length; i++)
         {
-            string[] productInclusions = pilots[i].GetProductsIncludedWith();
+            string[] productInclusions = items[i].GetProductsIncludedWith();
             if (productInclusions != null)
             {
                 for (int j = 0; j < productInclusions.Length; j++)
@@ -53,48 +54,15 @@ public class DebugVerifyProducts : MonoBehaviour
                     }
                     if (!isValidName)
                     {
-                        Debug.LogError(productInclusions[j] + " is invalid product name on " + pilots[i].GetType().Name + " titled \'" + pilots[i].name + "\'");
+                        Debug.LogError(productInclusions[j] + " is invalid product name on " + items[i].GetType().Name + " titled \'" + items[i].GetName() + "\'");
                     }
                 }
             }
             else
             {
-                Debug.LogError(pilots[i].name + " does not have a product. List products in which it is included.");
+                Debug.LogWarning(items[i].GetName() + " needs a product inclusion!");
             }
-            
-        }
-    }
 
-    private void ValidateAddonProductStrings()
-    {
-        for (int i = 0; i < addonCards.Length; i++)
-        {
-            Debug.Log(addonCards[i].name + " test A");
-            string[] productInclusions = addonCards[i].GetProductsIncludedWith();
-            if (productInclusions != null)
-            {
-                Debug.Log(productInclusions.Length + " test B");
-                for (int j = 0; j < productInclusions.Length; j++)
-                {
-                    bool isValidName = false;
-                    for (int k = 0; k < products.Length; k++)
-                    {
-                        if (productInclusions[j] == products[k].name)
-                        {
-                            isValidName = true;
-                        }
-                    }
-                    if (!isValidName)
-                    {
-                        Debug.LogError(productInclusions[j] + " is invalid product name on " + addonCards[i].GetType().Name + " titled \'" + addonCards[i].name + "\'");
-                    }
-                }
-            }
-            else
-            {
-                Debug.LogWarning(addonCards[i].name + " needs a product inclusion!");
-            }
-            
         }
     }
 }

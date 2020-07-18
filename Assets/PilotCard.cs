@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class PilotCard : ScriptableObject
+public class PilotCard : ScriptableObject, IComeInProducts
 {
     private AddonType[] addonTypes = new AddonType[17];
 
@@ -129,5 +129,10 @@ public class PilotCard : ScriptableObject
     public string[] GetProductsIncludedWith()
     {
         return includedWith;
+    }
+
+    public string GetName()
+    {
+        return this.name;
     }
 }

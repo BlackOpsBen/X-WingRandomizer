@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class AddonCard : ScriptableObject
+public class AddonCard : ScriptableObject, IComeInProducts
 {
     public bool forcePushChanges;
 
@@ -221,5 +221,10 @@ public class AddonCard : ScriptableObject
     public string[] GetProductsIncludedWith()
     {
         return includedWith;
+    }
+
+    public string GetName()
+    {
+        return this.name;
     }
 }
