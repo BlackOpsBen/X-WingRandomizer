@@ -38,21 +38,30 @@ public class DebugVerifyProducts : MonoBehaviour
     {
         for (int i = 0; i < pilots.Length; i++)
         {
-            for (int j = 0; j < pilots[i].GetProductsIncludedWith().Length; j++)
+            string[] productInclusions = pilots[i].GetProductsIncludedWith();
+            if (productInclusions != null)
             {
-                bool isValidName = false;
-                for (int k = 0; k < products.Length; k++)
+                for (int j = 0; j < productInclusions.Length; j++)
                 {
-                    if (pilots[i].GetProductsIncludedWith()[j] == products[k].name)
+                    bool isValidName = false;
+                    for (int k = 0; k < products.Length; k++)
                     {
-                        isValidName = true;
+                        if (productInclusions[j] == products[k].name)
+                        {
+                            isValidName = true;
+                        }
+                    }
+                    if (!isValidName)
+                    {
+                        Debug.LogError(productInclusions[j] + " is invalid product name on " + pilots[i].GetType().Name + " titled \'" + pilots[i].name + "\'");
                     }
                 }
-                if (!isValidName)
-                {
-                    Debug.LogError(pilots[i].GetProductsIncludedWith()[j] + " is invalid product name on " + pilots[i].GetType().Name + " titled \'" + pilots[i].name + "\'");
-                }
             }
+            else
+            {
+                Debug.LogError(pilots[i].name + " does not have a product. List products in which it is included.");
+            }
+            
         }
     }
 
@@ -60,21 +69,24 @@ public class DebugVerifyProducts : MonoBehaviour
     {
         for (int i = 0; i < addonCards.Length; i++)
         {
-            if (addonCards[i].GetProductsIncludedWith() != null)
+            Debug.Log(addonCards[i].name + " test A");
+            string[] productInclusions = addonCards[i].GetProductsIncludedWith();
+            if (productInclusions != null)
             {
-                for (int j = 0; j < addonCards[i].GetProductsIncludedWith().Length; j++)
+                Debug.Log(productInclusions.Length + " test B");
+                for (int j = 0; j < productInclusions.Length; j++)
                 {
                     bool isValidName = false;
                     for (int k = 0; k < products.Length; k++)
                     {
-                        if (addonCards[i].GetProductsIncludedWith()[j] == products[k].name)
+                        if (productInclusions[j] == products[k].name)
                         {
                             isValidName = true;
                         }
                     }
                     if (!isValidName)
                     {
-                        Debug.LogError(addonCards[i].GetProductsIncludedWith()[j] + " is invalid product name on " + addonCards[i].GetType().Name + " titled \'" + addonCards[i].name + "\'");
+                        Debug.LogError(productInclusions[j] + " is invalid product name on " + addonCards[i].GetType().Name + " titled \'" + addonCards[i].name + "\'");
                     }
                 }
             }
