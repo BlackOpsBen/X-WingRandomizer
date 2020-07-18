@@ -15,6 +15,7 @@ MonoBehaviour:
   forcePushChanges: 0
   cardArt: {fileID: 21300000, guid: eccdd2290561ecf469c7b0cc1f2af1b4, type: 3}
   cost: 2
+  includedWith: []
   unique: 1
   limited: 0
   rebelOnly: 0
@@ -48,6 +49,7 @@ MonoBehaviour:
   boostOrBarrelRoll: 0
   focusOrEvade: 0
   slam: 0
+  actionHeader: 0
   cantAlreadyHaveElitePilotTalentSlot: 0
   hasMinPilotSkill: 0
   minPilotSkill: 0
@@ -57,8 +59,18 @@ MonoBehaviour:
   torpedoOrMissileOrBombEquipped: 0
   hasTorpedoOrMissileSlot: 0
   requiresShieldValue1: 0
+  bombEquipped: 0
+  hasAstromechEquipped: 0
+  hasAttackTargetLockEquipped: 0
   grantsFocus: 0
   grantsTargetLock: 0
   grantsBoost: 0
   grantsEvade: 0
   grantsBarrelRoll: 0
+  grantsActionHeader: 0
+  grantsAttackTargetLock: 0
+  grantsElitePilotTalent: 0
+  grantsCrew: 0
+  grantsIllicit: 0
+  grantsModificationCosting3OrLess: 0
+  grantsBomb: 0

@@ -167,8 +167,6 @@ public class CardRandomizer : MonoBehaviour
 
             totalCost += selectedCard.cost; // TODO delegate cost counting elsewhere
 
-            Debug.Log("Selected " + selectedCard.name);
-
             return selectedCard;
         }
         else
@@ -288,7 +286,7 @@ public class CardRandomizer : MonoBehaviour
     private bool ValidateSelection(AddonCard addonCard)
     {
         int pointLimit = Squadrons.Instance.GetPointsRemaining() - PreviousCardsCost() - pilot.GetCost();
-        Debug.Log("Point limit: " + pointLimit);
+        
         if (addonCard.cost > pointLimit)
         {
             Debug.Log(addonCard.name + " too expensive.");

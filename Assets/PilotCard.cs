@@ -12,6 +12,7 @@ public class PilotCard : ScriptableObject
     [SerializeField] private bool isUnique;
     [SerializeField] private int pilotSkill;
     [SerializeField] private int cost;
+    [SerializeField] private string[] includedWith;
 
     [Header("Common addons")]
     [SerializeField] private int elitePilotTalents;
@@ -123,5 +124,10 @@ public class PilotCard : ScriptableObject
     public bool GetIsUnique()
     {
         return isUnique;
+    }
+
+    public string[] GetProductsIncludedWith()
+    {
+        return includedWith;
     }
 }

@@ -15,6 +15,7 @@ MonoBehaviour:
   forcePushChanges: 0
   cardArt: {fileID: 21300000, guid: 14c0945bdcea39840bb6c04353430737, type: 3}
   cost: 1
+  includedWith: []
   unique: 1
   limited: 0
   rebelOnly: 0
@@ -60,13 +61,16 @@ MonoBehaviour:
   requiresShieldValue1: 0
   bombEquipped: 0
   hasAstromechEquipped: 0
+  hasAttackTargetLockEquipped: 0
   grantsFocus: 0
   grantsTargetLock: 0
   grantsBoost: 0
   grantsEvade: 0
   grantsBarrelRoll: 0
   grantsActionHeader: 1
+  grantsAttackTargetLock: 0
   grantsElitePilotTalent: 0
   grantsCrew: 0
   grantsIllicit: 0
   grantsModificationCosting3OrLess: 0
+  grantsBomb: 0

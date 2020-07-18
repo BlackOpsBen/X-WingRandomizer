@@ -11,6 +11,8 @@ public class AddonCard : ScriptableObject
 
     public int cost;
 
+    [SerializeField] private string[] includedWith;
+
     private bool hasRestrictions;
     private bool[] restrictions;
 
@@ -214,5 +216,10 @@ public class AddonCard : ScriptableObject
     public bool GetRestriction(int restriction)
     {
         return restrictions[restriction];
+    }
+
+    public string[] GetProductsIncludedWith()
+    {
+        return includedWith;
     }
 }
