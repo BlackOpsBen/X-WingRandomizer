@@ -1,22 +1,46 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 [CreateAssetMenu]
 public class Product : ScriptableObject
 {
-    [SerializeField] private IComeInProducts[] itemsIncluded;
+    [SerializeField] private Item[] itemsIncluded;
 
     private void OnValidate()
     {
-        foreach (IComeInProducts item in itemsIncluded)
+        if (itemsIncluded.Length > 0)
         {
-            string[] itemsProducts = item.GetProductsIncludedWith();
-            foreach (string product in itemsProducts)
+            foreach (IComeInProducts item in itemsIncluded)
             {
-                if (product == this.name)
+                bool needToAskForInclusion = true;
+
+                if (item != null)
                 {
-                    Debug.Log(item.GetType() + " " + item.GetName() + " and " + this.GetType() + " " + this.name + " already reciprocate.");
+                    if (item.GetProductListCount() > 0)
+                    {
+                        List<Product> itemsProducts = item.GetProductsIncludedWith();
+
+                        foreach (Product product in itemsProducts)
+                        {
+                            if (product == this)
+                            {
+                                Debug.Log(item.GetType() + " " + item.GetName() + " and " + this.GetType() + " " + this.name + " already reciprocate.");
+                                needToAskForInclusion = false;
+                            }
+                        }
+                    }
+
+                    if (needToAskForInclusion)
+                    {
+                        Debug.LogWarning("Need to ask " + item.GetName() + " to reciprocate inclusion in this product.");
+                        item.ReciprocateInclusion(this);
+                    }
                 }
             }
+        }
+        else
+        {
+            Debug.LogWarning("Product " + this.name + " does not list any included items.");
         }
     }
 }

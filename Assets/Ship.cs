@@ -1,8 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 [CreateAssetMenu]
-public class Ship : ScriptableObject
+public class Ship : Item, IComeInProducts
 {
+    [SerializeField] private List<Product> includedWith = new List<Product>();
+
     [Header("Stats")]
     public int shieldValue;
 
@@ -40,5 +43,25 @@ public class Ship : ScriptableObject
     public int GetCheapestPilotCost()
     {
         return cheapestPilotCost;
+    }
+
+    public List<Product> GetProductsIncludedWith()
+    {
+        return includedWith;
+    }
+
+    public string GetName()
+    {
+        return this.name;
+    }
+
+    public void ReciprocateInclusion(Product product)
+    {
+        includedWith.Add(product);
+    }
+
+    public int GetProductListCount()
+    {
+        return includedWith.Count;
     }
 }

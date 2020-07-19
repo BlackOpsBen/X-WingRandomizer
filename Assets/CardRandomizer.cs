@@ -544,6 +544,15 @@ public class CardRandomizer : MonoBehaviour
                 }
             }
 
+            if (addonCard.torpedoOrBombEquipped)
+            {
+                if (pilot.GetAddonTypeQuantity(1) == 0 && pilot.GetAddonTypeQuantity(3) == 0)
+                {
+                    //Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip a torpedo or bomb.");
+                    return false;
+                }
+            }
+
             if (addonCard.hasTorpedoOrMissileSlot && pilot.GetAddonTypeQuantity(1) == 0 && pilot.GetAddonTypeQuantity(2) == 0)
             {
                 //Debug.Log(addonCard.name + " requires a Torpedo or Missile slot. Invalid selection.");
@@ -688,6 +697,28 @@ public class CardRandomizer : MonoBehaviour
             if (previousCardDoes)
             {
                 //Debug.Log(addonCard.name + " grants Barrel Roll, but a previously selected card already grants it. Invalid selection.");
+                return false;
+            }
+        }
+
+        if (addonCard.grantsSLAM && ship.slam)
+        {
+            //Debug.Log(addonCard.name + " grants a redundant ability (SLAM). Invalid selection.");
+            return false;
+        }
+        else
+        {
+            bool previousCardDoes = false;
+            foreach (AddonCard prevCard in addonCards)
+            {
+                if (prevCard.grantsSLAM)
+                {
+                    previousCardDoes = true;
+                }
+            }
+            if (previousCardDoes)
+            {
+                //Debug.Log(addonCard.name + " grants SLAM, but a previously selected card already grants it. Invalid selection.");
                 return false;
             }
         }

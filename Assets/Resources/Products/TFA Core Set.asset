@@ -12,3 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: TFA Core Set
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: 86f786e0f97c7bb4a98a837f5078bd6b, type: 2}
+  - {fileID: 11400000, guid: 29be13f8a44053244947106679fd32c1, type: 2}
+  - {fileID: 11400000, guid: 29be13f8a44053244947106679fd32c1, type: 2}
+  - {fileID: 11400000, guid: dbe2ba706c75e954ba52d1ceb3f90ba4, type: 2}
+  - {fileID: 11400000, guid: 499ac5bcdefc96d458f215dad00cb7e6, type: 2}
+  - {fileID: 11400000, guid: 2e96f58a572c49c469ced740dec28ffa, type: 2}
+  - {fileID: 11400000, guid: 2c4728ed002c9ae4fa4006916aa8efbe, type: 2}
+  - {fileID: 11400000, guid: 258df35cefce6494986e0d9bb14dfed3, type: 2}
+  - {fileID: 11400000, guid: 9f18f2dbc6d9abf47a0748a6f6338661, type: 2}
+  - {fileID: 11400000, guid: cd8d6330288abf64d80f8bfe85f4f16c, type: 2}
+  - {fileID: 11400000, guid: 47decc90fc587db41ac13bc06ea8e8b4, type: 2}
+  - {fileID: 11400000, guid: 47decc90fc587db41ac13bc06ea8e8b4, type: 2}
+  - {fileID: 11400000, guid: 8150e7756c254ad45a56356adfa405f8, type: 2}
+  - {fileID: 11400000, guid: 8150e7756c254ad45a56356adfa405f8, type: 2}
+  - {fileID: 11400000, guid: f8b8e5e0748ff7a4c8e6af15a48e82b0, type: 2}
+  - {fileID: 11400000, guid: f8b8e5e0748ff7a4c8e6af15a48e82b0, type: 2}
+  - {fileID: 11400000, guid: b5f74470162cfb141be90242712eef48, type: 2}
+  - {fileID: 11400000, guid: 720b2c9f0c9a09e4689594fc05327840, type: 2}
+  - {fileID: 11400000, guid: 9d3035b87ce1a5d44a149070844c8966, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}

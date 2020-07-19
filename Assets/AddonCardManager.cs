@@ -37,7 +37,7 @@ public class AddonCardManager : MonoBehaviour
             "Cargos",
             "Hardpoints",
             "Teams",
-            "SalvagedAstromechs"
+            "Salvaged Astromechs"
             };
     }
 

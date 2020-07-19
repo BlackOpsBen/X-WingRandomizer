@@ -4,7 +4,11 @@ using UnityEngine;
 
 public interface IComeInProducts
 {
-    string[] GetProductsIncludedWith();
+    List<Product> GetProductsIncludedWith();
 
     string GetName();
+
+    void ReciprocateInclusion(Product product);
+
+    int GetProductListCount();
 }

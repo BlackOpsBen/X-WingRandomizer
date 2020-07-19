@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class AddonCard : ScriptableObject, IComeInProducts
+public class AddonCard : Item, IComeInProducts
 {
     public bool forcePushChanges;
 
@@ -11,7 +11,7 @@ public class AddonCard : ScriptableObject, IComeInProducts
 
     public int cost;
 
-    [SerializeField] private string[] includedWith;
+    [SerializeField] private List<Product> includedWith = new List<Product>();
 
     private bool hasRestrictions;
     private bool[] restrictions;
@@ -71,6 +71,7 @@ public class AddonCard : ScriptableObject, IComeInProducts
     public int maxPilotSkill;
     public bool torpedoOrMissileEquipped;
     public bool torpedoOrMissileOrBombEquipped;
+    public bool torpedoOrBombEquipped;
     public bool hasTorpedoOrMissileSlot;
     public bool requiresShieldValue1;
     public bool bombEquipped;
@@ -85,6 +86,7 @@ public class AddonCard : ScriptableObject, IComeInProducts
     public bool grantsBarrelRoll;
     public bool grantsActionHeader;
     public bool grantsAttackTargetLock;
+    public bool grantsSLAM;
 
     [Header("Grants new slots to fill")]
     public bool grantsElitePilotTalent;
@@ -145,6 +147,7 @@ public class AddonCard : ScriptableObject, IComeInProducts
             hasMaxPilotSkill,
             torpedoOrMissileEquipped,
             torpedoOrMissileOrBombEquipped,
+            torpedoOrBombEquipped,
             hasTorpedoOrMissileSlot,
             requiresShieldValue1,
             bombEquipped,
@@ -163,7 +166,8 @@ public class AddonCard : ScriptableObject, IComeInProducts
             grantsEvade,
             grantsBarrelRoll,
             grantsActionHeader,
-            grantsAttackTargetLock
+            grantsAttackTargetLock,
+            grantsSLAM
         };
     }
 
@@ -218,7 +222,7 @@ public class AddonCard : ScriptableObject, IComeInProducts
         return restrictions[restriction];
     }
 
-    public string[] GetProductsIncludedWith()
+    public List<Product> GetProductsIncludedWith()
     {
         return includedWith;
     }
@@ -226,5 +230,15 @@ public class AddonCard : ScriptableObject, IComeInProducts
     public string GetName()
     {
         return this.name;
+    }
+
+    public void ReciprocateInclusion(Product product)
+    {
+        includedWith.Add(product);
+    }
+
+    public int GetProductListCount()
+    {
+        return includedWith.Count;
     }
 }

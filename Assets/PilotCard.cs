@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class PilotCard : ScriptableObject, IComeInProducts
+public class PilotCard : Item, IComeInProducts
 {
     private AddonType[] addonTypes = new AddonType[17];
 
@@ -12,7 +12,7 @@ public class PilotCard : ScriptableObject, IComeInProducts
     [SerializeField] private bool isUnique;
     [SerializeField] private int pilotSkill;
     [SerializeField] private int cost;
-    [SerializeField] private string[] includedWith;
+    [SerializeField] private List<Product> includedWith = new List<Product>();
 
     [Header("Common addons")]
     [SerializeField] private int elitePilotTalents;
@@ -126,7 +126,7 @@ public class PilotCard : ScriptableObject, IComeInProducts
         return isUnique;
     }
 
-    public string[] GetProductsIncludedWith()
+    public List<Product> GetProductsIncludedWith()
     {
         return includedWith;
     }
@@ -134,5 +134,15 @@ public class PilotCard : ScriptableObject, IComeInProducts
     public string GetName()
     {
         return this.name;
+    }
+
+    public void ReciprocateInclusion(Product product)
+    {
+        includedWith.Add(product);
+    }
+
+    public int GetProductListCount()
+    {
+        return includedWith.Count;
     }
 }

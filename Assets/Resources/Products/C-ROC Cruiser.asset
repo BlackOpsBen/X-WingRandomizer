@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: C-ROC Cruiser
   m_EditorClassIdentifier: 
+  itemsIncluded: []
