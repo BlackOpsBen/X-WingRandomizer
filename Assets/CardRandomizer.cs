@@ -80,11 +80,23 @@ public class CardRandomizer : MonoBehaviour
     {
         List<PilotCard> affordablePilots = PilotCardManager.Instance.GetAffordablePilots(Squadrons.Instance.GetPointsRemaining(), randShip);
         PilotCard potentialPilot;
+
+        int infLoopLimiter = 0;
+
         do
         {
             int randPilot = UnityEngine.Random.Range(0, affordablePilots.Count);
             potentialPilot = affordablePilots[randPilot];
-        } while (UniquePilotAlreadyTaken(potentialPilot));
+
+            infLoopLimiter++;
+
+        } while (UniquePilotAlreadyTaken(potentialPilot) && infLoopLimiter < 100);
+
+        if (infLoopLimiter == 100)
+        {
+            Debug.LogError("Unable to find a pilot that isn't an already taken \"unique\" pilot for " + ship.name + ".");
+        }
+
         return potentialPilot;
     }
 
@@ -237,7 +249,7 @@ public class CardRandomizer : MonoBehaviour
         }
     }
 
-    private bool PreviousCardGrantsAction(int aGrantingIndex)
+    public bool PreviousCardGrantsAction(int aGrantingIndex)
     {
         foreach (AddonCard addonCard in addonCards)
         {
@@ -446,6 +458,12 @@ public class CardRandomizer : MonoBehaviour
                 return false;
             }
 
+            if (addonCard.TIEAdvancedOnly && ship.name != "TIE Advanced")
+            {
+                //Debug.Log(addonCard.name + " requires TIE Advanced. Invalid selection.");
+                return false;
+            }
+
             // Action Restrictions
             if (addonCard.focus && !ship.focus && !PreviousCardGrantsAction(0))
             {
@@ -477,7 +495,7 @@ public class CardRandomizer : MonoBehaviour
                 return false;
             }
 
-            if (addonCard.cloak && !ship.cloak)
+            if (addonCard.cloak && !ship.cloak && !PreviousCardGrantsAction(8))
             {
                 //Debug.Log(addonCard.name + " requires a ship that can Cloak. Invalid selection.");
                 return false;
@@ -495,7 +513,7 @@ public class CardRandomizer : MonoBehaviour
                 return false;
             }
 
-            if (addonCard.slam && !ship.slam)
+            if (addonCard.slam && !ship.slam && !PreviousCardGrantsAction(7))
             {
                 //Debug.Log(addonCard.name + " requires a ship that can SLAM. Invalid selection.");
                 return false;
@@ -580,6 +598,12 @@ public class CardRandomizer : MonoBehaviour
             if (addonCard.hasAttackTargetLockEquipped && !PreviousCardGrantsAction(6))
             {
                 //Debug.Log(addonCard.name + " won't be equipped because no addon card has Attack Target Lock.");
+                return false;
+            }
+
+            if (addonCard.hasShields && ship.shieldValue == 0)
+            {
+                //Debug.Log(addonCard.name + " can't be equipped because this ship has no shields.");
                 return false;
             }
         }

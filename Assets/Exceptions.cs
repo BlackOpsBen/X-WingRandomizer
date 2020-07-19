@@ -32,6 +32,28 @@ public class Exceptions : MonoBehaviour
         }
         #endregion
 
+        #region Collision Detector
+        if (addonCard.name == "Collision Detector" && !ship.boost && !ship.barrelRoll && !ship.cloak && !cardRandomizer.PreviousCardGrantsAction(2) && !cardRandomizer.PreviousCardGrantsAction(4) && !cardRandomizer.PreviousCardGrantsAction(8))
+        {
+            return false;
+        }
+        #endregion
+
+        #region Trajectory Simulator
+        if (addonCard.name == "Trajectory Simulator")
+        {
+            bool hasNonActionBombEquipped = false;
+            foreach (AddonCard addon in cardRandomizer.addonCards)
+            {
+                if (addon.GetType().ToString() == "Bomb" && !addon.grantsActionHeader)
+                {
+                    hasNonActionBombEquipped = true;
+                }
+            }
+            return hasNonActionBombEquipped;
+        }
+        #endregion
+
         return true;
     }
 }

@@ -50,6 +50,7 @@ public class AddonCard : Item, IComeInProducts
     public bool T65xWingOnly;
     public bool aWingOnly;
     public bool yWingOnly;
+    public bool TIEAdvancedOnly;
 
     [Header("Action Requirements")]
     public bool focus;
@@ -77,6 +78,7 @@ public class AddonCard : Item, IComeInProducts
     public bool bombEquipped;
     public bool hasAstromechEquipped;
     public bool hasAttackTargetLockEquipped;
+    public bool hasShields;
 
     [Header("Grants actions/abilities:")]
     public bool grantsFocus;
@@ -87,6 +89,7 @@ public class AddonCard : Item, IComeInProducts
     public bool grantsActionHeader;
     public bool grantsAttackTargetLock;
     public bool grantsSLAM;
+    public bool grantsCloak;
 
     [Header("Grants new slots to fill")]
     public bool grantsElitePilotTalent;
@@ -132,6 +135,7 @@ public class AddonCard : Item, IComeInProducts
             T65xWingOnly,
             aWingOnly,
             yWingOnly,
+            TIEAdvancedOnly,
             focus,
             targetLock,
             boost,
@@ -152,7 +156,8 @@ public class AddonCard : Item, IComeInProducts
             requiresShieldValue1,
             bombEquipped,
             hasAstromechEquipped,
-            hasAttackTargetLockEquipped
+            hasAttackTargetLockEquipped,
+            hasShields
         };
     }
 
@@ -167,7 +172,8 @@ public class AddonCard : Item, IComeInProducts
             grantsBarrelRoll,
             grantsActionHeader,
             grantsAttackTargetLock,
-            grantsSLAM
+            grantsSLAM,
+            grantsCloak
         };
     }
 

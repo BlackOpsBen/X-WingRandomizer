@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c32d5ca8e7bf774458500f6ad4398d1c, type: 3}
+  m_Name: Reinforced Deflectors
+  m_EditorClassIdentifier: 
+  forcePushChanges: 0
+  cardArt: {fileID: 21300000, guid: ca48371f743f2e54d89506a27278183c, type: 3}
+  cost: 3
+  includedWith: []
+  unique: 0
+  limited: 0
+  rebelOnly: 0
+  imperialOnly: 0
+  scumOnly: 0
+  rebelAndScumOnly: 0
+  smallShipOnly: 0
+  largeShipOnly: 1
+  hugeShipOnly: 0
+  tiePhantomOnly: 0
+  bWingOnly: 0
+  GR75Only: 0
+  BSF17BomberOnly: 0
+  lancerClassPursuitCraftOnly: 0
+  xWingOnly: 0
+  YV666Only: 0
+  YT1300AndYT2400Only: 0
+  TIEFighterOnly: 0
+  quadjumperOnly: 0
+  heavyTIEOnly: 0
+  TIEOnly: 0
+  T65xWingOnly: 0
+  aWingOnly: 0
+  yWingOnly: 0
+  TIEAdvancedOnly: 0
+  focus: 0
+  targetLock: 0
+  boost: 0
+  evade: 0
+  barrelRoll: 0
+  cloak: 0
+  boostOrBarrelRoll: 0
+  focusOrEvade: 0
+  slam: 0
+  actionHeader: 0
+  cantAlreadyHaveElitePilotTalentSlot: 0
+  hasMinPilotSkill: 0
+  minPilotSkill: 0
+  hasMaxPilotSkill: 0
+  maxPilotSkill: 0
+  torpedoOrMissileEquipped: 0
+  torpedoOrMissileOrBombEquipped: 0
+  torpedoOrBombEquipped: 0
+  hasTorpedoOrMissileSlot: 0
+  requiresShieldValue1: 0
+  bombEquipped: 0
+  hasAstromechEquipped: 0
+  hasAttackTargetLockEquipped: 0
+  hasShields: 1
+  grantsFocus: 0
+  grantsTargetLock: 0
+  grantsBoost: 0
+  grantsEvade: 0
+  grantsBarrelRoll: 0
+  grantsActionHeader: 0
+  grantsAttackTargetLock: 0
+  grantsSLAM: 0
+  grantsCloak: 0
+  grantsElitePilotTalent: 0
+  grantsCrew: 0
+  grantsIllicit: 0
+  grantsModificationCosting3OrLess: 0
+  grantsBomb: 0
