@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Comm Relay
   m_EditorClassIdentifier: 
   forcePushChanges: 0
-  cardArt: {fileID: 0}
-  cost: 0
+  cardArt: {fileID: 21300000, guid: 230eab52fe514d34f921cb17a2b289eb, type: 3}
+  cost: 3
   includedWith: []
   unique: 0
   limited: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
   focus: 0
   targetLock: 0
   boost: 0
-  evade: 0
+  evade: 1
   barrelRoll: 0
   cloak: 0
   boostOrBarrelRoll: 0

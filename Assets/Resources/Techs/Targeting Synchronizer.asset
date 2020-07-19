@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Targeting Synchronizer
   m_EditorClassIdentifier: 
   forcePushChanges: 0
-  cardArt: {fileID: 0}
-  cost: 0
+  cardArt: {fileID: 21300000, guid: d9709146d36f18448a2f1667f0534d2a, type: 3}
+  cost: 3
   includedWith: []
   unique: 0
   limited: 0
@@ -42,7 +42,7 @@ MonoBehaviour:
   yWingOnly: 0
   TIEAdvancedOnly: 0
   focus: 0
-  targetLock: 0
+  targetLock: 1
   boost: 0
   evade: 0
   barrelRoll: 0

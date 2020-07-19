@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Threat Tracker
   m_EditorClassIdentifier: 
   forcePushChanges: 0
-  cardArt: {fileID: 0}
-  cost: 0
+  cardArt: {fileID: 21300000, guid: 39bf9b4758eb07f4c99f02166a2776b3, type: 3}
+  cost: 3
   includedWith: []
   unique: 0
   limited: 0
@@ -22,7 +22,7 @@ MonoBehaviour:
   imperialOnly: 0
   scumOnly: 0
   rebelAndScumOnly: 0
-  smallShipOnly: 0
+  smallShipOnly: 1
   largeShipOnly: 0
   hugeShipOnly: 0
   tiePhantomOnly: 0
@@ -42,12 +42,12 @@ MonoBehaviour:
   yWingOnly: 0
   TIEAdvancedOnly: 0
   focus: 0
-  targetLock: 0
+  targetLock: 1
   boost: 0
   evade: 0
   barrelRoll: 0
   cloak: 0
-  boostOrBarrelRoll: 0
+  boostOrBarrelRoll: 1
   focusOrEvade: 0
   slam: 0
   actionHeader: 0

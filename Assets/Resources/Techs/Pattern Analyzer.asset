@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Pattern Analyzer
   m_EditorClassIdentifier: 
   forcePushChanges: 0
-  cardArt: {fileID: 0}
-  cost: 0
+  cardArt: {fileID: 21300000, guid: e70e1fbf6c3eb3a4180b33a019be8e29, type: 3}
+  cost: 2
   includedWith: []
   unique: 0
   limited: 0

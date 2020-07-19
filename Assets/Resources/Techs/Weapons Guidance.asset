@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Weapons Guidance
   m_EditorClassIdentifier: 
   forcePushChanges: 0
-  cardArt: {fileID: 0}
-  cost: 0
-  includedWith: []
+  cardArt: {fileID: 21300000, guid: b9bb3d0b3820b3d4099da47f3fdb6514, type: 3}
+  cost: 2
+  includedWith:
+  - {fileID: 11400000, guid: 57c02a1b0c0a1b84c87d8ea0550035b3, type: 2}
   unique: 0
   limited: 0
   rebelOnly: 0
@@ -41,7 +42,7 @@ MonoBehaviour:
   aWingOnly: 0
   yWingOnly: 0
   TIEAdvancedOnly: 0
-  focus: 0
+  focus: 1
   targetLock: 0
   boost: 0
   evade: 0
