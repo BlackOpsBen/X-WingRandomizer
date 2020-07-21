@@ -12,3 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: Sabine's TIE Fighter
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: 59cf693112540cf45b1feceed774f8fe, type: 2}
+  - {fileID: 11400000, guid: 7270f2f47faa02644bc424f04658623b, type: 2}
+  - {fileID: 11400000, guid: 60ed8e0288bbf2a489e0343ec7ded9da, type: 2}
+  - {fileID: 11400000, guid: 06e2262da54e77e4881fe0b5b02d38be, type: 2}
+  - {fileID: 11400000, guid: 207c8e7d7a7bc7d48bad7b4c95e1a4db, type: 2}
+  - {fileID: 11400000, guid: 2a0482e85efe87741b5d67dcedfc5fe4, type: 2}
+  - {fileID: 11400000, guid: 0eb063b63c034594099494de950214e1, type: 2}
+  - {fileID: 11400000, guid: 480111d752c2c254ab2a2e28ea247950, type: 2}
+  - {fileID: 11400000, guid: 1e563c768521c874082406434dcd8331, type: 2}
+  - {fileID: 11400000, guid: 67d24e28f20bb9b4eb84d9c85e0a0a78, type: 2}

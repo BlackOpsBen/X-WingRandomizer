@@ -12,3 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: K-Wing
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: c256ebe3ce4fab94b80dad400885377b, type: 2}
+  - {fileID: 11400000, guid: 169ca196b81cabf44912071b2b941f48, type: 2}
+  - {fileID: 11400000, guid: cb6a167b117213248a5940df37cb6c26, type: 2}
+  - {fileID: 11400000, guid: 6592c85ceff629e43af775958072dd53, type: 2}
+  - {fileID: 11400000, guid: f61993de0b8b00e4685791400848d3d2, type: 2}
+  - {fileID: 11400000, guid: da7d34cae64493c45a7b7bb473fa3bc4, type: 2}
+  - {fileID: 11400000, guid: f35780ac67faf4a4e97e9dc87e60f8d2, type: 2}
+  - {fileID: 11400000, guid: 6eff5682d5bef674c8dfc3bff3a47ee7, type: 2}
+  - {fileID: 11400000, guid: c869d933d0705b84da6359ccf143c563, type: 2}
+  - {fileID: 11400000, guid: c869d933d0705b84da6359ccf143c563, type: 2}
+  - {fileID: 11400000, guid: b4205458e4b5fc34dbd3baf4546d638c, type: 2}
+  - {fileID: 11400000, guid: 683105fa41773044c8c3d252e1eb9aa7, type: 2}
+  - {fileID: 11400000, guid: c09e72aa705040449a2f4beccd92fd69, type: 2}
+  - {fileID: 11400000, guid: 4bca21a836f766d4ca3895c696f46bc2, type: 2}

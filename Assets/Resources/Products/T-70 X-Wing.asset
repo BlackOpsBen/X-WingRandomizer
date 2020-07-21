@@ -12,3 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: T-70 X-Wing
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: 86f786e0f97c7bb4a98a837f5078bd6b, type: 2}
+  - {fileID: 11400000, guid: 07850fc054bc2ea42bed2f44a31dd5a0, type: 2}
+  - {fileID: 11400000, guid: d3a78266bee91c14abaf96a7e3ca3b3f, type: 2}
+  - {fileID: 11400000, guid: 2e96f58a572c49c469ced740dec28ffa, type: 2}
+  - {fileID: 11400000, guid: 2c4728ed002c9ae4fa4006916aa8efbe, type: 2}
+  - {fileID: 11400000, guid: e8e96583b28f8d24f8e10f13f61d3ec1, type: 2}
+  - {fileID: 11400000, guid: 5a1060cab1d96dc478f1df1b77e48d28, type: 2}
+  - {fileID: 11400000, guid: 238d2ad68b2925c4983eb0fded7d26ed, type: 2}
+  - {fileID: 11400000, guid: 2b78eb1d58b1bce46bc693b01c2d0b1a, type: 2}
+  - {fileID: 11400000, guid: 1b55c8cc0a248814eaaff66d6bca5313, type: 2}

@@ -12,3 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: Millenium Falcon
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: 3adb45d0652776c47b0f6157b744eb0d, type: 2}
+  - {fileID: 11400000, guid: d549ab108d9df154db9d144ab380f2d2, type: 2}
+  - {fileID: 11400000, guid: 00123da0370c4b548b86ae2bcf12f6dc, type: 2}
+  - {fileID: 11400000, guid: 027ac32381f90c646a5e240e01ed4ea0, type: 2}
+  - {fileID: 11400000, guid: 917a78c4f1a885940871d76501cac9b5, type: 2}
+  - {fileID: 11400000, guid: 099ca2d693f4a914d9f2b101e4501a40, type: 2}
+  - {fileID: 11400000, guid: ca4a2697df551b84d8d3810b5e3ca841, type: 2}
+  - {fileID: 11400000, guid: 2a0482e85efe87741b5d67dcedfc5fe4, type: 2}
+  - {fileID: 11400000, guid: 664ba5ba810cffe4fb209aaff8b275d8, type: 2}
+  - {fileID: 11400000, guid: 73eb90ede06908743bbe64b54dccb310, type: 2}
+  - {fileID: 11400000, guid: 6b11ec65e3b2b1b45b8dd1d2f3689b05, type: 2}
+  - {fileID: 11400000, guid: 8ff31ec325b8ee54d9cf57b1344c636b, type: 2}
+  - {fileID: 11400000, guid: dca52a45625f2c74e81716bd16a09ef2, type: 2}
+  - {fileID: 11400000, guid: c7f4a4d797d21ca499b9d9674adfef9a, type: 2}
+  - {fileID: 11400000, guid: 760ba843ebd0a1c4893384f39acb5361, type: 2}
+  - {fileID: 11400000, guid: c1d89c0be7cb7b94ea5af2fb9ca40ab2, type: 2}
+  - {fileID: 11400000, guid: c1d89c0be7cb7b94ea5af2fb9ca40ab2, type: 2}
+  - {fileID: 11400000, guid: c3979dca298b7a94097e0b78c8910253, type: 2}
+  - {fileID: 11400000, guid: c3979dca298b7a94097e0b78c8910253, type: 2}

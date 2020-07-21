@@ -12,3 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: HWK-290
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: 6c7da72df1f44b1459b5b8b7f9cc882e, type: 2}
+  - {fileID: 11400000, guid: 4b15bc3553fba79479d8c868011a1ddf, type: 2}
+  - {fileID: 11400000, guid: bebea0080830ffa46ba448325243399c, type: 2}
+  - {fileID: 11400000, guid: 10d8c497218e63e4b97c36a7ddb1db39, type: 2}
+  - {fileID: 11400000, guid: 3346299a002512a488a562e2619a63be, type: 2}
+  - {fileID: 11400000, guid: 4bcc8be5f62781c4ca898e2ed0bec481, type: 2}
+  - {fileID: 11400000, guid: b787cbd7c326fd44f9f2de9805f6e109, type: 2}
+  - {fileID: 11400000, guid: 53819f64969e34849ae17d9de6dce5ab, type: 2}
+  - {fileID: 11400000, guid: 8d39772991bc0a64096f65dbdbefcdd7, type: 2}
+  - {fileID: 11400000, guid: f2ffaddb57ac0b049aad1731c9ec6495, type: 2}
+  - {fileID: 11400000, guid: 20867e3e40de48e468b08b62e1b70658, type: 2}

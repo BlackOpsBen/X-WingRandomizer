@@ -12,3 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: X-Wing
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: 9dd26ad48982ec0468122212c00abae0, type: 2}
+  - {fileID: 11400000, guid: fb3ad4049fddc0e488533d079c2c4394, type: 2}
+  - {fileID: 11400000, guid: 37706cafd2dc3d544a21669cde348a80, type: 2}
+  - {fileID: 11400000, guid: ac52aac2e9e3de844bf47aedc09f379b, type: 2}
+  - {fileID: 11400000, guid: 223027aed28d83d48ae3618cc0a0f2cb, type: 2}
+  - {fileID: 11400000, guid: 575438bc42acdbc499ad3817a98601a1, type: 2}
+  - {fileID: 11400000, guid: ca769d7314ce6ea468ec1146c870aef1, type: 2}
+  - {fileID: 11400000, guid: d089936b92267f84bb9e56242daa7e60, type: 2}
+  - {fileID: 11400000, guid: 38614c77d4f8294468ef881703e2f1ce, type: 2}
+  - {fileID: 11400000, guid: 09cce0d7a315bf141acb664535834da3, type: 2}

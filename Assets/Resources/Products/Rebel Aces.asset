@@ -12,3 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: Rebel Aces
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: 84f260354ed00f04aae9bafa97cc548b, type: 2}
+  - {fileID: 11400000, guid: 9b61c3b08f1292147afc562aac0d378c, type: 2}
+  - {fileID: 11400000, guid: 5e41cc7698526794db617d32c8141b08, type: 2}
+  - {fileID: 11400000, guid: 7330b8c92990a524e8ef3ec7d84f068a, type: 2}
+  - {fileID: 11400000, guid: f01e55c765f67fd4a8005fd9cbed3e1c, type: 2}
+  - {fileID: 11400000, guid: 9331a3ebb6adac34b87d2704f15b8e6c, type: 2}
+  - {fileID: 11400000, guid: 5f65590554c9b8048a35f95ab6560d93, type: 2}
+  - {fileID: 11400000, guid: 49aa7d45027fa5c438aaf7dfb610e766, type: 2}
+  - {fileID: 11400000, guid: 5b88c061d330fc5429e4ca925b0554f1, type: 2}
+  - {fileID: 11400000, guid: 82788257350735046b6bf13df31dc377, type: 2}
+  - {fileID: 11400000, guid: b99eab668dcf9c7459c2fe6d1a229e62, type: 2}
+  - {fileID: 11400000, guid: b99eab668dcf9c7459c2fe6d1a229e62, type: 2}
+  - {fileID: 11400000, guid: b99eab668dcf9c7459c2fe6d1a229e62, type: 2}
+  - {fileID: 11400000, guid: 12487e2ee2c5fae459d4652ae391a9fe, type: 2}
+  - {fileID: 11400000, guid: 12487e2ee2c5fae459d4652ae391a9fe, type: 2}
+  - {fileID: 11400000, guid: d541fcec62e019941b3e542a989692e5, type: 2}
+  - {fileID: 11400000, guid: fdce8a0bac7a75c4a84d7066537172c5, type: 2}
+  - {fileID: 11400000, guid: 0712f990b7ca3344c902110311642a43, type: 2}
+  - {fileID: 11400000, guid: 0712f990b7ca3344c902110311642a43, type: 2}
+  - {fileID: 11400000, guid: 463345b34a91ec548a5bc88da176051f, type: 2}
+  - {fileID: 11400000, guid: 463345b34a91ec548a5bc88da176051f, type: 2}
+  - {fileID: 11400000, guid: 56e4502d37c7ca74fa05976edba2e819, type: 2}
+  - {fileID: 11400000, guid: 56e4502d37c7ca74fa05976edba2e819, type: 2}

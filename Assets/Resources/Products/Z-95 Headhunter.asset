@@ -12,3 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: Z-95 Headhunter
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: 02e124798db31264fa26e3e83d8db93b, type: 2}
+  - {fileID: 11400000, guid: 6f8e91786da007c42b393de0aa725f62, type: 2}
+  - {fileID: 11400000, guid: 7eae40dcac4fee845bf45b69affeaec3, type: 2}
+  - {fileID: 11400000, guid: 0a233043f7e30d049926bc0b78dc428a, type: 2}
+  - {fileID: 11400000, guid: 867bf9d1b54a10749a81cf44dc4e43ca, type: 2}
+  - {fileID: 11400000, guid: 904aff41be1b0cf45889640858147f28, type: 2}
+  - {fileID: 11400000, guid: 65c20896008685f47a7b6f49548585f5, type: 2}
+  - {fileID: 11400000, guid: db6a17767b19eae438b27daa93633fa8, type: 2}
+  - {fileID: 11400000, guid: 664ba5ba810cffe4fb209aaff8b275d8, type: 2}
+  - {fileID: 11400000, guid: 2099771c7afa3f04a88bdeb9ef1cf2ff, type: 2}

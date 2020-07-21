@@ -12,3 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: YT-2400 Freighter
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: ff133c0fc3270024298b51aebabaa852, type: 2}
+  - {fileID: 11400000, guid: 4d89c2c9bfc0a5b4e89251e54e2dce33, type: 2}
+  - {fileID: 11400000, guid: 96628af2c0f4ad745a287c509f952514, type: 2}
+  - {fileID: 11400000, guid: fe4bf3a87523ff244887dc5e677f7d18, type: 2}
+  - {fileID: 11400000, guid: b5fe7249a1fa23b4892984afa9e73666, type: 2}
+  - {fileID: 11400000, guid: 993797816edb97d448f15884631f2e88, type: 2}
+  - {fileID: 11400000, guid: e4e1de9c2fedafd44a890d67a832710c, type: 2}
+  - {fileID: 11400000, guid: 12487e2ee2c5fae459d4652ae391a9fe, type: 2}
+  - {fileID: 11400000, guid: 5011d9aef7c35ea4a968719e5c70eb92, type: 2}
+  - {fileID: 11400000, guid: b66c1289f6f930a43b7a5ce993e15dde, type: 2}
+  - {fileID: 11400000, guid: 8b7cd730368ee264382e96117d39fe48, type: 2}
+  - {fileID: 11400000, guid: 96280d062bea022459bd8a0cb8e7b85b, type: 2}
+  - {fileID: 11400000, guid: ac46281f3ed4c1c4abb4e584e8b4a016, type: 2}
+  - {fileID: 11400000, guid: 59c6afc151116b54386d2ccba862201a, type: 2}
+  - {fileID: 11400000, guid: e54fa89695725d3468984f883985befa, type: 2}
+  - {fileID: 11400000, guid: 4bfcb8aa7c9a4f844952d00d240f79ab, type: 2}
+  - {fileID: 11400000, guid: 4bfcb8aa7c9a4f844952d00d240f79ab, type: 2}
+  - {fileID: 11400000, guid: 98b4e070fef2e884fb88761c6ed0c1a3, type: 2}
