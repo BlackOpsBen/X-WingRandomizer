@@ -8,7 +8,7 @@ public class ProductLimitations : MonoBehaviour
 
     private void Awake()
     {
-        Product[] productsInResources = Resources.LoadAll<Product>("Resources/Products");
+        Product[] productsInResources = Resources.LoadAll<Product>("Products");
 
         for (int i = 0; i < productsInResources.Length; i++)
         {
@@ -23,16 +23,32 @@ public class ProductLimitations : MonoBehaviour
 
     public bool ItemIsAvailable(IComeInProducts item)
     {
-        foreach (Product includedProduct in productsIncluded)
+        for (int i = 0; i < productsIncluded.Count; i++)
         {
-            foreach (Product productRequired in item.GetProductsIncludedWith())
+            if (item.GetProductsIncludedWith().Count > 0)
             {
-                if (productRequired.name == includedProduct.name)
+                for (int j = 0; j < item.GetProductsIncludedWith().Count; j++)
                 {
-                    return true;
+                    if (item.GetProductsIncludedWith()[j] != null)
+                    {
+                        Debug.Log(item.GetProductsIncludedWith()[j].name + " is being compared with " + productsIncluded[i].name);
+                        if (item.GetProductsIncludedWith()[j] == productsIncluded[i])
+                        {
+                            return true;
+                        }
+                    }
+                    else
+                    {
+                        Debug.LogWarning("Error state 2.");
+                    }
                 }
             }
+            else
+            {
+                Debug.LogWarning("Error state 1.");
+            }
         }
+
         return false;
     }
 }
