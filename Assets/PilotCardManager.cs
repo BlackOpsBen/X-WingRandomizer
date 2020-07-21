@@ -12,6 +12,8 @@ public class PilotCardManager : MonoBehaviour
 
     private GameObject pilotCard;
 
+    private ProductLimitations productLimitations;
+
     [System.Serializable]
     public class Faction
     {
@@ -27,6 +29,8 @@ public class PilotCardManager : MonoBehaviour
         SingletonPattern();
 
         pilotCard = FindObjectOfType<ChangeFaction>().gameObject;
+
+        productLimitations = GetComponent<ProductLimitations>();
 
         InitializeFactions();
 
@@ -123,7 +127,7 @@ public class PilotCardManager : MonoBehaviour
         List<Ship> listToReturn = new List<Ship>();
         foreach (Ship ship in factionList[PilotCardManager.Instance.GetSelectedFactionIndex()].ships)
         {
-            if (ship.GetCheapestPilotCost() <= pointsAvailable)
+            if (productLimitations.ItemIsAvailable(ship) && ship.GetCheapestPilotCost() <= pointsAvailable)
             {
                 listToReturn.Add(ship);
             }
@@ -136,7 +140,7 @@ public class PilotCardManager : MonoBehaviour
         List<PilotCard> listToReturn = new List<PilotCard>();
         foreach (PilotCard pilot in factionList[selectedFaction].pilotGroups[shipIndex].pilots)
         {
-            if (pilot.GetCost() <= pointsAvailable)
+            if (productLimitations.ItemIsAvailable(pilot) && pilot.GetCost() <= pointsAvailable)
             {
                 listToReturn.Add(pilot);
             }

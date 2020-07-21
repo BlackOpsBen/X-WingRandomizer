@@ -14,6 +14,8 @@ public class CardRandomizer : MonoBehaviour
 
     private Exceptions exceptions;
 
+    private ProductLimitations productLimitations;
+
     private bool needToFillNewSlots = false;
     private int lastCountedCardIndex = 0;
 
@@ -21,6 +23,7 @@ public class CardRandomizer : MonoBehaviour
     {
         displayCards = GetComponent<DisplayCards>();
         exceptions = GetComponent<Exceptions>();
+        productLimitations = GetComponent<ProductLimitations>();
     }
 
     // Called by UI Button
@@ -316,6 +319,12 @@ public class CardRandomizer : MonoBehaviour
 
     private bool ValidateSelection(AddonCard addonCard)
     {
+        if (productLimitations.ItemIsAvailable(addonCard) == false)
+        {
+            Debug.Log(addonCard.name + " is not available with the selected products.");
+            return false;
+        }
+
         int pointLimit = Squadrons.Instance.GetPointsRemaining() - PreviousCardsCost() - pilot.GetCost();
         
         if (addonCard.cost > pointLimit)
