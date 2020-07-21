@@ -12,3 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: TIE Phantom
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: b337b8bfb2fc5d343b86691c12ab8fe3, type: 2}
+  - {fileID: 11400000, guid: 04c6278a4a75e11449e006c2681a0d12, type: 2}
+  - {fileID: 11400000, guid: c6715c52323ae45488e559a74de51f9f, type: 2}
+  - {fileID: 11400000, guid: 017c891fdd1ad0143a1286c13c5f9145, type: 2}
+  - {fileID: 11400000, guid: 56a64422d80f335429c0ced8e0437422, type: 2}
+  - {fileID: 11400000, guid: 8d39772991bc0a64096f65dbdbefcdd7, type: 2}
+  - {fileID: 11400000, guid: 4456d95a3e0fbab4cae64bab190d2b01, type: 2}
+  - {fileID: 11400000, guid: 629e7ab3842569f47acbfaa8e2ed4b81, type: 2}
+  - {fileID: 11400000, guid: 368b8494b4a8a1745b389aa3d9b0ae49, type: 2}
+  - {fileID: 11400000, guid: 70111f046f5fd2c4686af6c8567ace60, type: 2}

@@ -12,3 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: TIE Punisher
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: 8e9926710a09a564eb5f55311c710805, type: 2}
+  - {fileID: 11400000, guid: 069da1ad999f48c4d80ea76f632ff681, type: 2}
+  - {fileID: 11400000, guid: b5e9e2483d30e9c43822200eda731168, type: 2}
+  - {fileID: 11400000, guid: 5f2a52b20ea99974d9f1c4b8df281ec8, type: 2}
+  - {fileID: 11400000, guid: 0d5c54152ff369f40a7ef6dd9b6d3b5c, type: 2}
+  - {fileID: 11400000, guid: da7d34cae64493c45a7b7bb473fa3bc4, type: 2}
+  - {fileID: 11400000, guid: c30a50cc9e772a14aa17b53f319592cb, type: 2}
+  - {fileID: 11400000, guid: f35780ac67faf4a4e97e9dc87e60f8d2, type: 2}
+  - {fileID: 11400000, guid: 6eff5682d5bef674c8dfc3bff3a47ee7, type: 2}
+  - {fileID: 11400000, guid: 06ceb704f17084c48b5a0470a71b47dd, type: 2}
+  - {fileID: 11400000, guid: 683105fa41773044c8c3d252e1eb9aa7, type: 2}
+  - {fileID: 11400000, guid: 0712f990b7ca3344c902110311642a43, type: 2}
+  - {fileID: 11400000, guid: 30fe7738a7f2da945925b0d6574d1f50, type: 2}
+  - {fileID: 11400000, guid: 30fe7738a7f2da945925b0d6574d1f50, type: 2}

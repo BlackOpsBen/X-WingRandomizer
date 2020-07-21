@@ -12,3 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: TIEfo Fighter
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: 29be13f8a44053244947106679fd32c1, type: 2}
+  - {fileID: 11400000, guid: 5bd6fe13afe8ba148bd5af27e36b2aaf, type: 2}
+  - {fileID: 11400000, guid: 6c33b95dffef92848b89a3568db4319c, type: 2}
+  - {fileID: 11400000, guid: 510ab4f3a45e9564f8ffe05daeba8ddf, type: 2}
+  - {fileID: 11400000, guid: 47decc90fc587db41ac13bc06ea8e8b4, type: 2}
+  - {fileID: 11400000, guid: 8150e7756c254ad45a56356adfa405f8, type: 2}
+  - {fileID: 11400000, guid: f8b8e5e0748ff7a4c8e6af15a48e82b0, type: 2}
+  - {fileID: 11400000, guid: af48066d8f36f1a47937cf3e160f6458, type: 2}
+  - {fileID: 11400000, guid: 303cc4f3c9a355e48a87cd955fdb2b9b, type: 2}

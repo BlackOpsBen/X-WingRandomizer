@@ -12,3 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: VT-49 Decimator
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: ecb0a162582d36e4f9fd4162e3a0fc66, type: 2}
+  - {fileID: 11400000, guid: b49e0d6833c9ce24d9ff387f920f8299, type: 2}
+  - {fileID: 11400000, guid: 006d9c8fdedaa514597f3bdf0ab985fc, type: 2}
+  - {fileID: 11400000, guid: 1b98c5271f444774e86f506ed7c8e816, type: 2}
+  - {fileID: 11400000, guid: 2b50b6795d67eea4aac6e105a1d8672d, type: 2}
+  - {fileID: 11400000, guid: f2e56ac684e4391419c81a7fa2e7a59d, type: 2}
+  - {fileID: 11400000, guid: b9824d988bd512641bdd9bc9ba4729bd, type: 2}
+  - {fileID: 11400000, guid: b9824d988bd512641bdd9bc9ba4729bd, type: 2}
+  - {fileID: 11400000, guid: 6241dc5b852dc854587bcf36d6b509d9, type: 2}
+  - {fileID: 11400000, guid: 6241dc5b852dc854587bcf36d6b509d9, type: 2}
+  - {fileID: 11400000, guid: fa59901b8a90fc043a0aa974a8c00509, type: 2}
+  - {fileID: 11400000, guid: 64fbfaf724601bd4089d3a7b804f1f4a, type: 2}
+  - {fileID: 11400000, guid: 222c774f42817f74eb48434330b7767d, type: 2}
+  - {fileID: 11400000, guid: 5ec17dcbe917f2742b53cdf7c4e7adce, type: 2}
+  - {fileID: 11400000, guid: 0a4597d48d0fc9f4da1919456c126279, type: 2}
+  - {fileID: 11400000, guid: a09459ee6bfebb147b9565d7918d2c44, type: 2}
+  - {fileID: 11400000, guid: 0968a00ef394f3049a968aa906e0e9ea, type: 2}
+  - {fileID: 11400000, guid: 0968a00ef394f3049a968aa906e0e9ea, type: 2}

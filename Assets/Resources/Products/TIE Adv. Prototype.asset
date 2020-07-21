@@ -12,3 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: TIE Adv. Prototype
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: 4de0eafde124b1c4f934be713eaceb12, type: 2}
+  - {fileID: 11400000, guid: 906fe328d94d5954b96e30b9a53f4efa, type: 2}
+  - {fileID: 11400000, guid: 4b33c08714f0db341b0a468ca3f281fe, type: 2}
+  - {fileID: 11400000, guid: fc57c407f269a954aa3a05e787a88f9d, type: 2}
+  - {fileID: 11400000, guid: 147c0ee7c48298e4696e2b61254c3ee5, type: 2}
+  - {fileID: 11400000, guid: e072bd338ee3b9e45973ed7040447f6f, type: 2}
+  - {fileID: 11400000, guid: c0f041b00ffeba14cab461f535eb4239, type: 2}
+  - {fileID: 11400000, guid: b0c03c5c6f3f12444ad8cde1e8f7af27, type: 2}
+  - {fileID: 11400000, guid: ebfd731c082e4af4cb110c110befae48, type: 2}
+  - {fileID: 11400000, guid: fbca785bd1185c041a2676416003991e, type: 2}

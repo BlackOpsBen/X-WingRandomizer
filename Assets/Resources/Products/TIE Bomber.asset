@@ -12,3 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: TIE Bomber
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: 43181f8b36b83b140b1b47dd30ee2142, type: 2}
+  - {fileID: 11400000, guid: 5d3aa73b6727ec449bff77101f251696, type: 2}
+  - {fileID: 11400000, guid: 226a35f75bc216a4b9bf1daecd4ef88c, type: 2}
+  - {fileID: 11400000, guid: e48ee25480c63ab46b719c81cfb824d8, type: 2}
+  - {fileID: 11400000, guid: ad0e4d2876abfd4478f50fc3e6cbed1e, type: 2}
+  - {fileID: 11400000, guid: 0450a8a8ca9d0a34bb3fb3b95c8258b1, type: 2}
+  - {fileID: 11400000, guid: 238d2ad68b2925c4983eb0fded7d26ed, type: 2}
+  - {fileID: 11400000, guid: 664ba5ba810cffe4fb209aaff8b275d8, type: 2}
+  - {fileID: 11400000, guid: fa59901b8a90fc043a0aa974a8c00509, type: 2}
+  - {fileID: 11400000, guid: b602b8fd691b9f8408ff91efe15b085e, type: 2}

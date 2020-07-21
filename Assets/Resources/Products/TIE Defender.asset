@@ -12,3 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: TIE Defender
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: 5fd79cf0b039e0648ab8e5a9a41cbdd5, type: 2}
+  - {fileID: 11400000, guid: 16ec4817f1c4114498c5ce56039d8d9d, type: 2}
+  - {fileID: 11400000, guid: 35b425d32534848428fcf94b1eee1e26, type: 2}
+  - {fileID: 11400000, guid: 615024ac33eb3ac49b9caf5b7940fb85, type: 2}
+  - {fileID: 11400000, guid: db4ae8b0e344f6b43b7bb6103531571b, type: 2}
+  - {fileID: 11400000, guid: abaa7e207cce4f942b7e49c988a9789e, type: 2}
+  - {fileID: 11400000, guid: 398f920869aac5f4f9ee768b07316db2, type: 2}
+  - {fileID: 11400000, guid: 6c7037ff796ad1c47a4999d44ed4ee46, type: 2}
+  - {fileID: 11400000, guid: db6a17767b19eae438b27daa93633fa8, type: 2}
+  - {fileID: 11400000, guid: 2099771c7afa3f04a88bdeb9ef1cf2ff, type: 2}

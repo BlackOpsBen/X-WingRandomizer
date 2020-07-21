@@ -12,3 +12,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: Ghost
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: f88b85de18494a84d8865e138a6281b6, type: 2}
+  - {fileID: 11400000, guid: ef1402f60f1cc344499071b41fe5988e, type: 2}
+  - {fileID: 11400000, guid: ad8e330e829b93c499601cb6ac48fb6c, type: 2}
+  - {fileID: 11400000, guid: 3ca72e20a28d5e64ba9cedab3ea3fb1e, type: 2}
+  - {fileID: 11400000, guid: fff84632a6eccb544b8133fd9898ea0b, type: 2}
+  - {fileID: 11400000, guid: 0119c13e19a016e458a04657d905ac15, type: 2}
+  - {fileID: 11400000, guid: 88eeba068d925ad4f992942b44b390df, type: 2}
+  - {fileID: 11400000, guid: 5d20c1436c0771147bf3209bfb168a5c, type: 2}
+  - {fileID: 11400000, guid: 8cb0f978e6f7eee448fba7a2b3acd190, type: 2}
+  - {fileID: 11400000, guid: 7ad34b4386e449a439dc8e8cf78e2cc9, type: 2}
+  - {fileID: 11400000, guid: 398f920869aac5f4f9ee768b07316db2, type: 2}
+  - {fileID: 11400000, guid: 238d2ad68b2925c4983eb0fded7d26ed, type: 2}
+  - {fileID: 11400000, guid: fe81eb13fadb5f84c9deb0940332c75b, type: 2}
+  - {fileID: 11400000, guid: fe81eb13fadb5f84c9deb0940332c75b, type: 2}
+  - {fileID: 11400000, guid: 06ceb704f17084c48b5a0470a71b47dd, type: 2}
+  - {fileID: 11400000, guid: b4205458e4b5fc34dbd3baf4546d638c, type: 2}
+  - {fileID: 11400000, guid: d58209e0ec02bbf46b32a976419253d8, type: 2}
+  - {fileID: 11400000, guid: 3d03c6123720fb1439bbc2899cc75201, type: 2}
+  - {fileID: 11400000, guid: 1fadc011fdd5e514a92f7abd69886acd, type: 2}
+  - {fileID: 11400000, guid: c1a3bca172fc5d14fba7b8386817cd1f, type: 2}
+  - {fileID: 11400000, guid: 5f086b3bf5ca49449a5b24255acc2748, type: 2}
+  - {fileID: 11400000, guid: 67f83090e6155da48adf096cea778c92, type: 2}
+  - {fileID: 11400000, guid: 506b0d2b577db7a4e8bb2149a91dfbed, type: 2}
+  - {fileID: 11400000, guid: 1c732ba410591cc4abe85903863a39b1, type: 2}
+  - {fileID: 11400000, guid: ebe920fc20703dd448df303bf662afe7, type: 2}
+  - {fileID: 11400000, guid: 0d401d2a7c3dc4044ab5ebb6bd598652, type: 2}

@@ -12,3 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: TIE Fighter
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: b57378ecd43f1414ca936d4b8288d64b, type: 2}
+  - {fileID: 11400000, guid: e777d9829ae6f24498e1fff395533969, type: 2}
+  - {fileID: 11400000, guid: 8d6a4d966bd20274f81ac8f0d0253fa2, type: 2}
+  - {fileID: 11400000, guid: c63ee25e06f5b074ea5a8c4df1fbb6c4, type: 2}
+  - {fileID: 11400000, guid: f19af73d4f981174083f98c8ef03c22d, type: 2}
+  - {fileID: 11400000, guid: 91cfcc88cee9b9e47aa39103f3df3055, type: 2}
+  - {fileID: 11400000, guid: bb57b21c4bfb9cb47b598a30f572a48d, type: 2}
+  - {fileID: 11400000, guid: 13eaf4a5a69f0c4459960d3250f03b6b, type: 2}
+  - {fileID: 11400000, guid: a041e2f6018a53f44a9af13ecdfe22a0, type: 2}

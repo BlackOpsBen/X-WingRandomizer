@@ -12,3 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: B-Wing
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: 9b61c3b08f1292147afc562aac0d378c, type: 2}
+  - {fileID: 11400000, guid: 152074aff3f76764c8588753386ae9fd, type: 2}
+  - {fileID: 11400000, guid: 190765a7061432c4a851a0e148256332, type: 2}
+  - {fileID: 11400000, guid: 5b88c061d330fc5429e4ca925b0554f1, type: 2}
+  - {fileID: 11400000, guid: 82788257350735046b6bf13df31dc377, type: 2}
+  - {fileID: 11400000, guid: 238d2ad68b2925c4983eb0fded7d26ed, type: 2}
+  - {fileID: 11400000, guid: 09cce0d7a315bf141acb664535834da3, type: 2}
+  - {fileID: 11400000, guid: b960b504dabbd4548b9f428d77d25e53, type: 2}
+  - {fileID: 11400000, guid: 6c7037ff796ad1c47a4999d44ed4ee46, type: 2}
+  - {fileID: 11400000, guid: 629e7ab3842569f47acbfaa8e2ed4b81, type: 2}

@@ -12,3 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: Alpha-Class Star Wing
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: 73b4bb1a63afe5345b01e0de5c67b14f, type: 2}
+  - {fileID: 11400000, guid: bb8a555c52acef843853db4ca5f9e72b, type: 2}
+  - {fileID: 11400000, guid: b3ebaafff9b7616409bd23dbd3ef473e, type: 2}
+  - {fileID: 11400000, guid: 4f280f16293e5f143ab65eb039214545, type: 2}
+  - {fileID: 11400000, guid: bf8c18d7a034b4e46bc18df61aac2652, type: 2}
+  - {fileID: 11400000, guid: 6a6dd173165e32640b9863fac87ef341, type: 2}
+  - {fileID: 11400000, guid: e0e4dc27972e9d34699042776c078d3d, type: 2}
+  - {fileID: 11400000, guid: a495a9a8eb06b9d40b125091f84db925, type: 2}
+  - {fileID: 11400000, guid: 5f408025ff64ade4388da90fc8a2c843, type: 2}
+  - {fileID: 11400000, guid: 9dc6e572abd477d4d9e22074bc109ed5, type: 2}
+  - {fileID: 11400000, guid: 4bca21a836f766d4ca3895c696f46bc2, type: 2}
+  - {fileID: 11400000, guid: bde89f95331c45b4bb1cfa9327a75ab0, type: 2}

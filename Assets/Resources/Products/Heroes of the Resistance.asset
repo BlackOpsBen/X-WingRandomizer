@@ -12,3 +12,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: Heroes of the Resistance
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: 86f786e0f97c7bb4a98a837f5078bd6b, type: 2}
+  - {fileID: 11400000, guid: 3adb45d0652776c47b0f6157b744eb0d, type: 2}
+  - {fileID: 11400000, guid: aa4f00c4e87fb0d4382e56fb3c368ef9, type: 2}
+  - {fileID: 11400000, guid: 3f24b9b7669686b4d9e251bd0c42242f, type: 2}
+  - {fileID: 11400000, guid: cf640da9313d3464db5d100758283cb3, type: 2}
+  - {fileID: 11400000, guid: 58d869f0cc767564e9ecc28c43833ab7, type: 2}
+  - {fileID: 11400000, guid: a021c892a7474c245ab09fa5b4b76798, type: 2}
+  - {fileID: 11400000, guid: 01dc770084b65324ca47739838cafd77, type: 2}
+  - {fileID: 11400000, guid: 905867006e5adf84f81f7702f288ef26, type: 2}
+  - {fileID: 11400000, guid: 876347127eaa37f4d866b7bab99041ea, type: 2}
+  - {fileID: 11400000, guid: 2e96f58a572c49c469ced740dec28ffa, type: 2}
+  - {fileID: 11400000, guid: 2c4728ed002c9ae4fa4006916aa8efbe, type: 2}
+  - {fileID: 11400000, guid: 80183d452c1110640a4316798874db31, type: 2}
+  - {fileID: 11400000, guid: 0f4f41d869d639149b15ea1a3e362d72, type: 2}
+  - {fileID: 11400000, guid: cd22e85187e73c8499545f7244689de3, type: 2}
+  - {fileID: 11400000, guid: 67e2188c3290a224085f0e20ef564464, type: 2}
+  - {fileID: 11400000, guid: 6b274d2062192664eaaac01196f957d4, type: 2}
+  - {fileID: 11400000, guid: 6b274d2062192664eaaac01196f957d4, type: 2}
+  - {fileID: 11400000, guid: f1f0410c1cf78b242a27dec9c3da7c25, type: 2}
+  - {fileID: 11400000, guid: f1f0410c1cf78b242a27dec9c3da7c25, type: 2}
+  - {fileID: 11400000, guid: f4bc8de9565c409429dfd755c13b239b, type: 2}
+  - {fileID: 11400000, guid: f4bc8de9565c409429dfd755c13b239b, type: 2}
+  - {fileID: 11400000, guid: 2b78eb1d58b1bce46bc693b01c2d0b1a, type: 2}
+  - {fileID: 11400000, guid: 2b78eb1d58b1bce46bc693b01c2d0b1a, type: 2}
+  - {fileID: 11400000, guid: 857410288090ce4409ceb7f029e8bb10, type: 2}
+  - {fileID: 11400000, guid: 74d3acb23db553f4c868b8d17a65d1f9, type: 2}
+  - {fileID: 11400000, guid: 74d3acb23db553f4c868b8d17a65d1f9, type: 2}
+  - {fileID: 11400000, guid: 935b5aa51683b674dbf916869ecee5fe, type: 2}
+  - {fileID: 11400000, guid: 461cb1d5803223b4699f17ebf1cbe02d, type: 2}
+  - {fileID: 11400000, guid: 69fae00333289054ca94a443a68731bd, type: 2}

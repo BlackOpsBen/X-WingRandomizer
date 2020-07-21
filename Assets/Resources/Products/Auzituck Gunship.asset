@@ -12,3 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: Auzituck Gunship
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: bfda3dd3d04e36a4faaf099cd9e4c8fc, type: 2}
+  - {fileID: 11400000, guid: a485cb27229326a48b1a7702734f6df1, type: 2}
+  - {fileID: 11400000, guid: 16c8791e76589934fb911153d02abb4c, type: 2}
+  - {fileID: 11400000, guid: 551e167556647524993ed8b2100968a8, type: 2}
+  - {fileID: 11400000, guid: 26f761a322ae2b44cae1cc0354314cce, type: 2}
+  - {fileID: 11400000, guid: f2e56ac684e4391419c81a7fa2e7a59d, type: 2}
+  - {fileID: 11400000, guid: 9723d1df7b9bcaa449a69e1c02b6c0d2, type: 2}
+  - {fileID: 11400000, guid: 5025b56851279b1418b05d948aad5cc5, type: 2}
+  - {fileID: 11400000, guid: 4456d95a3e0fbab4cae64bab190d2b01, type: 2}
+  - {fileID: 11400000, guid: b25d89e20a471b141bd27ddaa0c5caec, type: 2}
+  - {fileID: 11400000, guid: 38e9efe253b6bc24c968d8fd5b7a054c, type: 2}

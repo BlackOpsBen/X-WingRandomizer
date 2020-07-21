@@ -12,3 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: Lambda-Class Shuttle
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: d6c73d30c4cfe0c4abb4799f41aaa5d0, type: 2}
+  - {fileID: 11400000, guid: 130329aaecfcf044d8e408f00cd6316a, type: 2}
+  - {fileID: 11400000, guid: fc4a1be78ddd75e4ab677194d6970478, type: 2}
+  - {fileID: 11400000, guid: 24162eb14c1558042b4ad44aac6827ee, type: 2}
+  - {fileID: 11400000, guid: fc61bc81e569f6a4c99a7d53594dde80, type: 2}
+  - {fileID: 11400000, guid: 5011d9aef7c35ea4a968719e5c70eb92, type: 2}
+  - {fileID: 11400000, guid: 9c2e9f22e9a82174391acb80479f984b, type: 2}
+  - {fileID: 11400000, guid: 176b18f4d3bc4a14483138d81005228a, type: 2}
+  - {fileID: 11400000, guid: 53819f64969e34849ae17d9de6dce5ab, type: 2}
+  - {fileID: 11400000, guid: 25d2c48bb8a36ee4a989dad27d297176, type: 2}
+  - {fileID: 11400000, guid: ead4c623b65b29c4e87f6cb384a5b99b, type: 2}
+  - {fileID: 11400000, guid: c7f4a4d797d21ca499b9d9674adfef9a, type: 2}
+  - {fileID: 11400000, guid: 1366542fa61bd2e49b4c4439b21531ce, type: 2}
+  - {fileID: 11400000, guid: 1366542fa61bd2e49b4c4439b21531ce, type: 2}
+  - {fileID: 11400000, guid: 09052bc44b2cdf940af25dfabc4d44fd, type: 2}
+  - {fileID: 11400000, guid: 6ad62a62b48e1174f93c60f98cd88389, type: 2}
+  - {fileID: 11400000, guid: e946c8420c1fe1b44bf519adc6521186, type: 2}

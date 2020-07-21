@@ -12,3 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: Imperial Aces
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: 10dcb07109622e249935404da6767578, type: 2}
+  - {fileID: 11400000, guid: 07890508c5e2ef64cb8bf1c736a30bf3, type: 2}
+  - {fileID: 11400000, guid: 1f4836df6e66c6c45bb92bf7097cb5ca, type: 2}
+  - {fileID: 11400000, guid: 7af95ac2982edf6418163941640e806e, type: 2}
+  - {fileID: 11400000, guid: e862004bce46fa5499aa908fdc60e68c, type: 2}
+  - {fileID: 11400000, guid: e862004bce46fa5499aa908fdc60e68c, type: 2}
+  - {fileID: 11400000, guid: f6a5bd1853649464e8395b16b43c8b80, type: 2}
+  - {fileID: 11400000, guid: f6a5bd1853649464e8395b16b43c8b80, type: 2}
+  - {fileID: 11400000, guid: 023062d5891a2034eb35d2cdc03ad41a, type: 2}
+  - {fileID: 11400000, guid: 023062d5891a2034eb35d2cdc03ad41a, type: 2}
+  - {fileID: 11400000, guid: a0cca3a1088562b4197a00947d0958ff, type: 2}
+  - {fileID: 11400000, guid: a0cca3a1088562b4197a00947d0958ff, type: 2}
+  - {fileID: 11400000, guid: 59a4e535afae9a049a8c686b00ec5cdc, type: 2}
+  - {fileID: 11400000, guid: 59a4e535afae9a049a8c686b00ec5cdc, type: 2}
+  - {fileID: 11400000, guid: 38e9efe253b6bc24c968d8fd5b7a054c, type: 2}
+  - {fileID: 11400000, guid: 38e9efe253b6bc24c968d8fd5b7a054c, type: 2}
+  - {fileID: 11400000, guid: c3979dca298b7a94097e0b78c8910253, type: 2}
+  - {fileID: 11400000, guid: c3979dca298b7a94097e0b78c8910253, type: 2}
+  - {fileID: 11400000, guid: 91e1da9122ac9fc47ae37d322e2d4ff0, type: 2}
+  - {fileID: 11400000, guid: 91e1da9122ac9fc47ae37d322e2d4ff0, type: 2}
+  - {fileID: 11400000, guid: 8a254b008afc83047a7cf4c65a29b0d6, type: 2}
+  - {fileID: 11400000, guid: 8a254b008afc83047a7cf4c65a29b0d6, type: 2}

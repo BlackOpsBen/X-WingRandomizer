@@ -245,6 +245,25 @@ public class CardRandomizer : MonoBehaviour
                 MakeValidSelection(3);
                 Debug.Log("Verify this selection was of type 'Bomb'");
             }
+
+            if (addonCards[i].grantsBomb2)
+            {
+                MakeValidSelection(3);
+                Debug.Log("Verify this selection was of type 'Bomb'");
+            }
+
+            if (addonCards[i].grantsModification)
+            {
+                MakeValidSelection(4);
+                Debug.Log("Verify this selection was of type 'Modification'");
+            }
+
+            if (addonCards[i].grantsTorpedo)
+            {
+                MakeValidSelection(1);
+                Debug.Log("Verify this selection was of type 'Torpedo'");
+            }
+
             lastCountedCardIndex++;
         }
     }

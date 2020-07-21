@@ -79,6 +79,7 @@ public class AddonCard : Item, IComeInProducts
     public bool hasAstromechEquipped;
     public bool hasAttackTargetLockEquipped;
     public bool hasShields;
+    public bool hasTurretEquipped;
 
     [Header("Grants actions/abilities:")]
     public bool grantsFocus;
@@ -97,6 +98,9 @@ public class AddonCard : Item, IComeInProducts
     public bool grantsIllicit;
     public bool grantsModificationCosting3OrLess;
     public bool grantsBomb;
+    public bool grantsBomb2;
+    public bool grantsModification;
+    public bool grantsTorpedo;
 
     private void OnValidate()
     {
@@ -157,7 +161,8 @@ public class AddonCard : Item, IComeInProducts
             bombEquipped,
             hasAstromechEquipped,
             hasAttackTargetLockEquipped,
-            hasShields
+            hasShields,
+            hasTurretEquipped
         };
     }
 
@@ -185,7 +190,10 @@ public class AddonCard : Item, IComeInProducts
             grantsCrew,
             grantsIllicit,
             grantsModificationCosting3OrLess,
-            grantsBomb
+            grantsBomb,
+            grantsBomb2,
+            grantsModification,
+            grantsTorpedo
         };
     }
 

@@ -12,3 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: TIE Interceptor
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: 8a254b008afc83047a7cf4c65a29b0d6, type: 2}
+  - {fileID: 11400000, guid: 22a283343e6ebfa46bc92495a5a0306b, type: 2}
+  - {fileID: 11400000, guid: db0d511083da0fe459fbc40cdbe95178, type: 2}
+  - {fileID: 11400000, guid: 268b07e4d718a4848810f972ef815850, type: 2}
+  - {fileID: 11400000, guid: f6a5bd1853649464e8395b16b43c8b80, type: 2}
+  - {fileID: 11400000, guid: 72ec887275af50f47bbf3b8deac8205d, type: 2}
+  - {fileID: 11400000, guid: 6aed2ec34251c284e8eac81591e3b71e, type: 2}
+  - {fileID: 11400000, guid: 7fef6c960b9f02746ab8a68948cf395d, type: 2}
+  - {fileID: 11400000, guid: ca4a2697df551b84d8d3810b5e3ca841, type: 2}

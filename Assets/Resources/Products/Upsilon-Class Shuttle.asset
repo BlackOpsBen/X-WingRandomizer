@@ -12,3 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: Upsilon-Class Shuttle
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: f0087d940e27904459b11df8d2d7b80b, type: 2}
+  - {fileID: 11400000, guid: 1a7405fc64203b94f8d5b64891632609, type: 2}
+  - {fileID: 11400000, guid: 60d54c660d1b5354c994d126dbf7769a, type: 2}
+  - {fileID: 11400000, guid: 3c3911774988ddd49832088e181d2def, type: 2}
+  - {fileID: 11400000, guid: a2548a985be7fa249a73da2db24ea80f, type: 2}
+  - {fileID: 11400000, guid: 6b274d2062192664eaaac01196f957d4, type: 2}
+  - {fileID: 11400000, guid: 6b274d2062192664eaaac01196f957d4, type: 2}
+  - {fileID: 11400000, guid: 777042af142039f47bd0e43dc663154e, type: 2}
+  - {fileID: 11400000, guid: 6cc65e7074ef1d74bb4eeb1e7a5a229a, type: 2}
+  - {fileID: 11400000, guid: d43d0d79e38109e4a8358163e2f429eb, type: 2}
+  - {fileID: 11400000, guid: d43d0d79e38109e4a8358163e2f429eb, type: 2}
+  - {fileID: 11400000, guid: b716c5a3128df7a44973d278f7d403a4, type: 2}
+  - {fileID: 11400000, guid: b716c5a3128df7a44973d278f7d403a4, type: 2}
+  - {fileID: 11400000, guid: 967898824ba9ef54798ef3ef539a670a, type: 2}
+  - {fileID: 11400000, guid: 967898824ba9ef54798ef3ef539a670a, type: 2}
+  - {fileID: 11400000, guid: 8bdbab011183c544abcf6ee4b76e8f1e, type: 2}
+  - {fileID: 11400000, guid: a932d1a8ac5568d49899755895112d15, type: 2}
+  - {fileID: 11400000, guid: a932d1a8ac5568d49899755895112d15, type: 2}

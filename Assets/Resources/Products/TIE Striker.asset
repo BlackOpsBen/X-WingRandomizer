@@ -12,3 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: TIE Striker
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: bf9d77617e8166b4fa9613efacec54ce, type: 2}
+  - {fileID: 11400000, guid: 37dec1c78e26e534dad1865377aa74bb, type: 2}
+  - {fileID: 11400000, guid: d31081818e48d7b4d80470f586532817, type: 2}
+  - {fileID: 11400000, guid: a6f3dfffc0d717246a0a43d3213a1794, type: 2}
+  - {fileID: 11400000, guid: 95c0e9121bd03c44e83fe42669ce303b, type: 2}
+  - {fileID: 11400000, guid: 58de56cf430105c45b3b85ae45ef2faf, type: 2}
+  - {fileID: 11400000, guid: 5820bfed644bee04bb8ca5ff62a88af4, type: 2}
+  - {fileID: 11400000, guid: a9883188e29f4c64cb0b150ab3d63bf9, type: 2}
+  - {fileID: 11400000, guid: 93b2281462053954791da5daf905b952, type: 2}
+  - {fileID: 11400000, guid: dc76465d0d21fbe41afcadb361f72bf8, type: 2}

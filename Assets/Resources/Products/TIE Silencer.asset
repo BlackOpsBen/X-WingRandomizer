@@ -12,3 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: TIE Silencer
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: 0f0d99d63f0378c42b57535f6851c5d0, type: 2}
+  - {fileID: 11400000, guid: b818511f38facd04b8e4b2a676754baa, type: 2}
+  - {fileID: 11400000, guid: 3a67495299b4d184790790502fc5cf30, type: 2}
+  - {fileID: 11400000, guid: c457f569a000dc34184e3189c0fa4a4d, type: 2}
+  - {fileID: 11400000, guid: 68bf69da5f51a054bb42d25bea9fe474, type: 2}
+  - {fileID: 11400000, guid: 421d7ecc6da16424fba642f31e13a191, type: 2}
+  - {fileID: 11400000, guid: 421d7ecc6da16424fba642f31e13a191, type: 2}
+  - {fileID: 11400000, guid: e946c8420c1fe1b44bf519adc6521186, type: 2}
+  - {fileID: 11400000, guid: 935b5aa51683b674dbf916869ecee5fe, type: 2}
+  - {fileID: 11400000, guid: 935b5aa51683b674dbf916869ecee5fe, type: 2}
+  - {fileID: 11400000, guid: db9c5f5d56bcb314596063a3530f26c9, type: 2}
+  - {fileID: 11400000, guid: db9c5f5d56bcb314596063a3530f26c9, type: 2}
+  - {fileID: 11400000, guid: b988a0bdf23aef54985e3f02e257b388, type: 2}
+  - {fileID: 11400000, guid: b988a0bdf23aef54985e3f02e257b388, type: 2}
+  - {fileID: 11400000, guid: a7c086bd36cac404a9b92891fbbb997a, type: 2}
+  - {fileID: 11400000, guid: a7c086bd36cac404a9b92891fbbb997a, type: 2}
+  - {fileID: 11400000, guid: fec86e64eb5045242990647d3001b031, type: 2}

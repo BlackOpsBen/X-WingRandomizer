@@ -12,3 +12,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: Imperial Veterans
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: 5fd79cf0b039e0648ab8e5a9a41cbdd5, type: 2}
+  - {fileID: 11400000, guid: 43181f8b36b83b140b1b47dd30ee2142, type: 2}
+  - {fileID: 11400000, guid: 0f58d07d9238ed540a9843d17ddce37e, type: 2}
+  - {fileID: 11400000, guid: 8ced617951963f34f90c0c7745a4b620, type: 2}
+  - {fileID: 11400000, guid: 39f30c0c0657eb74b8dd48201806115a, type: 2}
+  - {fileID: 11400000, guid: 39f30c0c0657eb74b8dd48201806115a, type: 2}
+  - {fileID: 11400000, guid: c463b56713afec549a2111374f858d6f, type: 2}
+  - {fileID: 11400000, guid: 7fc112283bd1ff24e9b16cd1c142891a, type: 2}
+  - {fileID: 11400000, guid: e403d847fa2b5cd4d9bf036b9a8dd07d, type: 2}
+  - {fileID: 11400000, guid: e403d847fa2b5cd4d9bf036b9a8dd07d, type: 2}
+  - {fileID: 11400000, guid: b56c048a6262f504e9111f092f3f1ef5, type: 2}
+  - {fileID: 11400000, guid: 06ceb704f17084c48b5a0470a71b47dd, type: 2}
+  - {fileID: 11400000, guid: 4d52bd7b3e2e5b3449960239bfc33705, type: 2}
+  - {fileID: 11400000, guid: 711d969d5230a734793bf44a4d2f857f, type: 2}
+  - {fileID: 11400000, guid: e12718e3869eeb44ab82e7ddac402019, type: 2}
+  - {fileID: 11400000, guid: 428fddc2c534b6d40837ddfa4ff40a48, type: 2}
+  - {fileID: 11400000, guid: 428fddc2c534b6d40837ddfa4ff40a48, type: 2}
+  - {fileID: 11400000, guid: cc5582f3210360d41acfb0c017587963, type: 2}
+  - {fileID: 11400000, guid: cc5582f3210360d41acfb0c017587963, type: 2}
+  - {fileID: 11400000, guid: e09ca895a8f5eb84db1ce8d3863fa26b, type: 2}
+  - {fileID: 11400000, guid: e09ca895a8f5eb84db1ce8d3863fa26b, type: 2}
+  - {fileID: 11400000, guid: b214816f2ede06d41a768dc9550d95fe, type: 2}
+  - {fileID: 11400000, guid: b214816f2ede06d41a768dc9550d95fe, type: 2}

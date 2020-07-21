@@ -12,3 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: TIEsf Fighter
   m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: 85ca8b592d1a4c641b477d665911a65c, type: 2}
+  - {fileID: 11400000, guid: 101af85fef2cbf64da0dd48dcb79cf07, type: 2}
+  - {fileID: 11400000, guid: 0d1863ebeb5b38f4692b5167baf23d70, type: 2}
+  - {fileID: 11400000, guid: 5ee8442e35231ab4db1db52414fbf641, type: 2}
+  - {fileID: 11400000, guid: 6564a94fc6266a7469f1b389e25369fb, type: 2}
+  - {fileID: 11400000, guid: 9d3035b87ce1a5d44a149070844c8966, type: 2}
+  - {fileID: 11400000, guid: d039855c3da5bbb4db565cc808261053, type: 2}
+  - {fileID: 11400000, guid: 9ac3e3dfcf9f3b543a04a7f7a8cc8b20, type: 2}
+  - {fileID: 11400000, guid: 9ac3e3dfcf9f3b543a04a7f7a8cc8b20, type: 2}
+  - {fileID: 11400000, guid: 0576bbbd00e7de74fa347c85ceac1e80, type: 2}
