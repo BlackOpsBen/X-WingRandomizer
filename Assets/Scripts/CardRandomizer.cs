@@ -14,8 +14,6 @@ public class CardRandomizer : MonoBehaviour
 
     private Exceptions exceptions;
 
-    private ProductLimitations productLimitations;
-
     private bool needToFillNewSlots = false;
     private int lastCountedCardIndex = 0;
 
@@ -23,7 +21,6 @@ public class CardRandomizer : MonoBehaviour
     {
         displayCards = GetComponent<DisplayCards>();
         exceptions = GetComponent<Exceptions>();
-        productLimitations = GetComponent<ProductLimitations>();
     }
 
     // Called by UI Button
@@ -63,14 +60,18 @@ public class CardRandomizer : MonoBehaviour
         totalCost += pilot.GetCost();
     }
 
-    private int RollForShip(out Ship s)
+    private int RollForShip(out Ship selectedShip)
     {
         List<Ship> affordableShips = PilotCardManager.Instance.GetAffordableShips(Squadrons.Instance.GetPointsRemaining());
+
         int result = UnityEngine.Random.Range(0, affordableShips.Count);
-        s = affordableShips[result];
+
+        selectedShip = affordableShips[result];
+
         for (int i = 0; i < PilotCardManager.Instance.factionList[PilotCardManager.Instance.GetSelectedFactionIndex()].ships.Length; i++)
         {
-            if (PilotCardManager.Instance.factionList[PilotCardManager.Instance.GetSelectedFactionIndex()].ships[i].name == affordableShips[result].name)
+            string possibleShipName = PilotCardManager.Instance.factionList[PilotCardManager.Instance.GetSelectedFactionIndex()].ships[i].name;
+            if (possibleShipName == selectedShip.name)
             {
                 return i;
             }
@@ -319,7 +320,7 @@ public class CardRandomizer : MonoBehaviour
 
     private bool ValidateSelection(AddonCard addonCard)
     {
-        if (productLimitations.ItemIsAvailable(addonCard) == false)
+        if (false) // TODO replace "false" with product validation
         {
             Debug.Log(addonCard.name + " is not available with the selected products.");
             return false;
@@ -544,6 +545,12 @@ public class CardRandomizer : MonoBehaviour
             if (addonCard.slam && !ship.slam && !PreviousCardGrantsAction(7))
             {
                 //Debug.Log(addonCard.name + " requires a ship that can SLAM. Invalid selection.");
+                return false;
+            }
+
+            if (addonCard.actionHeader && !PreviousCardGrantsAction(5))
+            {
+                //Debug.Log(addonCard.name + " requires a card that has an "Action" header. Invalid selection.");
                 return false;
             }
 

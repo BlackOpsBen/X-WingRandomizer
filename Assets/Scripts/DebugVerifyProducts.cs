@@ -47,14 +47,14 @@ public class DebugVerifyProducts : MonoBehaviour
                     bool isValidName = false;
                     for (int k = 0; k < products.Length; k++)
                     {
-                        if (productInclusions[j] == products[k])
+                        if (productInclusions[j].name == products[k].name)
                         {
                             isValidName = true;
                         }
                     }
                     if (!isValidName)
                     {
-                        Debug.LogError(productInclusions[j] + " is invalid product name on " + items[i].GetType().Name + " titled \'" + items[i].GetName() + "\'");
+                        Debug.LogError("\"" + productInclusions[j].name + "\" is invalid product name on " + items[i].GetType().Name + " titled \'" + items[i].GetName() + "\'");
                     }
                 }
             }
