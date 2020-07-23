@@ -12,6 +12,8 @@ public class DisplayProductToggles : MonoBehaviour
 
     [SerializeField] private GameObject toggleObject;
     [SerializeField] private GameObject parentCanvas;
+    [SerializeField] private RectTransform SelectAllButton;
+    [SerializeField] private Vector2 SelectAllOffset;
     [SerializeField] private float listStartXPos = 190f;
     [SerializeField] private float listStartYPos = 913.5f;
     [SerializeField] private float horizontalSpacing = 441.8f;
@@ -19,6 +21,8 @@ public class DisplayProductToggles : MonoBehaviour
     [SerializeField] private int linesPerColumnLimit = 14;
     [SerializeField] private float nonclickablePadding = 175f;
 
+
+    private Vector2 scaledSelectAllOffset;
     private float scaledListStartXPos;
     private float scaledListStartYPos;
     private float scaledHorizontalSpacing;
@@ -41,6 +45,9 @@ public class DisplayProductToggles : MonoBehaviour
 
     private void ScaleValuesWithScreen()
     {
+        Vector2 selectOffsetPercents = new Vector2(SelectAllOffset.x / refScreenWidth, SelectAllOffset.y / refScreenHeight);
+        scaledSelectAllOffset = new Vector2(Screen.width * selectOffsetPercents.x, Screen.height * selectOffsetPercents.y);
+
         float startXPercent = listStartXPos / refScreenWidth;
         scaledListStartXPos = Screen.width * startXPercent;
 
@@ -80,6 +87,8 @@ public class DisplayProductToggles : MonoBehaviour
     {
         startPos = new Vector3(scaledListStartXPos, scaledListStartYPos);
         offset = new Vector3(scaledHorizontalSpacing, scaledVerticalSpacing);
+
+        SelectAllButton.position = startPos + new Vector3(scaledSelectAllOffset.x, scaledSelectAllOffset.y);
 
         for (int i = 0; i < productToggles.Length; i++)
         {
