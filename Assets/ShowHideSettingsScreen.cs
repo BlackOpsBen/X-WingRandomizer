@@ -5,9 +5,22 @@ using UnityEngine;
 public class ShowHideSettingsScreen : MonoBehaviour
 {
     [SerializeField] private GameObject settingsScreen;
+    [SerializeField] private GameObject mainButtons;
+
+    bool mainButtonsShouldBe;
 
     public void ToggleSettingsScreen()
     {
-        settingsScreen.SetActive(!settingsScreen.activeSelf);
+        if (!settingsScreen.activeSelf)
+        {
+            mainButtonsShouldBe = mainButtons.activeSelf;
+            settingsScreen.SetActive(true);
+            mainButtons.SetActive(false);
+        }
+        else
+        {
+            settingsScreen.SetActive(false);
+            mainButtons.SetActive(mainButtonsShouldBe);
+        }
     }
 }
