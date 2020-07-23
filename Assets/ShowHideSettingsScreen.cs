@@ -9,6 +9,11 @@ public class ShowHideSettingsScreen : MonoBehaviour
 
     bool mainButtonsShouldBe;
 
+    private void Awake()
+    {
+        settingsScreen.SetActive(false);
+    }
+
     public void ToggleSettingsScreen()
     {
         if (!settingsScreen.activeSelf)
