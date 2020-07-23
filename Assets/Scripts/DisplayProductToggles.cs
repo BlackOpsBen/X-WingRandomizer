@@ -96,6 +96,40 @@ public class DisplayProductToggles : MonoBehaviour
             productToggles[i].SetColors(checkedColor, uncheckedColor, highlightedColor);
         }
     }
+
+    public void SelectAllNone()
+    {
+        bool allOn = DetermineIfAllOn();
+
+        if (allOn)
+        {
+            TurnAll(false);
+        }
+        else
+        {
+            TurnAll(true);
+        }
+    }
+
+    private void TurnAll(bool value)
+    {
+        foreach (ProductToggle pToggle in productToggles)
+        {
+            pToggle.ManualToggle(value);
+        }
+    }
+
+    private bool DetermineIfAllOn()
+    {
+        for (int i = 0; i < productToggles.Length; i++)
+        {
+            if (productToggles[i].GetIsEnabled() == false)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
 }
 
 public class ProductToggle
@@ -156,6 +190,11 @@ public class ProductToggle
         ToggleVisualState(value);
     }
 
+    public bool GetIsEnabled()
+    {
+        return isEnabled;
+    }
+
     private void SetToggleObject(GameObject obj)
     {
         toggleObject = obj;
@@ -187,5 +226,12 @@ public class ProductToggle
         uncheckedColor = off;
         highlightedColor = highlighted;
         ToggleVisualState(isEnabled);
+    }
+
+    public void ManualToggle(bool value)
+    {
+        toggle.isOn = value;
+        isEnabled = value;
+        ToggleVisualState(value);
     }
 }
