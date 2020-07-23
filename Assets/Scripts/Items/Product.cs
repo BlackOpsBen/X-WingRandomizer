@@ -24,7 +24,7 @@ public class Product : ScriptableObject
                         {
                             if (product == this)
                             {
-                                Debug.Log(item.GetType() + " " + item.GetName() + " and " + this.GetType() + " " + this.name + " already reciprocate.");
+                                //Debug.Log(item.GetType() + " " + item.GetName() + " and " + this.GetType() + " " + this.name + " already reciprocate.");
                                 needToAskForInclusion = false;
                             }
                         }
