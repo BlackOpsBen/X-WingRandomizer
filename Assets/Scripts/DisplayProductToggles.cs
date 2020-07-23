@@ -3,9 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class DisplayProductToggles : MonoBehaviour
 {
+    private const float refScreenWidth = 1920f;
+    private const float refScreenHeight = 1080f;
+
     [SerializeField] private GameObject toggleObject;
     [SerializeField] private GameObject parentCanvas;
     [SerializeField] private float listStartXPos = 190f;
@@ -14,6 +18,12 @@ public class DisplayProductToggles : MonoBehaviour
     [SerializeField] private float verticalSpacing = -54.95f;
     [SerializeField] private int linesPerColumnLimit = 14;
     [SerializeField] private float nonclickablePadding = 175f;
+
+    private float scaledListStartXPos;
+    private float scaledListStartYPos;
+    private float scaledHorizontalSpacing;
+    private float scaledVerticalSpacing;
+    private float scaledNonclickablePadding;
 
     [SerializeField] private Color checkedColor;
     [SerializeField] private Color uncheckedColor;
@@ -24,15 +34,33 @@ public class DisplayProductToggles : MonoBehaviour
 
     private ProductToggle[] productToggles;
 
-    //[SerializeField] private List<GameObject> toggles = new List<GameObject>();
-
     private void Awake()
     {
         CreateToggles();
     }
 
+    private void ScaleValuesWithScreen()
+    {
+        float startXPercent = listStartXPos / refScreenWidth;
+        scaledListStartXPos = Screen.width * startXPercent;
+
+        float startYPercent = listStartYPos / refScreenHeight;
+        scaledListStartYPos = Screen.height * startYPercent;
+
+        float horSpacePercent = horizontalSpacing / refScreenWidth;
+        scaledHorizontalSpacing = Screen.width * horSpacePercent;
+
+        float vertSpacePercent = verticalSpacing / refScreenHeight;
+        scaledVerticalSpacing = Screen.height * vertSpacePercent;
+
+        float paddingPercent = nonclickablePadding / refScreenWidth;
+        scaledNonclickablePadding = Screen.width * paddingPercent;
+    }
+
     private void Update()
     {
+        ScaleValuesWithScreen();
+
         UpdateArrangement(); // TODO move this to Awake instead of Update
     }
 
@@ -50,12 +78,12 @@ public class DisplayProductToggles : MonoBehaviour
 
     private void UpdateArrangement()
     {
-        startPos = new Vector3(listStartXPos, listStartYPos);
-        offset = new Vector3(horizontalSpacing, verticalSpacing);
+        startPos = new Vector3(scaledListStartXPos, scaledListStartYPos);
+        offset = new Vector3(scaledHorizontalSpacing, scaledVerticalSpacing);
 
         for (int i = 0; i < productToggles.Length; i++)
         {
-            productToggles[i].UpdateUIPosition(startPos, offset, linesPerColumnLimit, i, nonclickablePadding);
+            productToggles[i].UpdateUIPosition(startPos, offset, linesPerColumnLimit, i, nonclickablePadding, horizontalSpacing);
             productToggles[i].SetColors(checkedColor, uncheckedColor, highlightedColor);
         }
     }
@@ -124,10 +152,10 @@ public class ProductToggle
         toggleObject = obj;
     }
 
-    public void UpdateUIPosition(Vector3 startPos, Vector3 offset, int lineLimit, int index, float padding)
+    public void UpdateUIPosition(Vector3 scaledStartPos, Vector3 scaledOffset, int lineLimit, int index, float unscaledPadding, float unscaledXOffset)
     {
-        rectTransform.SetPositionAndRotation(startPos + new Vector3(offset.x * Mathf.Floor(index / lineLimit), offset.y * (index % lineLimit)), Quaternion.identity);
-        rectTransform.GetComponentInChildren<AdjustLabelWidth>().SetWidth(offset.x - padding);
+        rectTransform.SetPositionAndRotation(scaledStartPos + new Vector3(scaledOffset.x * Mathf.Floor(index / lineLimit), scaledOffset.y * (index % lineLimit)), Quaternion.identity);
+        rectTransform.GetComponentInChildren<AdjustLabelWidth>().SetWidth(unscaledXOffset - unscaledPadding);
     }
 
     private void ToggleVisualState(bool value)
