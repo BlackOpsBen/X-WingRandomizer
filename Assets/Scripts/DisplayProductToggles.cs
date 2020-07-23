@@ -183,7 +183,7 @@ public class ProductToggle
             statusText = "disabled";
         }
 
-        Debug.Log(name + " has been " + statusText + ".");
+        //Debug.Log(name + " has been " + statusText + ".");
         
         isEnabled = value;
 
