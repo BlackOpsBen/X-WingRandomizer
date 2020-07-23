@@ -57,3 +57,30 @@ public class Exceptions : MonoBehaviour
         return true;
     }
 }
+
+/*
+ * Chopper Astromech requires another upgrade card of any kind
+ * 
+ * Death Troopers require 2 crew slots, and fill both.
+ * 
+ * Emporer Palpatine requires 2 crew slots, and fill both
+ * 
+ * ISB Slicer crew requires jam action
+ * 
+ * Maul crew is scum only unless you already have "Ezra Bridger" crew in squad
+ * 
+ * Tail Gunner crew only valid for ships with rear aux arc. (Firespray and ARC-130 and Sheathipede-class Shuttle)
+ * 
+ * IG-88D crew requires another ship with IG-2000
+ * 
+ * Ketsu Onyo crew requires tractor beam ability
+ * 
+ * Cikatro Vizago crew requires an Illicit equipped
+ * 
+ * Jabba crew requires 2 crew slots, AND requires at least 1 Illicit equipped
+ * 
+ * Breach specialist crew requires Reinforce action
+ * 
+ * Wookie Commandos crew requires 2 crew slots
+ * 
+ * 

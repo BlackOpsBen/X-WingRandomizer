@@ -10,17 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12bb5836b19dcfe42a7272eb7a90a8fc, type: 3}
-  m_Name: Maul
+  m_Name: Breach Specialist
   m_EditorClassIdentifier: 
   forcePushChanges: 0
-  cardArt: {fileID: 21300000, guid: ac9cf3499cc6d7d40954b196dada2aff, type: 3}
-  cost: 3
-  unique: 1
+  cardArt: {fileID: 21300000, guid: 03912b29f49e3b542a83704b51d6fbd9, type: 3}
+  cost: 1
+  includedWith:
+  - {fileID: 11400000, guid: 8aa1126e305a6e4499ce35b5c7fbe654, type: 2}
+  unique: 0
   limited: 0
   rebelOnly: 0
   imperialOnly: 0
   scumOnly: 0
-  rebelAndScumOnly: 1
+  rebelAndScumOnly: 0
   smallShipOnly: 0
   largeShipOnly: 0
   hugeShipOnly: 0
@@ -39,6 +41,7 @@ MonoBehaviour:
   T65xWingOnly: 0
   aWingOnly: 0
   yWingOnly: 0
+  TIEAdvancedOnly: 0
   focus: 0
   targetLock: 0
   boost: 0
@@ -56,18 +59,28 @@ MonoBehaviour:
   maxPilotSkill: 0
   torpedoOrMissileEquipped: 0
   torpedoOrMissileOrBombEquipped: 0
+  torpedoOrBombEquipped: 0
   hasTorpedoOrMissileSlot: 0
   requiresShieldValue1: 0
   bombEquipped: 0
   hasAstromechEquipped: 0
+  hasAttackTargetLockEquipped: 0
+  hasShields: 0
+  hasTurretEquipped: 0
   grantsFocus: 0
   grantsTargetLock: 0
   grantsBoost: 0
   grantsEvade: 0
   grantsBarrelRoll: 0
   grantsActionHeader: 0
+  grantsAttackTargetLock: 0
+  grantsSLAM: 0
+  grantsCloak: 0
   grantsElitePilotTalent: 0
   grantsCrew: 0
   grantsIllicit: 0
   grantsModificationCosting3OrLess: 0
   grantsBomb: 0
+  grantsBomb2: 0
+  grantsModification: 0
+  grantsTorpedo: 0

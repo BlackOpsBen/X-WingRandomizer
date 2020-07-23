@@ -17,6 +17,8 @@ MonoBehaviour:
   cost: 3
   includedWith:
   - {fileID: 11400000, guid: df633c0c417483b48a2ba931e8020c1f, type: 2}
+  - {fileID: 11400000, guid: 6a2c8d146c28a0f49abfcfd49b5bf48d, type: 2}
+  - {fileID: 11400000, guid: d8d51ba6f3574614ab5b7556e5704800, type: 2}
   unique: 0
   limited: 1
   rebelOnly: 0
@@ -65,7 +67,7 @@ MonoBehaviour:
   bombEquipped: 0
   hasAstromechEquipped: 0
   hasAttackTargetLockEquipped: 0
-  hasShields: 0
+  hasShields: 1
   hasTurretEquipped: 0
   grantsFocus: 0
   grantsTargetLock: 0

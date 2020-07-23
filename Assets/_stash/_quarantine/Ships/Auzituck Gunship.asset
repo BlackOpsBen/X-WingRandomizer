@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   includedWith:
   - {fileID: 11400000, guid: 8aa1126e305a6e4499ce35b5c7fbe654, type: 2}
-  shieldValue: 0
+  shieldValue: 3
   focus: 1
   targetLock: 0
   boost: 0
