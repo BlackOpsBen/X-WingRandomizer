@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
@@ -33,5 +34,19 @@ public class Settings : MonoBehaviour
     public void SetPointLimit(int points)
     {
         pointLimit = points;
+    }
+
+    public void SetPointLimit(string text)
+    {
+        int pointsEntered = int.Parse(text);
+
+        Debug.Log(pointsEntered.ToString() + " is what was parsed.");
+
+        if (pointsEntered > 0)
+        {
+            pointLimit = pointsEntered;
+        }
+
+        UIManager.Instance.UpdateUI();
     }
 }
