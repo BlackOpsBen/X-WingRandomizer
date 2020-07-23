@@ -124,7 +124,8 @@ public class PilotCardManager : MonoBehaviour
 
         foreach (Ship ship in factionList[PilotCardManager.Instance.GetSelectedFactionIndex()].ships)
         {
-            if (true && ship.GetCheapestPilotCost() <= pointsAvailable) // TODO replace "true" with product validation
+            bool isIncluded = DisplayProductToggles.Instance.GetIsEnabled(ship);
+            if (isIncluded && ship.GetCheapestPilotCost() <= pointsAvailable)
             {
                 listToReturn.Add(ship);
             }
@@ -137,7 +138,8 @@ public class PilotCardManager : MonoBehaviour
         List<PilotCard> listToReturn = new List<PilotCard>();
         foreach (PilotCard pilot in factionList[selectedFaction].pilotGroups[shipIndex].pilots)
         {
-            if (true && pilot.GetCost() <= pointsAvailable) // TODO replace "true" with product validation
+            bool isIncluded = DisplayProductToggles.Instance.GetIsEnabled(pilot);
+            if (isIncluded && pilot.GetCost() <= pointsAvailable)
             {
                 listToReturn.Add(pilot);
             }

@@ -320,7 +320,8 @@ public class CardRandomizer : MonoBehaviour
 
     private bool ValidateSelection(AddonCard addonCard)
     {
-        if (false) // TODO replace "false" with product validation
+        bool isIncluded = DisplayProductToggles.Instance.GetIsEnabled(addonCard);
+        if (!isIncluded)
         {
             Debug.Log(addonCard.name + " is not available with the selected products.");
             return false;

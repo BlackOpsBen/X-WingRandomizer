@@ -61,7 +61,7 @@ public class UIManager : MonoBehaviour
         keepOrPassUI.SetActive(true);
     }
 
-    // So far, called when Squadrons Calculates total cost, and when PilotCardManager changes selected faction.
+    // So far, called when Squadrons Calculates total cost, and when PilotCardManager changes selected faction, and when making changes to the Product Selections
     public void UpdateUI()
     {
         pointsCounter.UpdatePoints();

@@ -52,7 +52,7 @@ public class Ship : Item, IComeInProducts
 
     public string GetName()
     {
-        return this.name;
+        return name;
     }
 
     public void ReciprocateInclusion(Product product)

@@ -7,6 +7,8 @@ using System;
 
 public class DisplayProductToggles : MonoBehaviour
 {
+    public static DisplayProductToggles Instance { get; private set; }
+
     private const float refScreenWidth = 1920f;
     private const float refScreenHeight = 1080f;
 
@@ -40,7 +42,21 @@ public class DisplayProductToggles : MonoBehaviour
 
     private void Awake()
     {
+        SingletonPattern();
+
         CreateToggles();
+    }
+
+    private void SingletonPattern()
+    {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+        }
     }
 
     private void ScaleValuesWithScreen()
@@ -109,6 +125,7 @@ public class DisplayProductToggles : MonoBehaviour
         {
             TurnAll(true);
         }
+        UIManager.Instance.UpdateUI();
     }
 
     private void TurnAll(bool value)
@@ -129,6 +146,21 @@ public class DisplayProductToggles : MonoBehaviour
             }
         }
         return true;
+    }
+
+    public bool GetIsEnabled(IComeInProducts item)
+    {
+        foreach (Product productRequired in item.GetProductsIncludedWith())
+        {
+            foreach (ProductToggle productToggle in productToggles)
+            {
+                if (productToggle.GetIsEnabled() && productToggle.GetName() == productRequired.name)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }
 
@@ -166,6 +198,11 @@ public class ProductToggle
         toggleObject.GetComponentInChildren<TextMeshProUGUI>().text = label;
     }
 
+    public string GetName()
+    {
+        return name;
+    }
+
     private void SubscribeToToggleState()
     {
         toggleObject.GetComponent<Toggle>().onValueChanged.AddListener(SetIsEnabled);
@@ -173,21 +210,23 @@ public class ProductToggle
 
     private void SetIsEnabled(bool value)
     {
-        string statusText;
-        if (value)
-        {
-            statusText = "enabled";
-        }
-        else
-        {
-            statusText = "disabled";
-        }
+        //string statusText;
+        //if (value)
+        //{
+        //    statusText = "enabled";
+        //}
+        //else
+        //{
+        //    statusText = "disabled";
+        //}
 
         //Debug.Log(name + " has been " + statusText + ".");
         
         isEnabled = value;
 
         ToggleVisualState(value);
+
+        UIManager.Instance.UpdateUI();
     }
 
     public bool GetIsEnabled()
