@@ -9,14 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64154c9015f9d7c439c99185e9573c8f, type: 3}
-  m_Name: Scavenger Crane
+  m_Script: {fileID: 11500000, guid: e0d9f1ea26640074ab71e2a912d28449, type: 3}
+  m_Name: Advanced Ailerons
   m_EditorClassIdentifier: 
   forcePushChanges: 0
-  cardArt: {fileID: 21300000, guid: e9fc798ad64701d4298e532d6dd5fc88, type: 3}
-  cost: 2
+  cardArt: {fileID: 21300000, guid: 67c8618aaa8ec6e48be6848513b15a46, type: 3}
+  cost: 0
   includedWith:
-  - {fileID: 11400000, guid: cc3ca432cc3efff41ba0108567cf5885, type: 2}
+  - {fileID: 11400000, guid: f5130d630534d584a8253c74fc519bc0, type: 2}
   unique: 0
   limited: 0
   rebelOnly: 0
@@ -59,7 +59,7 @@ MonoBehaviour:
   hasMaxPilotSkill: 0
   maxPilotSkill: 0
   torpedoOrMissileEquipped: 0
-  torpedoOrMissileOrBombEquipped: 1
+  torpedoOrMissileOrBombEquipped: 0
   torpedoOrBombEquipped: 0
   hasTorpedoOrMissileSlot: 0
   requiresShieldValue1: 0

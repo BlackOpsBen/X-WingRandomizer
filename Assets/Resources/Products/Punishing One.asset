@@ -12,4 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: Punishing One
   m_EditorClassIdentifier: 
-  itemsIncluded: []
+  itemsIncluded:
+  - {fileID: 11400000, guid: 1ea802e67652eda4fb378c2392eaebee, type: 2}
+  - {fileID: 11400000, guid: b7bbb5d49651b3a409009ff69d677e8b, type: 2}
+  - {fileID: 11400000, guid: 26f1cbce1b4a93b49adcaeebacc48101, type: 2}
+  - {fileID: 11400000, guid: 367391ce2ad6a354b905bc5a1e7a2f6f, type: 2}
+  - {fileID: 11400000, guid: b8f4f1fbc17bd1c4baa8a7cb712cfc5d, type: 2}
+  - {fileID: 11400000, guid: c772c2fbee1968c46a6a32fc3a6ada5c, type: 2}
+  - {fileID: 11400000, guid: 72b8ba49076263a489ae459c24e64d01, type: 2}
+  - {fileID: 11400000, guid: 72b8ba49076263a489ae459c24e64d01, type: 2}
+  - {fileID: 11400000, guid: f35780ac67faf4a4e97e9dc87e60f8d2, type: 2}
+  - {fileID: 11400000, guid: 49a06640154c3f74baf6091a63163af8, type: 2}
+  - {fileID: 11400000, guid: a8f147aa1a36d864baec0e71335e213d, type: 2}
+  - {fileID: 11400000, guid: d0a83d18253a6e640860eab78d74e230, type: 2}
+  - {fileID: 11400000, guid: 199f30b6d904ed4419b7a6fe01ce7030, type: 2}
+  - {fileID: 11400000, guid: 9082a3ad23968e94e84536bb67df74c2, type: 2}
+  - {fileID: 11400000, guid: 9082a3ad23968e94e84536bb67df74c2, type: 2}
+  - {fileID: 11400000, guid: 7295f47ff70ef4d40943cb2e90aba35c, type: 2}
+  - {fileID: 11400000, guid: ebfd731c082e4af4cb110c110befae48, type: 2}
+  - {fileID: 11400000, guid: ebfd731c082e4af4cb110c110befae48, type: 2}
+  - {fileID: 11400000, guid: a23395ac9a0c11f49bb012d1961d41be, type: 2}

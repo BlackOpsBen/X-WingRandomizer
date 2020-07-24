@@ -9,21 +9,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 64154c9015f9d7c439c99185e9573c8f, type: 3}
-  m_Name: Scavenger Crane
+  m_Script: {fileID: 11500000, guid: c13d99f7654b4814197abd859e2bb759, type: 3}
+  m_Name: Multi-Spectral Camouflage
   m_EditorClassIdentifier: 
   forcePushChanges: 0
-  cardArt: {fileID: 21300000, guid: e9fc798ad64701d4298e532d6dd5fc88, type: 3}
-  cost: 2
+  cardArt: {fileID: 21300000, guid: db8d2da6cc286c94a80bd1f146fc97ba, type: 3}
+  cost: 1
   includedWith:
-  - {fileID: 11400000, guid: cc3ca432cc3efff41ba0108567cf5885, type: 2}
-  unique: 0
+  - {fileID: 11400000, guid: f5130d630534d584a8253c74fc519bc0, type: 2}
+  unique: 1
   limited: 0
   rebelOnly: 0
   imperialOnly: 0
   scumOnly: 0
   rebelAndScumOnly: 0
-  smallShipOnly: 0
+  smallShipOnly: 1
   largeShipOnly: 0
   hugeShipOnly: 0
   tiePhantomOnly: 0
@@ -59,7 +59,7 @@ MonoBehaviour:
   hasMaxPilotSkill: 0
   maxPilotSkill: 0
   torpedoOrMissileEquipped: 0
-  torpedoOrMissileOrBombEquipped: 1
+  torpedoOrMissileOrBombEquipped: 0
   torpedoOrBombEquipped: 0
   hasTorpedoOrMissileSlot: 0
   requiresShieldValue1: 0

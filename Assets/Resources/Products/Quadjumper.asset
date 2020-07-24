@@ -12,4 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: Quadjumper
   m_EditorClassIdentifier: 
-  itemsIncluded: []
+  itemsIncluded:
+  - {fileID: 11400000, guid: a9ccd7ca274bac7418897c9f91c4944b, type: 2}
+  - {fileID: 11400000, guid: ad516451a7eee5245bdb44cf121762f3, type: 2}
+  - {fileID: 11400000, guid: e7fbf9aad416c6c48afb06b32b511807, type: 2}
+  - {fileID: 11400000, guid: 94e277d4080670f43aec962c299b0c66, type: 2}
+  - {fileID: 11400000, guid: 4a2065b485428ea43bf0a797a9c8a8f9, type: 2}
+  - {fileID: 11400000, guid: adb1556604673ff41a7ec548c9fa17c6, type: 2}
+  - {fileID: 11400000, guid: c2df502e14d3cc44fa7ff10ed20504a4, type: 2}
+  - {fileID: 11400000, guid: 6c44f1a750615f640b8cf505c218df51, type: 2}
+  - {fileID: 11400000, guid: d58209e0ec02bbf46b32a976419253d8, type: 2}
+  - {fileID: 11400000, guid: 967898824ba9ef54798ef3ef539a670a, type: 2}
+  - {fileID: 11400000, guid: f546ae4df6082a147a68d03e400536e5, type: 2}
+  - {fileID: 11400000, guid: 3314b3a5558cb604f81d5e4bb78297cd, type: 2}

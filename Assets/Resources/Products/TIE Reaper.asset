@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
+  m_Name: TIE Reaper
+  m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: ba69a4c66c11a7e4ca186216f742545b, type: 2}
+  - {fileID: 11400000, guid: 910c8b5f18421644bb3812955b073c4b, type: 2}
+  - {fileID: 11400000, guid: a5d47966325366646856f38683b37b79, type: 2}
+  - {fileID: 11400000, guid: b990b2f8ab544b44ab5899eef97ca3d6, type: 2}
+  - {fileID: 11400000, guid: 63329f6273bb051499828d27f737ed04, type: 2}
+  - {fileID: 11400000, guid: 904aff41be1b0cf45889640858147f28, type: 2}
+  - {fileID: 11400000, guid: 711d969d5230a734793bf44a4d2f857f, type: 2}
+  - {fileID: 11400000, guid: 711d969d5230a734793bf44a4d2f857f, type: 2}
+  - {fileID: 11400000, guid: b0ab64496661c1e4189aeb23852e8624, type: 2}
+  - {fileID: 11400000, guid: d1a4a6b62c0dda84c90445f33fca43cc, type: 2}
+  - {fileID: 11400000, guid: 6b2c3754b44e52a4a8314e3d617fab8f, type: 2}
+  - {fileID: 11400000, guid: 67a713110014870469d962a9fac664d2, type: 2}
+  - {fileID: 11400000, guid: 67a713110014870469d962a9fac664d2, type: 2}
+  - {fileID: 11400000, guid: b7d84e8075c069d4a925810158c5ab30, type: 2}
+  - {fileID: 11400000, guid: d4be418bf39e4bc449e5de170a230213, type: 2}

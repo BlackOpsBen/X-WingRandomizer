@@ -22,7 +22,7 @@ public class Product : ScriptableObject
 
                         foreach (Product product in itemsProducts)
                         {
-                            if (product == this)
+                            if (product.name == this.name)
                             {
                                 //Debug.Log(item.GetType() + " " + item.GetName() + " and " + this.GetType() + " " + this.name + " already reciprocate.");
                                 needToAskForInclusion = false;

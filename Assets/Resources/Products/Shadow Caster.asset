@@ -12,4 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: Shadow Caster
   m_EditorClassIdentifier: 
-  itemsIncluded: []
+  itemsIncluded:
+  - {fileID: 11400000, guid: 09bb1faf0f7f6f0479a0c9dbc184fe98, type: 2}
+  - {fileID: 11400000, guid: bc38d47b00f386e48a99878860f1f699, type: 2}
+  - {fileID: 11400000, guid: ab87728eafa0ee7489f5e967e1358a02, type: 2}
+  - {fileID: 11400000, guid: a5a3419954ee96f49bc9d7f27f7c1f71, type: 2}
+  - {fileID: 11400000, guid: b5612396de6092e48bb625c6765b20a3, type: 2}
+  - {fileID: 11400000, guid: 2a0482e85efe87741b5d67dcedfc5fe4, type: 2}
+  - {fileID: 11400000, guid: 0ec6f83ee798a5d44ad27cbe25af3227, type: 2}
+  - {fileID: 11400000, guid: 267f97786f7eacf4fa1248f45d58dcb4, type: 2}
+  - {fileID: 11400000, guid: 09f372ad37859524aa257b7ad1cbda56, type: 2}
+  - {fileID: 11400000, guid: f0ad1e5b42d3fe2458bc09002b9a4286, type: 2}
+  - {fileID: 11400000, guid: 53270ed5877f5c94fa8e5315b3887e4d, type: 2}
+  - {fileID: 11400000, guid: 53270ed5877f5c94fa8e5315b3887e4d, type: 2}
+  - {fileID: 11400000, guid: a99c07f939817444f9aacb9ada910844, type: 2}
+  - {fileID: 11400000, guid: 4bfcb8aa7c9a4f844952d00d240f79ab, type: 2}
+  - {fileID: 11400000, guid: 0968a00ef394f3049a968aa906e0e9ea, type: 2}
+  - {fileID: 11400000, guid: 0968a00ef394f3049a968aa906e0e9ea, type: 2}
+  - {fileID: 11400000, guid: 4f4029ef9332e084aa23856965bcd259, type: 2}

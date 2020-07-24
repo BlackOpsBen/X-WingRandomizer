@@ -12,4 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: Protectorate Starfighter
   m_EditorClassIdentifier: 
-  itemsIncluded: []
+  itemsIncluded:
+  - {fileID: 11400000, guid: 30cc192f8c9a0824fa0181bfe1d8738e, type: 2}
+  - {fileID: 11400000, guid: e1708885a59516c41aa0d950708981e8, type: 2}
+  - {fileID: 11400000, guid: c3974254bd063c643b35502899e480a1, type: 2}
+  - {fileID: 11400000, guid: d27880e96b6039f4093ba9b504ebb3dc, type: 2}
+  - {fileID: 11400000, guid: 4dc46efcdf3f22c4b8efad52869e15bd, type: 2}
+  - {fileID: 11400000, guid: 579bc16c80cf799448a5718fe2bb1c40, type: 2}
+  - {fileID: 11400000, guid: df21a09a613736548b377c82a5fc39ec, type: 2}
+  - {fileID: 11400000, guid: f8b32788a830e9447a39b871e8900169, type: 2}
+  - {fileID: 11400000, guid: a6663a1d9e5f7ef49bfc3a3565d27b3a, type: 2}

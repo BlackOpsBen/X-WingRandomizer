@@ -95,4 +95,9 @@ public class Exceptions : MonoBehaviour
  * Thrust Corrector system requires hull value of 5 or more (find which ships apply)
  * 
  * Renegade Refit torpedo is for T65 X-Wing and U-Wing only. Also makes ALL Elites -1 cost. (Apply this AFTER ALL selections.)
+ * 
+ * Attani Mindlink elite pilot talent requires 2 ships to have it. If last possible ship, don't allow. Otherwise, require that the next ship chosen can and will also take it.
+ * 
+ * Advanced Ailerons title for TIE Reaper only
  */
+ 

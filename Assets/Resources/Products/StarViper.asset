@@ -12,4 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: StarViper
   m_EditorClassIdentifier: 
-  itemsIncluded: []
+  itemsIncluded:
+  - {fileID: 11400000, guid: 9a81197957d5231469465ca0560d496f, type: 2}
+  - {fileID: 11400000, guid: 6ae2842bbd880d946bbfdba6df599ae3, type: 2}
+  - {fileID: 11400000, guid: af1d734e873329e4cb60983c4dc9789b, type: 2}
+  - {fileID: 11400000, guid: 2c6e2859a8eecb247a9421452edf2985, type: 2}
+  - {fileID: 11400000, guid: 47e88fd22fdf8a04e8e821b9fe9bb97b, type: 2}
+  - {fileID: 11400000, guid: 1b41247d39003e44693cbafe22b25a90, type: 2}
+  - {fileID: 11400000, guid: 30e1784544f6a834d98750f313ad19db, type: 2}
+  - {fileID: 11400000, guid: 6241dc5b852dc854587bcf36d6b509d9, type: 2}
+  - {fileID: 11400000, guid: cae26bcda49732f48a112a96fc12dddf, type: 2}
+  - {fileID: 11400000, guid: b79deec521d169143b526971b3881b22, type: 2}
+  - {fileID: 11400000, guid: a7c086bd36cac404a9b92891fbbb997a, type: 2}
+  - {fileID: 11400000, guid: a7c086bd36cac404a9b92891fbbb997a, type: 2}
+  - {fileID: 11400000, guid: 38e9efe253b6bc24c968d8fd5b7a054c, type: 2}
+  - {fileID: 11400000, guid: 0f17f44b3baf50c4ca5d8a3e75099120, type: 2}
