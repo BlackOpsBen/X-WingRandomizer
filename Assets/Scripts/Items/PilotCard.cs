@@ -92,6 +92,11 @@ public class PilotCard : Item, IComeInProducts
         return addonTypes[i].quantity;
     }
 
+    public string GetAddonTypeName(int i)
+    {
+        return addonTypes[i].name;
+    }
+
     public int GetNumAddonTypes()
     {
         return addonTypes.Length;

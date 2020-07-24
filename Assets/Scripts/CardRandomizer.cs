@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class CardRandomizer : MonoBehaviour
 {
+    [SerializeField] private bool debugReasons = false;
+
     public Ship ship;
     public PilotCard pilot;
     public List<AddonCard> addonCards;
@@ -215,7 +217,6 @@ public class CardRandomizer : MonoBehaviour
             if (addonCards[i].grantsCrew)
             {
                 MakeValidSelection(8);
-                Debug.Log("Verify this selection was of type 'Crew'");
             }
 
             if (addonCards[i].grantsElitePilotTalent)
@@ -323,7 +324,7 @@ public class CardRandomizer : MonoBehaviour
         bool isIncluded = DisplayProductToggles.Instance.GetIsEnabled(addonCard);
         if (!isIncluded)
         {
-            //Debug.Log(addonCard.name + " is not available with the selected products.");
+            if (debugReasons) { Debug.Log(addonCard.name + " is not available with the selected products."); }
             return false;
         }
 
@@ -331,7 +332,7 @@ public class CardRandomizer : MonoBehaviour
         
         if (addonCard.cost > pointLimit)
         {
-            //Debug.Log(addonCard.name + " too expensive.");
+            if (debugReasons) { Debug.Log(addonCard.name + " too expensive."); }
             return false;
         }
 
@@ -341,6 +342,7 @@ public class CardRandomizer : MonoBehaviour
             {
                 if (Squadrons.Instance.GetUniqueAlreadyTaken(addonCard.name) && PreviousCardIs(addonCard.name))
                 {
+                    if (debugReasons) { Debug.Log(addonCard.name + " unique and already taken."); }
                     return false;
                 }
             }
@@ -349,6 +351,7 @@ public class CardRandomizer : MonoBehaviour
             {
                 if (PreviousCardIs(addonCard.name))
                 {
+                    if (debugReasons) { Debug.Log(addonCard.name + " is limited and already on this ship."); }
                     return false;
                 }
             }
@@ -356,215 +359,215 @@ public class CardRandomizer : MonoBehaviour
             // Faction restrictions
             if (addonCard.rebelOnly && !ship.rebel)
             {
-                //Debug.Log(addonCard.name + " requires Rebel Ship. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires Rebel Ship. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.imperialOnly && !ship.imperial)
             {
-                //Debug.Log(addonCard.name + " requires Imperial Ship. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires Imperial Ship. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.scumOnly && !ship.scum)
             {
-                //Debug.Log(addonCard.name + " requires Scum Ship. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires Scum Ship. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.rebelAndScumOnly && (!ship.rebel || !ship.scum))
             {
-                //Debug.Log(addonCard.name + " requires Rebel or Scum Ship. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires Rebel or Scum Ship. Invalid selection."); }
                 return false;
             }
 
             // Ship size restrictions
             if (addonCard.smallShipOnly && !ship.smallShip)
             {
-                //Debug.Log(addonCard.name + " requires Small Ship. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires Small Ship. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.largeShipOnly && !ship.largeShip)
             {
-                //Debug.Log(addonCard.name + " requires Large Ship. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires Large Ship. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.hugeShipOnly && !ship.hugeShip)
             {
-                //Debug.Log(addonCard.name + " requires Huge Ship. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires Huge Ship. Invalid selection."); }
                 return false;
             }
 
             // Ship type restrictions
             if (addonCard.tiePhantomOnly && ship.name != "TIE Phantom")
             {
-                //Debug.Log(addonCard.name + " requires TIE Phantom. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires TIE Phantom. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.bWingOnly && ship.name != "B-Wing")
             {
-                //Debug.Log(addonCard.name + " requires B-Wing. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires B-Wing. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.GR75Only && ship.name != "GR-75")
             {
-                //Debug.Log(addonCard.name + " requires GR-75 Ship. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires GR-75 Ship. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.BSF17BomberOnly && ship.name != "B/SF-17 Bomber")
             {
-                //Debug.Log(addonCard.name + " requires B/SF-17 Bomber. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires B/SF-17 Bomber. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.lancerClassPursuitCraftOnly && ship.name != "Lancer-Class Pursuit Craft")
             {
-                //Debug.Log(addonCard.name + " requires Lancer-Class Pursuit Craft. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires Lancer-Class Pursuit Craft. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.xWingOnly && ship.name != "X-Wing" && ship.name != "T-70 X-Wing")
             {
-                //Debug.Log(addonCard.name + " requires any X-Wing type. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires any X-Wing type. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.YV666Only && ship.name != "YV-666")
             {
-                //Debug.Log(addonCard.name + " requires YV-666. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires YV-666. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.YT1300AndYT2400Only && ship.name != "YT-1300" && ship.name != "YT-2400")
             {
-                //Debug.Log(addonCard.name + " requires YT-1300. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires YT-1300. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.TIEFighterOnly && ship.name != "TIE Fighter" && ship.name != "Rebel TIE Fighter")
             {
-                //Debug.Log(addonCard.name + " requires TIE Fighter. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires TIE Fighter. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.quadjumperOnly && ship.name != "Quadjumper")
             {
-                //Debug.Log(addonCard.name + " requires Quadjumper. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires Quadjumper. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.heavyTIEOnly && !ship.heavyTIE)
             {
-                //Debug.Log(addonCard.name + " requires any heavy TIE type. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires any heavy TIE type. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.TIEOnly && !ship.TIE)
             {
-                //Debug.Log(addonCard.name + " requires any TIE type. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires any TIE type. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.T65xWingOnly && ship.name != "X-Wing")
             {
-                //Debug.Log(addonCard.name + " requires X-Wing. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires X-Wing. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.aWingOnly && ship.name != "A-Wing")
             {
-                //Debug.Log(addonCard.name + " requires A-Wing. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires A-Wing. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.yWingOnly && ship.name != "Y-Wing")
             {
-                //Debug.Log(addonCard.name + " requires Y-Wing. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires Y-Wing. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.TIEAdvancedOnly && ship.name != "TIE Advanced")
             {
-                //Debug.Log(addonCard.name + " requires TIE Advanced. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires TIE Advanced. Invalid selection."); }
                 return false;
             }
 
             // Action Restrictions
             if (addonCard.focus && !ship.focus && !PreviousCardGrantsAction(0))
             {
-                //Debug.Log(addonCard.name + " requires a ship that can Focus. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires a ship that can Focus. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.targetLock && !ship.targetLock && !PreviousCardGrantsAction(1))
             {
-                //Debug.Log(addonCard.name + " requires a ship that can Target Lock. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires a ship that can Target Lock. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.boost && !ship.boost && !PreviousCardGrantsAction(2))
             {
-                //Debug.Log(addonCard.name + " requires a ship that can Boost. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires a ship that can Boost. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.evade && !ship.evade && !PreviousCardGrantsAction(3))
             {
-                //Debug.Log(addonCard.name + " requires a ship that can Evade. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires a ship that can Evade. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.barrelRoll && !ship.barrelRoll && !PreviousCardGrantsAction(4))
             {
-                //Debug.Log(addonCard.name + " requires a ship that can Barrel Roll. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires a ship that can Barrel Roll. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.cloak && !ship.cloak && !PreviousCardGrantsAction(8))
             {
-                //Debug.Log(addonCard.name + " requires a ship that can Cloak. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires a ship that can Cloak. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.boostOrBarrelRoll && !ship.boost && !ship.barrelRoll && !PreviousCardGrantsAction(2) && !PreviousCardGrantsAction(4))
             {
-                //Debug.Log(addonCard.name + " requires a ship that can Boost or Barrel Roll. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires a ship that can Boost or Barrel Roll. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.focusOrEvade && !ship.focus && !ship.evade && !PreviousCardGrantsAction(0) && !PreviousCardGrantsAction(3))
             {
-                //Debug.Log(addonCard.name + " requires a ship that can Focus or Evade. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires a ship that can Focus or Evade. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.slam && !ship.slam && !PreviousCardGrantsAction(7))
             {
-                //Debug.Log(addonCard.name + " requires a ship that can SLAM. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires a ship that can SLAM. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.actionHeader && !PreviousCardGrantsAction(5))
             {
-                //Debug.Log(addonCard.name + " requires a card that has an "Action" header. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires a card that has an \"Action\" header. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.reinforce && !ship.reinforce)
             {
-                //Debug.Log(addonCard.name + " requires a ship that has the "Reinforce" action. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires a ship that has the \"Reinforce\" action. Invalid selection."); }
                 return false;
             }
 
             // Misc Restrictions
             if (addonCard.cantAlreadyHaveElitePilotTalentSlot && pilot.GetAddonTypeQuantity(0) > 0)
             {
-                //Debug.Log(addonCard.name + " requires a pilot that does not already have an Elite Pilot Talent slot. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires a pilot that does not already have an Elite Pilot Talent slot. Invalid selection."); }
                 return false;
             }
 
@@ -572,7 +575,7 @@ public class CardRandomizer : MonoBehaviour
             {
                 if (pilot.GetPilotSkill() < addonCard.minPilotSkill)
                 {
-                    //Debug.Log(addonCard.name + " requires a pilot skill of at least " + addonCard.minPilotSkill + ". Invalid selection.");
+                    if (debugReasons) { Debug.Log(addonCard.name + " requires a pilot skill of at least " + addonCard.minPilotSkill + ". Invalid selection."); }
                     return false;
                 }
             }
@@ -581,7 +584,7 @@ public class CardRandomizer : MonoBehaviour
             {
                 if (pilot.GetPilotSkill() > addonCard.maxPilotSkill)
                 {
-                    //Debug.Log(addonCard.name + " requires a pilot skill of at most " + addonCard.maxPilotSkill + ". Invalid selection.");
+                    if (debugReasons) { Debug.Log(addonCard.name + " requires a pilot skill of at most " + addonCard.maxPilotSkill + ". Invalid selection."); }
                     return false;
                 }
             }
@@ -590,7 +593,7 @@ public class CardRandomizer : MonoBehaviour
             {
                 if (pilot.GetAddonTypeQuantity(1) == 0 && pilot.GetAddonTypeQuantity(2) == 0)
                 {
-                    //Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip a torpedo or missile.");
+                    if (debugReasons) { Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip a torpedo or missile."); }
                     return false;
                 }
             }
@@ -599,7 +602,7 @@ public class CardRandomizer : MonoBehaviour
             {
                 if (pilot.GetAddonTypeQuantity(1) == 0 && pilot.GetAddonTypeQuantity(2) == 0 && pilot.GetAddonTypeQuantity(3) == 0)
                 {
-                    //Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip a torpedo or missile or bomb.");
+                    if (debugReasons) { Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip a torpedo or missile or bomb."); }
                     return false;
                 }
             }
@@ -608,188 +611,207 @@ public class CardRandomizer : MonoBehaviour
             {
                 if (pilot.GetAddonTypeQuantity(1) == 0 && pilot.GetAddonTypeQuantity(3) == 0)
                 {
-                    //Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip a torpedo or bomb.");
+                    if (debugReasons) { Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip a torpedo or bomb."); }
                     return false;
                 }
             }
 
             if (addonCard.hasTorpedoOrMissileSlot && pilot.GetAddonTypeQuantity(1) == 0 && pilot.GetAddonTypeQuantity(2) == 0)
             {
-                //Debug.Log(addonCard.name + " requires a Torpedo or Missile slot. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires a Torpedo or Missile slot. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.requiresShieldValue1 && ship.shieldValue != 1)
             {
-                //Debug.Log(addonCard.name + " requires a Shield Value of exactly 1. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " requires a Shield Value of exactly 1. Invalid selection."); }
                 return false;
             }
 
             if (addonCard.bombEquipped && pilot.GetAddonTypeQuantity(3) == 0)
             {
-                //Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip a bomb.");
+                if (debugReasons) { Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip a bomb."); }
                 return false;
             }
 
             if (addonCard.hasAstromechEquipped && pilot.GetAddonTypeQuantity(5) == 0)
             {
-                //Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip an Astromech.");
+                if (debugReasons) { Debug.Log(addonCard.name + " can't be equipped because " + pilot.name + " can't even equip an Astromech."); }
                 return false;
             }
 
             if (addonCard.hasAttackTargetLockEquipped && !PreviousCardGrantsAction(6))
             {
-                //Debug.Log(addonCard.name + " won't be equipped because no addon card has Attack Target Lock.");
+                if (debugReasons) { Debug.Log(addonCard.name + " won't be equipped because no addon card has Attack Target Lock."); }
                 return false;
             }
 
             if (addonCard.hasShields && ship.shieldValue == 0)
             {
-                //Debug.Log(addonCard.name + " can't be equipped because this ship has no shields.");
+                if (debugReasons) { Debug.Log(addonCard.name + " can't be equipped because this ship has no shields."); }
                 return false;
             }
         }
 
         if (exceptions.ValidateExceptions(addonCard, pilot, ship) == false)
         {
+            if (debugReasons) { Debug.Log(addonCard.name + " has exceptions that aren't valid."); }
             return false;
         }
-        
+
 
         // Check for redundant ability
-        if (addonCard.grantsFocus && ship.focus)
+        if (addonCard.grantsFocus)
         {
-            //Debug.Log(addonCard.name + " grants a redundant ability (Focus). Invalid selection.");
-            return false;
-        }
-        else
-        {
-            bool previousCardDoes = false;
-            foreach (AddonCard prevCard in addonCards)
+            if (ship.focus)
             {
-                if (prevCard.grantsFocus)
-                {
-                    previousCardDoes = true;
-                }
-            }
-            if (previousCardDoes)
-            {
-                //Debug.Log(addonCard.name + " grants Focus, but a previously selected card already grants it. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " grants a redundant ability (Focus). Invalid selection."); }
                 return false;
+            }
+            else
+            {
+                bool previousCardDoes = false;
+                foreach (AddonCard prevCard in addonCards)
+                {
+                    if (prevCard.grantsFocus)
+                    {
+                        previousCardDoes = true;
+                    }
+                }
+                if (previousCardDoes)
+                {
+                    if (debugReasons) { Debug.Log(addonCard.name + " grants Focus, but a previously selected card already grants it. Invalid selection."); }
+                    return false;
+                }
             }
         }
 
-        if (addonCard.grantsTargetLock && ship.targetLock)
+        if (addonCard.grantsTargetLock)
         {
-            //Debug.Log(addonCard.name + " grants a redundant ability (Target Lock). Invalid selection.");
-            return false;
-        }
-        else
-        {
-            bool previousCardDoes = false;
-            foreach (AddonCard prevCard in addonCards)
+            if (ship.targetLock)
             {
-                if (prevCard.grantsTargetLock)
-                {
-                    previousCardDoes = true;
-                }
-            }
-            if (previousCardDoes)
-            {
-                //Debug.Log(addonCard.name + " grants Target Lock, but a previously selected card already grants it. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " grants a redundant ability (Target Lock). Invalid selection."); }
                 return false;
+            }
+            else
+            {
+                bool previousCardDoes = false;
+                foreach (AddonCard prevCard in addonCards)
+                {
+                    if (prevCard.grantsTargetLock)
+                    {
+                        previousCardDoes = true;
+                    }
+                }
+                if (previousCardDoes)
+                {
+                    if (debugReasons) { Debug.Log(addonCard.name + " grants Target Lock, but a previously selected card already grants it. Invalid selection."); }
+                    return false;
+                }
             }
         }
 
-        if (addonCard.grantsBoost && ship.boost)
+        if (addonCard.grantsBoost)
         {
-            //Debug.Log(addonCard.name + " grants a redundant ability (Boost). Invalid selection.");
-            return false;
-        }
-        else
-        {
-            bool previousCardDoes = false;
-            foreach (AddonCard prevCard in addonCards)
+            if (ship.boost)
             {
-                if (prevCard.grantsBoost)
-                {
-                    previousCardDoes = true;
-                }
-            }
-            if (previousCardDoes)
-            {
-                //Debug.Log(addonCard.name + " grants Boost, but a previously selected card already grants it. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " grants a redundant ability (Boost). Invalid selection."); }
                 return false;
+            }
+            else
+            {
+                bool previousCardDoes = false;
+                foreach (AddonCard prevCard in addonCards)
+                {
+                    if (prevCard.grantsBoost)
+                    {
+                        previousCardDoes = true;
+                    }
+                }
+                if (previousCardDoes)
+                {
+                    if (debugReasons) { Debug.Log(addonCard.name + " grants Boost, but a previously selected card already grants it. Invalid selection."); }
+                    return false;
+                }
             }
         }
 
-        if (addonCard.grantsEvade && ship.evade)
+        if (addonCard.grantsEvade)
         {
-            //Debug.Log(addonCard.name + " grants a redundant ability (Evade). Invalid selection.");
-            return false;
-        }
-        else
-        {
-            bool previousCardDoes = false;
-            foreach (AddonCard prevCard in addonCards)
+            if (ship.evade)
             {
-                if (prevCard.grantsEvade)
-                {
-                    previousCardDoes = true;
-                }
-            }
-            if (previousCardDoes)
-            {
-                //Debug.Log(addonCard.name + " grants Evade, but a previously selected card already grants it. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " grants a redundant ability (Evade). Invalid selection."); }
                 return false;
+            }
+            else
+            {
+                bool previousCardDoes = false;
+                foreach (AddonCard prevCard in addonCards)
+                {
+                    if (prevCard.grantsEvade)
+                    {
+                        previousCardDoes = true;
+                    }
+                }
+                if (previousCardDoes)
+                {
+                    if (debugReasons) { Debug.Log(addonCard.name + " grants Evade, but a previously selected card already grants it. Invalid selection."); }
+                    return false;
+                }
             }
         }
 
-        if (addonCard.grantsBarrelRoll && ship.barrelRoll)
+        if (addonCard.grantsBarrelRoll)
         {
-            //Debug.Log(addonCard.name + " grants a redundant ability (Barrel Roll). Invalid selection.");
-            return false;
-        }
-        else
-        {
-            bool previousCardDoes = false;
-            foreach (AddonCard prevCard in addonCards)
+            if (ship.barrelRoll)
             {
-                if (prevCard.grantsBarrelRoll)
-                {
-                    previousCardDoes = true;
-                }
-            }
-            if (previousCardDoes)
-            {
-                //Debug.Log(addonCard.name + " grants Barrel Roll, but a previously selected card already grants it. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " grants a redundant ability (Barrel Roll). Invalid selection."); }
                 return false;
+            }
+            else
+            {
+                bool previousCardDoes = false;
+                foreach (AddonCard prevCard in addonCards)
+                {
+                    if (prevCard.grantsBarrelRoll)
+                    {
+                        previousCardDoes = true;
+                    }
+                }
+                if (previousCardDoes)
+                {
+                    if (debugReasons) { Debug.Log(addonCard.name + " grants Barrel Roll, but a previously selected card already grants it. Invalid selection."); }
+                    return false;
+                }
             }
         }
 
-        if (addonCard.grantsSLAM && ship.slam)
+        if (addonCard.grantsSLAM)
         {
-            //Debug.Log(addonCard.name + " grants a redundant ability (SLAM). Invalid selection.");
-            return false;
-        }
-        else
-        {
-            bool previousCardDoes = false;
-            foreach (AddonCard prevCard in addonCards)
+            if (ship.slam)
             {
-                if (prevCard.grantsSLAM)
-                {
-                    previousCardDoes = true;
-                }
-            }
-            if (previousCardDoes)
-            {
-                //Debug.Log(addonCard.name + " grants SLAM, but a previously selected card already grants it. Invalid selection.");
+                if (debugReasons) { Debug.Log(addonCard.name + " grants a redundant ability (SLAM). Invalid selection."); }
                 return false;
+            }
+            else
+            {
+                bool previousCardDoes = false;
+                foreach (AddonCard prevCard in addonCards)
+                {
+                    if (prevCard.grantsSLAM)
+                    {
+                        previousCardDoes = true;
+                    }
+                }
+                if (previousCardDoes)
+                {
+                    if (debugReasons) { Debug.Log(addonCard.name + " grants SLAM, but a previously selected card already grants it. Invalid selection."); }
+                    return false;
+                }
             }
         }
 
-        //Debug.Log("All requirements met for equipping " + addonCard.name + ". This card is valid!");
+        if (debugReasons) { Debug.Log("All requirements met for equipping " + addonCard.name + ". This card is valid!"); }
         return true;
     }
 }

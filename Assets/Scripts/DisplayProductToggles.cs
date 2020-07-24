@@ -289,14 +289,12 @@ public class ProductToggle
             flag = 0;
         }
         PlayerPrefs.SetInt(this.name, flag);
-
-        Debug.Log("Saved setting: " + this.name + " = " + flag.ToString());
     }
 
     public void LoadToggleSetting()
     {
         int flag = PlayerPrefs.GetInt(this.name);
-        Debug.Log("Loaded setting: " + this.name + " = " + flag.ToString());
+
         if (flag == 1)
         {
             ManualToggle(true);
