@@ -31,4 +31,6 @@ MonoBehaviour:
   hugeShip: 0
   heavyTIE: 0
   TIE: 0
-  titles: []
+  titles:
+  - {fileID: 11400000, guid: 57e8488d06cbca44d9911f37dbca1e3e, type: 2}
+  - {fileID: 11400000, guid: 31532aa1096421e4fafdd6c9df2b795a, type: 2}

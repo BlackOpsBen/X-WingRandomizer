@@ -15,7 +15,9 @@ MonoBehaviour:
   forcePushChanges: 0
   cardArt: {fileID: 21300000, guid: 829065eb806f41540b84d58ee5a0b14d, type: 3}
   cost: 1
-  includedWith: []
+  includedWith:
+  - {fileID: 11400000, guid: 1e30cfe0bd8a77d45b3824cb9bec9745, type: 2}
+  - {fileID: 11400000, guid: b2bba57c54ddd9c4182051f38f1292cd, type: 2}
   unique: 0
   limited: 0
   rebelOnly: 0
@@ -40,6 +42,7 @@ MonoBehaviour:
   T65xWingOnly: 0
   aWingOnly: 0
   yWingOnly: 0
+  TIEAdvancedOnly: 0
   focus: 0
   targetLock: 0
   boost: 0
@@ -50,6 +53,7 @@ MonoBehaviour:
   focusOrEvade: 0
   slam: 0
   actionHeader: 0
+  reinforce: 0
   cantAlreadyHaveElitePilotTalentSlot: 0
   hasMinPilotSkill: 0
   minPilotSkill: 0
@@ -63,6 +67,8 @@ MonoBehaviour:
   bombEquipped: 0
   hasAstromechEquipped: 0
   hasAttackTargetLockEquipped: 0
+  hasShields: 0
+  hasTurretEquipped: 0
   grantsFocus: 0
   grantsTargetLock: 0
   grantsBoost: 0
@@ -71,8 +77,14 @@ MonoBehaviour:
   grantsActionHeader: 0
   grantsAttackTargetLock: 0
   grantsSLAM: 0
+  grantsCloak: 0
   grantsElitePilotTalent: 0
   grantsCrew: 0
   grantsIllicit: 0
   grantsModificationCosting3OrLess: 0
   grantsBomb: 0
+  grantsBomb2: 0
+  grantsModification: 0
+  grantsModification2: 0
+  grantsTorpedo: 0
+  grantsSystem: 0

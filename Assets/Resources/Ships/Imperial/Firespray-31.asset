@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: Firespray-31
   m_EditorClassIdentifier: 
+  includedWith:
+  - {fileID: 11400000, guid: ff2cfa35e74e27144858866a07e5cff0, type: 2}
   shieldValue: 4
+  hullValue: 0
   focus: 1
   targetLock: 1
   boost: 0
@@ -20,6 +23,7 @@ MonoBehaviour:
   barrelRoll: 0
   cloak: 0
   slam: 0
+  reinforce: 0
   rebel: 0
   imperial: 1
   scum: 0
@@ -28,4 +32,6 @@ MonoBehaviour:
   hugeShip: 0
   heavyTIE: 0
   TIE: 0
-  titles: []
+  titles:
+  - {fileID: 11400000, guid: 57e8488d06cbca44d9911f37dbca1e3e, type: 2}
+  - {fileID: 11400000, guid: 31532aa1096421e4fafdd6c9df2b795a, type: 2}

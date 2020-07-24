@@ -12,14 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: TIE Interceptor
   m_EditorClassIdentifier: 
+  includedWith:
+  - {fileID: 11400000, guid: c2520fb9a854ba640ba77b54d6c1427c, type: 2}
+  - {fileID: 11400000, guid: 99796e79e3659454397c14597a55678d, type: 2}
   shieldValue: 0
+  hullValue: 0
   focus: 1
   targetLock: 0
   boost: 1
   evade: 1
   barrelRoll: 1
   cloak: 0
-  SLAM: 0
+  slam: 0
+  reinforce: 0
   rebel: 0
   imperial: 1
   scum: 0
@@ -28,3 +33,5 @@ MonoBehaviour:
   hugeShip: 0
   heavyTIE: 0
   TIE: 1
+  titles:
+  - {fileID: 11400000, guid: 59a4e535afae9a049a8c686b00ec5cdc, type: 2}

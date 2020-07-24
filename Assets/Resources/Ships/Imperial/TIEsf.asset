@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: TIEsf
   m_EditorClassIdentifier: 
+  includedWith:
+  - {fileID: 11400000, guid: 2ce2fabfede74ca4a818030b5f807523, type: 2}
   shieldValue: 3
+  hullValue: 0
   focus: 1
   targetLock: 1
   boost: 0
@@ -20,6 +23,7 @@ MonoBehaviour:
   barrelRoll: 1
   cloak: 0
   slam: 0
+  reinforce: 0
   rebel: 0
   imperial: 1
   scum: 0
@@ -28,4 +32,5 @@ MonoBehaviour:
   hugeShip: 0
   heavyTIE: 1
   TIE: 1
-  titles: []
+  titles:
+  - {fileID: 11400000, guid: 0576bbbd00e7de74fa347c85ceac1e80, type: 2}

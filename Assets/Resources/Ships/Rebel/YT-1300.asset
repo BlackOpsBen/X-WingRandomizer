@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: YT-1300
   m_EditorClassIdentifier: 
+  includedWith:
+  - {fileID: 11400000, guid: 80164aa2c44763042b1f4fff42aa0d2b, type: 2}
+  - {fileID: 11400000, guid: 43d3ac03bc5cf834db9dc3a5834ff29f, type: 2}
   shieldValue: 5
+  hullValue: 0
   focus: 1
   targetLock: 1
   boost: 0
@@ -20,6 +24,7 @@ MonoBehaviour:
   barrelRoll: 0
   cloak: 0
   slam: 0
+  reinforce: 0
   rebel: 1
   imperial: 0
   scum: 0
@@ -28,4 +33,6 @@ MonoBehaviour:
   hugeShip: 0
   heavyTIE: 0
   TIE: 0
-  titles: []
+  titles:
+  - {fileID: 11400000, guid: 760ba843ebd0a1c4893384f39acb5361, type: 2}
+  - {fileID: 11400000, guid: 69fae00333289054ca94a443a68731bd, type: 2}

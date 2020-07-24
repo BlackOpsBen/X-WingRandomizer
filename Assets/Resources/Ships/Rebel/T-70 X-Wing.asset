@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: T-70 X-Wing
   m_EditorClassIdentifier: 
+  includedWith:
+  - {fileID: 11400000, guid: 57c02a1b0c0a1b84c87d8ea0550035b3, type: 2}
+  - {fileID: 11400000, guid: 43d3ac03bc5cf834db9dc3a5834ff29f, type: 2}
+  - {fileID: 11400000, guid: 7b8e5c18a3353244285e08fae4a8a289, type: 2}
   shieldValue: 3
+  hullValue: 0
   focus: 1
   targetLock: 1
   boost: 1
@@ -20,6 +25,7 @@ MonoBehaviour:
   barrelRoll: 0
   cloak: 0
   slam: 0
+  reinforce: 0
   rebel: 1
   imperial: 0
   scum: 0
@@ -28,4 +34,5 @@ MonoBehaviour:
   hugeShip: 0
   heavyTIE: 0
   TIE: 0
-  titles: []
+  titles:
+  - {fileID: 11400000, guid: 461cb1d5803223b4699f17ebf1cbe02d, type: 2}

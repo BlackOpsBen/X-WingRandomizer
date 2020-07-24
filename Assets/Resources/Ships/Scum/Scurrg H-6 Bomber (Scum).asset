@@ -15,6 +15,7 @@ MonoBehaviour:
   includedWith:
   - {fileID: 11400000, guid: df07e8fa4beaaf2409f1e383ad84d8f5, type: 2}
   shieldValue: 5
+  hullValue: 0
   focus: 1
   targetLock: 1
   boost: 0
@@ -22,6 +23,7 @@ MonoBehaviour:
   barrelRoll: 1
   cloak: 0
   slam: 0
+  reinforce: 0
   rebel: 0
   imperial: 0
   scum: 1
@@ -30,4 +32,5 @@ MonoBehaviour:
   hugeShip: 0
   heavyTIE: 0
   TIE: 0
-  titles: []
+  titles:
+  - {fileID: 11400000, guid: 0b194b0be8548cf489dd926185ceaaad, type: 2}

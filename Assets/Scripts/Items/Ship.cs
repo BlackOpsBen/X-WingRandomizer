@@ -66,4 +66,9 @@ public class Ship : Item, IComeInProducts
     {
         return includedWith.Count;
     }
+
+    public Title[] GetTitleOptions()
+    {
+        return titles;
+    }
 }

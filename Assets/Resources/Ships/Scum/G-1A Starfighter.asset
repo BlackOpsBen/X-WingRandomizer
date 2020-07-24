@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: G-1A Starfighter
   m_EditorClassIdentifier: 
-  includedWith: []
+  includedWith:
+  - {fileID: 11400000, guid: 20bd86f671a72d94e9eb5701f6064539, type: 2}
   shieldValue: 4
+  hullValue: 0
   focus: 1
   targetLock: 1
   boost: 0
@@ -21,6 +23,7 @@ MonoBehaviour:
   barrelRoll: 0
   cloak: 0
   slam: 0
+  reinforce: 0
   rebel: 0
   imperial: 0
   scum: 1
@@ -29,4 +32,5 @@ MonoBehaviour:
   hugeShip: 0
   heavyTIE: 0
   TIE: 0
-  titles: []
+  titles:
+  - {fileID: 11400000, guid: d70e8c2c321cc804db9112e7f75e61da, type: 2}

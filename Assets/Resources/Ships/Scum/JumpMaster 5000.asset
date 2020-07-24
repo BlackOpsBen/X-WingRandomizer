@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: JumpMaster 5000
   m_EditorClassIdentifier: 
-  includedWith: []
+  includedWith:
+  - {fileID: 11400000, guid: 9a394b6eaa8f24640863b221ae774b16, type: 2}
   shieldValue: 4
   hullValue: 5
   focus: 1
@@ -31,4 +32,5 @@ MonoBehaviour:
   hugeShip: 0
   heavyTIE: 0
   TIE: 0
-  titles: []
+  titles:
+  - {fileID: 11400000, guid: 7295f47ff70ef4d40943cb2e90aba35c, type: 2}

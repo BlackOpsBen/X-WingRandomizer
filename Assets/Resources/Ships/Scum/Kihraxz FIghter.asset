@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: Kihraxz FIghter
   m_EditorClassIdentifier: 
-  includedWith: []
+  includedWith:
+  - {fileID: 11400000, guid: 82038d8ded7aacb439241ded5b9d598c, type: 2}
+  - {fileID: 11400000, guid: 8a71105e9c1670c489eaee4a31f4c759, type: 2}
   shieldValue: 1
   hullValue: 4
   focus: 1
@@ -31,4 +33,5 @@ MonoBehaviour:
   hugeShip: 0
   heavyTIE: 0
   TIE: 0
-  titles: []
+  titles:
+  - {fileID: 11400000, guid: 30d4418e74a41d04d87ae041c74c10b3, type: 2}

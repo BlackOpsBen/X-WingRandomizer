@@ -19,6 +19,10 @@ public class CardRandomizer : MonoBehaviour
     private bool needToFillNewSlots = false;
     private int lastCountedCardIndex = 0;
 
+    // Title specific modifications
+    bool nextSystemIsMinus4 = false; // TIEx1
+    bool allUpgradesAreMinus1 = false; // Vaksai
+
     private void Awake()
     {
         displayCards = GetComponent<DisplayCards>();
@@ -30,6 +34,7 @@ public class CardRandomizer : MonoBehaviour
     {
         ResetPilot();
         MakeRandomPilot();
+        SelectTitle();
         SelectAddons();
 
         while (needToFillNewSlots)
@@ -47,6 +52,9 @@ public class CardRandomizer : MonoBehaviour
     {
         addonCards.Clear();
         totalCost = 0;
+
+        nextSystemIsMinus4 = false;
+        allUpgradesAreMinus1 = false;
     }
 
     private void MakeRandomPilot()
@@ -118,6 +126,50 @@ public class CardRandomizer : MonoBehaviour
         }
     }
 
+    private void SelectTitle()
+    {
+        Title[] titleOptions = ship.GetTitleOptions();
+        if (titleOptions.Length > 0)
+        {
+            int rand = UnityEngine.Random.Range(0, titleOptions.Length);
+
+            Title selectedTitle = titleOptions[rand];
+
+            if (ValidateSelection(selectedTitle))
+            {
+                addonCards.Add(selectedTitle);
+
+                if (selectedTitle.GetGrantsSlot())
+                {
+                    needToFillNewSlots = true;
+                }
+
+                if (selectedTitle.GetName() == "TIEx1")
+                {
+                    nextSystemIsMinus4 = true;
+                }
+                else if (selectedTitle.GetName() == "Vaksai")
+                {
+                    allUpgradesAreMinus1 = true;
+                }
+                else if (selectedTitle.GetName() == "StarViper MkII")
+                {
+                    int coin = UnityEngine.Random.Range(0, 2);
+                    if (coin == 1)
+                    {
+                        addonCards.Add(titleOptions[0]);
+                        if (titleOptions[0].GetGrantsSlot())
+                        {
+                            needToFillNewSlots = true;
+                        }
+                    }
+                }
+            }
+
+            // TODO check if it REMOVES a slot
+        }
+    }
+
     private void SelectAddons()
     {
         int numToLoop = pilot.GetNumAddonTypes();
@@ -151,8 +203,18 @@ public class CardRandomizer : MonoBehaviour
     private void MakeValidSelection(int addonType)
     {
         AddonCard selection;
-        if (selection = RandomlySelectAddon(addonType))
+        if (selection = Instantiate(RandomlySelectAddon(addonType)))
         {
+            if (addonType == 9 && nextSystemIsMinus4)
+            {
+                selection.cost = Mathf.Max(0, selection.cost - 4);
+                nextSystemIsMinus4 = false;
+            }
+
+            if (allUpgradesAreMinus1)
+            {
+                selection.cost = Mathf.Max(0, selection.cost - 1);
+            }
             addonCards.Add(selection);
             if (selection.GetGrantsSlot())
             {
@@ -263,10 +325,22 @@ public class CardRandomizer : MonoBehaviour
                 Debug.Log("Verify this selection was of type 'Modification'");
             }
 
+            if (addonCards[i].grantsModification2)
+            {
+                MakeValidSelection(4);
+                Debug.Log("Verify this selection was of type 'Modification'");
+            }
+
             if (addonCards[i].grantsTorpedo)
             {
                 MakeValidSelection(1);
                 Debug.Log("Verify this selection was of type 'Torpedo'");
+            }
+
+            if (addonCards[i].grantsSystem)
+            {
+                MakeValidSelection(9);
+                Debug.Log("Verify this selection was of type 'System'");
             }
 
             lastCountedCardIndex++;

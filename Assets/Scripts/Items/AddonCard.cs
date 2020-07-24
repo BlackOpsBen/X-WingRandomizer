@@ -101,7 +101,9 @@ public class AddonCard : Item, IComeInProducts
     public bool grantsBomb;
     public bool grantsBomb2;
     public bool grantsModification;
+    public bool grantsModification2;
     public bool grantsTorpedo;
+    public bool grantsSystem;
 
     private void OnValidate()
     {
@@ -195,7 +197,9 @@ public class AddonCard : Item, IComeInProducts
             grantsBomb,
             grantsBomb2,
             grantsModification,
-            grantsTorpedo
+            grantsModification2,
+            grantsTorpedo,
+            grantsSystem
         };
     }
 

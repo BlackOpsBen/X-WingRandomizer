@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: Alpha-Class Star Wing
   m_EditorClassIdentifier: 
-  includedWith: []
+  includedWith:
+  - {fileID: 11400000, guid: 83f5c9feda17e454c8a4c9a79f5dceb8, type: 2}
   shieldValue: 3
+  hullValue: 0
   focus: 1
   targetLock: 1
   boost: 0
@@ -21,6 +23,7 @@ MonoBehaviour:
   barrelRoll: 0
   cloak: 0
   slam: 1
+  reinforce: 0
   rebel: 0
   imperial: 1
   scum: 0
@@ -29,4 +32,6 @@ MonoBehaviour:
   hugeShip: 0
   heavyTIE: 0
   TIE: 0
-  titles: []
+  titles:
+  - {fileID: 11400000, guid: 9dc6e572abd477d4d9e22074bc109ed5, type: 2}
+  - {fileID: 11400000, guid: 5f408025ff64ade4388da90fc8a2c843, type: 2}

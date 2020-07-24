@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: Y-Wing (Scum)
   m_EditorClassIdentifier: 
-  includedWith: []
+  includedWith:
+  - {fileID: 11400000, guid: c7c02f697b31b2d428f915ea1c95e3a4, type: 2}
   shieldValue: 3
   hullValue: 5
   focus: 1
@@ -31,4 +32,5 @@ MonoBehaviour:
   hugeShip: 0
   heavyTIE: 0
   TIE: 0
-  titles: []
+  titles:
+  - {fileID: 11400000, guid: 5256ccde326603c42967095b5324526c, type: 2}

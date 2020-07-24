@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: StarViper
   m_EditorClassIdentifier: 
-  includedWith: []
+  includedWith:
+  - {fileID: 11400000, guid: 82038d8ded7aacb439241ded5b9d598c, type: 2}
+  - {fileID: 11400000, guid: b2bba57c54ddd9c4182051f38f1292cd, type: 2}
   shieldValue: 1
   hullValue: 4
   focus: 1
@@ -31,4 +33,6 @@ MonoBehaviour:
   hugeShip: 0
   heavyTIE: 0
   TIE: 0
-  titles: []
+  titles:
+  - {fileID: 11400000, guid: b79deec521d169143b526971b3881b22, type: 2}
+  - {fileID: 11400000, guid: 65735e010ba22ad4a93b4e1322f1e707, type: 2}

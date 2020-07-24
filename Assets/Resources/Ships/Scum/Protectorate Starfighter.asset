@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: Protectorate Starfighter
   m_EditorClassIdentifier: 
-  includedWith: []
+  includedWith:
+  - {fileID: 11400000, guid: 040b6065a44fd304d8ccb89915edb74a, type: 2}
   shieldValue: 0
   hullValue: 4
   focus: 1
@@ -31,4 +32,5 @@ MonoBehaviour:
   hugeShip: 0
   heavyTIE: 0
   TIE: 0
-  titles: []
+  titles:
+  - {fileID: 11400000, guid: a6663a1d9e5f7ef49bfc3a3565d27b3a, type: 2}

@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   includedWith:
   - {fileID: 11400000, guid: e76e09b0ee201b54b9b7e3b01fbc438d, type: 2}
+  - {fileID: 11400000, guid: f403c90dd2451b546b19a632e8a65859, type: 2}
   shieldValue: 1
   hullValue: 2
   focus: 1
@@ -32,4 +33,6 @@ MonoBehaviour:
   hugeShip: 0
   heavyTIE: 0
   TIE: 0
-  titles: []
+  titles:
+  - {fileID: 11400000, guid: 0e59120e42610424190689d32b8fb0b4, type: 2}
+  - {fileID: 11400000, guid: edd4e5502e619b54fbbe5b879093b0d4, type: 2}

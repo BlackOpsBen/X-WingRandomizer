@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: A-Wing
   m_EditorClassIdentifier: 
+  includedWith:
+  - {fileID: 11400000, guid: 5f85cde752a46664ebe9aac025ebd5bf, type: 2}
+  - {fileID: 11400000, guid: 0fb13f90036603f46b54e06c1a0436e5, type: 2}
   shieldValue: 2
+  hullValue: 0
   focus: 1
   targetLock: 1
   boost: 1
@@ -20,6 +24,7 @@ MonoBehaviour:
   barrelRoll: 0
   cloak: 0
   slam: 0
+  reinforce: 0
   rebel: 1
   imperial: 0
   scum: 0
@@ -28,4 +33,5 @@ MonoBehaviour:
   hugeShip: 0
   heavyTIE: 0
   TIE: 0
-  titles: []
+  titles:
+  - {fileID: 11400000, guid: 463345b34a91ec548a5bc88da176051f, type: 2}

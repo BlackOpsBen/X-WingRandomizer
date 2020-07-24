@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: TIE Advanced Prototype
   m_EditorClassIdentifier: 
+  includedWith:
+  - {fileID: 11400000, guid: dc83a6532070af044bd58e99ff8b0309, type: 2}
   shieldValue: 2
+  hullValue: 0
   focus: 1
   targetLock: 1
   boost: 1
@@ -20,6 +23,7 @@ MonoBehaviour:
   barrelRoll: 1
   cloak: 0
   slam: 0
+  reinforce: 0
   rebel: 0
   imperial: 1
   scum: 0
@@ -28,4 +32,5 @@ MonoBehaviour:
   hugeShip: 0
   heavyTIE: 0
   TIE: 1
-  titles: []
+  titles:
+  - {fileID: 11400000, guid: fbca785bd1185c041a2676416003991e, type: 2}
