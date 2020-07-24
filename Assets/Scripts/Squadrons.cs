@@ -43,7 +43,7 @@ public class Squadrons : MonoBehaviour
         }
     }
 
-    public void RecordPilotSet(Ship ship, PilotCard pilot, AddonCard[] addonCards)
+    public void RecordPilotSet(Ship ship, PilotCard pilot, AddonCard[] addonCards, int costModifiers)
     {
         PilotSet pilotSet = new PilotSet
         {
@@ -60,20 +60,21 @@ public class Squadrons : MonoBehaviour
             pilotSet.selectedAddons[i].cost = addonCards[i].cost;
         }
 
-        CalculateSetTotalCost(pilotSet);
+        CalculateSetTotalCost(pilotSet, costModifiers);
 
         squadrons[PilotCardManager.Instance.GetSelectedFactionIndex()].pilotSets.Add(pilotSet);
 
         CalculateSquadronTotalCost(squadrons[PilotCardManager.Instance.GetSelectedFactionIndex()]);
     }
 
-    private void CalculateSetTotalCost(PilotSet pilotSet)
+    private void CalculateSetTotalCost(PilotSet pilotSet, int costModifiers)
     {
         pilotSet.pilotSetCost = pilotSet.pilotCost;
         for (int i = 0; i < pilotSet.selectedAddons.Length; i++)
         {
             pilotSet.pilotSetCost += pilotSet.selectedAddons[i].cost;
         }
+        pilotSet.pilotSetCost -= costModifiers;
     }
 
     private void CalculateSquadronTotalCost(Squadron squadron)
@@ -134,14 +135,14 @@ public class Squadrons : MonoBehaviour
         {
             if (pilotSet.pilotName == name)
             {
-                Debug.LogWarning("Unique name already chosen. \"" + name + "\" is invalid pilot.");
+                //Debug.LogWarning("Unique name already chosen. \"" + name + "\" is invalid pilot.");
                 return true;
             }
             foreach (SelectedAddon selectedAddon in pilotSet.selectedAddons)
             {
                 if (selectedAddon.addonName == name)
                 {
-                    Debug.LogWarning("Unique name already chosen. \"" + name + "\" is invalid addon.");
+                    //Debug.LogWarning("Unique name already chosen. \"" + name + "\" is invalid addon.");
                     return true;
                 }
             }

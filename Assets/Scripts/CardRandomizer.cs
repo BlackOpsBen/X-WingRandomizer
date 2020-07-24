@@ -20,13 +20,56 @@ public class CardRandomizer : MonoBehaviour
     private int lastCountedCardIndex = 0;
 
     // Title specific modifications
-    bool nextSystemIsMinus4 = false; // TIEx1
-    bool allUpgradesAreMinus1 = false; // Vaksai
+    private bool nextSystemIsMinus4 = false; // TIEx1
+    private bool allUpgradesAreMinus1 = false; // Vaksai
+    private int costModifiers = 0;
 
     private void Awake()
     {
         displayCards = GetComponent<DisplayCards>();
         exceptions = GetComponent<Exceptions>();
+    }
+
+    public int GetCostModifiers()
+    {
+        return costModifiers;
+    }
+
+    private void SetCostModifiers()
+    {
+        costModifiers = 0;
+
+        if (nextSystemIsMinus4)
+        {
+            int mostExpensiveSystem = 0;
+            foreach (AddonCard addonCard in addonCards)
+            {
+                if (addonCard.GetType().Name == "SystemUpgrade")
+                {
+                    Debug.Log("System upgrade found: " + addonCard.GetName() + " is a " + addonCard.GetType().ToString());
+                    if (addonCard.cost > mostExpensiveSystem)
+                    {
+                        mostExpensiveSystem = addonCard.cost;
+                    }
+                }
+            }
+            nextSystemIsMinus4 = false;
+            costModifiers += mostExpensiveSystem;
+        }
+
+        if (allUpgradesAreMinus1)
+        {
+            int totalDiscount = 0;
+            foreach (AddonCard addonCard in addonCards)
+            {
+                if (addonCard.cost > 0)
+                {
+                    totalDiscount++;
+                }
+            }
+            allUpgradesAreMinus1 = false;
+            costModifiers += totalDiscount;
+        }
     }
 
     // Called by UI Button
@@ -42,6 +85,8 @@ public class CardRandomizer : MonoBehaviour
             FillAnyNewSlots();
         }
         lastCountedCardIndex = 0;
+
+        SetCostModifiers();
 
         GetComponent<DisplayCards>().DisplayAddons(addonCards);
 
@@ -203,18 +248,8 @@ public class CardRandomizer : MonoBehaviour
     private void MakeValidSelection(int addonType)
     {
         AddonCard selection;
-        if (selection = Instantiate(RandomlySelectAddon(addonType)))
+        if (selection = RandomlySelectAddon(addonType))
         {
-            if (addonType == 9 && nextSystemIsMinus4)
-            {
-                selection.cost = Mathf.Max(0, selection.cost - 4);
-                nextSystemIsMinus4 = false;
-            }
-
-            if (allUpgradesAreMinus1)
-            {
-                selection.cost = Mathf.Max(0, selection.cost - 1);
-            }
             addonCards.Add(selection);
             if (selection.GetGrantsSlot())
             {
@@ -290,7 +325,6 @@ public class CardRandomizer : MonoBehaviour
             if (addonCards[i].grantsIllicit)
             {
                 MakeValidSelection(11);
-                Debug.Log("Verify this selection was of type 'Illicit'");
             }
 
             if (addonCards[i].grantsModificationCosting3OrLess)
@@ -322,13 +356,11 @@ public class CardRandomizer : MonoBehaviour
             if (addonCards[i].grantsModification)
             {
                 MakeValidSelection(4);
-                Debug.Log("Verify this selection was of type 'Modification'");
             }
 
             if (addonCards[i].grantsModification2)
             {
                 MakeValidSelection(4);
-                Debug.Log("Verify this selection was of type 'Modification'");
             }
 
             if (addonCards[i].grantsTorpedo)
@@ -340,7 +372,6 @@ public class CardRandomizer : MonoBehaviour
             if (addonCards[i].grantsSystem)
             {
                 MakeValidSelection(9);
-                Debug.Log("Verify this selection was of type 'System'");
             }
 
             lastCountedCardIndex++;

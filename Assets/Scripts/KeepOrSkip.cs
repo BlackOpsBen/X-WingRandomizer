@@ -16,7 +16,7 @@ public class KeepOrSkip : MonoBehaviour
     public void KeepSet()
     {
         // Record the set in Squadrons Manager
-        Squadrons.Instance.RecordPilotSet(cardRandomizer.ship, cardRandomizer.pilot, cardRandomizer.addonCards.ToArray());
+        Squadrons.Instance.RecordPilotSet(cardRandomizer.ship, cardRandomizer.pilot, cardRandomizer.addonCards.ToArray(), cardRandomizer.GetCostModifiers());
 
         // Hide all Addons
         displayCards.ClearPreviousCards();
