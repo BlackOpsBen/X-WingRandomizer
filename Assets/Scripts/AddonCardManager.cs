@@ -34,9 +34,6 @@ public class AddonCardManager : MonoBehaviour
             "Systems",
             "Techs",
             "Illicits",
-            "Cargos",
-            "Hardpoints",
-            "Teams",
             "Salvaged Astromechs"
             };
     }

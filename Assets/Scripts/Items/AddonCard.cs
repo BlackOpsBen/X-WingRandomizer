@@ -63,6 +63,7 @@ public class AddonCard : Item, IComeInProducts
     public bool focusOrEvade;
     public bool slam;
     public bool actionHeader;
+    public bool reinforce;
 
     [Header("Misc Restrictions")]
     public bool cantAlreadyHaveElitePilotTalentSlot;
@@ -150,6 +151,7 @@ public class AddonCard : Item, IComeInProducts
             focusOrEvade,
             slam,
             actionHeader,
+            reinforce,
             cantAlreadyHaveElitePilotTalentSlot,
             hasMinPilotSkill,
             hasMaxPilotSkill,

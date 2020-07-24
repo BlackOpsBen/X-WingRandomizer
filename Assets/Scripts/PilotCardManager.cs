@@ -125,6 +125,7 @@ public class PilotCardManager : MonoBehaviour
         foreach (Ship ship in factionList[PilotCardManager.Instance.GetSelectedFactionIndex()].ships)
         {
             bool isIncluded = DisplayProductToggles.Instance.GetIsEnabled(ship);
+            // TODO limit if a faction already selected this ship, unless I implement quantity of products
             if (isIncluded && ship.GetCheapestPilotCost() <= pointsAvailable)
             {
                 listToReturn.Add(ship);
@@ -139,6 +140,7 @@ public class PilotCardManager : MonoBehaviour
         foreach (PilotCard pilot in factionList[selectedFaction].pilotGroups[shipIndex].pilots)
         {
             bool isIncluded = DisplayProductToggles.Instance.GetIsEnabled(pilot);
+            // TODO for Scurrg H-6 Bomber, only select a faction valid pilot, also Unique has to apply, but manually
             if (isIncluded && pilot.GetCost() <= pointsAvailable)
             {
                 listToReturn.Add(pilot);

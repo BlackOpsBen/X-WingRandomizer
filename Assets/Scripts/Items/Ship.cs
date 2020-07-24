@@ -8,6 +8,7 @@ public class Ship : Item, IComeInProducts
 
     [Header("Stats")]
     public int shieldValue;
+    public int hullValue;
 
     [Header("Action Bar")]
     public bool focus;
@@ -17,6 +18,7 @@ public class Ship : Item, IComeInProducts
     public bool barrelRoll;
     public bool cloak;
     public bool slam;
+    public bool reinforce;
 
     [Header("Faction")]
     public bool rebel;

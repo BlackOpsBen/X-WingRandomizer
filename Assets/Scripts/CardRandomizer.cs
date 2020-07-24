@@ -555,6 +555,12 @@ public class CardRandomizer : MonoBehaviour
                 return false;
             }
 
+            if (addonCard.reinforce && !ship.reinforce)
+            {
+                //Debug.Log(addonCard.name + " requires a ship that has the "Reinforce" action. Invalid selection.");
+                return false;
+            }
+
             // Misc Restrictions
             if (addonCard.cantAlreadyHaveElitePilotTalentSlot && pilot.GetAddonTypeQuantity(0) > 0)
             {

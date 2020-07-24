@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
+  m_Name: Phantom II
+  m_EditorClassIdentifier: 
+  itemsIncluded:
+  - {fileID: 11400000, guid: e75f98eb69d5efc4aa811e3b297e0fee, type: 2}
+  - {fileID: 11400000, guid: 0ed13b68b6ffc4e46a9eff9315948a5a, type: 2}
+  - {fileID: 11400000, guid: e982b646e03c4b24f8a568ebdbeae259, type: 2}
+  - {fileID: 11400000, guid: f3e9c0b001e6faf48880882c8f9fb29b, type: 2}
+  - {fileID: 11400000, guid: 27d3b13ca945cb145b4043fc3c62fa69, type: 2}
+  - {fileID: 11400000, guid: ddef3f1cccc2744448d678ccc2452cb3, type: 2}
+  - {fileID: 11400000, guid: e554e54fb77d58a45b74fc66ef1575df, type: 2}
+  - {fileID: 11400000, guid: 13ae2ea2633acbe41b100791cb50bd69, type: 2}
+  - {fileID: 11400000, guid: e6b85a6624288574eb61b33fbf8664f1, type: 2}
+  - {fileID: 11400000, guid: 1c732ba410591cc4abe85903863a39b1, type: 2}
+  - {fileID: 11400000, guid: 6323cbf7ad1325b46b5a34272d5b7b36, type: 2}
