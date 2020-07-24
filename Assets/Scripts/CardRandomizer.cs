@@ -46,7 +46,6 @@ public class CardRandomizer : MonoBehaviour
             {
                 if (addonCard.GetType().Name == "SystemUpgrade")
                 {
-                    Debug.Log("System upgrade found: " + addonCard.GetName() + " is a " + addonCard.GetType().ToString());
                     if (addonCard.cost > mostExpensiveSystem)
                     {
                         mostExpensiveSystem = addonCard.cost;
@@ -54,7 +53,7 @@ public class CardRandomizer : MonoBehaviour
                 }
             }
             nextSystemIsMinus4 = false;
-            costModifiers += mostExpensiveSystem;
+            costModifiers += Mathf.Min(4, mostExpensiveSystem);
         }
 
         if (allUpgradesAreMinus1)
