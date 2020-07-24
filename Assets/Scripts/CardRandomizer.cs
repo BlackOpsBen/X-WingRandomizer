@@ -133,6 +133,11 @@ public class CardRandomizer : MonoBehaviour
             unorderedList.Add(rand);
             orderedList.RemoveAt(index);
         }
+
+        for (int i = 0; i < unorderedList.Count; i++)
+        {
+            Debug.Log(unorderedList[i]);
+        }
         
         for (int i = 0; i < pilot.GetNumAddonTypes(); i++)
         {
@@ -323,7 +328,7 @@ public class CardRandomizer : MonoBehaviour
         bool isIncluded = DisplayProductToggles.Instance.GetIsEnabled(addonCard);
         if (!isIncluded)
         {
-            Debug.Log(addonCard.name + " is not available with the selected products.");
+            //Debug.Log(addonCard.name + " is not available with the selected products.");
             return false;
         }
 
@@ -331,7 +336,7 @@ public class CardRandomizer : MonoBehaviour
         
         if (addonCard.cost > pointLimit)
         {
-            Debug.Log(addonCard.name + " too expensive.");
+            //Debug.Log(addonCard.name + " too expensive.");
             return false;
         }
 

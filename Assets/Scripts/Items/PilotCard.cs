@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class PilotCard : Item, IComeInProducts
 {
-    private AddonType[] addonTypes = new AddonType[17];
+    private AddonType[] addonTypes = new AddonType[13];
 
     [Header("Settings")]
     [SerializeField] private Sprite cardArt;
@@ -78,17 +78,8 @@ public class PilotCard : Item, IComeInProducts
         addonTypes[11].name = "Illicits";
         addonTypes[11].quantity = illicits;
 
-        addonTypes[12].name = "Cargos";
-        addonTypes[12].quantity = cargos;
-
-        addonTypes[13].name = "Hardpoints";
-        addonTypes[13].quantity = hardpoints;
-
-        addonTypes[14].name = "Teams";
-        addonTypes[14].quantity = teams;
-
-        addonTypes[15].name = "SalvagedAstromechs";
-        addonTypes[15].quantity = salvagedAstromechs;
+        addonTypes[12].name = "SalvagedAstromechs";
+        addonTypes[12].quantity = salvagedAstromechs;
     }
     private struct AddonType
     {

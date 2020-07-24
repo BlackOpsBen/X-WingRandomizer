@@ -3720,11 +3720,11 @@ MonoBehaviour:
   parentCanvas: {fileID: 88042948}
   SelectAllButton: {fileID: 398985376}
   SelectAllOffset: {x: 64, y: 54.95}
-  listStartXPos: 190
-  listStartYPos: 830
-  horizontalSpacing: 441.8
+  listStartXPos: 109.1
+  listStartYPos: 755.6
+  horizontalSpacing: 364.4
   verticalSpacing: -54.95
-  linesPerColumnLimit: 14
+  linesPerColumnLimit: 13
   nonclickablePadding: 175
   checkedColor: {r: 1, g: 0.7921569, b: 0.22352941, a: 1}
   uncheckedColor: {r: 0.23529412, g: 0.23529412, b: 0.23529412, a: 0.70980394}
