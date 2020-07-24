@@ -16,7 +16,9 @@ MonoBehaviour:
   isUnique: 1
   pilotSkill: 6
   cost: 29
-  elitePilotTalents: 1
+  includedWith:
+  - {fileID: 11400000, guid: 7b8e5c18a3353244285e08fae4a8a289, type: 2}
+  elitePilotTalents: 0
   torpedoes: 1
   missiles: 0
   bombs: 0

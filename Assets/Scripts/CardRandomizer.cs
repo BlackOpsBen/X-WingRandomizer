@@ -133,11 +133,6 @@ public class CardRandomizer : MonoBehaviour
             unorderedList.Add(rand);
             orderedList.RemoveAt(index);
         }
-
-        for (int i = 0; i < unorderedList.Count; i++)
-        {
-            Debug.Log(unorderedList[i]);
-        }
         
         for (int i = 0; i < pilot.GetNumAddonTypes(); i++)
         {

@@ -47,6 +47,19 @@ public class DisplayProductToggles : MonoBehaviour
         CreateToggles();
     }
 
+    private void Start()
+    {
+        LoadSettings();
+    }
+
+    private void LoadSettings()
+    {
+        for (int i = 0; i < productToggles.Length; i++)
+        {
+            productToggles[i].LoadToggleSetting();
+        }
+    }
+
     private void SingletonPattern()
     {
         if (Instance != null)
@@ -210,23 +223,13 @@ public class ProductToggle
 
     private void SetIsEnabled(bool value)
     {
-        //string statusText;
-        //if (value)
-        //{
-        //    statusText = "enabled";
-        //}
-        //else
-        //{
-        //    statusText = "disabled";
-        //}
-
-        //Debug.Log(name + " has been " + statusText + ".");
-        
         isEnabled = value;
 
         ToggleVisualState(value);
 
         UIManager.Instance.UpdateUI();
+
+        SaveToggleSetting();
     }
 
     public bool GetIsEnabled()
@@ -272,5 +275,35 @@ public class ProductToggle
         toggle.isOn = value;
         isEnabled = value;
         ToggleVisualState(value);
+        SaveToggleSetting();
+    }
+    private void SaveToggleSetting()
+    {
+        int flag;
+        if (isEnabled)
+        {
+            flag = 1;
+        }
+        else
+        {
+            flag = 0;
+        }
+        PlayerPrefs.SetInt(this.name, flag);
+
+        Debug.Log("Saved setting: " + this.name + " = " + flag.ToString());
+    }
+
+    public void LoadToggleSetting()
+    {
+        int flag = PlayerPrefs.GetInt(this.name);
+        Debug.Log("Loaded setting: " + this.name + " = " + flag.ToString());
+        if (flag == 1)
+        {
+            ManualToggle(true);
+        }
+        else
+        {
+            ManualToggle(false);
+        }
     }
 }

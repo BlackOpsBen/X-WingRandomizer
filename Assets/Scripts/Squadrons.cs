@@ -39,6 +39,7 @@ public class Squadrons : MonoBehaviour
             squadrons[i] = new Squadron();
             squadrons[i].factionName = PilotCardManager.Instance.factions[i];
             squadrons[i].pilotSets = new List<PilotSet>();
+            squadrons[i].totalCost = 0;
         }
     }
 
