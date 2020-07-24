@@ -12,4 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: Mist Hunter
   m_EditorClassIdentifier: 
-  itemsIncluded: []
+  itemsIncluded:
+  - {fileID: 11400000, guid: 05c1a43341b2112438294bb9010c6985, type: 2}
+  - {fileID: 11400000, guid: b7ddce801fde2e243a603a03eecc17c7, type: 2}
+  - {fileID: 11400000, guid: 536a720b69d827e42b2a9882786ef782, type: 2}
+  - {fileID: 11400000, guid: 328d985b62e075646a80738ed2ab8de4, type: 2}
+  - {fileID: 11400000, guid: 99ff673aea0d3e64781b1f607e3e18ab, type: 2}
+  - {fileID: 11400000, guid: e2b90a1ff1eb446448538092fba5f60b, type: 2}
+  - {fileID: 11400000, guid: e2b90a1ff1eb446448538092fba5f60b, type: 2}
+  - {fileID: 11400000, guid: c26536fe1b9b311428a9ce1ea1512543, type: 2}
+  - {fileID: 11400000, guid: 539f6ffe4f1b4194883834f01dae39ba, type: 2}
+  - {fileID: 11400000, guid: 4d52bd7b3e2e5b3449960239bfc33705, type: 2}
+  - {fileID: 11400000, guid: d70e8c2c321cc804db9112e7f75e61da, type: 2}
+  - {fileID: 11400000, guid: 3cff3577f5992c54fa22b1a4fa4209ea, type: 2}
+  - {fileID: 11400000, guid: 3cff3577f5992c54fa22b1a4fa4209ea, type: 2}
+  - {fileID: 11400000, guid: 6876b1f99ebf2d9409413d44ff22f988, type: 2}

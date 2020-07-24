@@ -15,7 +15,8 @@ MonoBehaviour:
   forcePushChanges: 0
   cardArt: {fileID: 21300000, guid: 3547b4b37afb6c2458c108d9dd03f61b, type: 3}
   cost: 1
-  includedWith: []
+  includedWith:
+  - {fileID: 11400000, guid: 019b0bbf202ac7546942247f7650f90d, type: 2}
   unique: 0
   limited: 0
   rebelOnly: 0
@@ -51,6 +52,7 @@ MonoBehaviour:
   focusOrEvade: 0
   slam: 0
   actionHeader: 0
+  reinforce: 0
   cantAlreadyHaveElitePilotTalentSlot: 0
   hasMinPilotSkill: 0
   minPilotSkill: 0

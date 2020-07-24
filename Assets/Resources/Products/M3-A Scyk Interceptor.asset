@@ -12,4 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: M3-A Scyk Interceptor
   m_EditorClassIdentifier: 
-  itemsIncluded: []
+  itemsIncluded:
+  - {fileID: 11400000, guid: 3cbeeeb997e516c4f9b302ed424c5bdb, type: 2}
+  - {fileID: 11400000, guid: 020d23656eaf5474fbb99663db230e8c, type: 2}
+  - {fileID: 11400000, guid: e3c0a40c498587c4382f7b0a9bdf0d60, type: 2}
+  - {fileID: 11400000, guid: ae3b78921d0ee024a80def737abc29dc, type: 2}
+  - {fileID: 11400000, guid: 239167c964bf140479b89e279add9dd5, type: 2}
+  - {fileID: 11400000, guid: 164f9f675be73604fa3bfdb209517de7, type: 2}
+  - {fileID: 11400000, guid: af89ed6f361162e43b32caeee4732f51, type: 2}
+  - {fileID: 11400000, guid: 6c7037ff796ad1c47a4999d44ed4ee46, type: 2}
+  - {fileID: 11400000, guid: 0e59120e42610424190689d32b8fb0b4, type: 2}
+  - {fileID: 11400000, guid: 5e53acc390793184c95f992f415a3087, type: 2}

@@ -12,4 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: Guns for Hire
   m_EditorClassIdentifier: 
-  itemsIncluded: []
+  itemsIncluded:
+  - {fileID: 11400000, guid: 09aeb14dbb5b8d04bad53ced4b9c46cf, type: 2}
+  - {fileID: 11400000, guid: 9a81197957d5231469465ca0560d496f, type: 2}
+  - {fileID: 11400000, guid: 24bceb302d288e94b9483a522e327c7b, type: 2}
+  - {fileID: 11400000, guid: 1a63ca5283845664caf5f529129b53ac, type: 2}
+  - {fileID: 11400000, guid: 5b90b508277d5f84d8b5d82070ede7c1, type: 2}
+  - {fileID: 11400000, guid: 0ba7f274257fe674a8ff5ecb1bcf79c9, type: 2}
+  - {fileID: 11400000, guid: e63671691c88751448b9d6b524b71c4f, type: 2}
+  - {fileID: 11400000, guid: 7273f8e1972410f46a5ac35132fcfd19, type: 2}
+  - {fileID: 11400000, guid: b80a9b46166e91e488478beff533fba2, type: 2}
+  - {fileID: 11400000, guid: b80a9b46166e91e488478beff533fba2, type: 2}
+  - {fileID: 11400000, guid: 7e8066d684579b24b9ba53fda0c7c17c, type: 2}
+  - {fileID: 11400000, guid: 7e8066d684579b24b9ba53fda0c7c17c, type: 2}
+  - {fileID: 11400000, guid: 416acf7dc01390445bf6da1621199025, type: 2}
+  - {fileID: 11400000, guid: 416acf7dc01390445bf6da1621199025, type: 2}
+  - {fileID: 11400000, guid: 65735e010ba22ad4a93b4e1322f1e707, type: 2}
+  - {fileID: 11400000, guid: 65735e010ba22ad4a93b4e1322f1e707, type: 2}
+  - {fileID: 11400000, guid: 30d4418e74a41d04d87ae041c74c10b3, type: 2}
+  - {fileID: 11400000, guid: c1bc3411bbd5e0847a51cd4fa4190ff3, type: 2}
+  - {fileID: 11400000, guid: c1bc3411bbd5e0847a51cd4fa4190ff3, type: 2}
+  - {fileID: 11400000, guid: 5e53acc390793184c95f992f415a3087, type: 2}
+  - {fileID: 11400000, guid: 1a0d4b413506db741938c4f5dafd4c07, type: 2}
+  - {fileID: 11400000, guid: 30d4418e74a41d04d87ae041c74c10b3, type: 2}

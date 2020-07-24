@@ -12,4 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: Kimogila Fighter
   m_EditorClassIdentifier: 
-  itemsIncluded: []
+  itemsIncluded:
+  - {fileID: 11400000, guid: e1c6c132d97a0184380082e2150eef57, type: 2}
+  - {fileID: 11400000, guid: a8057c8469c2ca3458f99b4fe9ec1a5a, type: 2}
+  - {fileID: 11400000, guid: e3b7ac5f668ef2e448a948469b5e7c8d, type: 2}
+  - {fileID: 11400000, guid: 4cb0567697d074143bd4dc0e50f6e25b, type: 2}
+  - {fileID: 11400000, guid: 90276bb3fa606584081c685b69c08c19, type: 2}
+  - {fileID: 11400000, guid: bf8c18d7a034b4e46bc18df61aac2652, type: 2}
+  - {fileID: 11400000, guid: bf8c18d7a034b4e46bc18df61aac2652, type: 2}
+  - {fileID: 11400000, guid: f35780ac67faf4a4e97e9dc87e60f8d2, type: 2}
+  - {fileID: 11400000, guid: 8e0c42e3c4795f349a2f953d14934d9f, type: 2}
+  - {fileID: 11400000, guid: 8e0c42e3c4795f349a2f953d14934d9f, type: 2}
+  - {fileID: 11400000, guid: 34c0482eed24fdc45b793d8af2c90534, type: 2}
+  - {fileID: 11400000, guid: d143d210401bc994b95818fb3b687080, type: 2}
+  - {fileID: 11400000, guid: aef3e5e5871d25c4cb69d4ff4424b4a3, type: 2}
+  - {fileID: 11400000, guid: 9a12ab84bce9911469b6bd93695e0f61, type: 2}
+  - {fileID: 11400000, guid: 9a12ab84bce9911469b6bd93695e0f61, type: 2}

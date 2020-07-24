@@ -12,4 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 726647b7867657649896f9062d4df73b, type: 3}
   m_Name: Kihraxz Fighter
   m_EditorClassIdentifier: 
-  itemsIncluded: []
+  itemsIncluded:
+  - {fileID: 11400000, guid: 09aeb14dbb5b8d04bad53ced4b9c46cf, type: 2}
+  - {fileID: 11400000, guid: 45d6332cbe344bc4ea7e9c97323331ec, type: 2}
+  - {fileID: 11400000, guid: e0b8ca0604378724d98a021a5916a1b3, type: 2}
+  - {fileID: 11400000, guid: 5b90b508277d5f84d8b5d82070ede7c1, type: 2}
+  - {fileID: 11400000, guid: 0ba7f274257fe674a8ff5ecb1bcf79c9, type: 2}
+  - {fileID: 11400000, guid: e12718e3869eeb44ab82e7ddac402019, type: 2}
+  - {fileID: 11400000, guid: dd987305c009cc44eb82793209059e30, type: 2}
+  - {fileID: 11400000, guid: 398f920869aac5f4f9ee768b07316db2, type: 2}
+  - {fileID: 11400000, guid: c0f041b00ffeba14cab461f535eb4239, type: 2}
+  - {fileID: 11400000, guid: e5d2ec59efd9db241aaa6d2ac318ac56, type: 2}

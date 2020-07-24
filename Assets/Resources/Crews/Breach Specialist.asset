@@ -52,6 +52,7 @@ MonoBehaviour:
   focusOrEvade: 0
   slam: 0
   actionHeader: 0
+  reinforce: 1
   cantAlreadyHaveElitePilotTalentSlot: 0
   hasMinPilotSkill: 0
   minPilotSkill: 0

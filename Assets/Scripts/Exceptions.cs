@@ -80,7 +80,7 @@ public class Exceptions : MonoBehaviour
  * 
  * IG-88D crew requires another ship with IG-2000
  * 
- * Ketsu Onyo crew requires tractor beam ability
+ * Ketsu Onyo crew requires tractor beam ability (SHadow caster pilot Ketsu does but he's the same person!)
  * 
  * Cikatro Vizago crew requires an Illicit equipped
  * 

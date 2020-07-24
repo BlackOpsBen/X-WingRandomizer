@@ -15,6 +15,7 @@ MonoBehaviour:
   includedWith:
   - {fileID: 11400000, guid: 8aa1126e305a6e4499ce35b5c7fbe654, type: 2}
   shieldValue: 3
+  hullValue: 0
   focus: 1
   targetLock: 0
   boost: 0
@@ -22,6 +23,7 @@ MonoBehaviour:
   barrelRoll: 0
   cloak: 0
   slam: 0
+  reinforce: 1
   rebel: 1
   imperial: 0
   scum: 0

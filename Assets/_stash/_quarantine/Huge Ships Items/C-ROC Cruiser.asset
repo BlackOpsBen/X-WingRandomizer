@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
+  m_Name: C-ROC Cruiser
+  m_EditorClassIdentifier: 
+  includedWith:
+  - {fileID: 11400000, guid: e76e09b0ee201b54b9b7e3b01fbc438d, type: 2}
+  shieldValue: 4
+  hullValue: 10
+  focus: 0
+  targetLock: 1
+  boost: 0
+  evade: 0
+  barrelRoll: 0
+  cloak: 0
+  slam: 0
+  reinforce: 1
+  rebel: 0
+  imperial: 0
+  scum: 1
+  smallShip: 0
+  largeShip: 0
+  hugeShip: 1
+  heavyTIE: 0
+  TIE: 0
+  titles: []
