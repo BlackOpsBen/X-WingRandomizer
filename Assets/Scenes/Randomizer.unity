@@ -203,7 +203,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 64843764}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 620814535}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Settings
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &64843764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -850,7 +861,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2045713744}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -1565,6 +1576,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 620814535}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Settings
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &531731876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1797,6 +1819,7 @@ GameObject:
   - component: {fileID: 620814536}
   - component: {fileID: 620814535}
   - component: {fileID: 620814537}
+  - component: {fileID: 620814538}
   m_Layer: 0
   m_Name: '[AudioManager]'
   m_TagString: Untagged
@@ -1897,6 +1920,20 @@ MonoBehaviour:
     volume: 0.5
     source: {fileID: 0}
   randomizedTrackNums: 
+--- !u!114 &620814538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620814534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 478dc7a06d08278489eca488fe4c91f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  trackInfos: {fileID: 2045713743}
+  trackNameText: {fileID: 374980050}
 --- !u!1 &647511610
 GameObject:
   m_ObjectHideFlags: 0
@@ -3247,7 +3284,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2045713744}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -5244,8 +5281,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 374980049}
   - {fileID: 1243742985}
+  - {fileID: 374980049}
   m_Father: {fileID: 1891754191}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

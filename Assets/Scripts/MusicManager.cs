@@ -66,8 +66,9 @@ public class MusicManager : MonoBehaviour
         songs[randomizedTrackNums[currentTrack]].source.Stop();
         currentTrack++;
         currentTrack = currentTrack % randomizedTrackNums.Length;
-        Debug.Log("Playing track #" + randomizedTrackNums[currentTrack].ToString());
+        Debug.Log("Playing track " + songs[randomizedTrackNums[currentTrack]].name);
         songs[randomizedTrackNums[currentTrack]].source.Play();
+        displayTrackInfo.ShowTrackTitle(songs[randomizedTrackNums[currentTrack]].name);
         displayTrackInfo.ShowTrackInfo();
     }
 }
