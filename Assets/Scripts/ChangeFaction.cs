@@ -26,5 +26,6 @@ public class ChangeFaction : MonoBehaviour
         meshRenderer.materials[faceMatIndex].mainTexture = meshRenderer.materials[backMatIndex].mainTexture;
         transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         meshRenderer.materials[backMatIndex].mainTexture = texture;
+        AudioManager.Instance.Play("FlipPilot");
     }
 }

@@ -16,6 +16,8 @@ public class MoveAndFlip : MonoBehaviour
 
     private bool goingUp = false;
 
+    private bool flipSoundPlayed = false;
+
     private void Update()
     {
         transform.position = Vector3.Lerp(transform.position, destPos, Time.deltaTime * moveSpeed);
@@ -23,6 +25,11 @@ public class MoveAndFlip : MonoBehaviour
         if (Vector3.Distance(transform.position, destPos) < flipDist || goingUp)
         {
             transform.rotation = Quaternion.Lerp(transform.rotation, destRot, Time.deltaTime * flipSpeed);
+            if (!flipSoundPlayed)
+            {
+                AudioManager.Instance.Play("FlipAddon");
+                flipSoundPlayed = true;
+            }
         }
     }
 
@@ -33,6 +40,7 @@ public class MoveAndFlip : MonoBehaviour
 
     public void ExitCard()
     {
+        flipSoundPlayed = false;
         gameObject.tag = "Untagged";
         goingUp = true;
         destRot = Quaternion.Euler(new Vector3(0f, -180f, 0f));

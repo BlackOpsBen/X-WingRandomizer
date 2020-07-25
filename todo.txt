@@ -7,3 +7,5 @@ Add hull values to all ships
 Reset button
 
 Deal with all exceptions pending
+
+Add particle effects

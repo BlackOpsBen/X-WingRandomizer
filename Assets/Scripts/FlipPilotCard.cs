@@ -15,6 +15,7 @@ public class FlipPilotCard : MonoBehaviour
 
     public void SetDestRot(Vector3 newDestRot)
     {
+        AudioManager.Instance.Play("FlipPilot");
         destRot = newDestRot;
     }
 }
