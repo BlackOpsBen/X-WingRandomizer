@@ -27,6 +27,11 @@ public class CardRandomizer : MonoBehaviour
     private bool mustEquipTractorBeam = false; // Mist Hunter
     private int costModifiers = 0;
 
+    private bool losesCannon = false;
+    private bool losesMissile = false;
+    private bool losesCrew = false;
+    private bool losesAllOrdnance = false;
+
     private void Awake()
     {
         displayCards = GetComponent<DisplayCards>();
@@ -180,61 +185,79 @@ public class CardRandomizer : MonoBehaviour
     private void SelectTitle()
     {
         Title[] titleOptions = ship.GetTitleOptions();
+        List<Title> validOptions = new List<Title>();
+
         if (titleOptions.Length > 0)
         {
-            int rand = UnityEngine.Random.Range(0, titleOptions.Length);
-
-            Title selectedTitle = titleOptions[rand];
-
-            if (ValidateSelection(selectedTitle))
+            for (int i = 0; i < titleOptions.Length; i++)
             {
-                addonCards.Add(selectedTitle);
+                if (ValidateSelection(titleOptions[i]))
+                {
+                    validOptions.Add(titleOptions[i]);
+                }
+            }
+        }
+        if (validOptions.Count > 0)
+        {
+            int rand = UnityEngine.Random.Range(0, validOptions.Count);
 
-                if (selectedTitle.GetGrantsSlot())
-                {
-                    needToFillNewSlots = true;
-                }
+            Title selectedTitle = validOptions[rand];
 
-                if (selectedTitle.GetName() == "TIEx1")
+            addonCards.Add(selectedTitle);
+
+            if (selectedTitle.GetGrantsSlot())
+            {
+                needToFillNewSlots = true;
+            }
+
+            if (selectedTitle.GetName() == "TIEx1")
+            {
+                nextSystemIsMinus4 = true;
+            }
+            else if (selectedTitle.GetName() == "Vaksai")
+            {
+                allUpgradesAreMinus1 = true;
+            }
+            else if (selectedTitle.GetName() == "StarViper MkII")
+            {
+                int coin = UnityEngine.Random.Range(0, 2);
+                if (coin == 1)
                 {
-                    nextSystemIsMinus4 = true;
-                }
-                else if (selectedTitle.GetName() == "Vaksai")
-                {
-                    allUpgradesAreMinus1 = true;
-                }
-                else if (selectedTitle.GetName() == "StarViper MkII")
-                {
-                    int coin = UnityEngine.Random.Range(0, 2);
-                    if (coin == 1)
+                    addonCards.Add(titleOptions[0]);
+                    if (titleOptions[0].GetGrantsSlot())
                     {
-                        addonCards.Add(titleOptions[0]);
-                        if (titleOptions[0].GetGrantsSlot())
-                        {
-                            needToFillNewSlots = true;
-                        }
+                        needToFillNewSlots = true;
                     }
                 }
-                else if (selectedTitle.GetName() == "Havoc")
-                {
-                    onlyUniqueSalvagedAstromechs = true;
-                }
-                else if (selectedTitle.GetName() == "TIE Shuttle")
-                {
-                    crewsCost4OrLess = true;
-                }
-                else if (selectedTitle.GetName() == "Mist Hunter")
-                {
-                    mustEquipTractorBeam = true;
+            }
+            else if (selectedTitle.GetName() == "Havoc")
+            {
+                onlyUniqueSalvagedAstromechs = true;
+            }
+            else if (selectedTitle.GetName() == "TIE Shuttle")
+            {
+                crewsCost4OrLess = true;
+            }
+            else if (selectedTitle.GetName() == "Mist Hunter")
+            {
+                mustEquipTractorBeam = true;
 
-                    // TODO get rid of this flag, and have this block do:
-                    // Add tractorbeam
-                    // Remove 1 cannon slot
+                AddonCard tractorBeamCard;
+                for (int i = 0; i < AddonCardManager.Instance.GetAddonCardGroupLength(6); i++)
+                {
+                    if (AddonCardManager.Instance.GetAddonCard(6, i).GetName() == "Tractor Beam")
+                    {
+                        tractorBeamCard = AddonCardManager.Instance.GetAddonCard(6, i);
+                        addonCards.Add(tractorBeamCard);
+                    }
                 }
             }
 
-            // TODO check if it REMOVES a slot
-        }
+            losesCannon = selectedTitle.losesCannon;
+            losesMissile = selectedTitle.losesMissile;
+            losesCrew = selectedTitle.losesCrew;
+            losesAllOrdnance = selectedTitle.losesAllOrdnance;
+}
     }
 
     private void SelectAddons()
@@ -257,7 +280,26 @@ public class CardRandomizer : MonoBehaviour
         
         for (int i = 0; i < pilot.GetNumAddonTypes(); i++)
         {
-            for (int j = 0; j < pilot.GetAddonTypeQuantity(unorderedList[i]); j++)
+            int quantityToFill = pilot.GetAddonTypeQuantity(unorderedList[i]);
+
+            if (unorderedList[i] == 6 && losesCannon)
+            {
+                quantityToFill--;
+            }
+            else if (unorderedList[i] == 8 && losesCrew)
+            {
+                quantityToFill--;
+            }
+            else if (unorderedList[i] == 2 && losesMissile)
+            {
+                quantityToFill--;
+            }
+            else if (losesAllOrdnance && ( (unorderedList[i] == 1) || (unorderedList[i] == 2) || (unorderedList[i] == 3) ) )
+            {
+                quantityToFill = 0;
+            }
+
+            for (int j = 0; j < quantityToFill; j++)
             {
                 if (true) // TODO set this back to Roll() and make better odds
                 {
@@ -391,7 +433,6 @@ public class CardRandomizer : MonoBehaviour
             if (addonCards[i].grantsTorpedo)
             {
                 MakeValidSelection(1);
-                Debug.Log("Verify this selection was of type 'Torpedo'");
             }
 
             if (addonCards[i].grantsSystem)
@@ -402,19 +443,16 @@ public class CardRandomizer : MonoBehaviour
             if (addonCards[i].grantsCannon)
             {
                 MakeValidSelection(6);
-                Debug.Log("Verify this selection was of type 'Cannon'");
             }
 
             if (addonCards[i].grantsCannon2)
             {
                 MakeValidSelection(6);
-                Debug.Log("Verify this selection was of type 'Cannon'");
             }
 
             if (addonCards[i].grantsMissile)
             {
                 MakeValidSelection(2);
-                Debug.Log("Verify this selection was of type 'Missile'");
             }
 
             if (addonCards[i].grantsSalvagedAstromech)
@@ -425,8 +463,35 @@ public class CardRandomizer : MonoBehaviour
             if (addonCards[i].grantsCannonTorpedoOrMissile)
             {
                 int[] options = new int[] { 6, 1, 2 };
-                int rand = UnityEngine.Random.Range(0, options.Length);
-                MakeValidSelection(options[rand]);
+                List<int> typeOptions = new List<int>(options);
+                int[] unorderedOptions = new int[3];
+
+                for (int r = 0; r < options.Length; r++)
+                {
+                    int rand = UnityEngine.Random.Range(0, typeOptions.Count);
+                    unorderedOptions[r] = typeOptions[rand];
+                    typeOptions.RemoveAt(rand);
+                }
+
+                for (int t = 0; t < unorderedOptions.Length; t++)
+                {
+                    bool optionExists = false;
+
+                    for (int p = 0; p < AddonCardManager.Instance.GetAddonCardGroupLength(unorderedOptions[t]); p++)
+                    {
+                        if (ValidateSelection(AddonCardManager.Instance.GetAddonCard(unorderedOptions[t], p)))
+                        {
+                            optionExists = true;
+                            p = 1000;
+                        }
+                    }
+
+                    if (optionExists)
+                    {
+                        MakeValidSelection(unorderedOptions[t]);
+                        t = 1000;
+                    }
+                }
             }
 
             lastCountedCardIndex++;

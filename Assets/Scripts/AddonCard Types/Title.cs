@@ -4,8 +4,8 @@
 public class Title : AddonCard
 {
     [Header("Removes slot")]
-    [SerializeField] private bool losesCannon;
-    [SerializeField] private bool losesMissile;
-    [SerializeField] private bool losesCrew;
-    [SerializeField] private bool losesAllOrdnance;
+    [SerializeField] public bool losesCannon;
+    [SerializeField] public bool losesMissile;
+    [SerializeField] public bool losesCrew;
+    [SerializeField] public bool losesAllOrdnance;
 }
