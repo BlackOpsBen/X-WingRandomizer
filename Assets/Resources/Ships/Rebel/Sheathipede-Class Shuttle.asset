@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: Sheathipede-Class Shuttle
   m_EditorClassIdentifier: 
-  includedWith: []
+  includedWith:
+  - {fileID: 11400000, guid: 621ea2c059924c942808f0cdab115a4f, type: 2}
   shieldValue: 1
+  hullValue: 4
   focus: 1
   targetLock: 1
   boost: 0
@@ -21,6 +23,7 @@ MonoBehaviour:
   barrelRoll: 0
   cloak: 0
   slam: 0
+  reinforce: 0
   rebel: 1
   imperial: 0
   scum: 0

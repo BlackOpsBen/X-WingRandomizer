@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: Z-95 Headhunter
   m_EditorClassIdentifier: 
+  includedWith:
+  - {fileID: 11400000, guid: 9eae6c25adafe26468d0d6867a8ad02e, type: 2}
   shieldValue: 2
+  hullValue: 2
   focus: 1
   targetLock: 1
   boost: 0
@@ -20,6 +23,7 @@ MonoBehaviour:
   barrelRoll: 0
   cloak: 0
   slam: 0
+  reinforce: 0
   rebel: 1
   imperial: 0
   scum: 0

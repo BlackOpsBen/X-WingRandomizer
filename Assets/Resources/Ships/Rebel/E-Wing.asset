@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: E-Wing
   m_EditorClassIdentifier: 
+  includedWith:
+  - {fileID: 11400000, guid: 3595893ccbc2b9e429ab3b570d9f22bb, type: 2}
   shieldValue: 3
+  hullValue: 2
   focus: 1
   targetLock: 1
   boost: 0
@@ -20,6 +23,7 @@ MonoBehaviour:
   barrelRoll: 1
   cloak: 0
   slam: 0
+  reinforce: 0
   rebel: 1
   imperial: 0
   scum: 0

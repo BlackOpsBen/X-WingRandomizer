@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: Rebel TIE
   m_EditorClassIdentifier: 
+  includedWith:
+  - {fileID: 11400000, guid: 562c32e4d24c364478f1253e3ff8efde, type: 2}
   shieldValue: 0
+  hullValue: 3
   focus: 1
   targetLock: 0
   boost: 0
@@ -20,6 +23,7 @@ MonoBehaviour:
   barrelRoll: 1
   cloak: 0
   slam: 0
+  reinforce: 0
   rebel: 1
   imperial: 0
   scum: 0

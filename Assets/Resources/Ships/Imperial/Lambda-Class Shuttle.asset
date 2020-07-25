@@ -15,7 +15,7 @@ MonoBehaviour:
   includedWith:
   - {fileID: 11400000, guid: 105df2210d5c8dd4a8c4dbc53877d892, type: 2}
   shieldValue: 5
-  hullValue: 0
+  hullValue: 5
   focus: 1
   targetLock: 1
   boost: 0

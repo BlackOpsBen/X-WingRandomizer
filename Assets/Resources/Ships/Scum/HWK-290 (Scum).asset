@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: HWK-290 (Scum)
   m_EditorClassIdentifier: 
   includedWith: []
-  shieldValue: 0
-  hullValue: 0
+  shieldValue: 1
+  hullValue: 4
   focus: 0
   targetLock: 0
   boost: 0

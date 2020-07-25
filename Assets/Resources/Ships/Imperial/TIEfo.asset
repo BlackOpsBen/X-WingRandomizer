@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: TIEfo
   m_EditorClassIdentifier: 
+  includedWith:
+  - {fileID: 11400000, guid: 57c02a1b0c0a1b84c87d8ea0550035b3, type: 2}
+  - {fileID: 11400000, guid: f4eb7e56a96404c4995921a83303e4e0, type: 2}
   shieldValue: 1
+  hullValue: 3
   focus: 1
   targetLock: 1
   boost: 0
@@ -20,6 +24,7 @@ MonoBehaviour:
   barrelRoll: 1
   cloak: 0
   slam: 0
+  reinforce: 0
   rebel: 0
   imperial: 1
   scum: 0

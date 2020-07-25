@@ -12,7 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: X-Wing
   m_EditorClassIdentifier: 
+  includedWith:
+  - {fileID: 11400000, guid: 019b0bbf202ac7546942247f7650f90d, type: 2}
+  - {fileID: 11400000, guid: 6a2c8d146c28a0f49abfcfd49b5bf48d, type: 2}
+  - {fileID: 11400000, guid: 9022a7e166399f348aebf0face4efd11, type: 2}
+  - {fileID: 11400000, guid: cb3c9d37e2ff841418c48caeac095476, type: 2}
   shieldValue: 2
+  hullValue: 3
   focus: 1
   targetLock: 1
   boost: 0
@@ -20,6 +26,7 @@ MonoBehaviour:
   barrelRoll: 0
   cloak: 0
   slam: 0
+  reinforce: 0
   rebel: 1
   imperial: 0
   scum: 0

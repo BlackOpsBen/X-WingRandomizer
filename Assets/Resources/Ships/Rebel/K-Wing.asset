@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: K-Wing
   m_EditorClassIdentifier: 
+  includedWith:
+  - {fileID: 11400000, guid: 10260e21be0d17d47a481500095f9d1f, type: 2}
   shieldValue: 4
+  hullValue: 5
   focus: 1
   targetLock: 1
   boost: 0
@@ -20,6 +23,7 @@ MonoBehaviour:
   barrelRoll: 0
   cloak: 0
   slam: 1
+  reinforce: 0
   rebel: 1
   imperial: 0
   scum: 0

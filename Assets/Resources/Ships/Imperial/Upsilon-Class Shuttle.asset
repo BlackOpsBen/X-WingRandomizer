@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: Upsilon-Class Shuttle
   m_EditorClassIdentifier: 
+  includedWith:
+  - {fileID: 11400000, guid: fe8df4361b2453747a7d018d65db8667, type: 2}
   shieldValue: 6
+  hullValue: 6
   focus: 1
   targetLock: 1
   boost: 0
@@ -20,6 +23,7 @@ MonoBehaviour:
   barrelRoll: 0
   cloak: 0
   slam: 0
+  reinforce: 0
   rebel: 0
   imperial: 1
   scum: 0

@@ -16,7 +16,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 80164aa2c44763042b1f4fff42aa0d2b, type: 2}
   - {fileID: 11400000, guid: 43d3ac03bc5cf834db9dc3a5834ff29f, type: 2}
   shieldValue: 5
-  hullValue: 0
+  hullValue: 8
   focus: 1
   targetLock: 1
   boost: 0

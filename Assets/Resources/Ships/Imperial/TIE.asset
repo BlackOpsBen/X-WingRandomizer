@@ -12,7 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: TIE
   m_EditorClassIdentifier: 
+  includedWith:
+  - {fileID: 11400000, guid: 260b9865ca0c08e458aa65af31d27560, type: 2}
+  - {fileID: 11400000, guid: 9022a7e166399f348aebf0face4efd11, type: 2}
+  - {fileID: 11400000, guid: c6eb476efd1115f4fadf20fab765c1c2, type: 2}
   shieldValue: 0
+  hullValue: 3
   focus: 1
   targetLock: 0
   boost: 0
@@ -20,6 +25,7 @@ MonoBehaviour:
   barrelRoll: 1
   cloak: 0
   slam: 0
+  reinforce: 0
   rebel: 0
   imperial: 1
   scum: 0
