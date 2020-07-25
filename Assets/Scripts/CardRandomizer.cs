@@ -388,7 +388,6 @@ public class CardRandomizer : MonoBehaviour
             if (addonCards[i].grantsElitePilotTalent)
             {
                 MakeValidSelection(0);
-                Debug.Log("Verify this selection was of type 'Elite Pilot Talent'");
             }
 
             if (addonCards[i].grantsIllicit)
