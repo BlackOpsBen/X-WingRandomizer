@@ -7,8 +7,10 @@ public class CardRandomizer : MonoBehaviour
 {
     [SerializeField] private bool debugReasons = false;
 
+    [HideInInspector]
     public Ship ship;
-    public PilotCard pilot;
+    [HideInInspector]
+    public PilotCard pilot; // TODO delegate this to another script
     public List<AddonCard> addonCards;
     public int totalCost;
 
@@ -35,6 +37,31 @@ public class CardRandomizer : MonoBehaviour
     {
         displayCards = GetComponent<DisplayCards>();
         exceptions = GetComponent<Exceptions>();
+    }
+
+    // Called by UI Button
+    public void GenerateNewSet()
+    {
+        ResetPilot();
+        MakeRandomPilot();
+        SelectTitle();
+        SelectAddons();
+
+        while (needToFillNewSlots)
+        {
+            FillAnyNewSlots();
+        }
+        lastCountedCardIndex = 0;
+
+        SetCostModifiers();
+
+        CalculateTotalCost();
+
+        UIManager.Instance.DisplaySetCost(totalCost);
+
+        GetComponent<DisplayCards>().DisplayAddons(addonCards);
+
+        UIManager.Instance.EnableKeepOrPass();
     }
 
     public int GetCostModifiers()
@@ -78,25 +105,16 @@ public class CardRandomizer : MonoBehaviour
         }
     }
 
-    // Called by UI Button
-    public void GenerateNewSet()
+    private void CalculateTotalCost()
     {
-        ResetPilot();
-        MakeRandomPilot();
-        SelectTitle();
-        SelectAddons();
-
-        while (needToFillNewSlots)
+        int subtotalCost = 0;
+        subtotalCost += pilot.GetCost();
+        foreach (AddonCard addonCard in addonCards)
         {
-            FillAnyNewSlots();
+            subtotalCost += addonCard.cost;
         }
-        lastCountedCardIndex = 0;
-
-        SetCostModifiers();
-
-        GetComponent<DisplayCards>().DisplayAddons(addonCards);
-
-        UIManager.Instance.EnableKeepOrPass();
+        subtotalCost -= costModifiers;
+        totalCost = subtotalCost;
     }
 
     private void ResetPilot()
@@ -120,8 +138,6 @@ public class CardRandomizer : MonoBehaviour
         pilot.MakeList();
 
         displayCards.DisplayPilot(pilot.GetTexture());
-
-        totalCost += pilot.GetCost();
     }
 
     private int RollForShip(out Ship selectedShip)
@@ -350,8 +366,6 @@ public class CardRandomizer : MonoBehaviour
 
             rand = UnityEngine.Random.Range(0, randMax);
             selectedCard = allCards[rand];
-
-            totalCost += selectedCard.cost; // TODO delegate cost counting elsewhere
 
             return selectedCard;
         }

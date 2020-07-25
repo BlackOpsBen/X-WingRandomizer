@@ -230,6 +230,8 @@ public class ProductToggle
         UIManager.Instance.UpdateUI();
 
         SaveToggleSetting();
+
+        AudioManager.Instance.Play("Check");
     }
 
     public bool GetIsEnabled()

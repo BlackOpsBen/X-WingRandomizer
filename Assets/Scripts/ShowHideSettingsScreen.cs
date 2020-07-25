@@ -27,5 +27,7 @@ public class ShowHideSettingsScreen : MonoBehaviour
             settingsScreen.SetActive(false);
             mainButtons.SetActive(mainButtonsShouldBe);
         }
+
+        AudioManager.Instance.Play("Settings");
     }
 }

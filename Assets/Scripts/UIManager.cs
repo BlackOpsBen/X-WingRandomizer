@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class UIManager : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject generateUI;
 
     [SerializeField] private GameObject keepOrPassUI;
+
+    [SerializeField] private TextMeshProUGUI keepLabel;
 
     [SerializeField] private float UIToggleDelay = 1f;
 
@@ -66,5 +69,10 @@ public class UIManager : MonoBehaviour
     {
         pointsCounter.UpdatePoints();
         disableGenerate.SetGenerateButton();
+    }
+
+    public void DisplaySetCost(int cost)
+    {
+        keepLabel.text = "KEEP (" + cost.ToString() + "pts)";
     }
 }
