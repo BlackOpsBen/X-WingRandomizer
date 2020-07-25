@@ -7,4 +7,5 @@ public class Title : AddonCard
     [SerializeField] private bool losesCannon;
     [SerializeField] private bool losesMissile;
     [SerializeField] private bool losesCrew;
+    [SerializeField] private bool losesAllOrdnance;
 }

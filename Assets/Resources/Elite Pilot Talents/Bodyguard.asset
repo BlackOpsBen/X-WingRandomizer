@@ -18,7 +18,7 @@ MonoBehaviour:
   includedWith:
   - {fileID: 11400000, guid: b2bba57c54ddd9c4182051f38f1292cd, type: 2}
   unique: 1
-  limited: 0
+  limited: 1
   rebelOnly: 0
   imperialOnly: 0
   scumOnly: 1
@@ -79,6 +79,7 @@ MonoBehaviour:
   grantsCloak: 0
   grantsElitePilotTalent: 0
   grantsCrew: 0
+  grantsCrew2: 0
   grantsIllicit: 0
   grantsModificationCosting3OrLess: 0
   grantsBomb: 0
@@ -87,3 +88,8 @@ MonoBehaviour:
   grantsModification2: 0
   grantsTorpedo: 0
   grantsSystem: 0
+  grantsCannon: 0
+  grantsCannon2: 0
+  grantsMissile: 0
+  grantsSalvagedAstromech: 0
+  grantsCannonTorpedoOrMissile: 0

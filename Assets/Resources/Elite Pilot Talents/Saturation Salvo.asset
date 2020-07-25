@@ -12,10 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2614d7a3fe43b5f4097ba3c27e303646, type: 3}
   m_Name: Saturation Salvo
   m_EditorClassIdentifier: 
+  forcePushChanges: 0
   cardArt: {fileID: 21300000, guid: 77f69a5d5cfa66d4b9b1b67eeda7935d, type: 3}
   cost: 1
+  includedWith:
+  - {fileID: 11400000, guid: 83f5c9feda17e454c8a4c9a79f5dceb8, type: 2}
+  - {fileID: 11400000, guid: 8cdb6f6f8a28b2b4eba67e0959624872, type: 2}
   unique: 0
-  limited: 0
+  limited: 1
   rebelOnly: 0
   imperialOnly: 0
   scumOnly: 0
@@ -38,6 +42,7 @@ MonoBehaviour:
   T65xWingOnly: 0
   aWingOnly: 0
   yWingOnly: 0
+  TIEAdvancedOnly: 0
   focus: 0
   targetLock: 0
   boost: 0
@@ -46,7 +51,9 @@ MonoBehaviour:
   cloak: 0
   boostOrBarrelRoll: 0
   focusOrEvade: 0
-  SLAM: 0
+  slam: 0
+  actionHeader: 0
+  reinforce: 0
   cantAlreadyHaveElitePilotTalentSlot: 0
   hasMinPilotSkill: 0
   minPilotSkill: 0
@@ -54,10 +61,36 @@ MonoBehaviour:
   maxPilotSkill: 0
   torpedoOrMissileEquipped: 1
   torpedoOrMissileOrBombEquipped: 0
+  torpedoOrBombEquipped: 0
   hasTorpedoOrMissileSlot: 0
   requiresShieldValue1: 0
+  bombEquipped: 0
+  hasAstromechEquipped: 0
+  hasAttackTargetLockEquipped: 0
+  hasShields: 0
+  hasTurretEquipped: 0
   grantsFocus: 0
   grantsTargetLock: 0
   grantsBoost: 0
   grantsEvade: 0
   grantsBarrelRoll: 0
+  grantsActionHeader: 0
+  grantsAttackTargetLock: 0
+  grantsSLAM: 0
+  grantsCloak: 0
+  grantsElitePilotTalent: 0
+  grantsCrew: 0
+  grantsCrew2: 0
+  grantsIllicit: 0
+  grantsModificationCosting3OrLess: 0
+  grantsBomb: 0
+  grantsBomb2: 0
+  grantsModification: 0
+  grantsModification2: 0
+  grantsTorpedo: 0
+  grantsSystem: 0
+  grantsCannon: 0
+  grantsCannon2: 0
+  grantsMissile: 0
+  grantsSalvagedAstromech: 0
+  grantsCannonTorpedoOrMissile: 0

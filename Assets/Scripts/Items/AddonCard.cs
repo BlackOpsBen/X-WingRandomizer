@@ -96,6 +96,7 @@ public class AddonCard : Item, IComeInProducts
     [Header("Grants new slots to fill")]
     public bool grantsElitePilotTalent;
     public bool grantsCrew;
+    public bool grantsCrew2;
     public bool grantsIllicit;
     public bool grantsModificationCosting3OrLess;
     public bool grantsBomb;
@@ -108,6 +109,7 @@ public class AddonCard : Item, IComeInProducts
     public bool grantsCannon2;
     public bool grantsMissile;
     public bool grantsSalvagedAstromech;
+    public bool grantsCannonTorpedoOrMissile;
 
     private void OnValidate()
     {
@@ -196,6 +198,7 @@ public class AddonCard : Item, IComeInProducts
         {
             grantsElitePilotTalent,
             grantsCrew,
+            grantsCrew2,
             grantsIllicit,
             grantsModificationCosting3OrLess,
             grantsBomb,
@@ -207,7 +210,8 @@ public class AddonCard : Item, IComeInProducts
             grantsCannon,
             grantsCannon2,
             grantsMissile,
-            grantsSalvagedAstromech
+            grantsSalvagedAstromech,
+            grantsCannonTorpedoOrMissile
         };
     }
 

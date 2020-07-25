@@ -23,6 +23,8 @@ public class CardRandomizer : MonoBehaviour
     private bool nextSystemIsMinus4 = false; // TIEx1
     private bool allUpgradesAreMinus1 = false; // Vaksai
     private bool onlyUniqueSalvagedAstromechs = false; // Havoc
+    private bool crewsCost4OrLess = false; // TIE Shuttle
+    private bool mustEquipTractorBeam = false; // Mist Hunter
     private int costModifiers = 0;
 
     private void Awake()
@@ -100,6 +102,10 @@ public class CardRandomizer : MonoBehaviour
 
         nextSystemIsMinus4 = false;
         allUpgradesAreMinus1 = false;
+        onlyUniqueSalvagedAstromechs = false;
+        crewsCost4OrLess = false;
+        mustEquipTractorBeam = false;
+        costModifiers = 0;
     }
 
     private void MakeRandomPilot()
@@ -213,6 +219,18 @@ public class CardRandomizer : MonoBehaviour
                 {
                     onlyUniqueSalvagedAstromechs = true;
                 }
+                else if (selectedTitle.GetName() == "TIE Shuttle")
+                {
+                    crewsCost4OrLess = true;
+                }
+                else if (selectedTitle.GetName() == "Mist Hunter")
+                {
+                    mustEquipTractorBeam = true;
+
+                    // TODO get rid of this flag, and have this block do:
+                    // Add tractorbeam
+                    // Remove 1 cannon slot
+                }
             }
 
             // TODO check if it REMOVES a slot
@@ -320,6 +338,11 @@ public class CardRandomizer : MonoBehaviour
                 MakeValidSelection(8);
             }
 
+            if (addonCards[i].grantsCrew2)
+            {
+                MakeValidSelection(8);
+            }
+
             if (addonCards[i].grantsElitePilotTalent)
             {
                 MakeValidSelection(0);
@@ -399,6 +422,13 @@ public class CardRandomizer : MonoBehaviour
                 MakeValidSelection(12);
             }
 
+            if (addonCards[i].grantsCannonTorpedoOrMissile)
+            {
+                int[] options = new int[] { 6, 1, 2 };
+                int rand = UnityEngine.Random.Range(0, options.Length);
+                MakeValidSelection(options[rand]);
+            }
+
             lastCountedCardIndex++;
         }
     }
@@ -459,8 +489,16 @@ public class CardRandomizer : MonoBehaviour
         }
 
         int pointLimit = Squadrons.Instance.GetPointsRemaining() - PreviousCardsCost() - pilot.GetCost();
-        
-        if (addonCard.cost > pointLimit)
+
+        int netCardCost = addonCard.cost;
+
+        // For Mist Hunter Title and Tractor Beam requirement
+        if (addonCard.GetName() == "Mist Hunter")
+        {
+            netCardCost++;
+        }
+
+        if (netCardCost > pointLimit)
         {
             if (debugReasons) { Debug.Log(addonCard.name + " too expensive."); }
             return false;
@@ -783,6 +821,8 @@ public class CardRandomizer : MonoBehaviour
             }
         }
 
+        // Exceptions
+
         if (exceptions.ValidateExceptions(addonCard, pilot, ship) == false)
         {
             if (debugReasons) { Debug.Log(addonCard.name + " has exceptions that aren't valid."); }
@@ -794,6 +834,15 @@ public class CardRandomizer : MonoBehaviour
             if (!addonCard.unique)
             {
                 if (debugReasons) { Debug.Log(addonCard.name + " Havoc title requires unique Salvaged Astromechs only."); }
+                return false;
+            }
+        }
+
+        if (addonCard.GetType().Name == "Crew" && crewsCost4OrLess)
+        {
+            if (addonCard.cost > 4)
+            {
+                if (debugReasons) { Debug.Log(addonCard.name + " is too expensive. TIE Shuttle requires cost of 4 or less."); }
                 return false;
             }
         }
