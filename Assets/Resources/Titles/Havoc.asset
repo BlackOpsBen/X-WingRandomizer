@@ -86,6 +86,11 @@ MonoBehaviour:
   grantsModification: 0
   grantsModification2: 0
   grantsTorpedo: 0
-  grantsSystem: 0
+  grantsSystem: 1
+  grantsCannon: 0
+  grantsCannon2: 0
+  grantsMissile: 0
+  grantsSalvagedAstromech: 1
   losesCannon: 0
   losesMissile: 0
+  losesCrew: 1

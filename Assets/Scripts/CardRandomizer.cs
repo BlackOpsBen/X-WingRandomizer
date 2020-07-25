@@ -22,6 +22,7 @@ public class CardRandomizer : MonoBehaviour
     // Title specific modifications
     private bool nextSystemIsMinus4 = false; // TIEx1
     private bool allUpgradesAreMinus1 = false; // Vaksai
+    private bool onlyUniqueSalvagedAstromechs = false; // Havoc
     private int costModifiers = 0;
 
     private void Awake()
@@ -208,6 +209,10 @@ public class CardRandomizer : MonoBehaviour
                         }
                     }
                 }
+                else if (selectedTitle.GetName() == "Havoc")
+                {
+                    onlyUniqueSalvagedAstromechs = true;
+                }
             }
 
             // TODO check if it REMOVES a slot
@@ -343,13 +348,11 @@ public class CardRandomizer : MonoBehaviour
             if (addonCards[i].grantsBomb)
             {
                 MakeValidSelection(3);
-                Debug.Log("Verify this selection was of type 'Bomb'");
             }
 
             if (addonCards[i].grantsBomb2)
             {
                 MakeValidSelection(3);
-                Debug.Log("Verify this selection was of type 'Bomb'");
             }
 
             if (addonCards[i].grantsModification)
@@ -371,6 +374,29 @@ public class CardRandomizer : MonoBehaviour
             if (addonCards[i].grantsSystem)
             {
                 MakeValidSelection(9);
+            }
+
+            if (addonCards[i].grantsCannon)
+            {
+                MakeValidSelection(6);
+                Debug.Log("Verify this selection was of type 'Cannon'");
+            }
+
+            if (addonCards[i].grantsCannon2)
+            {
+                MakeValidSelection(6);
+                Debug.Log("Verify this selection was of type 'Cannon'");
+            }
+
+            if (addonCards[i].grantsMissile)
+            {
+                MakeValidSelection(2);
+                Debug.Log("Verify this selection was of type 'Missile'");
+            }
+
+            if (addonCards[i].grantsSalvagedAstromech)
+            {
+                MakeValidSelection(12);
             }
 
             lastCountedCardIndex++;
@@ -761,6 +787,15 @@ public class CardRandomizer : MonoBehaviour
         {
             if (debugReasons) { Debug.Log(addonCard.name + " has exceptions that aren't valid."); }
             return false;
+        }
+
+        if (addonCard.GetType().Name == "SalvagedAstromech" && onlyUniqueSalvagedAstromechs)
+        {
+            if (!addonCard.unique)
+            {
+                if (debugReasons) { Debug.Log(addonCard.name + " Havoc title requires unique Salvaged Astromechs only."); }
+                return false;
+            }
         }
 
 

@@ -104,6 +104,10 @@ public class AddonCard : Item, IComeInProducts
     public bool grantsModification2;
     public bool grantsTorpedo;
     public bool grantsSystem;
+    public bool grantsCannon;
+    public bool grantsCannon2;
+    public bool grantsMissile;
+    public bool grantsSalvagedAstromech;
 
     private void OnValidate()
     {
@@ -199,7 +203,11 @@ public class AddonCard : Item, IComeInProducts
             grantsModification,
             grantsModification2,
             grantsTorpedo,
-            grantsSystem
+            grantsSystem,
+            grantsCannon,
+            grantsCannon2,
+            grantsMissile,
+            grantsSalvagedAstromech
         };
     }
 
