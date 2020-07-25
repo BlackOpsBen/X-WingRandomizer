@@ -79,6 +79,7 @@ MonoBehaviour:
   grantsCloak: 0
   grantsElitePilotTalent: 0
   grantsCrew: 0
+  grantsCrew2: 0
   grantsIllicit: 0
   grantsModificationCosting3OrLess: 0
   grantsBomb: 0
@@ -87,5 +88,13 @@ MonoBehaviour:
   grantsModification2: 0
   grantsTorpedo: 1
   grantsSystem: 0
+  grantsCannon: 0
+  grantsCannon2: 0
+  grantsMissile: 0
+  grantsSalvagedAstromech: 0
+  grantsCannonTorpedoOrMissile: 0
   losesCannon: 0
   losesMissile: 0
+  losesCrew: 0
+  losesAllOrdnance: 0
+  noBrainer: 1

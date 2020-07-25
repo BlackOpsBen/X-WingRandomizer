@@ -98,3 +98,4 @@ MonoBehaviour:
   losesMissile: 0
   losesCrew: 0
   losesAllOrdnance: 0
+  noBrainer: 1

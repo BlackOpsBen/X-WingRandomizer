@@ -8,4 +8,7 @@ public class Title : AddonCard
     [SerializeField] public bool losesMissile;
     [SerializeField] public bool losesCrew;
     [SerializeField] public bool losesAllOrdnance;
+
+    [Header("Misc")]
+    [SerializeField] public bool noBrainer;
 }

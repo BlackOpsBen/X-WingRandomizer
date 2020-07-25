@@ -24,7 +24,6 @@ public class CardRandomizer : MonoBehaviour
     private bool allUpgradesAreMinus1 = false; // Vaksai
     private bool onlyUniqueSalvagedAstromechs = false; // Havoc
     private bool crewsCost4OrLess = false; // TIE Shuttle
-    private bool mustEquipTractorBeam = false; // Mist Hunter
     private int costModifiers = 0;
 
     private bool losesCannon = false;
@@ -109,7 +108,6 @@ public class CardRandomizer : MonoBehaviour
         allUpgradesAreMinus1 = false;
         onlyUniqueSalvagedAstromechs = false;
         crewsCost4OrLess = false;
-        mustEquipTractorBeam = false;
         costModifiers = 0;
     }
 
@@ -193,7 +191,18 @@ public class CardRandomizer : MonoBehaviour
             {
                 if (ValidateSelection(titleOptions[i]))
                 {
-                    validOptions.Add(titleOptions[i]);
+                    if (titleOptions[i].noBrainer)
+                    {
+                        validOptions.Add(titleOptions[i]);
+                    }
+                    else
+                    {
+                        int roll = UnityEngine.Random.Range(0, 2);
+                        if (roll == 1)
+                        {
+                            validOptions.Add(titleOptions[i]);
+                        }
+                    }
                 }
             }
         }
@@ -240,8 +249,6 @@ public class CardRandomizer : MonoBehaviour
             }
             else if (selectedTitle.GetName() == "Mist Hunter")
             {
-                mustEquipTractorBeam = true;
-
                 AddonCard tractorBeamCard;
                 for (int i = 0; i < AddonCardManager.Instance.GetAddonCardGroupLength(6); i++)
                 {
