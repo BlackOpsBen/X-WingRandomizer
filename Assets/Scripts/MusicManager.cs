@@ -21,10 +21,14 @@ public class MusicManager : MonoBehaviour
     {
         displayTrackInfo = GetComponent<DisplayTrackInfo>();
         CreateAudioSources();
-        LoadMuteSetting();
         CreateOrderedTrackNums();
         CreateRandomizedTrackNums();
         PlayNextTrack();
+    }
+
+    private void Start()
+    {
+        LoadMuteSetting();
     }
 
     private void Update()
@@ -33,6 +37,20 @@ public class MusicManager : MonoBehaviour
         {
             PlayNextTrack();
         }
+    }
+
+    private void LoadMuteSetting()
+    {
+        if (PlayerPrefs.GetInt("Muted") == 1)
+        {
+            isMuted = true;
+        }
+        else
+        {
+            isMuted = false;
+        }
+
+        SetAudioMuteState();
     }
 
     private void CreateRandomizedTrackNums()
@@ -102,22 +120,9 @@ public class MusicManager : MonoBehaviour
         }
         else
         {
+            Debug.Log("Hiding track info...");
             displayTrackInfo.HideTrackInfo();
         }
-    }
-
-    private void LoadMuteSetting()
-    {
-        if (PlayerPrefs.HasKey("Muted") && PlayerPrefs.GetInt("Muted") == 0)
-        {
-            isMuted = true;
-        }
-        else
-        {
-            isMuted = false;
-        }
-
-        SetAudioMuteState();
     }
 
     private void SaveMuteSetting()
@@ -133,6 +138,7 @@ public class MusicManager : MonoBehaviour
             keyValue = 0;
         }
         PlayerPrefs.SetInt("Muted", keyValue);
+        Debug.Log(keyValue.ToString());
         PlayerPrefs.Save();
     }
 }
