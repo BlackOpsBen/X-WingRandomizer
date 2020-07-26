@@ -154,4 +154,31 @@ public class Squadrons : MonoBehaviour
     {
         return Settings.Instance.GetPointLimit() - GetSquadronTotalCost(PilotCardManager.Instance.GetSelectedFactionIndex());
     }
+
+    public bool GetPreviousShipHas(string name, int factionIndex)
+    {
+        foreach (PilotSet pilotSet in squadrons[factionIndex].pilotSets)
+        {
+            foreach (SelectedAddon selectedAddon in pilotSet.selectedAddons)
+            {
+                if (selectedAddon.addonName == name)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public bool GetPreviousPilotIs(string pilotName, int factionIndex)
+    {
+        foreach (PilotSet pilotSet in squadrons[factionIndex].pilotSets)
+        {
+            if (pilotSet.pilotName == pilotName)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }

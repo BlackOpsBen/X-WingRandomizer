@@ -40,8 +40,6 @@ public class Settings : MonoBehaviour
     {
         int pointsEntered = int.Parse(text);
 
-        Debug.Log(pointsEntered.ToString() + " is what was parsed.");
-
         if (pointsEntered > 0)
         {
             pointLimit = pointsEntered;

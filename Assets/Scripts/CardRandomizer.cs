@@ -26,12 +26,18 @@ public class CardRandomizer : MonoBehaviour
     private bool allUpgradesAreMinus1 = false; // Vaksai
     private bool onlyUniqueSalvagedAstromechs = false; // Havoc
     private bool crewsCost4OrLess = false; // TIE Shuttle
-    private int costModifiers = 0;
 
     private bool losesCannon = false;
     private bool losesMissile = false;
     private bool losesCrew = false;
     private bool losesAllOrdnance = false;
+
+    // Bizarrely specific exception helpers
+    private bool has2OrMoreSlots = false;
+    private bool tookCardFilling2Slots = false;
+    private bool allElitesAreMinus1 = false; // Renegade Refit
+
+    private int costModifiers = 0;
 
     private void Awake()
     {
@@ -103,6 +109,20 @@ public class CardRandomizer : MonoBehaviour
             allUpgradesAreMinus1 = false;
             costModifiers += totalDiscount;
         }
+
+        if (allElitesAreMinus1)
+        {
+            int totalDiscount = 0;
+            foreach (AddonCard addonCard in addonCards)
+            {
+                if (addonCard.GetType().Name == "ElitePilotTalent" && addonCard.cost > 0)
+                {
+                    totalDiscount++;
+                }
+            }
+            allElitesAreMinus1 = false;
+            costModifiers += totalDiscount;
+        }
     }
 
     private void CalculateTotalCost()
@@ -126,6 +146,7 @@ public class CardRandomizer : MonoBehaviour
         allUpgradesAreMinus1 = false;
         onlyUniqueSalvagedAstromechs = false;
         crewsCost4OrLess = false;
+        allElitesAreMinus1 = false;
         costModifiers = 0;
     }
 
@@ -165,6 +186,7 @@ public class CardRandomizer : MonoBehaviour
         List<PilotCard> affordablePilots = PilotCardManager.Instance.GetAffordablePilots(Squadrons.Instance.GetPointsRemaining(), randShip);
         PilotCard potentialPilot;
 
+        // TODO make it so a selection can't be made if theirs no valid non-unique taken pilot
         int infLoopLimiter = 0;
 
         do
@@ -324,9 +346,25 @@ public class CardRandomizer : MonoBehaviour
 
             for (int j = 0; j < quantityToFill; j++)
             {
+                tookCardFilling2Slots = false;
+
+                if (quantityToFill - j > 1)
+                {
+                    has2OrMoreSlots = true;
+                }
+                else
+                {
+                    has2OrMoreSlots = false;
+                }
+
                 if (true) // TODO set this back to Roll() and make better odds
                 {
                     MakeValidSelection(unorderedList[i]);
+                }
+
+                if (tookCardFilling2Slots)
+                {
+                    j++;
                 }
             }
         }
@@ -338,9 +376,22 @@ public class CardRandomizer : MonoBehaviour
         if (selection = RandomlySelectAddon(addonType))
         {
             addonCards.Add(selection);
+            
             if (selection.GetGrantsSlot())
             {
                 needToFillNewSlots = true;
+            }
+
+            // 2 Slot Exception
+            if (selection.GetName() == "Death Troopers" || selection.GetName() == "Wookie Commandos" || selection.GetName() == "Emperor Palpatine" || selection.GetName() == "Jabba the Hutt" || selection.GetName() == "Bomblet Generator")
+            {
+                tookCardFilling2Slots = true;
+            }
+
+            // Renegade Refit exception
+            if (selection.GetName() == "Renegade Refit")
+            {
+                allElitesAreMinus1 = true;
             }
         }
     }
@@ -371,7 +422,7 @@ public class CardRandomizer : MonoBehaviour
         }
         else
         {
-            //Debug.LogWarning("Attempted to select a card but there were no valid choices.");
+            Debug.LogWarning("Attempted to select a " + addonType.ToString() + "card but there were no valid choices.");
             return null;
         }
     }
@@ -593,7 +644,7 @@ public class CardRandomizer : MonoBehaviour
         {
             if (addonCard.unique)
             {
-                if (Squadrons.Instance.GetUniqueAlreadyTaken(addonCard.name) && PreviousCardIs(addonCard.name))
+                if (Squadrons.Instance.GetUniqueAlreadyTaken(addonCard.name) || PreviousCardIs(addonCard.name) || pilot.GetName() == addonCard.name)
                 {
                     if (debugReasons) { Debug.Log(addonCard.name + " unique and already taken."); }
                     return false;
@@ -628,7 +679,7 @@ public class CardRandomizer : MonoBehaviour
                 return false;
             }
 
-            if (addonCard.rebelAndScumOnly && (!ship.rebel || !ship.scum))
+            if (addonCard.rebelAndScumOnly && !ship.rebel && !ship.scum)
             {
                 if (debugReasons) { Debug.Log(addonCard.name + " requires Rebel or Scum Ship. Invalid selection."); }
                 return false;
@@ -904,6 +955,18 @@ public class CardRandomizer : MonoBehaviour
                 if (debugReasons) { Debug.Log(addonCard.name + " can't be equipped because this ship has no shields."); }
                 return false;
             }
+
+            if (addonCard.hasTurretEquipped && pilot.GetAddonTypeQuantity(7) == 0)
+            {
+                if (debugReasons) { Debug.Log(addonCard.name + " can't be equipped because it requires a Turret."); }
+                return false;
+            }
+
+            if (addonCard.hasIllicitEquipped && pilot.GetAddonTypeQuantity(11) == 0)
+            {
+                if (debugReasons) { Debug.Log(addonCard.name + " can't be equipped because it requires an Illicit."); }
+                return false;
+            }
         }
 
         // Exceptions
@@ -928,6 +991,15 @@ public class CardRandomizer : MonoBehaviour
             if (addonCard.cost > 4)
             {
                 if (debugReasons) { Debug.Log(addonCard.name + " is too expensive. TIE Shuttle requires cost of 4 or less."); }
+                return false;
+            }
+        }
+
+        if (addonCard.GetName() == "Death Troopers")
+        {
+            if (!has2OrMoreSlots)
+            {
+                if (debugReasons) { Debug.Log(addonCard.name + " requires 2 Crew slots but only 1 is available."); }
                 return false;
             }
         }

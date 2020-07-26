@@ -14,12 +14,12 @@ public class Exceptions : MonoBehaviour
     public bool ValidateExceptions(AddonCard addonCard, PilotCard pilot, Ship ship)
     {
         #region Chardaan Refit
-        if ((addonCard.torpedoOrMissileEquipped || addonCard.torpedoOrMissileOrBombEquipped) && cardRandomizer.PreviousCardIs("Chardaan Refit"))
+        if ((addonCard.torpedoOrMissileEquipped || addonCard.torpedoOrMissileOrBombEquipped || addonCard.torpedoOrBombEquipped) && cardRandomizer.PreviousCardIs("Chardaan Refit"))
         {
             return false;
         }
 
-        if (addonCard.name == "Chardaan Refit" && (cardRandomizer.PreviousCardRequires(37) || cardRandomizer.PreviousCardRequires(38)))
+        if (addonCard.name == "Chardaan Refit" && (cardRandomizer.PreviousCardRequires(39) || cardRandomizer.PreviousCardRequires(40) || cardRandomizer.PreviousCardRequires(41)))
         {
             return false;
         }
@@ -61,40 +61,72 @@ public class Exceptions : MonoBehaviour
         }
         #endregion
 
+        #region Saw's Renegades
+        if (addonCard.GetName() == "Saw's Renegades")
+        {
+            if (ship.GetName() == "X-Wing" || ship.GetName() == "U-Wing")
+            {
+                // Valid. Do nothing.
+            }
+            else
+            {
+                return false;
+            }
+        }
+        #endregion
+
+        #region IG-88D
+        if (addonCard.GetName() == "IG-88D")
+        {
+            if (Squadrons.Instance.GetPreviousShipHas("IG-2000", PilotCardManager.Instance.GetSelectedFactionIndex()))
+            {
+                // Valid. Do nothing.
+            }
+            else
+            {
+                return false;
+            }
+        }
+        #endregion
+
+        #region ISB Slicer
+        if (addonCard.GetName() == "ISB Slicer" && ship.GetName() != "TIE Reaper")
+        {
+            Debug.Log(addonCard.GetName() + " requires the ability to do the Jam action. Only the TIE Reaper can.");
+            return false;
+        }
+        #endregion
+
+        #region Maul
+        if (addonCard.GetName() == "Maul")
+        {
+            if (ship.rebel)
+            {
+                string ezraBridger = "Ezra Bridger";
+                int factionIndex = PilotCardManager.Instance.GetSelectedFactionIndex();
+                if (!Squadrons.Instance.GetPreviousShipHas(ezraBridger, factionIndex) && !cardRandomizer.PreviousCardIs(ezraBridger) && pilot.GetName() != ezraBridger && Squadrons.Instance.GetPreviousPilotIs(ezraBridger, factionIndex))
+                {
+                    Debug.Log(addonCard.GetName() + " is only valid for rebels IF Ezra Bridger is selected.");
+                    return false;
+                }
+            }
+        }
+        #endregion
+
         return true;
     }
 }
 
 /*
- * Chopper Astromech requires another upgrade card of any kind
- * 
- * Death Troopers require 2 crew slots, and fill both.
- * 
- * Emporer Palpatine requires 2 crew slots, and fill both
- * 
- * ISB Slicer crew requires jam action
- * 
  * Maul crew is scum only unless you already have "Ezra Bridger" crew in squad
  * 
  * Tail Gunner crew only valid for ships with rear aux arc. (Firespray and ARC-130 and Sheathipede-class Shuttle and TIE/sf Fighter)
- * 
- * IG-88D crew requires another ship with IG-2000
  * 
  * Ketsu Onyo crew requires tractor beam ability (SHadow caster pilot Ketsu does but he's the same person!)
  * 
  * Cikatro Vizago crew requires an Illicit equipped
  * 
- * Jabba crew requires 2 crew slots, AND requires at least 1 Illicit equipped
- * 
- * Wookie Commandos crew requires 2 crew slots
- * 
  * Tactical Officer crew grants Coordinate. (Do any cards require coordinate?) Also Sheathipede has coordinate
- * 
- * Bomblet Generator bomb requires 2 bomb slots and uses both
- * 
- * Thrust Corrector system requires hull value of 5 or more (find which ships apply)
- * 
- * Renegade Refit torpedo is for T65 X-Wing and U-Wing only. Also makes ALL Elites -1 cost. (Apply this AFTER ALL selections.)
  * 
  * Attani Mindlink elite pilot talent requires 2 ships to have it. If last possible ship, don't allow. Otherwise, require that the next ship chosen can and will also take it.
  * 

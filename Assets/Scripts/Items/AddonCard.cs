@@ -81,6 +81,7 @@ public class AddonCard : Item, IComeInProducts
     public bool hasAttackTargetLockEquipped;
     public bool hasShields;
     public bool hasTurretEquipped;
+    public bool hasIllicitEquipped;
 
     [Header("Grants actions/abilities:")]
     public bool grantsFocus;
@@ -172,7 +173,8 @@ public class AddonCard : Item, IComeInProducts
             hasAstromechEquipped,
             hasAttackTargetLockEquipped,
             hasShields,
-            hasTurretEquipped
+            hasTurretEquipped,
+            hasIllicitEquipped
         };
     }
 

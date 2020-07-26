@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 12bb5836b19dcfe42a7272eb7a90a8fc, type: 3}
-  m_Name: Jabba the Hutt
+  m_Name: Death Troopers
   m_EditorClassIdentifier: 
   forcePushChanges: 0
-  cardArt: {fileID: 21300000, guid: dd78a097a715fff47a18a1bba8968397, type: 3}
-  cost: 5
-  includedWith: []
+  cardArt: {fileID: 21300000, guid: 25154bfd595eac54f8bc2b4990a4ce50, type: 3}
+  cost: 2
+  includedWith:
+  - {fileID: 11400000, guid: f5130d630534d584a8253c74fc519bc0, type: 2}
   unique: 1
   limited: 0
   rebelOnly: 0
-  imperialOnly: 0
-  scumOnly: 1
+  imperialOnly: 1
+  scumOnly: 0
   rebelAndScumOnly: 0
   smallShipOnly: 0
   largeShipOnly: 0
@@ -51,6 +52,7 @@ MonoBehaviour:
   focusOrEvade: 0
   slam: 0
   actionHeader: 0
+  reinforce: 0
   cantAlreadyHaveElitePilotTalentSlot: 0
   hasMinPilotSkill: 0
   minPilotSkill: 0
@@ -77,9 +79,17 @@ MonoBehaviour:
   grantsCloak: 0
   grantsElitePilotTalent: 0
   grantsCrew: 0
+  grantsCrew2: 0
   grantsIllicit: 0
   grantsModificationCosting3OrLess: 0
   grantsBomb: 0
   grantsBomb2: 0
   grantsModification: 0
+  grantsModification2: 0
   grantsTorpedo: 0
+  grantsSystem: 0
+  grantsCannon: 0
+  grantsCannon2: 0
+  grantsMissile: 0
+  grantsSalvagedAstromech: 0
+  grantsCannonTorpedoOrMissile: 0

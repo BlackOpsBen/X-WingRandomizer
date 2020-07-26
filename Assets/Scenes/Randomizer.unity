@@ -226,17 +226,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 872046148}
-        m_MethodName: ToggleIcon
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &64843764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1941,6 +1930,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 12e370555f434cf4b88f443f1d357efa, type: 3}
     volume: 0.5
     source: {fileID: 0}
+  toggleMuteIcon: {fileID: 872046148}
   randomizedTrackNums: 
 --- !u!114 &620814538
 MonoBehaviour:
@@ -2191,7 +2181,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.3492551, g: 0.5377358, b: 0.12936096, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.48327485, g: 0.6886792, b: 0.24363652, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.34901962, g: 0.5372549, b: 0.12941177, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -2561,7 +2551,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.5849056, g: 0.09656459, b: 0.09656459, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.745283, g: 0.20038268, b: 0.20038268, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.58431375, g: 0.098039225, b: 0.098039225, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
