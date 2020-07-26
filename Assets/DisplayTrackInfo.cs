@@ -19,7 +19,7 @@ public class DisplayTrackInfo : MonoBehaviour
 
         if (infoTimer > timerLimit)
         {
-            HideTrackInfo();
+            TimeoutTrackInfo();
         }
     }
 
@@ -29,7 +29,12 @@ public class DisplayTrackInfo : MonoBehaviour
         infoTimer = 0f;
     }
 
-    private void HideTrackInfo()
+    public void HideTrackInfo()
+    {
+        infoTimer = timerLimit;
+    }
+
+    private void TimeoutTrackInfo()
     {
         trackInfos.SetActive(false);
     }

@@ -9,6 +9,8 @@ public class MusicManager : MonoBehaviour
     public Sound[] songs;
 
     private DisplayTrackInfo displayTrackInfo;
+    [SerializeField] private ToggleMuteIcon toggleMuteIcon;
+    private bool isMuted;
 
     private List<int> trackNums = new List<int>();
     [SerializeField] private int[] randomizedTrackNums;
@@ -19,6 +21,7 @@ public class MusicManager : MonoBehaviour
     {
         displayTrackInfo = GetComponent<DisplayTrackInfo>();
         CreateAudioSources();
+        LoadMuteSetting();
         CreateOrderedTrackNums();
         CreateRandomizedTrackNums();
         PlayNextTrack();
@@ -64,11 +67,72 @@ public class MusicManager : MonoBehaviour
     public void PlayNextTrack()
     {
         songs[randomizedTrackNums[currentTrack]].source.Stop();
+
         currentTrack++;
         currentTrack = currentTrack % randomizedTrackNums.Length;
-        Debug.Log("Playing track " + songs[randomizedTrackNums[currentTrack]].name);
+
         songs[randomizedTrackNums[currentTrack]].source.Play();
+
         displayTrackInfo.ShowTrackTitle(songs[randomizedTrackNums[currentTrack]].name);
         displayTrackInfo.ShowTrackInfo();
+    }
+
+    // Called by UI Button
+    public void ToggleMute()
+    {
+        isMuted = !isMuted;
+
+        SetAudioMuteState();
+
+        SaveMuteSetting();
+    }
+
+    private void SetAudioMuteState()
+    {
+        foreach (Sound song in songs)
+        {
+            song.source.mute = isMuted;
+        }
+
+        toggleMuteIcon.ToggleIcon(isMuted);
+
+        if (!isMuted)
+        {
+            displayTrackInfo.ShowTrackInfo();
+        }
+        else
+        {
+            displayTrackInfo.HideTrackInfo();
+        }
+    }
+
+    private void LoadMuteSetting()
+    {
+        if (PlayerPrefs.HasKey("Muted") && PlayerPrefs.GetInt("Muted") == 0)
+        {
+            isMuted = true;
+        }
+        else
+        {
+            isMuted = false;
+        }
+
+        SetAudioMuteState();
+    }
+
+    private void SaveMuteSetting()
+    {
+        int keyValue;
+
+        if (isMuted)
+        {
+            keyValue = 1;
+        }
+        else
+        {
+            keyValue = 0;
+        }
+        PlayerPrefs.SetInt("Muted", keyValue);
+        PlayerPrefs.Save();
     }
 }

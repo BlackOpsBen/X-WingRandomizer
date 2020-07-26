@@ -291,6 +291,7 @@ public class ProductToggle
             flag = 0;
         }
         PlayerPrefs.SetInt(this.name, flag);
+        PlayerPrefs.Save();
     }
 
     public void LoadToggleSetting()
