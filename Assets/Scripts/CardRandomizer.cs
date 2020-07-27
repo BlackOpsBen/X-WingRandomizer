@@ -422,7 +422,6 @@ public class CardRandomizer : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Attempted to select a " + addonType.ToString() + "card but there were no valid choices.");
             return null;
         }
     }

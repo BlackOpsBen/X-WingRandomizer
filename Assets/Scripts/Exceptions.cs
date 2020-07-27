@@ -106,7 +106,6 @@ public class Exceptions : MonoBehaviour
                 int factionIndex = PilotCardManager.Instance.GetSelectedFactionIndex();
                 if (!Squadrons.Instance.GetPreviousShipHas(ezraBridger, factionIndex) && !cardRandomizer.PreviousCardIs(ezraBridger) && pilot.GetName() != ezraBridger && !Squadrons.Instance.GetPreviousPilotIs(ezraBridger, factionIndex))
                 {
-                    Debug.Log(addonCard.GetName() + " is only valid for rebels IF Ezra Bridger is selected.");
                     return false;
                 }
             }
