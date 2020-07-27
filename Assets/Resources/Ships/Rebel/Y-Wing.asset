@@ -24,7 +24,7 @@ MonoBehaviour:
   cloak: 0
   slam: 0
   reinforce: 0
-  rebel: 0
+  rebel: 1
   imperial: 0
   scum: 0
   smallShip: 0

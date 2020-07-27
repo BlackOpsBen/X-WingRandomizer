@@ -138,7 +138,6 @@ public class MusicManager : MonoBehaviour
             keyValue = 0;
         }
         PlayerPrefs.SetInt("Muted", keyValue);
-        Debug.Log(keyValue.ToString());
         PlayerPrefs.Save();
     }
 }
