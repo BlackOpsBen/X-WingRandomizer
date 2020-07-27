@@ -146,7 +146,16 @@ public class CardRandomizer : MonoBehaviour
         allUpgradesAreMinus1 = false;
         onlyUniqueSalvagedAstromechs = false;
         crewsCost4OrLess = false;
+
+        losesCannon = false;
+        losesMissile = false;
+        losesCrew = false;
+        losesAllOrdnance = false;
+
+        has2OrMoreSlots = false;
+        tookCardFilling2Slots = false;
         allElitesAreMinus1 = false;
+
         costModifiers = 0;
     }
 
