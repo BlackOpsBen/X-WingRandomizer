@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 853c86030e0fabf4eb76aac3c2f8c454, type: 3}
   m_Name: TIE Reaper
   m_EditorClassIdentifier: 
-  includedWith: []
+  includedWith:
+  - {fileID: 11400000, guid: f5130d630534d584a8253c74fc519bc0, type: 2}
   shieldValue: 2
   hullValue: 6
   focus: 1
@@ -31,4 +32,5 @@ MonoBehaviour:
   hugeShip: 0
   heavyTIE: 1
   TIE: 1
-  titles: []
+  titles:
+  - {fileID: 11400000, guid: b7d84e8075c069d4a925810158c5ab30, type: 2}

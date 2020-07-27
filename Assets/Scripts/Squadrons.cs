@@ -178,9 +178,9 @@ public class Squadrons : MonoBehaviour
         return Settings.Instance.GetPointLimit() - GetSquadronTotalCost(PilotCardManager.Instance.GetSelectedFactionIndex());
     }
 
-    public bool GetPreviousShipHas(string name, int factionIndex)
+    public bool GetPreviousShipHas(string name)
     {
-        foreach (PilotSet pilotSet in squadrons[factionIndex].pilotSets)
+        foreach (PilotSet pilotSet in squadrons[PilotCardManager.Instance.GetSelectedFactionIndex()].pilotSets)
         {
             foreach (SelectedAddon selectedAddon in pilotSet.selectedAddons)
             {
@@ -193,9 +193,9 @@ public class Squadrons : MonoBehaviour
         return false;
     }
 
-    public bool GetPreviousPilotIs(string pilotName, int factionIndex)
+    public bool GetPreviousPilotIs(string pilotName)
     {
-        foreach (PilotSet pilotSet in squadrons[factionIndex].pilotSets)
+        foreach (PilotSet pilotSet in squadrons[PilotCardManager.Instance.GetSelectedFactionIndex()].pilotSets)
         {
             if (pilotSet.pilotName == pilotName)
             {

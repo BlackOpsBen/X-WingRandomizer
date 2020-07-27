@@ -4565,6 +4565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointLimit: 100
+  pointsInputField: {fileID: 1025924676}
 --- !u!4 &1797396465
 Transform:
   m_ObjectHideFlags: 0

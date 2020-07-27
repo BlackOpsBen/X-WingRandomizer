@@ -78,7 +78,7 @@ public class Exceptions : MonoBehaviour
         #region IG-88D
         if (addonCard.GetName() == "IG-88D")
         {
-            if (Squadrons.Instance.GetPreviousShipHas("IG-2000", PilotCardManager.Instance.GetSelectedFactionIndex()))
+            if (Squadrons.Instance.GetPreviousShipHas("IG-2000"))
             {
                 // Valid. Do nothing.
             }
@@ -110,12 +110,50 @@ public class Exceptions : MonoBehaviour
             if (ship.rebel)
             {
                 string ezraBridger = "Ezra Bridger";
-                int factionIndex = PilotCardManager.Instance.GetSelectedFactionIndex();
-                if (!Squadrons.Instance.GetPreviousShipHas(ezraBridger, factionIndex) && !cardRandomizer.PreviousCardIs(ezraBridger) && pilot.GetName() != ezraBridger && !Squadrons.Instance.GetPreviousPilotIs(ezraBridger, factionIndex))
+                if (!Squadrons.Instance.GetPreviousShipHas(ezraBridger) && !cardRandomizer.PreviousCardIs(ezraBridger) && pilot.GetName() != ezraBridger && !Squadrons.Instance.GetPreviousPilotIs(ezraBridger))
                 {
                     return false;
                 }
             }
+        }
+        #endregion
+
+        #region Tail Gunner
+        if (addonCard.GetName() == "Tail Gunner")
+        {
+            string[] validShips = new string[]
+            {
+                "Firespray-31",
+                "ARC-170",
+                "Sheathipede-Class Shuttle",
+                "TIEsf",
+                "Firespray-31 (Scum)"
+            };
+
+            bool isValidShip = false;
+
+            for (int i = 0; i < validShips.Length; i++)
+            {
+                if (validShips[i] == ship.GetName())
+                {
+                    isValidShip = true;
+                }
+            }
+            if (!isValidShip)
+            {
+                return false;
+            }
+        }
+        #endregion
+
+        #region Ketsu Onyo
+        if (addonCard.GetName() == "Ketsu Onyo")
+        {
+            if (!Squadrons.Instance.GetPreviousShipHas("Tractor Beam") && !Squadrons.Instance.GetPreviousShipHas("Spacetug Tractor Array"))
+            {
+                return false;
+            }
+            
         }
         #endregion
 
@@ -124,16 +162,6 @@ public class Exceptions : MonoBehaviour
 }
 
 /*
- * Tail Gunner crew only valid for ships with rear aux arc. (Firespray and ARC-130 and Sheathipede-class Shuttle and TIE/sf Fighter)
- * 
- * Ketsu Onyo crew requires tractor beam ability (SHadow caster pilot Ketsu does but he's the same person!)
- * 
- * Cikatro Vizago crew requires an Illicit equipped
- * 
- * Tactical Officer crew grants Coordinate. (Do any cards require coordinate?) Also Sheathipede has coordinate
- * 
  * Attani Mindlink elite pilot talent requires 2 ships to have it. If last possible ship, don't allow. Otherwise, require that the next ship chosen can and will also take it.
- * 
- * Advanced Ailerons title for TIE Reaper only
  */
  
