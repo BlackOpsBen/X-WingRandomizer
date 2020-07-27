@@ -129,7 +129,10 @@ public class PilotCardManager : MonoBehaviour
 
             if (isIncluded && factionList[selectedFaction].ships[i].GetCheapestPilotCost() <= pointsAvailable)
             {
-                listToReturn.Add(ship);
+                if (GetAffordablePilots(pointsAvailable, i).Count > 0)
+                {
+                    listToReturn.Add(ship);
+                }
             }
         }
         return listToReturn;
@@ -144,7 +147,10 @@ public class PilotCardManager : MonoBehaviour
             // TODO for Scurrg H-6 Bomber, only select a faction valid pilot, also Unique has to apply, but manually
             if (isIncluded && pilot.GetCost() <= pointsAvailable)
             {
-                listToReturn.Add(pilot);
+                if ( !pilot.GetIsUnique() || (pilot.GetIsUnique() && !Squadrons.Instance.GetUniqueAlreadyTaken(pilot.GetName())) )
+                {
+                    listToReturn.Add(pilot);
+                }
             }
         }
         return listToReturn;

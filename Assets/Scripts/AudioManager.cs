@@ -10,6 +10,8 @@ public class AudioManager : MonoBehaviour
     [Header("Sounds")]
     public Sound[] sounds;
 
+    private bool isReadyToPlay = false;
+
     private void Awake()
     {
         SingletonPattern();
@@ -40,7 +42,15 @@ public class AudioManager : MonoBehaviour
 
     public void Play(string clipName)
     {
-        Sound s = Array.Find(sounds, sound => sound.name == clipName);
-        s.source.Play();
+        if (isReadyToPlay)
+        {
+            Sound s = Array.Find(sounds, sound => sound.name == clipName);
+            s.source.Play();
+        }
+    }
+
+    public void SetIsReadyToPlay()
+    {
+        isReadyToPlay = true;
     }
 }

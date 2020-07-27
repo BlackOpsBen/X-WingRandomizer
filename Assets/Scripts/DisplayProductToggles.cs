@@ -50,6 +50,7 @@ public class DisplayProductToggles : MonoBehaviour
     private void Start()
     {
         LoadSettings();
+        AudioManager.Instance.SetIsReadyToPlay();
     }
 
     private void LoadSettings()
