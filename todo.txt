@@ -1,10 +1,12 @@
 TODO
 
-Remove individual addon card
+Ability to Remove individual addon card
+
+Track number of times each faction has "Passed" or "Removed" a set/card
 
 Reset button
 
-Deal with all exceptions pending
+Mindnet exception
 
 Add particle effects
 

@@ -144,7 +144,7 @@ public class PilotCardManager : MonoBehaviour
         foreach (PilotCard pilot in factionList[selectedFaction].pilotGroups[shipIndex].pilots)
         {
             bool isIncluded = DisplayProductToggles.Instance.GetIsEnabled(pilot);
-            // TODO for Scurrg H-6 Bomber, only select a faction valid pilot, also Unique has to apply, but manually
+
             if (isIncluded && pilot.GetCost() <= pointsAvailable)
             {
                 if ( !pilot.GetIsUnique() || (pilot.GetIsUnique() && !Squadrons.Instance.GetUniqueAlreadyTaken(pilot.GetName())) )

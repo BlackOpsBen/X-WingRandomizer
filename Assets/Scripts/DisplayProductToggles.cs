@@ -98,7 +98,7 @@ public class DisplayProductToggles : MonoBehaviour
     {
         ScaleValuesWithScreen();
 
-        UpdateArrangement(); // TODO move this to Awake instead of Update
+        UpdateArrangement();
     }
 
     public void CreateToggles()

@@ -36,6 +36,7 @@ public class CardRandomizer : MonoBehaviour
     private bool has2OrMoreSlots = false;
     private bool tookCardFilling2Slots = false;
     private bool allElitesAreMinus1 = false; // Renegade Refit
+    private bool modMustCost3OrLess = false; // Smuggling
 
     private int costModifiers = 0;
 
@@ -195,7 +196,6 @@ public class CardRandomizer : MonoBehaviour
         List<PilotCard> affordablePilots = PilotCardManager.Instance.GetAffordablePilots(Squadrons.Instance.GetPointsRemaining(), randShip);
         PilotCard potentialPilot;
 
-        // TODO make it so a selection can't be made if theirs no valid non-unique taken pilot
         int infLoopLimiter = 0;
 
         do
@@ -366,10 +366,7 @@ public class CardRandomizer : MonoBehaviour
                     has2OrMoreSlots = false;
                 }
 
-                if (true) // TODO set this back to Roll() and make better odds
-                {
-                    MakeValidSelection(unorderedList[i]);
-                }
+                MakeValidSelection(unorderedList[i]);
 
                 if (tookCardFilling2Slots)
                 {
@@ -477,15 +474,18 @@ public class CardRandomizer : MonoBehaviour
 
             if (addonCards[i].grantsModificationCosting3OrLess)
             {
-                AddonCard newMod;
+                modMustCost3OrLess = true;
 
-                do
+                AddonCard newMod = RandomlySelectAddon(4);
+
+                modMustCost3OrLess = false;
+
+                addonCards.Add(newMod);
+
+                if (newMod.GetGrantsSlot())
                 {
-                    newMod = RandomlySelectAddon(4);
-                } while (newMod.cost > 3);
-
-                // TODO need to make valid selection if no valid card exists. Avoid inf loop
-
+                    needToFillNewSlots = true;
+                }
             }
 
             if (addonCards[i].grantsBomb)
@@ -1009,6 +1009,11 @@ public class CardRandomizer : MonoBehaviour
                 if (debugReasons) { Debug.Log(addonCard.name + " requires 2 Crew slots but only 1 is available."); }
                 return false;
             }
+        }
+
+        if (modMustCost3OrLess && addonCard.cost > 3)
+        {
+            return false;
         }
 
 
