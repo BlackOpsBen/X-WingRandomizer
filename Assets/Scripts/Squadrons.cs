@@ -150,6 +150,29 @@ public class Squadrons : MonoBehaviour
         return false;
     }
 
+    public bool GetUniqueAlreadyTakenAnyFaction(string name)
+    {
+        foreach (Squadron squadron in squadrons)
+        {
+            foreach (PilotSet pilotSet in squadron.pilotSets)
+            {
+                if (pilotSet.pilotName == name)
+                {
+                    return true;
+                }
+
+                foreach (SelectedAddon selectedAddon in pilotSet.selectedAddons)
+                {
+                    if (selectedAddon.addonName == name)
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
     public int GetPointsRemaining()
     {
         return Settings.Instance.GetPointLimit() - GetSquadronTotalCost(PilotCardManager.Instance.GetSelectedFactionIndex());

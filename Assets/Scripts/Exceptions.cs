@@ -99,6 +99,14 @@ public class Exceptions : MonoBehaviour
         #region Maul
         if (addonCard.GetName() == "Maul")
         {
+            // First check if another faction already has Maul
+            if (Squadrons.Instance.GetUniqueAlreadyTakenAnyFaction(addonCard.GetName()))
+            {
+                Debug.LogWarning("Maul is already taken by another faction.");
+                return false;
+            }
+
+            // Then make sure a rebel can claim him.
             if (ship.rebel)
             {
                 string ezraBridger = "Ezra Bridger";
