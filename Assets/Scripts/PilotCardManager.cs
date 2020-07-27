@@ -122,11 +122,12 @@ public class PilotCardManager : MonoBehaviour
     {
         List<Ship> listToReturn = new List<Ship>();
 
-        foreach (Ship ship in factionList[PilotCardManager.Instance.GetSelectedFactionIndex()].ships)
+        for (int i = 0; i < factionList[selectedFaction].ships.Length; i++)
         {
+            Ship ship = factionList[selectedFaction].ships[i];
             bool isIncluded = DisplayProductToggles.Instance.GetIsEnabled(ship);
-            // TODO limit if a faction already selected this ship, unless I implement quantity of products
-            if (isIncluded && ship.GetCheapestPilotCost() <= pointsAvailable)
+
+            if (isIncluded && factionList[selectedFaction].ships[i].GetCheapestPilotCost() <= pointsAvailable)
             {
                 listToReturn.Add(ship);
             }
