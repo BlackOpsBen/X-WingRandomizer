@@ -120,7 +120,6 @@ public class MusicManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Hiding track info...");
             displayTrackInfo.HideTrackInfo();
         }
     }

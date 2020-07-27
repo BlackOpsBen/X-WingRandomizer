@@ -92,7 +92,6 @@ public class Exceptions : MonoBehaviour
         #region ISB Slicer
         if (addonCard.GetName() == "ISB Slicer" && ship.GetName() != "TIE Reaper")
         {
-            Debug.Log(addonCard.GetName() + " requires the ability to do the Jam action. Only the TIE Reaper can.");
             return false;
         }
         #endregion
@@ -117,8 +116,6 @@ public class Exceptions : MonoBehaviour
 }
 
 /*
- * Maul crew is scum only unless you already have "Ezra Bridger" crew in squad
- * 
  * Tail Gunner crew only valid for ships with rear aux arc. (Firespray and ARC-130 and Sheathipede-class Shuttle and TIE/sf Fighter)
  * 
  * Ketsu Onyo crew requires tractor beam ability (SHadow caster pilot Ketsu does but he's the same person!)

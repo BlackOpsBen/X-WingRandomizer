@@ -486,7 +486,6 @@ public class CardRandomizer : MonoBehaviour
 
                 // TODO need to make valid selection if no valid card exists. Avoid inf loop
 
-                Debug.Log("Verify this selection was of type 'Modification' and that it costs 3 or less points.");
             }
 
             if (addonCards[i].grantsBomb)
