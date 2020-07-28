@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6497603153777562795}
   - component: {fileID: 6497603153777562794}
   - component: {fileID: 6497603153777562797}
+  - component: {fileID: 9092825896088715766}
   m_Layer: 5
   m_Name: RemoveCardButton
   m_TagString: Untagged
@@ -29,7 +30,7 @@ RectTransform:
   m_GameObject: {fileID: 6497603153777562792}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.5389, y: 1.5389, z: 1.5389}
   m_Children:
   - {fileID: 6497603154217907143}
   m_Father: {fileID: 0}
@@ -118,7 +119,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6497603153777562795}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 9092825896088715766}
+        m_MethodName: DestroySelf
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6497603153777562797
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,6 +144,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   worldTransform: {fileID: 0}
+--- !u!114 &9092825896088715766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6497603153777562792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d9a6ab9eed2eae4fac843489491f54c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6497603154217907142
 GameObject:
   m_ObjectHideFlags: 0

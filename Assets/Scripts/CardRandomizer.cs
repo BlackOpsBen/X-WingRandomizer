@@ -64,8 +64,6 @@ public class CardRandomizer : MonoBehaviour
 
         CalculateTotalCost();
 
-        UIManager.Instance.DisplaySetCost(totalCost);
-
         GetComponent<DisplayCards>().DisplayAddons(addonCards);
 
         UIManager.Instance.EnableKeepOrPass();
@@ -136,6 +134,8 @@ public class CardRandomizer : MonoBehaviour
         }
         subtotalCost -= costModifiers;
         totalCost = subtotalCost;
+
+        UIManager.Instance.DisplaySetCost(totalCost);
     }
 
     private void ResetPilot()
@@ -1172,10 +1172,10 @@ public class CardRandomizer : MonoBehaviour
         return true;
     }
 
-    // To be called by UI badge button
     public void RemoveAddon(int index)
     {
         addonCards.RemoveAt(index);
         displayCards.ClearSingleCard(index);
+        CalculateTotalCost();
     }
 }

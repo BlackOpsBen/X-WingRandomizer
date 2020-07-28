@@ -10,6 +10,7 @@ public class DisplayCards : MonoBehaviour
     [SerializeField] GameObject addonCardModel;
 
     [SerializeField] FitView fitView;
+    [SerializeField] private CreateRemoveBadges createRemoveBadges;
 
     private List<GameObject> addonCardObjects = new List<GameObject>();
 
@@ -73,6 +74,8 @@ public class DisplayCards : MonoBehaviour
             MoveAndFlip moveAndFlip = newCardObject.AddComponent<MoveAndFlip>();
 
             moveAndFlip.SetDestPos(relPos);
+
+            createRemoveBadges.CreateNewBadge(newCardObject);
         }
     }
 
@@ -85,6 +88,7 @@ public class DisplayCards : MonoBehaviour
             Destroy(cardObject, 1f);
         }
         addonCardObjects.Clear();
+        createRemoveBadges.ResetBadges();
     }
 
     public void ClearSingleCard(int index)
@@ -92,8 +96,8 @@ public class DisplayCards : MonoBehaviour
         fitView.ClearSingleTarget(index);
         GameObject singleCardObject = addonCardObjects[index];
         singleCardObject.GetComponent<MoveAndFlip>().ExitCard();
-        Destroy(singleCardObject, 1f);
         addonCardObjects.RemoveAt(index);
+        Destroy(singleCardObject, 1f);
     }
 
     public void FlipPilotCard()
