@@ -87,6 +87,15 @@ public class DisplayCards : MonoBehaviour
         addonCardObjects.Clear();
     }
 
+    public void ClearSingleCard(int index)
+    {
+        fitView.ClearSingleTarget(index);
+        GameObject singleCardObject = addonCardObjects[index];
+        singleCardObject.GetComponent<MoveAndFlip>().ExitCard();
+        Destroy(singleCardObject, 1f);
+        addonCardObjects.RemoveAt(index);
+    }
+
     public void FlipPilotCard()
     {
         pilotCardModel.GetComponent<FlipPilotCard>().SetDestRot(new Vector3(0f, -180f, 0f));

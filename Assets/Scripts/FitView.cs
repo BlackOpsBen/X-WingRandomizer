@@ -29,6 +29,8 @@ public class FitView : MonoBehaviour
     {
         cards = GameObject.FindGameObjectsWithTag("card");
 
+        targets.Clear();
+
         for (int i = 0; i < cards.Length; i++)
         {
             targets.Add(cards[i].transform);
@@ -87,5 +89,10 @@ public class FitView : MonoBehaviour
     public void ClearTargets()
     {
         targets.Clear();
+    }
+
+    public void ClearSingleTarget(int index)
+    {
+        targets.RemoveAt(index);
     }
 }

@@ -1171,4 +1171,11 @@ public class CardRandomizer : MonoBehaviour
         if (debugReasons) { Debug.Log("All requirements met for equipping " + addonCard.name + ". This card is valid!"); }
         return true;
     }
+
+    // To be called by UI badge button
+    public void RemoveAddon(int index)
+    {
+        addonCards.RemoveAt(index);
+        displayCards.ClearSingleCard(index);
+    }
 }
