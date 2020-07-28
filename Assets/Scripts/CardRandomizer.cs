@@ -10,7 +10,7 @@ public class CardRandomizer : MonoBehaviour
     [HideInInspector]
     public Ship ship;
     [HideInInspector]
-    public PilotCard pilot; // TODO delegate this to another script
+    public PilotCard pilot;
     public List<AddonCard> addonCards;
     public int totalCost;
 
