@@ -1,13 +1,15 @@
 TODO
 
-Ability to Remove individual addon card
+Make removal of a "granting" card also remove the card paired with it.
+
+Removal badge delay appearance
+
+Cards rearrange when removed
 
 Track number of times each faction has "Passed" or "Removed" a set/card
 
 Reset button
 
-Mindnet exception
+Remaining Exceptions
 
 Add particle effects
-
-Check Pilot cards for rules that break my shit

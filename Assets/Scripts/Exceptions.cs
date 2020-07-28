@@ -163,5 +163,14 @@ public class Exceptions : MonoBehaviour
 
 /*
  * Attani Mindlink elite pilot talent requires 2 ships to have it. If last possible ship, don't allow. Otherwise, require that the next ship chosen can and will also take it.
+ * 
+ * Youngster pilot should prefer an Action header Elite
+ * 
+ * Quinn Jast pilot MUST take Heavy Scyk title
+ * 
+ * Tomax Bren pilot should prefer a Discard Elite card
+ * 
+ * Kullbee pilot should slightly favor taking the Servo Motor S-Foils modification
+ * 
  */
  
