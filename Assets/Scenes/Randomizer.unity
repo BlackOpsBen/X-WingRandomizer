@@ -1981,6 +1981,10 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: eb1e18eb1bc368541bd06b21c539be9a, type: 3}
     volume: 0.5
     source: {fileID: 0}
+  - name: Remove
+    clip: {fileID: 8300000, guid: 7a17cbf06e4251a4d922844381023806, type: 3}
+    volume: 0.5
+    source: {fileID: 0}
 --- !u!4 &620814536
 Transform:
   m_ObjectHideFlags: 0
