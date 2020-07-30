@@ -1174,6 +1174,13 @@ public class CardRandomizer : MonoBehaviour
 
     public void RemoveAddon(int index)
     {
+        AddonCard cardToRemove = addonCards[index];
+
+        if (cardToRemove.GetGrantsSlot())
+        {
+
+        }
+
         addonCards.RemoveAt(index);
         displayCards.ClearSingleCard(index);
         CalculateTotalCost();

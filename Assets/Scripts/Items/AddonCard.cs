@@ -246,6 +246,19 @@ public class AddonCard : Item, IComeInProducts
         return false;
     }
 
+    public List<int> GetSlotsGranted()
+    {
+        List<int> slotsGranted = new List<int>();
+        for (int i = 0; i < slotGrantings.Length; i++)
+        {
+            if (slotGrantings[i])
+            {
+                slotsGranted.Add(i);
+            }
+        }
+        return slotsGranted;
+    }
+
     public bool GetActionGranting(int aGranting)
     {
         return actionGrantings[aGranting];
