@@ -9,9 +9,13 @@ public class Squadrons : MonoBehaviour
 
     [SerializeField] private Squadron[] squadrons;
 
+    private PilotSetLists pilotSetLists;
+
     private void Awake()
     {
         SingletonPattern();
+
+        pilotSetLists = GetComponent<PilotSetLists>();
     }
 
     private void Start()
@@ -65,6 +69,8 @@ public class Squadrons : MonoBehaviour
         squadrons[PilotCardManager.Instance.GetSelectedFactionIndex()].pilotSets.Add(pilotSet);
 
         CalculateSquadronTotalCost(squadrons[PilotCardManager.Instance.GetSelectedFactionIndex()]);
+
+        pilotSetLists.AddPilotSet(ship.GetName(), pilot.GetName(), addonCards, PilotCardManager.Instance.GetSelectedFactionIndex());
     }
 
     private void CalculateSetTotalCost(PilotSet pilotSet, int costModifiers)
@@ -94,6 +100,12 @@ public class Squadrons : MonoBehaviour
         public string factionName;
         public List<PilotSet> pilotSets;
         public int totalCost;
+
+        public void Reset()
+        {
+            pilotSets = new List<PilotSet>();
+            totalCost = 0;
+        }
     }
 
     private class PilotSet
@@ -203,5 +215,11 @@ public class Squadrons : MonoBehaviour
             }
         }
         return false;
+    }
+
+    public void ResetFaction(int factionIndex)
+    {
+        squadrons[factionIndex].Reset();
+        UIManager.Instance.UpdateUI();
     }
 }

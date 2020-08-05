@@ -19,6 +19,8 @@ public class UIManager : MonoBehaviour
 
     private DisableGenerate disableGenerate;
 
+    [SerializeField] private FactionIcon factionIcon;
+
     private void Awake()
     {
         SingletonPattern();
@@ -69,6 +71,7 @@ public class UIManager : MonoBehaviour
     {
         pointsCounter.UpdatePoints();
         disableGenerate.SetGenerateButton();
+        factionIcon.SetIcon();
     }
 
     public void DisplaySetCost(int cost)
