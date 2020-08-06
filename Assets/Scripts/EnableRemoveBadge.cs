@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnableRemoveBadge : MonoBehaviour
 {
     private GameObject badge;
+    private ToggleBadgeVisibility visToggle;
 
     private MoveAndFlip moveAndFlip;
 
@@ -30,11 +31,12 @@ public class EnableRemoveBadge : MonoBehaviour
 
     private void SetBadgeActive(bool value)
     {
-        badge.SetActive(value);
+        visToggle.SetBadgeVisibility(value);
     }
 
     public void SetBadge(GameObject badgeObject)
     {
         badge = badgeObject;
+        visToggle = badge.GetComponent<ToggleBadgeVisibility>();
     }
 }

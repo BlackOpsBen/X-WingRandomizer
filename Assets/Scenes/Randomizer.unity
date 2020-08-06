@@ -2169,7 +2169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minFOV: 60
-  maxFOV: 70
+  maxFOV: 74
   offset: {x: 0, y: -0.2, z: -5}
 --- !u!20 &519420031
 Camera:

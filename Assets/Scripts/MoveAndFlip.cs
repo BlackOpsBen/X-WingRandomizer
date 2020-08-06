@@ -19,6 +19,8 @@ public class MoveAndFlip : MonoBehaviour
     private bool flipSoundPlayed = false;
 
     private float showBadgeDist = 0.1f;
+
+    private bool destPosSet = false;
     public bool hasArrived { get; private set; }
 
     private void Update()
@@ -35,7 +37,7 @@ public class MoveAndFlip : MonoBehaviour
             }
         }
 
-        if (Vector3.Distance(transform.position, destPos) < showBadgeDist)
+        if (destPosSet && Vector3.Distance(transform.position, destPos) < showBadgeDist)
         {
             hasArrived = true;
         }
@@ -44,6 +46,7 @@ public class MoveAndFlip : MonoBehaviour
     public void SetDestPos(Vector3 newDestPos)
     {
         destPos = newDestPos;
+        destPosSet = true;
     }
 
     public void ExitCard()
