@@ -18,6 +18,9 @@ public class MoveAndFlip : MonoBehaviour
 
     private bool flipSoundPlayed = false;
 
+    private float showBadgeDist = 0.1f;
+    public bool hasArrived { get; private set; }
+
     private void Update()
     {
         transform.position = Vector3.Lerp(transform.position, destPos, Time.deltaTime * moveSpeed);
@@ -30,6 +33,11 @@ public class MoveAndFlip : MonoBehaviour
                 AudioManager.Instance.Play("FlipAddon");
                 flipSoundPlayed = true;
             }
+        }
+
+        if (Vector3.Distance(transform.position, destPos) < showBadgeDist)
+        {
+            hasArrived = true;
         }
     }
 

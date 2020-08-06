@@ -19,11 +19,6 @@ public class CreateRemoveBadges : MonoBehaviour
         cardRandomizer = GetComponent<CardRandomizer>();
     }
 
-    //private void Update()
-    //{
-    //    DebugIndexes();
-    //}
-
     public void CreateNewBadge(GameObject cardObject)
     {
         GameObject newBadge = Instantiate(badgeObject, badgeParentCanvas);
@@ -33,6 +28,9 @@ public class CreateRemoveBadges : MonoBehaviour
         newBadge.GetComponent<Button>().onClick.AddListener(() => UserRemoveAddon(newBadge));
         
         badges.Add(newBadge);
+
+        EnableRemoveBadge enableRemoveBadge = cardObject.AddComponent<EnableRemoveBadge>();
+        enableRemoveBadge.SetBadge(newBadge);
     }
 
     public void UserRemoveAddon(GameObject selfBadge)
