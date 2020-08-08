@@ -49,7 +49,7 @@ public class FitView : MonoBehaviour
     {
         float newFOV;
 
-        if (cards.Length > 4)
+        if (cards.Length > 6)
         {
             newFOV = maxFOV;
         }
