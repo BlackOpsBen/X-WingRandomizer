@@ -30,5 +30,11 @@ public class DisableKeep : MonoBehaviour
                 buttonLabel.text = "Must remove a " + AddonCardManager.Instance.addonCardNames[i];
             }
         }
+
+        if (removeCards.mustRemoveMaul)
+        {
+            keepButton.interactable = false;
+            buttonLabel.text = "Must remove \"•Maul\"";
+        }
     }
 }

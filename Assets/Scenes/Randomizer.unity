@@ -3312,7 +3312,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   generateButton: {fileID: 2066589551}
   generateText: GENERATE PILOT
-  insufficientText: INSUFFICIENT POINTS
+  insufficientText: NO VALID OPTIONS
 --- !u!114 &872046148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5303,6 +5303,9 @@ MonoBehaviour:
   pilot: {fileID: 0}
   addonCards: []
   totalCost: 0
+  nextSystemIsMinus4: 0
+  allUpgradesAreMinus1: 0
+  allElitesAreMinus1: 0
 --- !u!114 &1277167124
 MonoBehaviour:
   m_ObjectHideFlags: 0

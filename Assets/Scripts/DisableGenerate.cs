@@ -10,7 +10,7 @@ public class DisableGenerate : MonoBehaviour
     private TextMeshProUGUI buttonLabel;
 
     [SerializeField] private string generateText = "GENERATE PILOT";
-    [SerializeField] private string insufficientText = "INSUFFICIENT POINTS";
+    [SerializeField] private string insufficientText = "NO VALID OPTIONS";
 
     private void Awake()
     {
