@@ -259,9 +259,18 @@ public class CardRandomizer : MonoBehaviour
         }
         if (validOptions.Count > 0)
         {
-            int rand = UnityEngine.Random.Range(0, validOptions.Count);
+            Title selectedTitle;
 
-            Title selectedTitle = validOptions[rand];
+            if (pilot.GetName() == "Quinn Jast")
+            {
+                selectedTitle = validOptions[0];
+            }
+            else
+            {
+                int rand = UnityEngine.Random.Range(0, validOptions.Count);
+
+                selectedTitle = validOptions[rand];
+            }
 
             addonCards.Add(selectedTitle);
 

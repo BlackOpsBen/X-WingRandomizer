@@ -173,8 +173,6 @@ public class Exceptions : MonoBehaviour
  * 
  * Youngster pilot should prefer an Action header Elite
  * 
- * Quinn Jast pilot MUST take Heavy Scyk title
- * 
  * Tomax Bren pilot should prefer a Discard Elite card
  * 
  */
