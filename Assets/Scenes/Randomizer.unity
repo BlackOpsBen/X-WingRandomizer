@@ -783,7 +783,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 254564640}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: db59821a0d1b7fc4b93dbfb9e86e8f01, type: 3}
   m_Name: 
@@ -1496,6 +1496,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 620814535}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Check
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &398985378
@@ -3235,6 +3246,7 @@ GameObject:
   - component: {fileID: 872046146}
   - component: {fileID: 872046147}
   - component: {fileID: 872046148}
+  - component: {fileID: 872046149}
   m_Layer: 0
   m_Name: '[UI Manager]'
   m_TagString: Untagged
@@ -3299,6 +3311,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generateButton: {fileID: 2066589551}
+  generateText: GENERATE PILOT
+  insufficientText: INSUFFICIENT POINTS
 --- !u!114 &872046148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3313,6 +3327,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   muteIcon: {fileID: 1873554145}
   unmuteIcon: {fileID: 1926965916}
+--- !u!114 &872046149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 872046143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf65926b816a4c94982db0dabff03dd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  removeCards: {fileID: 1277167129}
+  cardRandomizer: {fileID: 1277167123}
+  keepButton: {fileID: 707051856}
 --- !u!1 &873357415
 GameObject:
   m_ObjectHideFlags: 0
@@ -6560,6 +6589,7 @@ MonoBehaviour:
   checkedColor: {r: 1, g: 0.7921569, b: 0.22352941, a: 1}
   uncheckedColor: {r: 0.23529412, g: 0.23529412, b: 0.23529412, a: 0.70980394}
   highlightedColor: {r: 1, g: 1, b: 1, a: 1}
+  toggleSoundEnabled: 1
 --- !u!114 &1797396467
 MonoBehaviour:
   m_ObjectHideFlags: 0

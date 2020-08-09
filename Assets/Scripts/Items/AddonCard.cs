@@ -277,7 +277,7 @@ public class AddonCard : Item, IComeInProducts
 
     public int[] GetSlotGrantings()
     {
-        int[] numTypes = new int[AddonCardManager.Instance.GetNumAddonTypes() + 1]; // +1 is to account for "Modification costing 3 or less" as different from "Modification"
+        int[] numTypes = new int[AddonCardManager.Instance.GetNumAddonTypes() + 2]; // +2 is to account for "Modification costing 3 or less" as different from "Modification" and "Titles"
         for (int i = 0; i < numTypes.Length; i++)
         {
             numTypes[i] = 0;
@@ -388,12 +388,10 @@ public class AddonCard : Item, IComeInProducts
         {
             if (this.GetType().ToString() == itemTypes[i])
             {
-                Debug.Log("Item type index is " + i);
                 return i;
             }
         }
 
-        Debug.LogError("No item type index found!");
-        return 0;
+        return 14; // this is for when it's a "Title" card which doesn't exist in the type list.
     }
 }

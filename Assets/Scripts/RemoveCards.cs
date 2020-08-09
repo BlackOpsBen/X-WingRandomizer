@@ -22,7 +22,7 @@ public class RemoveCards : MonoBehaviour
 
     public void ResetMustRemoveList()
     {
-        mustRemoveAddonTypes = new int[AddonCardManager.Instance.GetNumAddonTypes() + 1]; // +1 is to account for "Modification costing 3 or less" as different from "Modification"
+        mustRemoveAddonTypes = new int[AddonCardManager.Instance.GetNumAddonTypes() + 2]; // +2 is to account for "Modification costing 3 or less" as different from "Modification" and "Titles"
     }
 
     public void RemoveAddon(int index)

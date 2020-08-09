@@ -40,6 +40,8 @@ public class DisplayProductToggles : MonoBehaviour
 
     private ProductToggle[] productToggles;
 
+    public bool toggleSoundEnabled = true;
+
     private void Awake()
     {
         SingletonPattern();
@@ -55,10 +57,12 @@ public class DisplayProductToggles : MonoBehaviour
 
     private void LoadSettings()
     {
+        toggleSoundEnabled = false;
         for (int i = 0; i < productToggles.Length; i++)
         {
             productToggles[i].LoadToggleSetting();
         }
+        toggleSoundEnabled = true;
     }
 
     private void SingletonPattern()
@@ -129,6 +133,7 @@ public class DisplayProductToggles : MonoBehaviour
 
     public void SelectAllNone()
     {
+        toggleSoundEnabled = false;
         bool allOn = DetermineIfAllOn();
 
         if (allOn)
@@ -140,6 +145,7 @@ public class DisplayProductToggles : MonoBehaviour
             TurnAll(true);
         }
         UIManager.Instance.UpdateUI();
+        toggleSoundEnabled = true;
     }
 
     private void TurnAll(bool value)
@@ -232,7 +238,10 @@ public class ProductToggle
 
         SaveToggleSetting();
 
-        AudioManager.Instance.Play("Check");
+        if (DisplayProductToggles.Instance.toggleSoundEnabled)
+        {
+            AudioManager.Instance.Play("Check");
+        }
     }
 
     public bool GetIsEnabled()

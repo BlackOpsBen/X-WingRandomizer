@@ -19,6 +19,8 @@ public class UIManager : MonoBehaviour
 
     private DisableGenerate disableGenerate;
 
+    private DisableKeep disableKeep;
+
     [SerializeField] private FactionIcon factionIcon;
 
     private void Awake()
@@ -28,6 +30,8 @@ public class UIManager : MonoBehaviour
         pointsCounter = GetComponent<PointsCounter>();
 
         disableGenerate = GetComponent<DisableGenerate>();
+
+        disableKeep = GetComponent<DisableKeep>();
     }
 
     public void EnableGenerate()
@@ -71,6 +75,7 @@ public class UIManager : MonoBehaviour
     {
         pointsCounter.UpdatePoints();
         disableGenerate.SetGenerateButton();
+        disableKeep.SetKeepButton();
         factionIcon.SetIcon();
     }
 

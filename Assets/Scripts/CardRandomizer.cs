@@ -60,6 +60,7 @@ public class CardRandomizer : MonoBehaviour
         }
         lastCountedCardIndex = 0;
 
+        ResetCostModifiers();
         SetCostModifiers();
 
         CalculateTotalCost();
@@ -72,6 +73,11 @@ public class CardRandomizer : MonoBehaviour
     public int GetCostModifiers()
     {
         return costModifiers;
+    }
+
+    private void ResetCostModifiers()
+    {
+
     }
 
     private void SetCostModifiers()
@@ -127,7 +133,11 @@ public class CardRandomizer : MonoBehaviour
     public void CalculateTotalCost()
     {
         int subtotalCost = 0;
-        subtotalCost += pilot.GetCost();
+        if (pilot)
+        {
+            subtotalCost += pilot.GetCost();
+        }
+        
         foreach (AddonCard addonCard in addonCards)
         {
             subtotalCost += addonCard.cost;
