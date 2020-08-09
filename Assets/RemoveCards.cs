@@ -42,5 +42,6 @@ public class RemoveCards : MonoBehaviour
         cardRandomizer.addonCards.RemoveAt(index);
         displayCards.ClearSingleCard(index);
         cardRandomizer.CalculateTotalCost();
+        UIManager.Instance.UpdateUI();
     }
 }
