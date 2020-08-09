@@ -22,8 +22,8 @@ public class CardRandomizer : MonoBehaviour
     private int lastCountedCardIndex = 0;
 
     // Title specific modifications
-    private bool nextSystemIsMinus4 = false; // TIEx1
-    private bool allUpgradesAreMinus1 = false; // Vaksai
+    public bool nextSystemIsMinus4 = false; // TIEx1
+    public bool allUpgradesAreMinus1 = false; // Vaksai
     private bool onlyUniqueSalvagedAstromechs = false; // Havoc
     private bool crewsCost4OrLess = false; // TIE Shuttle
 
@@ -35,7 +35,7 @@ public class CardRandomizer : MonoBehaviour
     // Bizarrely specific exception helpers
     private bool has2OrMoreSlots = false;
     private bool tookCardFilling2Slots = false;
-    private bool allElitesAreMinus1 = false; // Renegade Refit
+    public bool allElitesAreMinus1 = false; // Renegade Refit
     private bool modMustCost3OrLess = false; // Smuggling
 
     private int costModifiers = 0;
@@ -60,7 +60,6 @@ public class CardRandomizer : MonoBehaviour
         }
         lastCountedCardIndex = 0;
 
-        ResetCostModifiers();
         SetCostModifiers();
 
         CalculateTotalCost();
@@ -75,12 +74,7 @@ public class CardRandomizer : MonoBehaviour
         return costModifiers;
     }
 
-    private void ResetCostModifiers()
-    {
-
-    }
-
-    private void SetCostModifiers()
+    public void SetCostModifiers()
     {
         costModifiers = 0;
 
@@ -97,7 +91,7 @@ public class CardRandomizer : MonoBehaviour
                     }
                 }
             }
-            nextSystemIsMinus4 = false;
+            
             costModifiers += Mathf.Min(4, mostExpensiveSystem);
         }
 
@@ -111,7 +105,7 @@ public class CardRandomizer : MonoBehaviour
                     totalDiscount++;
                 }
             }
-            allUpgradesAreMinus1 = false;
+            
             costModifiers += totalDiscount;
         }
 
@@ -125,7 +119,7 @@ public class CardRandomizer : MonoBehaviour
                     totalDiscount++;
                 }
             }
-            allElitesAreMinus1 = false;
+            
             costModifiers += totalDiscount;
         }
     }
@@ -585,6 +579,18 @@ public class CardRandomizer : MonoBehaviour
 
             lastCountedCardIndex++;
         }
+    }
+
+    public bool TypeIsSelected(int type)
+    {
+        foreach (AddonCard addonCard in addonCards)
+        {
+            if (addonCard.GetThisTypeIndex() == type)
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     public bool PreviousCardGrantsAction(int aGrantingIndex)

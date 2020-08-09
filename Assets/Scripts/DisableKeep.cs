@@ -24,7 +24,7 @@ public class DisableKeep : MonoBehaviour
 
         for (int i = 0; i < removeCards.mustRemoveAddonTypes.Length; i++)
         {
-            if (removeCards.mustRemoveAddonTypes[i] > 0)
+            if (removeCards.mustRemoveAddonTypes[i] > 0 && cardRandomizer.TypeIsSelected(i))
             {
                 keepButton.interactable = false;
                 buttonLabel.text = "Must remove a " + AddonCardManager.Instance.addonCardNames[i];

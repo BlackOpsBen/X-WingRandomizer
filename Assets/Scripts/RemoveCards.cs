@@ -39,8 +39,24 @@ public class RemoveCards : MonoBehaviour
             mustRemoveAddonTypes[i] += cardsSlotGrantings[i];
         }
 
+        if (cardToRemove.GetName() == "Vaksai")
+        {
+            cardRandomizer.allUpgradesAreMinus1 = false;
+        }
+
+        if (cardToRemove.GetName() == "TIEx1")
+        {
+            cardRandomizer.nextSystemIsMinus4 = false;
+        }
+
+        if (cardToRemove.GetName() == "Renegade Refit")
+        {
+            cardRandomizer.allElitesAreMinus1 = false;
+        }
+
         cardRandomizer.addonCards.RemoveAt(index);
         displayCards.ClearSingleCard(index);
+        cardRandomizer.SetCostModifiers();
         cardRandomizer.CalculateTotalCost();
         UIManager.Instance.UpdateUI();
     }
