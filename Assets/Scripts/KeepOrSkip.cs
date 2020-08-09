@@ -6,11 +6,13 @@ public class KeepOrSkip : MonoBehaviour
 {
     private DisplayCards displayCards;
     private CardRandomizer cardRandomizer;
+    private RemoveCards removeCards;
 
     private void Awake()
     {
         displayCards = GetComponent<DisplayCards>();
         cardRandomizer = GetComponent<CardRandomizer>();
+        removeCards = GetComponent<RemoveCards>();
     }
 
     public void KeepSet()
@@ -24,7 +26,7 @@ public class KeepOrSkip : MonoBehaviour
         // Flip Pilot Card
         displayCards.FlipPilotCard();
 
-        // Reset the set
+        removeCards.ResetMustRemoveList();
 
         ToggleUI();
     }
@@ -34,6 +36,8 @@ public class KeepOrSkip : MonoBehaviour
         displayCards.ClearPreviousCards();
 
         displayCards.FlipPilotCard();
+
+        removeCards.ResetMustRemoveList();
 
         ToggleUI();
     }

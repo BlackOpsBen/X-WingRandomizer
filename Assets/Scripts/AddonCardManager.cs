@@ -22,19 +22,19 @@ public class AddonCardManager : MonoBehaviour
     {
         addonCardNames = new string[]
             {
-            "Elite Pilot Talents",
-            "Torpedoes",
-            "Missiles",
-            "Bombs",
-            "Modifications",
-            "Astromechs",
-            "Cannons",
-            "Turrets",
-            "Crews",
-            "Systems",
-            "Techs",
-            "Illicits",
-            "Salvaged Astromechs"
+            "ElitePilotTalent",
+            "Torpedo",
+            "Missile",
+            "Bomb",
+            "Modification",
+            "Astromech",
+            "Cannon",
+            "Turret",
+            "Crew",
+            "SystemUpgrade",
+            "Tech",
+            "Illicit",
+            "SalvagedAstromech"
             };
     }
 

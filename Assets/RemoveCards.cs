@@ -17,6 +17,11 @@ public class RemoveCards : MonoBehaviour
 
     private void Start()
     {
+        ResetMustRemoveList();
+    }
+
+    public void ResetMustRemoveList()
+    {
         mustRemoveAddonTypes = new int[AddonCardManager.Instance.GetNumAddonTypes() + 1]; // +1 is to account for "Modification costing 3 or less" as different from "Modification"
     }
 
@@ -24,7 +29,7 @@ public class RemoveCards : MonoBehaviour
     {
         AddonCard cardToRemove = cardRandomizer.addonCards[index];
 
-        int type = 0;
+        int type = cardToRemove.GetThisTypeIndex();
         mustRemoveAddonTypes[type]--;
 
         int[] cardsSlotGrantings = cardToRemove.GetSlotGrantings();

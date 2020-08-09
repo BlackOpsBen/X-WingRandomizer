@@ -2169,7 +2169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minFOV: 60
-  maxFOV: 74
+  maxFOV: 81
   offset: {x: 0, y: -0.2, z: -5}
 --- !u!20 &519420031
 Camera:
@@ -5218,6 +5218,7 @@ GameObject:
   - component: {fileID: 1277167126}
   - component: {fileID: 1277167127}
   - component: {fileID: 1277167128}
+  - component: {fileID: 1277167129}
   m_Layer: 0
   m_Name: '[Card Manager]'
   m_TagString: Untagged
@@ -5345,6 +5346,18 @@ MonoBehaviour:
   badgeObject: {fileID: 6497603153777562792, guid: 82c1066e25834b4439f32305b1aff269,
     type: 3}
   badgeParentCanvas: {fileID: 21270022}
+--- !u!114 &1277167129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277167120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4a0fae7f558ff4cab4ff32a7df983b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1360943141
 GameObject:
   m_ObjectHideFlags: 0
