@@ -157,6 +157,13 @@ public class Exceptions : MonoBehaviour
         }
         #endregion
 
+        #region Kullbee Sperado
+        if (pilot.GetName() == "Kullbee Sperado" && addonCard.GetType().ToString() == "Modification" && addonCard.GetName() != "Servomotor S-Foils")
+        {
+            return false;
+        }
+        #endregion
+
         return true;
     }
 }
@@ -169,8 +176,6 @@ public class Exceptions : MonoBehaviour
  * Quinn Jast pilot MUST take Heavy Scyk title
  * 
  * Tomax Bren pilot should prefer a Discard Elite card
- * 
- * Kullbee pilot should slightly favor taking the Servo Motor S-Foils modification
  * 
  */
  
