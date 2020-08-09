@@ -40,6 +40,9 @@ public class CardRandomizer : MonoBehaviour
 
     private int costModifiers = 0;
 
+    public bool mustPickAttanniMindlink = false;
+    public bool cantPickAttanniMindlink = false;
+
     private void Awake()
     {
         displayCards = GetComponent<DisplayCards>();

@@ -7,9 +7,13 @@ public class Squadrons : MonoBehaviour
 {
     public static Squadrons Instance { get; private set; }
 
+    [SerializeField] private CardRandomizer cardRandomizer;
+
     [SerializeField] private Squadron[] squadrons;
 
     private PilotSetLists pilotSetLists;
+
+    private bool isSecondAttanniMindlink = false;
 
     private void Awake()
     {
@@ -62,6 +66,21 @@ public class Squadrons : MonoBehaviour
             pilotSet.selectedAddons[i] = new SelectedAddon();
             pilotSet.selectedAddons[i].addonName = addonCards[i].name;
             pilotSet.selectedAddons[i].cost = addonCards[i].cost;
+
+            if (addonCards[i].GetName() == "Attanni Mindlink")
+            {
+                if (!isSecondAttanniMindlink)
+                {
+                    cardRandomizer.mustPickAttanniMindlink = true;
+                    isSecondAttanniMindlink = true;
+                }
+                else
+                {
+                    cardRandomizer.mustPickAttanniMindlink = false;
+                    cardRandomizer.cantPickAttanniMindlink = true;
+                }
+                
+            }
         }
 
         CalculateSetTotalCost(pilotSet, costModifiers);

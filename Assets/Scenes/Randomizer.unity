@@ -4762,6 +4762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c9e25ac4f7c9a746b7ad6c904867eea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardRandomizer: {fileID: 1277167123}
   squadrons: []
 --- !u!4 &1170346519
 Transform:
@@ -5306,6 +5307,8 @@ MonoBehaviour:
   nextSystemIsMinus4: 0
   allUpgradesAreMinus1: 0
   allElitesAreMinus1: 0
+  mustPickAttanniMindlink: 0
+  cantPickAttanniMindlink: 0
 --- !u!114 &1277167124
 MonoBehaviour:
   m_ObjectHideFlags: 0

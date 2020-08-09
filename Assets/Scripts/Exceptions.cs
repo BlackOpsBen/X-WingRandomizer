@@ -164,14 +164,30 @@ public class Exceptions : MonoBehaviour
         }
         #endregion
 
+        #region Attanni Mindlink
+        if (addonCard.GetType().ToString() == "ElitePilotTalent" && cardRandomizer.mustPickAttanniMindlink && addonCard.GetName() != "Attanni Mindlink")
+        {
+            return false;
+        }
+
+        if (addonCard.GetName() == "Attanni Mindlink")
+        {
+            if (cardRandomizer.cantPickAttanniMindlink)
+            {
+                return false;
+            }
+            if (Squadrons.Instance.GetPointsRemaining() - cardRandomizer.totalCost < 37)
+            {
+                return false;
+            }
+        }
+        #endregion
+
         return true;
     }
 }
 
-/*
- * Attani Mindlink elite pilot talent requires 2 ships to have it. If last possible ship, don't allow. Otherwise, require that the next ship chosen can and will also take it.
- * 
- * Youngster pilot should prefer an Action header Elite
+/* Youngster pilot should prefer an Action header Elite
  * 
  * Tomax Bren pilot should prefer a Discard Elite card
  * 
