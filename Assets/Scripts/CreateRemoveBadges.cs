@@ -12,11 +12,11 @@ public class CreateRemoveBadges : MonoBehaviour
 
     private List<GameObject> badges = new List<GameObject>();
 
-    private CardRandomizer cardRandomizer;
+    private RemoveCards removeCards;
 
     private void Awake()
     {
-        cardRandomizer = GetComponent<CardRandomizer>();
+        removeCards = GetComponent<RemoveCards>();
     }
 
     public void CreateNewBadge(GameObject cardObject)
@@ -37,7 +37,7 @@ public class CreateRemoveBadges : MonoBehaviour
     {
         int index = badges.IndexOf(selfBadge);
         badges.RemoveAt(index);
-        cardRandomizer.RemoveAddon(index);
+        removeCards.RemoveAddon(index);
     }
 
     public void ResetBadges()
@@ -48,13 +48,4 @@ public class CreateRemoveBadges : MonoBehaviour
         }
         badges.Clear();
     }
-
-
-    //private void DebugIndexes()
-    //{
-    //    for (int i = 0; i < badges.Count; i++)
-    //    {
-    //        badges[i].GetComponentInChildren<TextMeshProUGUI>().text = i.ToString();
-    //    }
-    //}
 }

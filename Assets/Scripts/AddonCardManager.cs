@@ -7,7 +7,7 @@ public class AddonCardManager : MonoBehaviour
 {
     public static AddonCardManager Instance { get; private set; }
 
-    private string[] addonCardNames;
+    public string[] addonCardNames { get; private set; }
     [SerializeField] private AddonCardGroup[] addonCardGroups;
 
     private void Awake()
@@ -58,6 +58,11 @@ public class AddonCardManager : MonoBehaviour
     public int GetAddonCardGroupLength(int group)
     {
         return addonCardGroups[group].addonCards.Length;
+    }
+
+    public int GetNumAddonTypes()
+    {
+        return addonCardNames.Length;
     }
 
     private void SingletonPattern()

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -196,6 +197,11 @@ public class AddonCard : Item, IComeInProducts
 
     private void MakeListOfSlotGrantings()
     {
+        if (grantsCannonTorpedoOrMissile)
+        {
+            DetermineWhichToGrant();
+        }
+
         slotGrantings = new bool[]
         {
             grantsElitePilotTalent,
@@ -215,6 +221,29 @@ public class AddonCard : Item, IComeInProducts
             grantsSalvagedAstromech,
             grantsCannonTorpedoOrMissile
         };
+    }
+
+    private void DetermineWhichToGrant()
+    {
+        int rand = UnityEngine.Random.Range(0, 3);
+        switch (rand)
+        {
+            case 0:
+                grantsCannon = true;
+                grantsCannonTorpedoOrMissile = false;
+                break;
+            case 1:
+                grantsTorpedo = true;
+                grantsCannonTorpedoOrMissile = false;
+                break;
+            case 2:
+                grantsMissile = true;
+                grantsCannonTorpedoOrMissile = false;
+                break;
+            default:
+                Debug.LogError("Invalid random number!");
+                break;
+        }
     }
 
     private bool SetHasRestrictions()
@@ -246,17 +275,79 @@ public class AddonCard : Item, IComeInProducts
         return false;
     }
 
-    public List<int> GetSlotsGranted()
+    public int[] GetSlotGrantings()
     {
-        List<int> slotsGranted = new List<int>();
-        for (int i = 0; i < slotGrantings.Length; i++)
+        int[] numTypes = new int[AddonCardManager.Instance.GetNumAddonTypes() + 1]; // +1 is to account for "Modification costing 3 or less" as different from "Modification"
+        for (int i = 0; i < numTypes.Length; i++)
         {
-            if (slotGrantings[i])
-            {
-                slotsGranted.Add(i);
-            }
+            numTypes[i] = 0;
         }
-        return slotsGranted;
+        if (grantsElitePilotTalent)
+        {
+            numTypes[0]++;
+        }
+        if (grantsCrew)
+        {
+            numTypes[8]++;
+        }
+        if (grantsCrew2)
+        {
+            numTypes[8]++;
+        }
+        if (grantsIllicit)
+        {
+            numTypes[11]++;
+        }
+        if (grantsModificationCosting3OrLess)
+        {
+            numTypes[13]++;
+        }
+        if (grantsBomb)
+        {
+            numTypes[3]++;
+        }
+        if (grantsBomb2)
+        {
+            numTypes[3]++;
+        }
+        if (grantsModification)
+        {
+            numTypes[4]++;
+        }
+        if (grantsModification2)
+        {
+            numTypes[4]++;
+        }
+        if (grantsTorpedo)
+        {
+            numTypes[1]++;
+        }
+        if (grantsSystem)
+        {
+            numTypes[9]++;
+        }
+        if (grantsCannon)
+        {
+            numTypes[6]++;
+        }
+        if (grantsCannon2)
+        {
+            numTypes[6]++;
+        }
+        if (grantsMissile)
+        {
+            numTypes[2]++;
+        }
+        if (grantsSalvagedAstromech)
+        {
+            numTypes[12]++;
+        }
+        if (grantsCannonTorpedoOrMissile)
+        {
+            Debug.LogError("This should never be reached!");
+        }
+
+        return numTypes;
     }
 
     public bool GetActionGranting(int aGranting)
@@ -287,5 +378,22 @@ public class AddonCard : Item, IComeInProducts
     public int GetProductListCount()
     {
         return includedWith.Count;
+    }
+
+    public int GetThisTypeIndex()
+    {
+        string[] itemTypes = AddonCardManager.Instance.addonCardNames;
+
+        for (int i = 0; i < itemTypes.Length; i++)
+        {
+            if (this.GetType().ToString() == itemTypes[i])
+            {
+                Debug.Log("Item type index is " + i);
+                return i;
+            }
+        }
+
+        Debug.LogError("No item type index found!");
+        return 0;
     }
 }

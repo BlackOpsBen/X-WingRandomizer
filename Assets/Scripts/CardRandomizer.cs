@@ -124,7 +124,7 @@ public class CardRandomizer : MonoBehaviour
         }
     }
 
-    private void CalculateTotalCost()
+    public void CalculateTotalCost()
     {
         int subtotalCost = 0;
         subtotalCost += pilot.GetCost();
@@ -540,6 +540,7 @@ public class CardRandomizer : MonoBehaviour
 
             if (addonCards[i].grantsCannonTorpedoOrMissile)
             {
+                Debug.LogWarning("This should no longer be called!");
                 int[] options = new int[] { 6, 1, 2 };
                 List<int> typeOptions = new List<int>(options);
                 int[] unorderedOptions = new int[3];
@@ -1170,19 +1171,5 @@ public class CardRandomizer : MonoBehaviour
 
         if (debugReasons) { Debug.Log("All requirements met for equipping " + addonCard.name + ". This card is valid!"); }
         return true;
-    }
-
-    public void RemoveAddon(int index)
-    {
-        AddonCard cardToRemove = addonCards[index];
-
-        if (cardToRemove.GetGrantsSlot())
-        {
-
-        }
-
-        addonCards.RemoveAt(index);
-        displayCards.ClearSingleCard(index);
-        CalculateTotalCost();
     }
 }
