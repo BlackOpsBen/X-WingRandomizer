@@ -113,6 +113,9 @@ public class AddonCard : Item, IComeInProducts
     public bool grantsSalvagedAstromech;
     public bool grantsCannonTorpedoOrMissile;
 
+    [Header("Misc Properties")]
+    public bool Discard;
+
     private void OnValidate()
     {
         MakeListOfRestrictions();

@@ -183,13 +183,20 @@ public class Exceptions : MonoBehaviour
         }
         #endregion
 
+        #region Tomax Bren
+        if (pilot.GetName() == "Tomax Bren" && addonCard.GetType().ToString() == "ElitePilotTalent" && addonCard.Discard == false)
+        {
+            return false;
+        }
+        #endregion
+
+        #region Youngster
+        if (pilot.GetName() == "Youngster" && addonCard.GetType().ToString() == "ElitePilotTalent" && addonCard.grantsActionHeader == false)
+        {
+            return false;
+        }
+        #endregion
+
         return true;
     }
 }
-
-/* Youngster pilot should prefer an Action header Elite
- * 
- * Tomax Bren pilot should prefer a Discard Elite card
- * 
- */
- 

@@ -69,6 +69,7 @@ MonoBehaviour:
   hasAttackTargetLockEquipped: 0
   hasShields: 0
   hasTurretEquipped: 0
+  hasIllicitEquipped: 0
   grantsFocus: 0
   grantsTargetLock: 0
   grantsBoost: 0
@@ -94,3 +95,4 @@ MonoBehaviour:
   grantsMissile: 0
   grantsSalvagedAstromech: 0
   grantsCannonTorpedoOrMissile: 0
+  Discard: 1
