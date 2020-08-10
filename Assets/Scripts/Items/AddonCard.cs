@@ -116,7 +116,16 @@ public class AddonCard : Item, IComeInProducts
     [Header("Misc Properties")]
     public bool Discard;
 
+    private void Awake()
+    {
+        InitializeAddon();
+    }
     private void OnValidate()
+    {
+        InitializeAddon();
+    }
+
+    private void InitializeAddon()
     {
         MakeListOfRestrictions();
         MakeListOfActionGrantings();
