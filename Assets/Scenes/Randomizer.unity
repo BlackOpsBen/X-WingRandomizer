@@ -3611,7 +3611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   generateButton: {fileID: 2066589551}
   generateText: GENERATE PILOT
-  insufficientText: NO VALID OPTIONS
+  insufficientText: INSUFFICIENT POINTS
 --- !u!114 &872046148
 MonoBehaviour:
   m_ObjectHideFlags: 0
