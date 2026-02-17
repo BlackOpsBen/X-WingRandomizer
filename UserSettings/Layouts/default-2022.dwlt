@@ -1,0 +1,3902 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: 2382
+    y: 241
+    width: 640
+    height: 601
+  m_ShowMode: 0
+  m_Title: Build Settings
+  m_RootView: {fileID: 4}
+  m_MinSize: {x: 640, y: 601}
+  m_MaxSize: {x: 4000, y: 4021}
+  m_Maximized: 0
+--- !u!114 &2
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12004, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PixelRect:
+    serializedVersion: 2
+    x: 0
+    y: 43
+    width: 1920
+    height: 997
+  m_ShowMode: 4
+  m_Title: Project
+  m_RootView: {fileID: 5}
+  m_MinSize: {x: 875, y: 300}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_Maximized: 1
+--- !u!114 &3
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: BuildPlayerWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 640
+    height: 601
+  m_MinSize: {x: 640, y: 601}
+  m_MaxSize: {x: 4000, y: 4021}
+  m_ActualView: {fileID: 17}
+  m_Panes:
+  - {fileID: 17}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &4
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 3}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 640
+    height: 601
+  m_MinSize: {x: 640, y: 601}
+  m_MaxSize: {x: 4000, y: 4021}
+  vertical: 0
+  controlID: 140
+--- !u!114 &5
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12008, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 6}
+  - {fileID: 8}
+  - {fileID: 7}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1920
+    height: 997
+  m_MinSize: {x: 875, y: 300}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_UseTopView: 1
+  m_TopViewHeight: 30
+  m_UseBottomView: 1
+  m_BottomViewHeight: 20
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12011, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1920
+    height: 30
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+  m_LastLoadedLayoutName: 
+--- !u!114 &7
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12042, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 977
+    width: 1920
+    height: 20
+  m_MinSize: {x: 0, y: 0}
+  m_MaxSize: {x: 0, y: 0}
+--- !u!114 &8
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 9}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 30
+    width: 1920
+    height: 947
+  m_MinSize: {x: 400, y: 100}
+  m_MaxSize: {x: 32384, y: 16192}
+  vertical: 1
+  controlID: 46
+--- !u!114 &9
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 10}
+  - {fileID: 16}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1920
+    height: 947
+  m_MinSize: {x: 400, y: 100}
+  m_MaxSize: {x: 32384, y: 16192}
+  vertical: 0
+  controlID: 47
+--- !u!114 &10
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 11}
+  - {fileID: 15}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1453
+    height: 947
+  m_MinSize: {x: 300, y: 100}
+  m_MaxSize: {x: 24288, y: 16192}
+  vertical: 1
+  controlID: 48
+--- !u!114 &11
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 12}
+  - {fileID: 13}
+  - {fileID: 14}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1453
+    height: 607
+  m_MinSize: {x: 300, y: 50}
+  m_MaxSize: {x: 24288, y: 8096}
+  vertical: 0
+  controlID: 49
+--- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 398
+    height: 607
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 19}
+  m_Panes:
+  - {fileID: 19}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &13
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: SceneView
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 398
+    y: 0
+    width: 547
+    height: 607
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 20}
+  m_Panes:
+  - {fileID: 20}
+  - {fileID: 21}
+  - {fileID: 22}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &14
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: GameView
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 945
+    y: 0
+    width: 508
+    height: 607
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 18}
+  m_Panes:
+  - {fileID: 18}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &15
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ProjectBrowser
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 607
+    width: 1453
+    height: 340
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 23}
+  m_Panes:
+  - {fileID: 23}
+  - {fileID: 24}
+  - {fileID: 25}
+  - {fileID: 26}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: InspectorWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 1453
+    y: 0
+    width: 467
+    height: 947
+  m_MinSize: {x: 275, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 27}
+  m_Panes:
+  - {fileID: 27}
+  - {fileID: 28}
+  - {fileID: 29}
+  m_Selected: 0
+  m_LastSelected: 4
+--- !u!114 &17
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12043, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 640, y: 580}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Build Settings
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 2382
+    y: 241
+    width: 640
+    height: 580
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_TreeViewState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 0
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+--- !u!114 &18
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12015, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Game
+    m_Image: {fileID: -6423792434712278376, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 945
+    y: 73
+    width: 506
+    height: 586
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_SerializedViewNames: []
+  m_SerializedViewValues: []
+  m_PlayModeViewName: GameView
+  m_ShowGizmos: 0
+  m_TargetDisplay: 0
+  m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
+  m_TargetSize: {x: 1920, y: 1080}
+  m_TextureFilterMode: 0
+  m_TextureHideFlags: 61
+  m_RenderIMGUI: 1
+  m_EnterPlayModeBehavior: 0
+  m_UseMipMap: 0
+  m_VSyncEnabled: 0
+  m_Gizmos: 0
+  m_Stats: 0
+  m_SelectedSizes: 03000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_ZoomArea:
+    m_HRangeLocked: 0
+    m_VRangeLocked: 0
+    hZoomLockedByDefault: 0
+    vZoomLockedByDefault: 0
+    m_HBaseRangeMin: -960
+    m_HBaseRangeMax: 960
+    m_VBaseRangeMin: -540
+    m_VBaseRangeMax: 540
+    m_HAllowExceedBaseRangeMin: 1
+    m_HAllowExceedBaseRangeMax: 1
+    m_VAllowExceedBaseRangeMin: 1
+    m_VAllowExceedBaseRangeMax: 1
+    m_ScaleWithWindow: 0
+    m_HSlider: 0
+    m_VSlider: 0
+    m_IgnoreScrollWheelUntilClicked: 0
+    m_EnableMouseInput: 1
+    m_EnableSliderZoomHorizontal: 0
+    m_EnableSliderZoomVertical: 0
+    m_UniformScale: 1
+    m_UpDirection: 1
+    m_DrawArea:
+      serializedVersion: 2
+      x: 0
+      y: 21
+      width: 506
+      height: 565
+    m_Scale: {x: 0.26354167, y: 0.26354167}
+    m_Translation: {x: 253, y: 282.5}
+    m_MarginLeft: 0
+    m_MarginRight: 0
+    m_MarginTop: 0
+    m_MarginBottom: 0
+    m_LastShownAreaInsideMargins:
+      serializedVersion: 2
+      x: -960
+      y: -1071.9368
+      width: 1920
+      height: 2143.8735
+    m_MinimalGUI: 1
+  m_defaultScale: 0.26354167
+  m_LastWindowPixelSize: {x: 506, y: 586}
+  m_ClearInEditMode: 1
+  m_NoCameraWarning: 1
+  m_LowResolutionForAspectRatios: 01000000000000000000
+  m_XRRenderMode: 0
+  m_RenderTexture: {fileID: 0}
+--- !u!114 &19
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12061, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Hierarchy
+    m_Image: {fileID: 7966133145522015247, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 73
+    width: 397
+    height: 586
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_SceneHierarchy:
+    m_TreeViewState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: ce14ffff1615fffffe16fffffa25ffff4026ffff2228ffff462affffce8e000064900000
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 12}
+      m_SearchString: 
+    m_ExpandedScenes: []
+    m_CurrenRootInstanceID: 0
+    m_LockTracker:
+      m_IsLocked: 0
+    m_CurrentSortingName: TransformSorting
+  m_WindowGUID: 808ca15cb0c3d104eb5245585bc091b3
+--- !u!114 &20
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12013, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Scene
+    m_Image: {fileID: 2593428753322112591, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 398
+    y: 73
+    width: 545
+    height: 586
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData:
+    - dockPosition: 0
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: -171, y: -26}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 3
+      id: Tool Settings
+      index: 0
+      layout: 1
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 0
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 156, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: unity-grid-and-snap-toolbar
+      index: 1
+      layout: 1
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 0, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: unity-scene-view-toolbar
+      index: 0
+      layout: 1
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-toolbar__top
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 1
+      id: unity-search-toolbar
+      index: 1
+      layout: 1
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 0
+      containerId: overlay-container--left
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 0, y: 26}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: unity-transform-toolbar
+      index: 0
+      layout: 2
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 0
+      containerId: overlay-container--left
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 0, y: 197}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: unity-component-tools
+      index: 1
+      layout: 2
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 0
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 67.5, y: 86}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Orientation
+      index: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Light Settings
+      index: 2
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Camera
+      index: 1
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Cloth Constraints
+      index: 3
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Cloth Collisions
+      index: 4
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Navmesh Display
+      index: 4
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Agent Display
+      index: 5
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Obstacle Display
+      index: 6
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: -211, y: -53}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 3
+      id: Scene View/Occlusion Culling
+      index: 5
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Physics Debugger
+      index: 6
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Scene Visibility
+      index: 7
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: -231, y: -197}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 3
+      id: Scene View/Particles
+      index: 8
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Tilemap
+      index: 11
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 0, y: 0}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Tilemap Palette Helper
+      index: 12
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: APV Overlay
+      index: 7
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/TrailRenderer
+      index: 9
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 0, y: 10}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: UnityEditor.SceneViewCameraOverlay
+      index: 11
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Cinemachine Tool Settings
+      index: 9
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 0
+      containerId: Floating
+      floating: 1
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: -191, y: -123}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 3
+      id: AINavigationOverlay
+      index: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 1
+      snapOffset: {x: 48, y: 25}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: UnityEditor.SceneViewCameraOverlay (0)
+      index: 12
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: -224, y: 151}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 1
+      id: Scene View/Animation Rigging
+      index: 10
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Open Tile Palette
+      index: 0
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    - dockPosition: 1
+      containerId: overlay-container--right
+      floating: 0
+      collapsed: 0
+      displayed: 0
+      snapOffset: {x: 48, y: 48}
+      snapOffsetDelta: {x: 0, y: 0}
+      snapCorner: 0
+      id: Scene View/Tilemap Focus
+      index: 1
+      layout: 4
+      size: {x: 0, y: 0}
+      sizeOverriden: 0
+    m_OverlaysVisible: 1
+  m_WindowGUID: 1a218f645cb33ba42ad919a5f5a08648
+  m_Gizmos: 0
+  m_OverrideSceneCullingMask: 6917529027641081856
+  m_SceneIsLit: 0
+  m_SceneLighting: 1
+  m_2DMode: 1
+  m_isRotationLocked: 0
+  m_PlayAudio: 0
+  m_AudioPlay: 0
+  m_Position:
+    m_Target: {x: 0, y: 0, z: 0}
+    speed: 2
+    m_Value: {x: 0, y: 0, z: 0}
+  m_RenderMode: 0
+  m_CameraMode:
+    drawMode: 0
+    name: Shaded
+    section: Shading Mode
+  m_ValidateTrueMetals: 0
+  m_DoValidateTrueMetals: 0
+  m_SceneViewState:
+    m_AlwaysRefresh: 0
+    showFog: 1
+    showSkybox: 1
+    showFlares: 1
+    showImageEffects: 1
+    showParticleSystems: 1
+    showVisualEffectGraphs: 1
+    m_FxEnabled: 1
+  m_Grid:
+    xGrid:
+      m_Fade:
+        m_Target: 0
+        speed: 2
+        m_Value: 0
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 0.5, y: 0.5}
+    yGrid:
+      m_Fade:
+        m_Target: 0
+        speed: 2
+        m_Value: 0
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 0.5, y: 0.5}
+    zGrid:
+      m_Fade:
+        m_Target: 0
+        speed: 2
+        m_Value: 0
+      m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
+      m_Pivot: {x: 0, y: 0, z: 0}
+      m_Size: {x: 0.5, y: 0.5}
+    m_ShowGrid: 0
+    m_GridAxis: 1
+    m_gridOpacity: 0.5
+  m_Rotation:
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    speed: 2
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
+  m_Size:
+    m_Target: 10
+    speed: 2
+    m_Value: 10
+  m_Ortho:
+    m_Target: 1
+    speed: 2
+    m_Value: 1
+  m_CameraSettings:
+    m_Speed: 0.14930089
+    m_SpeedNormalized: 0.07000045
+    m_SpeedMin: 0.01
+    m_SpeedMax: 2
+    m_EasingEnabled: 1
+    m_EasingDuration: 0.4
+    m_AccelerationEnabled: 1
+    m_FieldOfViewHorizontalOrVertical: 60
+    m_NearClip: 0.03
+    m_FarClip: 10000
+    m_DynamicClip: 1
+    m_OcclusionCulling: 0
+  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewOrtho: 0
+  m_ReplacementShader: {fileID: 0}
+  m_ReplacementString: 
+  m_SceneVisActive: 1
+  m_LastLockedObject: {fileID: 0}
+  m_ViewIsLockedToObject: 0
+--- !u!114 &21
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Animator
+    m_Image: {fileID: -1673928668082335149, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 398
+    y: 73
+    width: 654
+    height: 586
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_ViewTransforms:
+    m_KeySerializationHelper:
+    - {fileID: -4204451852071156868, guid: 63d044c21704ceb46bd65044691ef8d7, type: 2}
+    m_ValueSerializationHelper:
+    - e00: 1
+      e01: 0
+      e02: 0
+      e03: 0
+      e10: 0
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
+  m_PreviewAnimator: {fileID: 0}
+  m_AnimatorController: {fileID: 9100000, guid: 63d044c21704ceb46bd65044691ef8d7,
+    type: 2}
+  m_BreadCrumbs:
+  - m_Target: {fileID: 2110375352778563830, guid: 63d044c21704ceb46bd65044691ef8d7,
+      type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  - m_Target: {fileID: -4204451852071156868, guid: 63d044c21704ceb46bd65044691ef8d7,
+      type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  stateMachineGraph: {fileID: 0}
+  stateMachineGraphGUI: {fileID: 0}
+  blendTreeGraph: {fileID: 0}
+  blendTreeGraphGUI: {fileID: 0}
+  m_AutoLiveLink: 1
+  m_MiniTool: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_CurrentEditor: 1
+  m_LayerEditor:
+    m_SelectedLayerIndex: 0
+--- !u!114 &22
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_TitleContent:
+    m_Text: Project
+    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 398
+    y: 73
+    width: 1053
+    height: 586
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_SearchFilter:
+    m_NameFilter: 
+    m_ClassNames: []
+    m_AssetLabels: []
+    m_AssetBundleNames: []
+    m_ReferencingInstanceIDs: 
+    m_SceneHandles: 
+    m_ShowAllHits: 0
+    m_SkipHidden: 0
+    m_SearchArea: 1
+    m_Folders:
+    - Assets
+    m_Globs: []
+    m_OriginalText: 
+    m_ImportLogFlags: 0
+    m_FilterByTypeIntersection: 0
+  m_ViewMode: 1
+  m_StartGridSize: 16
+  m_LastFolders:
+  - Assets/MoraGames/MoraMapGen/Demo/Areas/Area Definitions
+  m_LastFoldersGridSize: 16
+  m_LastProjectPath: E:\Unity_Projects\Nemesis
+  m_LockTracker:
+    m_IsLocked: 1
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 217}
+    m_SelectedIDs: aa9a0000
+    m_LastClickedID: 39594
+    m_ExpandedIDs: 00000000080600005c060000bc060000f806000080070000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_AssetTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 00000000080600005c060000bc060000f806000080070000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_ListAreaState:
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: d6910000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 13}
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+    m_NewAssetIndexInList: -1
+    m_ScrollPosition: {x: 0, y: 0}
+    m_GridSize: 16
+  m_SkipHiddenPackages: 0
+  m_DirectoriesAreaWidth: 200
+--- !u!114 &23
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12014, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
+  m_TitleContent:
+    m_Text: Project
+    m_Image: {fileID: -5467254957812901981, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 680
+    width: 1452
+    height: 319
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_SearchFilter:
+    m_NameFilter: 
+    m_ClassNames: []
+    m_AssetLabels: []
+    m_AssetBundleNames: []
+    m_ReferencingInstanceIDs: 
+    m_SceneHandles: 
+    m_ShowAllHits: 0
+    m_SkipHidden: 0
+    m_SearchArea: 1
+    m_Folders:
+    - Assets/Scripts
+    m_Globs: []
+    m_OriginalText: 
+    m_ImportLogFlags: 0
+    m_FilterByTypeIntersection: 0
+  m_ViewMode: 1
+  m_StartGridSize: 16
+  m_LastFolders:
+  - Assets/Scripts
+  m_LastFoldersGridSize: 16
+  m_LastProjectPath: E:\Unity_Projects\X-Wing Randomizer
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 661}
+    m_SelectedIDs: 5c060000
+    m_LastClickedID: 1628
+    m_ExpandedIDs: 0000000008060000440600005c060000bc060000f80600008007000000ca9a3bffffff7f
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_AssetTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 00000000080600005c060000bc060000f806000080070000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 0}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_ListAreaState:
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: 7e810000fc9b0000c6fa000036ed00000000000090a0000058a300002e8a0000749c0000009c000080770000
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: Scripts
+      m_OriginalName: Scripts
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 1628
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 0
+      m_IsRenamingFilename: 1
+      m_ClientGUIView: {fileID: 15}
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+    m_NewAssetIndexInList: -1
+    m_ScrollPosition: {x: 0, y: 432}
+    m_GridSize: 16
+  m_SkipHiddenPackages: 0
+  m_DirectoriesAreaWidth: 200
+--- !u!114 &24
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12003, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Console
+    m_Image: {fileID: -4327648978806127646, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 680
+    width: 1452
+    height: 319
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+--- !u!114 &25
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12071, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Animation
+    m_Image: {fileID: -8166618308981325432, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 673
+    width: 1412
+    height: 326
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_LockTracker:
+    m_IsLocked: 0
+  m_LastSelectedObjectID: 36558
+--- !u!114 &26
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12373, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Audio Mixer
+    m_Image: {fileID: 2344599766593239149, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 0
+    y: 675
+    width: 1397
+    height: 324
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_MixersTreeState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 30556
+    m_ExpandedIDs: 12eb343c
+    m_RenameOverlay:
+      m_UserAcceptedRename: 0
+      m_Name: 
+      m_OriginalName: 
+      m_EditFieldRect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 0
+        height: 0
+      m_UserData: 0
+      m_IsWaitingForDelay: 0
+      m_IsRenaming: 0
+      m_OriginalEventType: 11
+      m_IsRenamingFilename: 0
+      m_ClientGUIView: {fileID: 13}
+    m_SearchString: 
+    m_CreateAssetUtility:
+      m_EndAction: {fileID: 0}
+      m_InstanceID: 0
+      m_Path: 
+      m_Icon: {fileID: 0}
+      m_ResourceFile: 
+  m_LayoutStripsOnTop:
+    m_VerticalSplitter:
+      ID: 0
+      splitterInitialOffset: 0
+      currentActiveSplitter: -1
+      realSizes:
+      - 65
+      - 35
+      relativeSizes:
+      - 0.65
+      - 0.35000002
+      minSizes:
+      - 85
+      - 105
+      maxSizes:
+      - 0
+      - 0
+      lastTotalSize: 0
+      splitSize: 6
+      xOffset: 0
+      m_Version: 1
+      oldRealSizes: 
+      oldMinSizes: 
+      oldMaxSizes: 
+      oldSplitSize: 0
+    m_HorizontalSplitter:
+      ID: 0
+      splitterInitialOffset: 0
+      currentActiveSplitter: -1
+      realSizes:
+      - 60
+      - 60
+      - 60
+      - 60
+      relativeSizes:
+      - 0.25
+      - 0.25
+      - 0.25
+      - 0.25
+      minSizes:
+      - 85
+      - 85
+      - 85
+      - 85
+      maxSizes:
+      - 0
+      - 0
+      - 0
+      - 0
+      lastTotalSize: 0
+      splitSize: 6
+      xOffset: 0
+      m_Version: 1
+      oldRealSizes: 
+      oldMinSizes: 
+      oldMaxSizes: 
+      oldSplitSize: 0
+  m_LayoutStripsOnRight:
+    m_VerticalSplitter:
+      ID: 0
+      splitterInitialOffset: 0
+      currentActiveSplitter: -1
+      realSizes:
+      - 60
+      - 60
+      - 60
+      - 60
+      relativeSizes:
+      - 0.25
+      - 0.25
+      - 0.25
+      - 0.25
+      minSizes:
+      - 100
+      - 85
+      - 85
+      - 85
+      maxSizes:
+      - 0
+      - 0
+      - 0
+      - 0
+      lastTotalSize: 0
+      splitSize: 6
+      xOffset: 0
+      m_Version: 1
+      oldRealSizes: 
+      oldMinSizes: 
+      oldMaxSizes: 
+      oldSplitSize: 0
+    m_HorizontalSplitter:
+      ID: 1878
+      splitterInitialOffset: 0
+      currentActiveSplitter: -1
+      realSizes:
+      - 419
+      - 978
+      relativeSizes:
+      - 0.3
+      - 0.7
+      minSizes:
+      - 160
+      - 160
+      maxSizes:
+      - 0
+      - 0
+      lastTotalSize: 1397
+      splitSize: 6
+      xOffset: 0
+      m_Version: 1
+      oldRealSizes: 
+      oldMinSizes: 
+      oldMaxSizes: 
+      oldSplitSize: 0
+  m_SectionOrder: 00000000030000000100000002000000
+  m_LayoutMode: 1
+  m_SortGroupsAlphabetically: 0
+  m_ShowReferencedBuses: 1
+  m_ShowBusConnections: 0
+  m_ShowBusConnectionsOfSelection: 0
+--- !u!114 &27
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12019, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 275, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Inspector
+    m_Image: {fileID: -2667387946076563598, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1453
+    y: 73
+    width: 466
+    height: 926
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_ObjectsLockedBeforeSerialization: []
+  m_InstanceIDsLockedBeforeSerialization: 
+  m_PreviewResizer:
+    m_CachedPref: 282
+    m_ControlHash: 1412526313
+    m_PrefName: Preview_InspectorPreview
+  m_LastInspectedObjectInstanceID: -1
+  m_LastVerticalScrollValue: 0
+  m_GlobalObjectId: 
+  m_InspectorMode: 0
+  m_LockTracker:
+    m_IsLocked: 0
+  m_PreviewWindow: {fileID: 0}
+--- !u!114 &28
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12079, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 390, y: 390}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Lighting
+    m_Image: {fileID: -1347227620855488341, guid: 0000000000000000d000000000000000,
+      type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1377
+    y: 73
+    width: 542
+    height: 926
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+--- !u!114 &29
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13401, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Test Runner
+    m_Image: {fileID: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1453
+    y: 73
+    width: 466
+    height: 926
+  m_SerializedDataModeController:
+    m_DataMode: 0
+    m_PreferredDataMode: 0
+    m_SupportedDataModes: 
+    isAutomatic: 1
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+    m_OverlaysVisible: 1
+  m_Spl:
+    ID: 248
+    splitterInitialOffset: 0
+    currentActiveSplitter: -1
+    realSizes:
+    - 642
+    - 214
+    relativeSizes:
+    - 0.75
+    - 0.25
+    minSizes:
+    - 32
+    - 32
+    maxSizes:
+    - 0
+    - 0
+    lastTotalSize: 856
+    splitSize: 6
+    xOffset: 0
+    m_Version: 1
+    oldRealSizes: 
+    oldMinSizes: 
+    oldMaxSizes: 
+    oldSplitSize: 0
+  m_TestTypeToolbarIndex: 0
+  m_PlayModeTestListGUI:
+    m_Window: {fileID: 29}
+    m_NewResultList:
+    - id: 1046
+      uniqueId: '[Nemesis][suite]'
+      name: Nemesis
+      fullName: Nemesis
+      resultStatus: 1
+      duration: 21.626383
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1029
+      uniqueId: '[MoraMapGen.PlayTests.dll][suite]'
+      name: MoraMapGen.PlayTests.dll
+      fullName: E:/Unity_Projects/Nemesis/Library/ScriptAssemblies/MoraMapGen.PlayTests.dll
+      resultStatus: 1
+      duration: 21.613558
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1000
+      parentUniqueId: '[Nemesis][suite]'
+    - id: 1030
+      uniqueId: MoraMapGen.PlayTests.dll/[MoraGames][suite]
+      name: MoraGames
+      fullName: MoraGames
+      resultStatus: 1
+      duration: 21.610048
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1029
+      parentUniqueId: '[MoraMapGen.PlayTests.dll][suite]'
+    - id: 1031
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/[MapGen][suite]
+      name: MapGen
+      fullName: MoraGames.MapGen
+      resultStatus: 1
+      duration: 21.606806
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1030
+      parentUniqueId: MoraMapGen.PlayTests.dll/[MoraGames][suite]
+    - id: 1032
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests][suite]
+      name: Tests
+      fullName: MoraGames.MapGen.Tests
+      resultStatus: 1
+      duration: 21.60318
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1031
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/[MapGen][suite]
+    - id: 1001
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.DeterminismIntegrationTests][suite]
+      name: DeterminismIntegrationTests
+      fullName: MoraGames.MapGen.Tests.DeterminismIntegrationTests
+      resultStatus: 1
+      duration: 3.2876854
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1032
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests][suite]
+    - id: 1006
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/DeterminismIntegrationTests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.DeterminismIntegrationTests.AsyncGeneration_MatchesSyncGeneration]
+      name: AsyncGeneration_MatchesSyncGeneration
+      fullName: MoraGames.MapGen.Tests.DeterminismIntegrationTests.AsyncGeneration_MatchesSyncGeneration
+      resultStatus: 1
+      duration: 2.3247848
+      messages: 
+      output: 'Random Seed: 77777
+
+        Random Seed: 77777
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.DeterminismIntegrationTests][suite]
+    - id: 1003
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/DeterminismIntegrationTests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.DeterminismIntegrationTests.DifferentSeeds_ProduceDifferentMaps]
+      name: DifferentSeeds_ProduceDifferentMaps
+      fullName: MoraGames.MapGen.Tests.DeterminismIntegrationTests.DifferentSeeds_ProduceDifferentMaps
+      resultStatus: 1
+      duration: 0.3605298
+      messages: 
+      output: 'Random Seed: 0
+
+        Random Seed: 1
+
+        Random Seed: 42
+
+        Random
+        Seed: 999
+
+        Random Seed: -100
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.DeterminismIntegrationTests][suite]
+    - id: 1002
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/DeterminismIntegrationTests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.DeterminismIntegrationTests.MultipleConsecutiveGenerations_ProduceSameResult]
+      name: MultipleConsecutiveGenerations_ProduceSameResult
+      fullName: MoraGames.MapGen.Tests.DeterminismIntegrationTests.MultipleConsecutiveGenerations_ProduceSameResult
+      resultStatus: 1
+      duration: 0.2440943
+      messages: 
+      output: 'Random Seed: 12345
+
+        Random Seed: 12345
+
+        Random Seed:
+        12345
+
+        Random Seed: 12345
+
+        Random Seed: 12345
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.DeterminismIntegrationTests][suite]
+    - id: 1004
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/DeterminismIntegrationTests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.DeterminismIntegrationTests.RoomAssignments_AreConsistentAcrossGenerations]
+      name: RoomAssignments_AreConsistentAcrossGenerations
+      fullName: MoraGames.MapGen.Tests.DeterminismIntegrationTests.RoomAssignments_AreConsistentAcrossGenerations
+      resultStatus: 1
+      duration: 0.1475322
+      messages: 
+      output: 'Random Seed: 54321
+
+        Random Seed: 54321
+
+        Random Seed:
+        54321
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.DeterminismIntegrationTests][suite]
+    - id: 1005
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/DeterminismIntegrationTests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.DeterminismIntegrationTests.TileCollectionOrder_IsStableAcrossGenerations]
+      name: TileCollectionOrder_IsStableAcrossGenerations
+      fullName: MoraGames.MapGen.Tests.DeterminismIntegrationTests.TileCollectionOrder_IsStableAcrossGenerations
+      resultStatus: 1
+      duration: 0.1926597
+      messages: 
+      output: 'Random Seed: 9999
+
+        Random Seed: 9999
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1001
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.DeterminismIntegrationTests][suite]
+    - id: 1007
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript][suite]
+      name: MapGenPlayTestScript
+      fullName: MoraGames.MapGen.Tests.MapGenPlayTestScript
+      resultStatus: 1
+      duration: 18.31037
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1032
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests][suite]
+    - id: 1024
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/MapGenPlayTestScript/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript.MapGenConsistentBetweenSyncAndAsync_Seed_1]
+      name: MapGenConsistentBetweenSyncAndAsync_Seed_1
+      fullName: MoraGames.MapGen.Tests.MapGenPlayTestScript.MapGenConsistentBetweenSyncAndAsync_Seed_1
+      resultStatus: 1
+      duration: 4.430506
+      messages: 
+      output: 'Random Seed: 1
+
+        Random Seed: 1
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript][suite]
+    - id: 1025
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/MapGenPlayTestScript/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript.MapGenConsistentBetweenSyncAndAsync_Seed_111]
+      name: MapGenConsistentBetweenSyncAndAsync_Seed_111
+      fullName: MoraGames.MapGen.Tests.MapGenPlayTestScript.MapGenConsistentBetweenSyncAndAsync_Seed_111
+      resultStatus: 1
+      duration: 4.376571
+      messages: 
+      output: 'Random Seed: 111
+
+        Random Seed: 111
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript][suite]
+    - id: 1026
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/MapGenPlayTestScript/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript.MapGenConsistentBetweenSyncAndAsync_Seed_1111]
+      name: MapGenConsistentBetweenSyncAndAsync_Seed_1111
+      fullName: MoraGames.MapGen.Tests.MapGenPlayTestScript.MapGenConsistentBetweenSyncAndAsync_Seed_1111
+      resultStatus: 1
+      duration: 3.7485824
+      messages: 
+      output: 'Random Seed: 1111
+
+        Random Seed: 1111
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript][suite]
+    - id: 1028
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/MapGenPlayTestScript/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript.MapGenConsistentBetweenSyncAndAsync_Seed_IntMaxVal]
+      name: MapGenConsistentBetweenSyncAndAsync_Seed_IntMaxVal
+      fullName: MoraGames.MapGen.Tests.MapGenPlayTestScript.MapGenConsistentBetweenSyncAndAsync_Seed_IntMaxVal
+      resultStatus: 1
+      duration: 2.2936401
+      messages: 
+      output: 'Random Seed: 2147483647
+
+        Random Seed: 2147483647
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript][suite]
+    - id: 1027
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/MapGenPlayTestScript/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript.MapGenConsistentBetweenSyncAndAsync_Seed_IntMinVal]
+      name: MapGenConsistentBetweenSyncAndAsync_Seed_IntMinVal
+      fullName: MoraGames.MapGen.Tests.MapGenPlayTestScript.MapGenConsistentBetweenSyncAndAsync_Seed_IntMinVal
+      resultStatus: 1
+      duration: 2.4650242
+      messages: 
+      output: 'Random Seed: -2147483648
+
+        Random Seed: -2147483648
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript][suite]
+    - id: 1008
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/MapGenPlayTestScript/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript.MapLayoutIsUnchanged_Seed_0]
+      name: MapLayoutIsUnchanged_Seed_0
+      fullName: MoraGames.MapGen.Tests.MapGenPlayTestScript.MapLayoutIsUnchanged_Seed_0
+      resultStatus: 1
+      duration: 0.0620711
+      messages: 
+      output: 'Random Seed: 0
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript][suite]
+    - id: 1009
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/MapGenPlayTestScript/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript.MapLayoutIsUnchanged_Seed_1]
+      name: MapLayoutIsUnchanged_Seed_1
+      fullName: MoraGames.MapGen.Tests.MapGenPlayTestScript.MapLayoutIsUnchanged_Seed_1
+      resultStatus: 1
+      duration: 0.078576
+      messages: 
+      output: 'Random Seed: 1
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript][suite]
+    - id: 1012
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/MapGenPlayTestScript/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript.MapLayoutIsUnchanged_Seed_100]
+      name: MapLayoutIsUnchanged_Seed_100
+      fullName: MoraGames.MapGen.Tests.MapGenPlayTestScript.MapLayoutIsUnchanged_Seed_100
+      resultStatus: 1
+      duration: 0.0497292
+      messages: 
+      output: 'Random Seed: 100
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript][suite]
+    - id: 1013
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/MapGenPlayTestScript/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript.MapLayoutIsUnchanged_Seed_1000]
+      name: MapLayoutIsUnchanged_Seed_1000
+      fullName: MoraGames.MapGen.Tests.MapGenPlayTestScript.MapLayoutIsUnchanged_Seed_1000
+      resultStatus: 1
+      duration: 0.0706316
+      messages: 
+      output: 'Random Seed: 1000
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript][suite]
+    - id: 1015
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/MapGenPlayTestScript/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript.MapLayoutIsUnchanged_Seed_IntMaxVal]
+      name: MapLayoutIsUnchanged_Seed_IntMaxVal
+      fullName: MoraGames.MapGen.Tests.MapGenPlayTestScript.MapLayoutIsUnchanged_Seed_IntMaxVal
+      resultStatus: 1
+      duration: 0.047268
+      messages: 
+      output: 'Random Seed: 2147483647
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript][suite]
+    - id: 1014
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/MapGenPlayTestScript/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript.MapLayoutIsUnchanged_Seed_IntMinVal]
+      name: MapLayoutIsUnchanged_Seed_IntMinVal
+      fullName: MoraGames.MapGen.Tests.MapGenPlayTestScript.MapLayoutIsUnchanged_Seed_IntMinVal
+      resultStatus: 1
+      duration: 0.0527294
+      messages: 
+      output: 'Random Seed: -2147483648
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript][suite]
+    - id: 1010
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/MapGenPlayTestScript/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript.MapLayoutIsUnchanged_Seed_Neg1]
+      name: MapLayoutIsUnchanged_Seed_Neg1
+      fullName: MoraGames.MapGen.Tests.MapGenPlayTestScript.MapLayoutIsUnchanged_Seed_Neg1
+      resultStatus: 1
+      duration: 0.0792287
+      messages: 
+      output: 'Random Seed: -1
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript][suite]
+    - id: 1011
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/MapGenPlayTestScript/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript.MapLayoutIsUnchanged_Seed_Neg1234]
+      name: MapLayoutIsUnchanged_Seed_Neg1234
+      fullName: MoraGames.MapGen.Tests.MapGenPlayTestScript.MapLayoutIsUnchanged_Seed_Neg1234
+      resultStatus: 1
+      duration: 0.0377141
+      messages: 
+      output: 'Random Seed: -1234
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript][suite]
+    - id: 1016
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/MapGenPlayTestScript/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript.MapRoomAssignmentsUnchanged_Seed_0]
+      name: MapRoomAssignmentsUnchanged_Seed_0
+      fullName: MoraGames.MapGen.Tests.MapGenPlayTestScript.MapRoomAssignmentsUnchanged_Seed_0
+      resultStatus: 1
+      duration: 0.0598304
+      messages: 
+      output: 'Random Seed: 0
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript][suite]
+    - id: 1017
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/MapGenPlayTestScript/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript.MapRoomAssignmentsUnchanged_Seed_1]
+      name: MapRoomAssignmentsUnchanged_Seed_1
+      fullName: MoraGames.MapGen.Tests.MapGenPlayTestScript.MapRoomAssignmentsUnchanged_Seed_1
+      resultStatus: 1
+      duration: 0.0738694
+      messages: 
+      output: 'Random Seed: 1
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript][suite]
+    - id: 1020
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/MapGenPlayTestScript/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript.MapRoomAssignmentsUnchanged_Seed_100]
+      name: MapRoomAssignmentsUnchanged_Seed_100
+      fullName: MoraGames.MapGen.Tests.MapGenPlayTestScript.MapRoomAssignmentsUnchanged_Seed_100
+      resultStatus: 1
+      duration: 0.0495068
+      messages: 
+      output: 'Random Seed: 100
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript][suite]
+    - id: 1021
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/MapGenPlayTestScript/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript.MapRoomAssignmentsUnchanged_Seed_1000]
+      name: MapRoomAssignmentsUnchanged_Seed_1000
+      fullName: MoraGames.MapGen.Tests.MapGenPlayTestScript.MapRoomAssignmentsUnchanged_Seed_1000
+      resultStatus: 1
+      duration: 0.0701292
+      messages: 
+      output: 'Random Seed: 1000
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript][suite]
+    - id: 1023
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/MapGenPlayTestScript/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript.MapRoomAssignmentsUnchanged_Seed_IntMaxVal]
+      name: MapRoomAssignmentsUnchanged_Seed_IntMaxVal
+      fullName: MoraGames.MapGen.Tests.MapGenPlayTestScript.MapRoomAssignmentsUnchanged_Seed_IntMaxVal
+      resultStatus: 1
+      duration: 0.045157
+      messages: 
+      output: 'Random Seed: 2147483647
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript][suite]
+    - id: 1022
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/MapGenPlayTestScript/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript.MapRoomAssignmentsUnchanged_Seed_IntMinVal]
+      name: MapRoomAssignmentsUnchanged_Seed_IntMinVal
+      fullName: MoraGames.MapGen.Tests.MapGenPlayTestScript.MapRoomAssignmentsUnchanged_Seed_IntMinVal
+      resultStatus: 1
+      duration: 0.0501187
+      messages: 
+      output: 'Random Seed: -2147483648
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript][suite]
+    - id: 1018
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/MapGenPlayTestScript/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript.MapRoomAssignmentsUnchanged_Seed_Neg1]
+      name: MapRoomAssignmentsUnchanged_Seed_Neg1
+      fullName: MoraGames.MapGen.Tests.MapGenPlayTestScript.MapRoomAssignmentsUnchanged_Seed_Neg1
+      resultStatus: 1
+      duration: 0.0808408
+      messages: 
+      output: 'Random Seed: -1
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript][suite]
+    - id: 1019
+      uniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/MapGenPlayTestScript/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript.MapRoomAssignmentsUnchanged_Seed_Neg1234]
+      name: MapRoomAssignmentsUnchanged_Seed_Neg1234
+      fullName: MoraGames.MapGen.Tests.MapGenPlayTestScript.MapRoomAssignmentsUnchanged_Seed_Neg1234
+      resultStatus: 1
+      duration: 0.06998
+      messages: 
+      output: 'Random Seed: -1234
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1007
+      parentUniqueId: MoraMapGen.PlayTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.PlayTests][MoraGames.MapGen.Tests.MapGenPlayTestScript][suite]
+    m_ResultText: 'MapGenConsistentBetweenSyncAndAsync_Seed_IntMaxVal (2.477s)
+
+      ---
+
+      Random
+      Seed: 2147483647
+
+      Random Seed: 2147483647'
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 1c76ba0d
+      m_LastClickedID: 230323740
+      m_ExpandedIDs: 5addf990b16f56b03d08edc57a09bfd4a2f6a8d6a4c601d7b3f907e4e6ace0fdfed4ad0ad0a4471255b60019262e4b2658ff004affffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized
+    m_SelectedOption: 0
+  m_EditModeTestListGUI:
+    m_Window: {fileID: 29}
+    m_NewResultList:
+    - id: 1000
+      uniqueId: '[Nemesis][suite]'
+      name: Nemesis
+      fullName: Nemesis
+      resultStatus: 1
+      duration: 0.1513803
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 
+      parentUniqueId: 
+    - id: 1103
+      uniqueId: '[MoraMapGen.EditorTests.dll][suite]'
+      name: MoraMapGen.EditorTests.dll
+      fullName: E:/Unity_Projects/Nemesis/Library/ScriptAssemblies/MoraMapGen.EditorTests.dll
+      resultStatus: 1
+      duration: 0.1162726
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1035
+      parentUniqueId: '[Nemesis][suite]'
+    - id: 1104
+      uniqueId: MoraMapGen.EditorTests.dll/[MoraGames][suite]
+      name: MoraGames
+      fullName: MoraGames
+      resultStatus: 1
+      duration: 0.114384
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1103
+      parentUniqueId: '[MoraMapGen.EditorTests.dll][suite]'
+    - id: 1105
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/[MapGen][suite]
+      name: MapGen
+      fullName: MoraGames.MapGen
+      resultStatus: 1
+      duration: 0.1134686
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1104
+      parentUniqueId: MoraMapGen.EditorTests.dll/[MoraGames][suite]
+    - id: 1106
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests][suite]
+      name: Tests
+      fullName: MoraGames.MapGen.Tests
+      resultStatus: 1
+      duration: 0.1098323
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1105
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/[MapGen][suite]
+    - id: 1036
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.DeterminismValidationTests][suite]
+      name: DeterminismValidationTests
+      fullName: MoraGames.MapGen.Tests.DeterminismValidationTests
+      resultStatus: 1
+      duration: 0.0394117
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1106
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests][suite]
+    - id: 1042
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/DeterminismValidationTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.DeterminismValidationTests.DeterministicHashSet_AddDuplicate_DoesNotChangeOrder]
+      name: DeterministicHashSet_AddDuplicate_DoesNotChangeOrder
+      fullName: MoraGames.MapGen.Tests.DeterminismValidationTests.DeterministicHashSet_AddDuplicate_DoesNotChangeOrder
+      resultStatus: 1
+      duration: 0.0144312
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.DeterminismValidationTests][suite]
+    - id: 1043
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/DeterminismValidationTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.DeterminismValidationTests.DeterministicHashSet_Clear_RemovesAllItems]
+      name: DeterministicHashSet_Clear_RemovesAllItems
+      fullName: MoraGames.MapGen.Tests.DeterminismValidationTests.DeterministicHashSet_Clear_RemovesAllItems
+      resultStatus: 1
+      duration: 0.0027799
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.DeterminismValidationTests][suite]
+    - id: 1040
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/DeterminismValidationTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.DeterminismValidationTests.DeterministicHashSet_ContainsPerformance_IsOOne]
+      name: DeterministicHashSet_ContainsPerformance_IsOOne
+      fullName: MoraGames.MapGen.Tests.DeterminismValidationTests.DeterministicHashSet_ContainsPerformance_IsOOne
+      resultStatus: 1
+      duration: 0.0031249
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.DeterminismValidationTests][suite]
+    - id: 1045
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/DeterminismValidationTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.DeterminismValidationTests.DeterministicHashSet_ExceptWith_RemovesItemsAndMaintainsOrder]
+      name: DeterministicHashSet_ExceptWith_RemovesItemsAndMaintainsOrder
+      fullName: MoraGames.MapGen.Tests.DeterminismValidationTests.DeterministicHashSet_ExceptWith_RemovesItemsAndMaintainsOrder
+      resultStatus: 1
+      duration: 0.0008178
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.DeterminismValidationTests][suite]
+    - id: 1038
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/DeterminismValidationTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.DeterminismValidationTests.DeterministicHashSet_First_ReturnsFirstInserted]
+      name: DeterministicHashSet_First_ReturnsFirstInserted
+      fullName: MoraGames.MapGen.Tests.DeterminismValidationTests.DeterministicHashSet_First_ReturnsFirstInserted
+      resultStatus: 1
+      duration: 0.0001605
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.DeterminismValidationTests][suite]
+    - id: 1041
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/DeterminismValidationTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.DeterminismValidationTests.DeterministicHashSet_IterationOrder_IsConsistentAcrossMultipleEnumerations]
+      name: DeterministicHashSet_IterationOrder_IsConsistentAcrossMultipleEnumerations
+      fullName: MoraGames.MapGen.Tests.DeterminismValidationTests.DeterministicHashSet_IterationOrder_IsConsistentAcrossMultipleEnumerations
+      resultStatus: 1
+      duration: 0.0017755
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.DeterminismValidationTests][suite]
+    - id: 1037
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/DeterminismValidationTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.DeterminismValidationTests.DeterministicHashSet_MaintainsInsertionOrder]
+      name: DeterministicHashSet_MaintainsInsertionOrder
+      fullName: MoraGames.MapGen.Tests.DeterminismValidationTests.DeterministicHashSet_MaintainsInsertionOrder
+      resultStatus: 1
+      duration: 0.0002725
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.DeterminismValidationTests][suite]
+    - id: 1039
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/DeterminismValidationTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.DeterminismValidationTests.DeterministicHashSet_Remove_MaintainsOrderOfRemaining]
+      name: DeterministicHashSet_Remove_MaintainsOrderOfRemaining
+      fullName: MoraGames.MapGen.Tests.DeterminismValidationTests.DeterministicHashSet_Remove_MaintainsOrderOfRemaining
+      resultStatus: 1
+      duration: 0.0002739
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.DeterminismValidationTests][suite]
+    - id: 1044
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/DeterminismValidationTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.DeterminismValidationTests.DeterministicHashSet_UnionWith_MaintainsOrderAndNoDuplicates]
+      name: DeterministicHashSet_UnionWith_MaintainsOrderAndNoDuplicates
+      fullName: MoraGames.MapGen.Tests.DeterminismValidationTests.DeterministicHashSet_UnionWith_MaintainsOrderAndNoDuplicates
+      resultStatus: 1
+      duration: 0.0004563
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1036
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.DeterminismValidationTests][suite]
+    - id: 1046
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.HashSetUsageValidator][suite]
+      name: HashSetUsageValidator
+      fullName: MoraGames.MapGen.Tests.HashSetUsageValidator
+      resultStatus: 1
+      duration: 0.0135161
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1106
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests][suite]
+    - id: 1050
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/HashSetUsageValidator/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.HashSetUsageValidator.DeterministicHashSet_HasRequiredMethods]
+      name: DeterministicHashSet_HasRequiredMethods
+      fullName: MoraGames.MapGen.Tests.HashSetUsageValidator.DeterministicHashSet_HasRequiredMethods
+      resultStatus: 1
+      duration: 0.0023494
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1046
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.HashSetUsageValidator][suite]
+    - id: 1049
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/HashSetUsageValidator/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.HashSetUsageValidator.DeterministicHashSet_ImplementsRequiredInterfaces]
+      name: DeterministicHashSet_ImplementsRequiredInterfaces
+      fullName: MoraGames.MapGen.Tests.HashSetUsageValidator.DeterministicHashSet_ImplementsRequiredInterfaces
+      resultStatus: 1
+      duration: 0.0006321
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1046
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.HashSetUsageValidator][suite]
+    - id: 1048
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/HashSetUsageValidator/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.HashSetUsageValidator.ValidateDeterministicHashSetMethods]
+      name: ValidateDeterministicHashSetMethods
+      fullName: MoraGames.MapGen.Tests.HashSetUsageValidator.ValidateDeterministicHashSetMethods
+      resultStatus: 1
+      duration: 0.0003638
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1046
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.HashSetUsageValidator][suite]
+    - id: 1047
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/HashSetUsageValidator/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.HashSetUsageValidator.ValidateNoCriticalHashSetFields]
+      name: ValidateNoCriticalHashSetFields
+      fullName: MoraGames.MapGen.Tests.HashSetUsageValidator.ValidateNoCriticalHashSetFields
+      resultStatus: 1
+      duration: 0.0003202
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1046
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.HashSetUsageValidator][suite]
+    - id: 1051
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+      name: MapGenEditorTestScript
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript
+      resultStatus: 1
+      duration: 0.0384225
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1106
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests][suite]
+    - id: 1063
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_0_0_900]
+      name: GetValidMapSizes_0_0_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_0_0_900
+      resultStatus: 1
+      duration: 0.0053513
+      messages: 
+      output: 'Testing dimensions of 0 and 0 with max safe area of 900
+
+        Dimensions
+        min/max: (4, 4), Area min/max: (16, 16)
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1061
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_0_20_900]
+      name: GetValidMapSizes_0_20_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_0_20_900
+      resultStatus: 1
+      duration: 0.0011364
+      messages: 
+      output: 'Testing dimensions of 0 and 20 with max safe area of 900
+
+        Dimensions
+        min/max: (4, 20), Area min/max: (16, 400)
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1057
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_1_50_900]
+      name: GetValidMapSizes_1_50_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_1_50_900
+      resultStatus: 1
+      duration: 0.0012164
+      messages: 
+      output: 'Testing dimensions of 1 and 50 with max safe area of 900
+
+        Dimensions
+        min/max: (4, 50), Area min/max: (16, 2500)
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1054
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_16_16_900]
+      name: GetValidMapSizes_16_16_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_16_16_900
+      resultStatus: 1
+      duration: 0.0009944
+      messages: 
+      output: 'Testing dimensions of 16 and 16 with max safe area of 900
+
+        Dimensions
+        min/max: (16, 16), Area min/max: (256, 256)
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1055
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_16_4_900]
+      name: GetValidMapSizes_16_4_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_16_4_900
+      resultStatus: 1
+      duration: 0.001171
+      messages: 
+      output: 'Testing dimensions of 16 and 4 with max safe area of 900
+
+        Dimensions
+        min/max: (16, 16), Area min/max: (256, 256)
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1060
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_19_20_360]
+      name: GetValidMapSizes_19_20_360
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_19_20_360
+      resultStatus: 1
+      duration: 0.0010307
+      messages: 
+      output: 'Testing dimensions of 19 and 20 with max safe area of 360
+
+        Dimensions
+        min/max: (18, 20), Area min/max: (324, 400)
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1059
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_19_20_361]
+      name: GetValidMapSizes_19_20_361
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_19_20_361
+      resultStatus: 1
+      duration: 0.0010139
+      messages: 
+      output: 'Testing dimensions of 19 and 20 with max safe area of 361
+
+        Dimensions
+        min/max: (19, 19), Area min/max: (361, 361)
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1058
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_19_20_5000]
+      name: GetValidMapSizes_19_20_5000
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_19_20_5000
+      resultStatus: 1
+      duration: 0.0010081
+      messages: 
+      output: 'Testing dimensions of 19 and 20 with max safe area of 5000
+
+        Dimensions
+        min/max: (19, 20), Area min/max: (361, 400)
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1056
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_19_20_900]
+      name: GetValidMapSizes_19_20_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_19_20_900
+      resultStatus: 1
+      duration: 0.0010194
+      messages: 
+      output: 'Testing dimensions of 19 and 20 with max safe area of 900
+
+        Dimensions
+        min/max: (19, 20), Area min/max: (361, 400)
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1062
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_20_0_900]
+      name: GetValidMapSizes_20_0_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_20_0_900
+      resultStatus: 1
+      duration: 0.0010296
+      messages: 
+      output: 'Testing dimensions of 20 and 0 with max safe area of 900
+
+        Dimensions
+        min/max: (20, 20), Area min/max: (400, 400)
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1053
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_4_16_900]
+      name: GetValidMapSizes_4_16_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_4_16_900
+      resultStatus: 1
+      duration: 0.001047
+      messages: 
+      output: 'Testing dimensions of 4 and 16 with max safe area of 900
+
+        Dimensions
+        min/max: (4, 16), Area min/max: (16, 256)
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1052
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_4_4_900]
+      name: GetValidMapSizes_4_4_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_4_4_900
+      resultStatus: 1
+      duration: 0.0010077
+      messages: 
+      output: 'Testing dimensions of 4 and 4 with max safe area of 900
+
+        Dimensions
+        min/max: (4, 4), Area min/max: (16, 16)
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1064
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_minus1_20_900]
+      name: GetValidMapSizes_minus1_20_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_minus1_20_900
+      resultStatus: 1
+      duration: 0.0012636
+      messages: 
+      output: 'Testing dimensions of -1 and 20 with max safe area of 900
+
+        Dimensions
+        min/max: (4, 20), Area min/max: (16, 400)
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1065
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_minus10_minus1_900]
+      name: GetValidMapSizes_minus10_minus1_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.GetValidMapSizes_minus10_minus1_900
+      resultStatus: 1
+      duration: 0.0011351
+      messages: 
+      output: 'Testing dimensions of -10 and -1 with max safe area of 900
+
+        Dimensions
+        min/max: (4, 4), Area min/max: (16, 16)
+
+'
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1066
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.PickRandomMapSize_WithFixedRandom_ReturnsDeterministicValue]
+      name: PickRandomMapSize_WithFixedRandom_ReturnsDeterministicValue
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.PickRandomMapSize_WithFixedRandom_ReturnsDeterministicValue
+      resultStatus: 1
+      duration: 0.0012455
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1083
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomArea_121_225_900]
+      name: ValidateGetValidRandomArea_121_225_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomArea_121_225_900
+      resultStatus: 1
+      duration: 0.0001777
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1080
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomArea_Exact_16_400_900]
+      name: ValidateGetValidRandomArea_Exact_16_400_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomArea_Exact_16_400_900
+      resultStatus: 1
+      duration: 0.0001603
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1081
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomArea_TooBig_16_400_900]
+      name: ValidateGetValidRandomArea_TooBig_16_400_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomArea_TooBig_16_400_900
+      resultStatus: 1
+      duration: 0.0001532
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1082
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomArea_TooSmall_121_225_900]
+      name: ValidateGetValidRandomArea_TooSmall_121_225_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomArea_TooSmall_121_225_900
+      resultStatus: 1
+      duration: 0.0001586
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1086
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomArea_Unsafe_1000_1100_31_35_900]
+      name: ValidateGetValidRandomArea_Unsafe_1000_1100_31_35_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomArea_Unsafe_1000_1100_31_35_900
+      resultStatus: 1
+      duration: 0.0001532
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1085
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomArea_Unsafe_900_1000_30_35_900]
+      name: ValidateGetValidRandomArea_Unsafe_900_1000_30_35_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomArea_Unsafe_900_1000_30_35_900
+      resultStatus: 1
+      duration: 0.0001551
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1084
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomArea_Unsafe_900_1000_900]
+      name: ValidateGetValidRandomArea_Unsafe_900_1000_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomArea_Unsafe_900_1000_900
+      resultStatus: 1
+      duration: 0.0002084
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1075
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_0_100_900]
+      name: ValidateGetValidRandomDimensions_0_100_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_0_100_900
+      resultStatus: 1
+      duration: 0.0001498
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1067
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_1_20_900]
+      name: ValidateGetValidRandomDimensions_1_20_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_1_20_900
+      resultStatus: 1
+      duration: 0.0001571
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1076
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_1000_1000_900]
+      name: ValidateGetValidRandomDimensions_1000_1000_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_1000_1000_900
+      resultStatus: 1
+      duration: 0.0001629
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1077
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_1000_20_900]
+      name: ValidateGetValidRandomDimensions_1000_20_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_1000_20_900
+      resultStatus: 1
+      duration: 0.0001476
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1073
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_15_14_900]
+      name: ValidateGetValidRandomDimensions_15_14_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_15_14_900
+      resultStatus: 1
+      duration: 0.0001428
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1072
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_15_15_900]
+      name: ValidateGetValidRandomDimensions_15_15_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_15_15_900
+      resultStatus: 1
+      duration: 0.0001443
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1069
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_16_20_300]
+      name: ValidateGetValidRandomDimensions_16_20_300
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_16_20_300
+      resultStatus: 1
+      duration: 0.000145
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1068
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_16_20_900]
+      name: ValidateGetValidRandomDimensions_16_20_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_16_20_900
+      resultStatus: 1
+      duration: 0.0001433
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1070
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_16_50_900]
+      name: ValidateGetValidRandomDimensions_16_50_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_16_50_900
+      resultStatus: 1
+      duration: 0.0001465
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1078
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_20_1000_900]
+      name: ValidateGetValidRandomDimensions_20_1000_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_20_1000_900
+      resultStatus: 1
+      duration: 0.0001454
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1071
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_25_50_900]
+      name: ValidateGetValidRandomDimensions_25_50_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_25_50_900
+      resultStatus: 1
+      duration: 0.0001429
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1079
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_31_1000_900]
+      name: ValidateGetValidRandomDimensions_31_1000_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_31_1000_900
+      resultStatus: 1
+      duration: 0.0001421
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1074
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenEditorTestScript/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_minus1_3_900]
+      name: ValidateGetValidRandomDimensions_minus1_3_900
+      fullName: MoraGames.MapGen.Tests.MapGenEditorTestScript.ValidateGetValidRandomDimensions_minus1_3_900
+      resultStatus: 1
+      duration: 0.000145
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1051
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenEditorTestScript][suite]
+    - id: 1087
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests][suite]
+      name: MapGenRandomTests
+      fullName: MoraGames.MapGen.Tests.MapGenRandomTests
+      resultStatus: 1
+      duration: 0.0152059
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 1
+      categories: []
+      parentId: 1106
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests][suite]
+    - id: 1096
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenRandomTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests.Weight_0_Picks_Item_1of2_Biased1]
+      name: Weight_0_Picks_Item_1of2_Biased1
+      fullName: MoraGames.MapGen.Tests.MapGenRandomTests.Weight_0_Picks_Item_1of2_Biased1
+      resultStatus: 1
+      duration: 0.0012874
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests][suite]
+    - id: 1091
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenRandomTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests.Weight_0_Picks_Item_1of2_Biased2]
+      name: Weight_0_Picks_Item_1of2_Biased2
+      fullName: MoraGames.MapGen.Tests.MapGenRandomTests.Weight_0_Picks_Item_1of2_Biased2
+      resultStatus: 1
+      duration: 0.0003056
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests][suite]
+    - id: 1088
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenRandomTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests.Weight_0_Picks_Item_1of2_Equal]
+      name: Weight_0_Picks_Item_1of2_Equal
+      fullName: MoraGames.MapGen.Tests.MapGenRandomTests.Weight_0_Picks_Item_1of2_Equal
+      resultStatus: 1
+      duration: 0.0002233
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests][suite]
+    - id: 1094
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenRandomTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests.Weight_0dot9_Picks_Item_1of2_Biased2]
+      name: Weight_0dot9_Picks_Item_1of2_Biased2
+      fullName: MoraGames.MapGen.Tests.MapGenRandomTests.Weight_0dot9_Picks_Item_1of2_Biased2
+      resultStatus: 1
+      duration: 0.0002707
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests][suite]
+    - id: 1092
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenRandomTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests.Weight_1_Picks_Item_1of2_Biased2]
+      name: Weight_1_Picks_Item_1of2_Biased2
+      fullName: MoraGames.MapGen.Tests.MapGenRandomTests.Weight_1_Picks_Item_1of2_Biased2
+      resultStatus: 1
+      duration: 0.0002664
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests][suite]
+    - id: 1089
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenRandomTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests.Weight_1_Picks_Item_1of2_Equal]
+      name: Weight_1_Picks_Item_1of2_Equal
+      fullName: MoraGames.MapGen.Tests.MapGenRandomTests.Weight_1_Picks_Item_1of2_Equal
+      resultStatus: 1
+      duration: 0.0003055
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests][suite]
+    - id: 1097
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenRandomTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests.Weight_100_Picks_Item_1of2_Biased1]
+      name: Weight_100_Picks_Item_1of2_Biased1
+      fullName: MoraGames.MapGen.Tests.MapGenRandomTests.Weight_100_Picks_Item_1of2_Biased1
+      resultStatus: 1
+      duration: 0.0002804
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests][suite]
+    - id: 1098
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenRandomTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests.Weight_100dot1_Picks_Item_2of2_Biased1]
+      name: Weight_100dot1_Picks_Item_2of2_Biased1
+      fullName: MoraGames.MapGen.Tests.MapGenRandomTests.Weight_100dot1_Picks_Item_2of2_Biased1
+      resultStatus: 1
+      duration: 0.0002855
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests][suite]
+    - id: 1095
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenRandomTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests.Weight_101_Picks_Item_2of2_Biased2]
+      name: Weight_101_Picks_Item_2of2_Biased2
+      fullName: MoraGames.MapGen.Tests.MapGenRandomTests.Weight_101_Picks_Item_2of2_Biased2
+      resultStatus: 1
+      duration: 0.0002681
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests][suite]
+    - id: 1099
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenRandomTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests.Weight_12dot2_Picks_Item_4of10_Mixed]
+      name: Weight_12dot2_Picks_Item_4of10_Mixed
+      fullName: MoraGames.MapGen.Tests.MapGenRandomTests.Weight_12dot2_Picks_Item_4of10_Mixed
+      resultStatus: 1
+      duration: 0.0003374
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests][suite]
+    - id: 1100
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenRandomTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests.Weight_12dot3_Picks_Item_5of10_Mixed]
+      name: Weight_12dot3_Picks_Item_5of10_Mixed
+      fullName: MoraGames.MapGen.Tests.MapGenRandomTests.Weight_12dot3_Picks_Item_5of10_Mixed
+      resultStatus: 1
+      duration: 0.0003968
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests][suite]
+    - id: 1101
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenRandomTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests.Weight_13dot2_Picks_Item_5of10_Mixed]
+      name: Weight_13dot2_Picks_Item_5of10_Mixed
+      fullName: MoraGames.MapGen.Tests.MapGenRandomTests.Weight_13dot2_Picks_Item_5of10_Mixed
+      resultStatus: 1
+      duration: 0.0003392
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests][suite]
+    - id: 1102
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenRandomTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests.Weight_13dot3_Picks_Item_6of10_Mixed]
+      name: Weight_13dot3_Picks_Item_6of10_Mixed
+      fullName: MoraGames.MapGen.Tests.MapGenRandomTests.Weight_13dot3_Picks_Item_6of10_Mixed
+      resultStatus: 1
+      duration: 0.0003159
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests][suite]
+    - id: 1093
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenRandomTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests.Weight_1dot1_Picks_Item_2of2_Biased2]
+      name: Weight_1dot1_Picks_Item_2of2_Biased2
+      fullName: MoraGames.MapGen.Tests.MapGenRandomTests.Weight_1dot1_Picks_Item_2of2_Biased2
+      resultStatus: 1
+      duration: 0.0002715
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests][suite]
+    - id: 1090
+      uniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/MapGenRandomTests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests.Weight_2_Picks_Item_2of2_Equal]
+      name: Weight_2_Picks_Item_2of2_Equal
+      fullName: MoraGames.MapGen.Tests.MapGenRandomTests.Weight_2_Picks_Item_2of2_Equal
+      resultStatus: 1
+      duration: 0.0002599
+      messages: 
+      output: 
+      stacktrace: 
+      notRunnable: 0
+      ignoredOrSkipped: 0
+      description: 
+      isSuite: 0
+      categories:
+      - Uncategorized
+      parentId: 1087
+      parentUniqueId: MoraMapGen.EditorTests.dll/MoraGames/MapGen/Tests/[MoraMapGen.EditorTests][MoraGames.MapGen.Tests.MapGenRandomTests][suite]
+    m_ResultText: 
+    m_ResultStacktrace: 
+    m_TestListState:
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 5addf990cda0eca3eacedfa9fbf386cc7eac18d1f33630e0d83345e01b3e3afc5ecf05ff39ccb313500bdf17a1264c2a82c3d9575aba786989e7ca6effc97576ffffff7f
+      m_RenameOverlay:
+        m_UserAcceptedRename: 0
+        m_Name: 
+        m_OriginalName: 
+        m_EditFieldRect:
+          serializedVersion: 2
+          x: 0
+          y: 0
+          width: 0
+          height: 0
+        m_UserData: 0
+        m_IsWaitingForDelay: 0
+        m_IsRenaming: 0
+        m_OriginalEventType: 11
+        m_IsRenamingFilename: 0
+        m_ClientGUIView: {fileID: 0}
+      m_SearchString: 
+    m_TestRunnerUIFilter:
+      PassedHidden: 0
+      FailedHidden: 0
+      NotRunHidden: 0
+      m_SearchString: 
+      selectedCategoryMask: 0
+      availableCategories:
+      - Uncategorized

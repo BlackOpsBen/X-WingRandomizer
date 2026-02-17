@@ -306,7 +306,12 @@ public class ProductToggle
 
     public void LoadToggleSetting()
     {
-        int flag = PlayerPrefs.GetInt(this.name);
+        int flag = 1;
+
+        if (PlayerPrefs.HasKey(this.name))
+        {
+            flag = PlayerPrefs.GetInt(this.name);
+        }
 
         if (flag == 1)
         {
